@@ -1,0 +1,182 @@
+# Source instantiation — LessonOrca / Aether (Aug 2026).
+# Copy this file, rename, and rewrite every field for a new startup.
+# Do not use this file as content for a non-edtech run.
+
+company_name: LessonOrca
+product_name: LessonOrca
+codename: Aether
+tagline: Precision learning operating system for every learner
+one_liner: A multi-agent, source-grounded AI tutor that probes knowledge state, plans a dual path of remediation plus acceleration, and teaches with verified pedagogical suitability from SELPA to genius.
+domain: education
+category: AI-native precision tutor / learning OS
+year: 2026
+
+problem:
+  industrial_trap: One teacher to many students; one learner to many untrusted sources. Logistics and source evaluation consume the struggle that should sit inside the material.
+  current_workarounds:
+    - Khanmigo / ChatGPT homework help
+    - human tutors at $60–150/hr
+    - IEP accommodations that do not accelerate
+    - gifted tracks that skip diagnosis
+  cost_of_status_quo: SAT/college-prep gap, wasted semesters, dignity loss for high-need students, boredom for high-ability students, parent distrust of black-box AI.
+  10x_claim: 10x faster and 10x better learning at equal or higher retention, across SELPA-to-Mensa and every preferred modality.
+  10x_mechanism: Recursive multimodal knowledge-boundary probing + real-time cognitive-load control + dual-path knowledge graph (remediate the true gap while unlocking enrichment) + pedagogical-suitability scoring + durable multi-resolution memory.
+
+spectrum:
+  low_end:
+    name: SELPA / IEP / 504 10th-grade college-prep student
+    description: Hidden threats to college trajectory; dignity-preserving onboarding; accommodations as first-class, not a separate dumbed-down mode.
+    dignity_rule: Never a "special" reduced-capability mode. Same engine, modulated load and representation.
+  mid_segments:
+    - { name: Average student, description: Solid but leaky prerequisites; needs gap-closing without shame. }
+    - { name: Right-brain heavy, description: Visual, analogical, narrative-first encoding. }
+    - { name: Left-brain heavy, description: Symbolic, sequential, proof-first encoding. }
+  high_end:
+    name: Profoundly gifted / 2e / Mensa
+    description: Far-transfer, adaptive expertise, raised cognitive demand, no busywork.
+  modality_axes: [visual, auditory, kinesthetic, analogical, symbolic, narrative, social]
+
+personas:
+  - id: selpa_student
+    role: user
+    name: College-prep 10th grader with IEP
+    job: Stay on college trajectory without shame
+    pains: [hidden prerequisite holes, cognitive overload, stigma, wasted time]
+    gains: [dignity, visible progress, dual-path acceleration]
+    must_have_language: "Don't make me feel dumb. Show me the real gap and the next win."
+    day_in_life_beats: [morning check-in, adaptive practice, productive-failure moment, teach-an-agent, reflection, parent summary]
+  - id: selpa_parent
+    role: buyer
+    name: Parent considering a gap semester
+    job: Protect the child's trajectory and see evidence weekly
+    pains: [school not adapting to AI, distrust of chatbots, IEP theater]
+    gains: [weekly insight, IEP-aligned evidence, privacy controls]
+    must_have_language: "Show me this is not another app. Show me my child."
+    day_in_life_beats: [Sunday insight card, midweek alert, teacher conference packet]
+  - id: genius_student
+    role: user
+    name: High-ability / 2e learner
+    job: Stop waiting; do work at the edge of ability
+    pains: [repetition, low ceiling, social isolation]
+    gains: [far-transfer challenges, peer-level AI debate, public work]
+    must_have_language: "Don't slow me down to the class average."
+    day_in_life_beats: [frontier map, raised-demand studio, publish]
+  - id: teacher
+    role: operator
+    name: Special-ed / classroom teacher
+    job: Intervene at highest-human-value moments
+    pains: [prep time, no real-time student state, static differentiation drafts]
+    gains: [co-pilot insights, not another lesson generator]
+    must_have_language: "Give me the moment that needs a human."
+    day_in_life_beats: [morning brief, escalation ping, IEP evidence export]
+  - id: district
+    role: buyer
+    name: District decision-maker
+    job: Equity + outcomes + compliance
+    pains: [tool sprawl, privacy, no closed-loop evidence]
+    gains: [multi-tenant, audit, Title I equalizer architecture]
+    must_have_language: "Equalizer, not amplifier of privilege."
+    day_in_life_beats: [pilot dashboard, FERPA review]
+
+core_loop:
+  name: Probe-Plan-Teach-Reflect-Remember
+  phases:
+    - { id: probe, name: Probe, purpose: Map exact knowledge boundary and load, signals: [binary/adaptive items, multimodal traces, confidence], artifacts: [knowledge-boundary map, load gauge] }
+    - { id: plan, name: Plan, purpose: Build verified prerequisite graph and dual path, signals: [gap vs enrichment nodes], artifacts: [Mermaid/dependency graph, semester micro-path] }
+    - { id: teach, name: Teach, purpose: Incremental multi-representational instruction, signals: [PSI score, error type], artifacts: [session, SVG/visuals, quiz] }
+    - { id: reflect, name: Reflect, purpose: Metacognitive close + parent/teacher handoff, signals: [JOL calibration], artifacts: [weekly insight] }
+    - { id: remember, name: Remember, purpose: Version the durable learner model, signals: [forgetting curve], artifacts: [model snapshot, spaced schedule] }
+
+domain_science:
+  - { name: Zone of Proximal Development, citation_hint: Vygotsky, product_implication: Keep every learner in ZPD; raise demand as expertise grows. }
+  - { name: Cognitive load theory, citation_hint: Sweller, product_implication: Real-time intrinsic/extraneous/germane control; expertise reversal. }
+  - { name: Desirable difficulties / retrieval practice, citation_hint: Bjork, product_implication: Force generation before reveal; spaced interleaved retrieval. }
+  - { name: Mastery learning, citation_hint: Bloom, product_implication: Close real gaps before advancing the graph. }
+  - { name: Self-regulated learning, citation_hint: Zimmerman, product_implication: Plan-monitor-evaluate scored every session. }
+  - { name: Universal Design for Learning, citation_hint: CAST, product_implication: Every technique modulated for SELPA; no separate mode. }
+
+deep_tech:
+  agents:
+    - { name: Orchestrator, job: Priority arbitration, safety envelope, conflict resolution }
+    - { name: Assessor, job: Recursive diagnosis, BKT, ZPD, epistemic stance }
+    - { name: Tutor, job: Technique selection, productive failure, generative strategies }
+    - { name: Memory, job: Long-term graph, spaced retrieval, successive relearning }
+    - { name: Motivation, job: Expectancy-value-cost, belonging, identity }
+    - { name: Accessibility, job: UDL, load, accommodations, multimodal }
+    - { name: Project / Transfer, job: Far-transfer, real-world projects, adaptive expertise }
+  durable_model: Versioned multi-dimensional learner model — beliefs, skills, epistemic stance, motivation profile, accessibility needs, history — with provenance, uncertainty, rollback.
+  closed_loop: Sense (multimodal) → Diagnose → Decide technique → Act → Measure PSI/load/outcome → Update graph.
+  evaluation: DARE-Bench-style pedagogical suitability + TutorBench/PSI + stealth assessment.
+  not_vaporware:
+    - Frontier + cheap-tier model routing, cache, fallback, on-device split
+    - Local/open-weight option for privacy-sensitive tenants
+    - Evaluation loops published, not claimed
+    - HITL/HOTL escalation with immutable audit log
+
+features:
+  top20: []   # fill from 07_features run; do not invent here if the skill will generate
+  top50: []
+  technique_libraries:
+    - { name: Cognitive & memory, grounding: testing effect, dual coding, CLT, items: [] }
+    - { name: Behavioral & SRL, grounding: habit, implementation intentions, Zimmerman, items: [] }
+    - { name: Narrative & cinematic, grounding: story memory, emotional arc, items: [] }
+
+buyers: [parents, microschools, districts]
+users: [students, teachers]
+beachhead: High-intent parents of 9–12th graders considering a gap semester / AI-native alternative (SELPA + high-ability).
+gtm:
+  dual_customer: true
+  channels: [parent referral, teacher influence, microschool networks, portfolio sharing]
+  expansion: [siblings, teacher seats, microschools, districts, international]
+  pricing_hypothesis: Family premium for depth over shallow tutors; expansion seats cheaper.
+
+market:
+  type: resegmented
+  tam: Global K-12 + test-prep + alternative-school spend
+  sam: US 9–12 + gap-semester + IEP families + microschools
+  som: Beachhead parent pilots → 3 microschools → 1 district pilot
+  comps:
+    - { name: Khanmigo, what_they_are: chatbot tutor on Khan content, gap: no durable model, no SELPA-to-genius dual path }
+    - { name: Claude for Teachers / ChatGPT for Teachers, what_they_are: teacher productivity copilots, gap: no student-side learning OS }
+    - { name: DreamBox / Carnegie / Century, what_they_are: adaptive content sequencers, gap: content sequencing ≠ cognitive partnership }
+    - { name: Synthesis / Alpha School / TKS, what_they_are: neo-schools, gap: program, not a precision OS any family can run }
+  neo_alternatives:
+    - { name: Alpha School, unique: 2-hour academics + life skills, white_space: diagnosis depth + SELPA dignity }
+    - { name: TKS, unique: mindsets + entrepreneurship, white_space: prerequisite graph + accommodations }
+    - { name: Prenda, unique: guide-supported microschools, white_space: multi-agent technique engine }
+    - { name: Forge Prep, unique: real-world problem solving, white_space: durable learner model }
+    - { name: Kūlia Academy, unique: AI model building + public results, white_space: full-spectrum UDL }
+  acquirers: [Google, Microsoft, Pearson, PowerSchool, large district platforms]
+
+team:
+  founder_advantage: Student-built — lived empathy + technical depth + domain credibility.
+  current_strengths: [lived learner friction, multi-agent systems, learning-science grounding]
+  next_hires:
+    - { role: AI/ML research lead, impact: 10x outcomes via frontier reasoning + recursive optimization }
+    - { role: Learning scientist, impact: defensible efficacy }
+    - { role: Growth lead, impact: scale with efficiency }
+    - { role: Privacy & compliance lead, impact: FERPA/COPPA/GDPR, district adoption }
+
+risks:
+  - { name: Model cost, mitigation: routing + cache + local fallback, residual: med }
+  - { name: Regulatory / privacy, mitigation: privacy-by-design, tenant isolation, residual: med }
+  - { name: Adoption, mitigation: 8–12 min dignity onboarding, residual: med }
+  - { name: Competition, mitigation: durable model + technique-effectiveness moat, residual: med }
+  - { name: Content quality / hallucination, mitigation: source grounding + verification agents, residual: low }
+  - { name: Retention, mitigation: habit loops + identity + parent insight, residual: med }
+
+visual:
+  product_ui_name: Lumina / MindWave-style product chrome (LessonOrca student app)
+  palette: [navy, charcoal, muted-teal, cream, deep-indigo]
+  density: extreme
+  orientation: landscape
+  backgrounds: [pure-white, cream, deep-indigo]
+  must_look_like: real product chrome for UX; elite systems diagram for architecture; founder board for Blank/VC
+
+external_sources:
+  - { url: https://youtu.be/kzcI5F4tGiU, what_to_extract: Probe-Plan-Teach analogs }
+  - { url: https://youtu.be/Q6PTLG71NGc, what_to_extract: industrial education trap / moonshots }
+  - { url: https://youtu.be/PXgkm5UvAy8, what_to_extract: human-centered AI opportunity (Mo Gawdat) }
+
+output_dir: ./runs/lessonorca
+source_run: ""

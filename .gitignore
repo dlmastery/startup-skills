@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+params.yaml
+runs/
+*.pyc
+__pycache__/
+.idea/
+.vscode/
