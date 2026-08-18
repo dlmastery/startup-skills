@@ -1,6 +1,6 @@
 .DS_Store
 Thumbs.db
-params.yaml
+/params.yaml
 runs/
 *.pyc
 __pycache__/
