@@ -2,8 +2,8 @@
 name: startup-pack
 description: >
   Use when assembling the final founder pack after coverage audit PASS —
-  index, reading order, slide-order analog, and file manifest. Trigger on
-  /startup-pack, "assemble the pack", "give this to a coding agent."
+  index, reading order, and file manifest. Trigger on /startup-pack,
+  "assemble the pack", "give this to a coding agent."
 ---
 
 # startup-pack
@@ -28,7 +28,7 @@ reading order:
   7. market + S25
   8. features + techniques + X02/X03
   9. UX collages
-  10. external novel boards
+  10. external novel boards (if any)
 manifest: path · type · one-line purpose
 image count: N
 ```

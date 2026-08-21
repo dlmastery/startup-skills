@@ -9,13 +9,11 @@ description: >
 
 # startup-ux
 
-Replay source EX98–EX106.
-
 ## Contract
 
 Each image is a **collage of four actual product screens**, same design language as S01.
 
-- Nice fonts, colors, typography (user repeated this)
+- Nice fonts, colors, typography
 - Four use cases, labeled
 - Advanced tools / techniques in action
 - Micro-interactions highlighted on later frames
@@ -23,12 +21,12 @@ Each image is a **collage of four actual product screens**, same design language
 
 ## Images
 
-S12: 8 collages. Suggested beats (domain-swap):
+S12: 8 collages. Suggested beats (fill from `{core_loop}` and `{personas}`):
 
 1. Onboarding + first diagnosis
 2. Planning / graph
 3. Live delivery + load gauge
-4. Retrieval / quiz / generation-before-reveal
+4. Retrieval / generation-before-reveal
 5. Buyer dashboard
 6. Operator copilot
 7. High-end studio / raised demand

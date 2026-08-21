@@ -1,10 +1,10 @@
 ---
 name: startup-setup
 description: >
-  Use when starting a new generic startup artifact run, when params.yaml is
-  missing or still contains leftover LessonOrca/edtech nouns, or when the user
-  pastes a startup description / PDF / transcript and wants the factory.
-  Also trigger on /startup-setup and the first step of /startup-skills.
+  Use when starting a new startup artifact run, when params.yaml is missing
+  or empty, or when the user pastes a startup description / PDF / transcript
+  and wants the factory. Also trigger on /startup-setup and the first step
+  of /startup-skills.
 ---
 
 # startup-setup
@@ -13,14 +13,15 @@ Write `params.yaml` from the user's description. Do not start research or images
 
 ## Steps
 
-1. Read `params.schema.yaml` and `examples/lessonorca.params.yaml` (shape only).
-2. Read the user's description, PDF, or transcript in full. If they point at a source run, note `source_run`.
-3. Fill every schema field. Invent nothing that the user already stated. For gaps, write an explicit `TODO` string — do not silently copy LessonOrca values.
-4. Domain-swap checks (fail setup if any still say the source domain and this run is not edtech):
-   - `core_loop` is not forced to Probe-Plan-Teach
-   - `spectrum.low_end` is this domain's underserved edge
+1. Read `params.schema.yaml`. For field *shape* only, you may glance at `examples/kiln.params.yaml`. Do not copy its nouns.
+2. Read the user's description, PDF, or transcript in full. If they point at a prior transcript, note `source_run`.
+3. Fill every schema field. Invent nothing that the user already stated. For gaps, write an explicit `TODO` string.
+4. Integrity checks (fail setup until fixed):
+   - `core_loop` is named for **this** domain's recurring work cycle
+   - `spectrum.low_end` is this domain's underserved edge; `high_end` is the elite edge
    - `domain_science` is this domain's evidence base
    - `market.comps` are this category's named incumbents
+   - no leftover nouns from `examples/kiln.params.yaml` unless this idea *is* that example
 5. Create `{output_dir}/` and write `{output_dir}/params.yaml` plus a copy at repo-root `params.yaml`.
 6. Show the user a 15-line params summary. If they object, edit. Then hand off to phase 1.
 

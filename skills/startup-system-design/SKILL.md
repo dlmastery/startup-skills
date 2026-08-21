@@ -9,11 +9,9 @@ description: >
 
 # startup-system-design
 
-Replay source EX87–EX97.
-
 ## Writes
 
-`11_system_design/README.md` + one page per diagram.
+`11_system_design/README.md` + one page per diagram (`A01.md`–`A10.md`).
 
 ## Images (A01–A10) — indigo/teal architecture family
 
@@ -30,6 +28,6 @@ Replay source EX87–EX97.
 | A09 | Model serving & routing (frontier / cache / fallback / on-device / cost) |
 | A10 | Security, privacy, compliance (domain regs from `risks`) |
 
-Also draw X01 (full architecture with safety envelope) if not already produced in the coverage redo.
+Also draw X01 (full architecture with safety envelope) if not already produced.
 
 These are technical illustrations, not hexagon slides. Every box is a named component that appears in `params.deep_tech`.

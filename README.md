@@ -1,18 +1,16 @@
 # startup-skills
 
-Parameterized Grok skill pack that replays a founder-grade startup artifact factory for **any** startup description.
+A self-contained Grok skill pack. Give it any startup idea. It produces a complete founder artifact pack for that idea: research, PRD, white paper, technical VC memo, journeys, features, techniques, market, Steve Blank boards, system diagrams, UX collages, and dense infographics — then a coverage audit that fills gaps.
 
-Extracted from a 203-exchange / 295-infographic build of LessonOrca (AI Probe–Plan–Teach tutor). The source content is edtech. The skills are not.
+No other repository is required. Every noun comes from a `params.yaml` you (or the agent) write for *this* idea.
 
-## What you get
+## What a complete run contains
 
-A rerunnable pipeline that, given a startup description, writes the same *shape* of pack:
-
-- landscape survey + latest-capability table + survey paper
+- landscape survey + latest-capability table + dated survey paper
 - superset PRD grounded in domain science
 - mechanistic 10x white paper (full-spectrum users, every modality)
-- legendary-founder framing + technical VC writeup (scenarios, not vaporware)
-- e2e journeys for the underserved edge, the middle, and the elite edge
+- founder framing + technical VC writeup (scenarios, not vaporware)
+- e2e journeys for the underserved edge, the beachhead, and the elite edge
 - deep-tech use cases as real product screens
 - 20-feature then 50-priority feature lists, illustrated
 - three waves of 50 domain techniques + decision tree + technique↔feature matrix
@@ -21,15 +19,14 @@ A rerunnable pipeline that, given a startup description, writes the same *shape*
 - 10 system-design diagrams
 - 4-up UX collages in product chrome
 - VC decision boards, buyer boards, spectrum boards, future-press
-- external-source ingest that keeps only **novel** angles
+- optional external-source ingest that keeps only **novel** angles
 - a coverage audit that lists missing artifacts and then generates them
 
-## How to rerun
+## How to run
 
-1. Clone this repo (or add it as `.grok/skills` / a Grok project skill root).
-2. Point Grok at `GROK.md`.
-3. Say: `Run /startup-skills for this startup:` and paste a description (or a PDF / transcript).
-4. The agent writes `params.yaml` from your description, then walks the 16 phases.
+1. Point Grok at this directory (clone, or add as a Grok skill root).
+2. Say: `Run /startup-skills for this startup:` and paste a description (or a PDF / transcript).
+3. The agent writes `params.yaml` from your description, then walks the 16 phases in `GROK.md`.
 
 To resume: `continue` / `next image` / `keep going`. It picks up at the first unfinished catalog type.
 
@@ -37,12 +34,14 @@ To resume: `continue` / `next image` / `keep going`. It picks up at the first un
 
 ```
 GROK.md                         # spine — read first
+SKILL.md                        # pack trigger
 params.schema.yaml              # every substitutable field
-examples/lessonorca.params.yaml # the source instantiation
+templates/params.yaml           # empty form
+examples/kiln.params.yaml       # fictional filled example (shape only)
 skills/                         # one skill per phase
-references/                     # catalogs, visual spec, image map
+references/                     # catalogs, visual spec, pipeline
 ```
 
 ## Fidelity rule
 
-Do not thin the pipeline. The source run's failure mode was missing images and missing Blank/system/VC boards. The skills exist to make that failure expensive.
+Do not thin the pipeline. The failure mode this pack exists to prevent is missing images and missing Blank / system / VC boards.

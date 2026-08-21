@@ -1,11 +1,11 @@
 # Prompt templates
 
-Fill from `params.yaml`. Do not leave source-domain nouns in a new run.
+Fill from `params.yaml`. Do not leave example-file nouns in a new run.
 
 ## Product chrome
 
 ```
-High-fidelity landscape product UI of {visual.product_ui_name}. Real {domain} work on screen, not lorem. Live widgets: {core_loop} state gauge, preference chips, state/knowledge graph (mastered / in progress / frontier), copilot strip. Dark academic SaaS. Title bar shows {product_name}. The screen demonstrates: {MECHANISM}. Readable type, shipped-app chrome, no marketing laptop frame.
+High-fidelity landscape product UI of {visual.product_ui_name}. Real {domain} work on screen, not lorem. Live widgets: {core_loop} state gauge, preference chips, state graph (mastered / in progress / frontier), copilot strip. Professional SaaS. Title bar shows {product_name}. The screen demonstrates: {MECHANISM}. Readable type, shipped-app chrome, no marketing laptop frame.
 ```
 
 ## 4-up UX

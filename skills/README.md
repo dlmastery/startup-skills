@@ -4,7 +4,7 @@ One skill per pipeline phase. The spine is `../GROK.md`. Do not run a later skil
 
 | skill | phase | when |
 |---|---|---|
-| [startup-setup](startup-setup/SKILL.md) | 0 | New run; missing or contaminated params |
+| [startup-setup](startup-setup/SKILL.md) | 0 | New run; missing params |
 | [startup-research](startup-research/SKILL.md) | 1 | Landscape, capability table, survey |
 | [startup-prd](startup-prd/SKILL.md) | 2 | Superset PRD |
 | [startup-whitepaper](startup-whitepaper/SKILL.md) | 3 | 10x paper + industrial-trap paper |

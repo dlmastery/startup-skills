@@ -1,18 +1,18 @@
-# Visual spec — locked from the 295 source images
+# Visual spec
 
-Inspected directly (not guessed): `img_001` product chrome, `img_011` live-session tutor UI, `img_050` knowledge-graph parent board, `img_140` founder-market-fit cream board, `img_225` indigo multi-agent architecture, `img_270` white competitive-advantage pyramid, `img_295` competitor-structural-gap board.
+Lock this language in phase 6 (`startup-deeptech`) and reuse it for the rest of the run.
 
 ## Two families
 
 ### A. Product chrome (UX, techniques-in-action, day-in-life)
 
 - Looks like a shipped app. Named `{visual.product_ui_name}`.
-- Dark or light academic UI. Real content in the subject domain (equations, diagrams, live annotation), not lorem.
+- Dark or light professional UI. Real content in the subject domain, not lorem.
 - Recurring widgets that prove the core loop is real:
-  - live state gauge (cognitive load / risk / confidence — domain-swap)
-  - preferred-modality / preference chips
-  - knowledge-boundary / state graph (mastered / in-progress / frontier)
-  - live voice or copilot strip
+  - live state gauge (load / risk / confidence — domain-swap)
+  - preference chips
+  - state / knowledge graph (mastered / in-progress / frontier)
+  - live copilot strip
 - 4-up collages: four distinct use cases, same type language, readable at slide size.
 - 5-up technique collages: five labeled techniques, each a real screen, not an icon.
 
@@ -20,9 +20,9 @@ Inspected directly (not guessed): `img_001` product chrome, `img_011` live-sessi
 
 - Landscape. Extreme density. Every panel has a noun, a number or mechanism, and a consequence.
 - Backgrounds:
-  - **Cream / off-white** for Blank, founder-market-fit, personas, funnels (`img_140` family).
-  - **Pure white** for competitive pyramids, structural-gap vs incumbents, trust (`img_270`, `img_295` family). Late source run (EX157+) demanded white background, professional consumption.
-  - **Deep indigo + teal glass** for multi-agent / closed-loop / knowledge-graph architecture (`img_225`, `img_050` family).
+  - **Cream / off-white** for Blank, founder-market-fit, personas, funnels.
+  - **Pure white** for competitive pyramids, structural-gap vs incumbents, trust. Prefer white for any board meant for investors or buyers.
+  - **Deep indigo + teal glass** for multi-agent / closed-loop / graph architecture.
 - Palette: navy, charcoal, muted teal, gold/amber accents. No pastel SaaS, no 3D cartoon people as the hero.
 - Title (8–12 words) + subtitle that names the product and the claim.
 - Footer strip: 3–6 proof chips + one sentence thesis.
@@ -42,16 +42,16 @@ No decorative people. No watermark. No prompt-card. The image IS the board.
 For product chrome, replace the first line with:
 
 ```
-High-fidelity product UI screenshot of {visual.product_ui_name}, dark academic SaaS, real {domain} content on screen, live widgets for {core_loop} state.
+High-fidelity product UI screenshot of {visual.product_ui_name}, professional SaaS, real {domain} content on screen, live widgets for {core_loop} state.
 ```
 
 ## Generation rules
 
 1. Call the image tool in the same turn as the prompt. Batch 1–4.
 2. Inspect the result. Fail if: prompt text is visible, layout is a single icon, words are soup, promised panels are missing.
-3. One regenerate. If still wrong, rebuild as HTML/CSS (imagine skill: exact text/structure → code, not the image model) and capture.
+3. One regenerate. If still wrong, rebuild as HTML/CSS (exact text/structure → code) and capture.
 4. Stable filename: `images/{type_id}.png`.
-5. After EX157-style user pressure, prefer **pure white** for any board meant for investors or parents.
+5. Prefer **pure white** for any board meant for investors or buyers.
 
 ## Density test
 

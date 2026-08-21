@@ -9,11 +9,11 @@ description: >
 
 # startup-blank
 
-Replay source EX63–EX81. This is **not** "just a lean canvas."
+This is **not** "just a lean canvas."
 
 ## Writes
 
-`10_blank/README.md` plus one markdown page per board (B01–B16) with the facts that will be drawn.
+`10_blank/README.md` plus one markdown page per board (`B01.md`–`B16.md`) with the facts that will be drawn.
 
 ## Images — all 16, one per turn or two per turn, never zero
 

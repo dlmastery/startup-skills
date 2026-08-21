@@ -8,9 +8,9 @@ description: >
 
 # startup-prd
 
-Replay source EX4. The PRD is a **superset** — not an MVP spec.
+The PRD is a **superset** — not an MVP spec.
 
-## Required sections (same spine, domain-swapped nouns)
+## Required sections
 
 1. Executive summary and vision
 2. Goals and non-goals
@@ -27,5 +27,5 @@ Replay source EX4. The PRD is a **superset** — not an MVP spec.
 ## Rules
 
 - One product, one engine. No segregated "lite" mode that reduces capability for the underserved edge (`spectrum.low_end.dignity_rule`).
-- Pedagogical/clinical/domain **suitability** is first-class, not "the model answered."
+- Domain **suitability** is first-class, not "the model answered."
 - Write `02_prd/PRD.md`. No images.

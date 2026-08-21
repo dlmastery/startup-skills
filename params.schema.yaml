@@ -1,14 +1,14 @@
 # params.schema.yaml — single source of truth for parameterization.
-# Every skill reads params.yaml (this schema). Never hard-code LessonOrca / edtech.
-# Instantiate by copying examples/lessonorca.params.yaml and rewriting every field.
+# Every skill reads params.yaml (this schema). Never hard-code a prior run's nouns.
+# Instantiate by copying templates/params.yaml (empty) or examples/kiln.params.yaml (shape only).
 
 company_name: string          # legal / brand name
 product_name: string          # shipped product name (may equal company_name)
-codename: string              # internal system name if different (e.g. Aether)
+codename: string              # internal system name if different
 tagline: string
 one_liner: string             # one sentence, no jargon stacking
-domain: string                # education | health | fintech | climate | ...
-category: string              # more specific (AI tutor, precision diagnostics, ...)
+domain: string                # health | fintech | climate | industrial | education | ...
+category: string              # more specific (precision diagnostics, grid dispatch, ...)
 year: integer                 # "as of" year for surveys and market comps
 
 problem:
@@ -22,7 +22,7 @@ spectrum:                     # underserved → elite. Never ship a single happy
   low_end: { name: string, description: string, dignity_rule: string }
   mid_segments: [{ name: string, description: string }]
   high_end: { name: string, description: string }
-  modality_axes: [string]     # how minds/users differ (visual, analogical, left/right, ...)
+  modality_axes: [string]     # how users differ (visual, analogical, verbal, hands-on, ...)
 
 personas:                     # dual-sided if buyers ≠ users
   - id: string
@@ -34,8 +34,8 @@ personas:                     # dual-sided if buyers ≠ users
     must_have_language: string
     day_in_life_beats: [string]
 
-core_loop:                    # Probe → Plan → Act → Reflect → Remember, domain-swapped
-  name: string                # e.g. Probe-Plan-Teach
+core_loop:                    # Sense → Diagnose → Decide → Act → Learn, named for this domain
+  name: string
   phases:
     - id: string
       name: string
@@ -43,7 +43,7 @@ core_loop:                    # Probe → Plan → Act → Reflect → Remember,
       signals: [string]
       artifacts: [string]
 
-domain_science:               # non-negotiable principles (learning science, clinical evidence, ...)
+domain_science:               # non-negotiable principles (clinical evidence, control theory, ...)
   - name: string
     citation_hint: string
     product_implication: string
@@ -52,13 +52,13 @@ deep_tech:
   agents: [{ name: string, job: string }]
   durable_model: string       # what is versioned over months/years
   closed_loop: string         # sense → diagnose → decide → act → measure → update
-  evaluation: string          # named bench / loop (DARE-Bench style)
+  evaluation: string          # named bench / loop
   not_vaporware: [string]     # concrete stack, local-model options, production patterns
 
 features:
   top20: [{ name: string, why: string, priority: 1-20 }]
   top50: [{ name: string, why: string, priority: 1-50 }]
-  technique_libraries:        # 50+50+50 style waves
+  technique_libraries:
     - name: string
       grounding: string
       items: [string]
@@ -69,7 +69,7 @@ beachhead: string
 gtm:
   dual_customer: boolean
   channels: [string]
-  expansion: [string]         # families → microschools → districts generalized
+  expansion: [string]
   pricing_hypothesis: string
 
 market:
@@ -90,13 +90,13 @@ risks: [{ name: string, mitigation: string, residual: low | med | high }]
 
 visual:
   product_ui_name: string
-  palette: [string]           # navy / charcoal / muted teal / cream
+  palette: [string]
   density: extreme
   orientation: landscape
   backgrounds: [pure-white, cream, deep-indigo]
-  must_look_like: string      # "real product chrome" | "elite systems diagram" | ...
+  must_look_like: string
 
-external_sources:             # videos/papers/talks to ingest as novel-only prompts
+external_sources:
   - url: string
     what_to_extract: string
 

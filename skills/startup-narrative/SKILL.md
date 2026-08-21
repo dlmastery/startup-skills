@@ -8,11 +8,9 @@ description: >
 
 # startup-narrative
 
-Replay source EX6–7 and EX85–86.
-
 ## FOUNDER_FRAMING.md
 
-Legendary-founder voice. 12–14 *beats* (not slides — the source user rejected the slideshow). Hunger of the buyer. What the tech actually does. Why now.
+Legendary-founder voice. 12–14 *beats* (not slides). Hunger of the buyer. What the tech actually does. Why now.
 
 ## VC_WRITEUP.md
 
@@ -30,6 +28,6 @@ No vaporware: every capability points at `{deep_tech.not_vaporware}` or a scenar
 
 ## FUTURE_PRESS.md
 
-Newspaper-article form (not a celebration photo). Category-defining outcome, labeled speculative. Source EX86 forced the newspaper layout after a generic hero image.
+Newspaper-article form (not a celebration photo). Category-defining outcome, labeled speculative.
 
 Write under `04_narrative/`. The matching image is `X13` via `startup-infographics`.

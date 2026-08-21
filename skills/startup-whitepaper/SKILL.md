@@ -7,8 +7,6 @@ description: >
 
 # startup-whitepaper
 
-Replay source EX5 and EX28.
-
 ## WHITEPAPER.md
 
 How this makes the core job `{problem.10x_claim}` — mechanistically.
@@ -27,6 +25,6 @@ A 10x claim without a mechanism is marketing. Each 10x factor names a loop, a mo
 
 ## INDUSTRIAL_TRAP.md
 
-The legacy system is stuck in an industrial loop. Architecture of the path forward. Role of platforms. Opportunity for buyers. "Humanity moves up one level" analog — what becomes scarce when the old scarce thing is abundant.
+The legacy system is stuck in an industrial loop. Architecture of the path forward. Role of platforms. Opportunity for buyers. What becomes scarce when the old scarce thing is abundant.
 
 Write both under `03_whitepaper/`.

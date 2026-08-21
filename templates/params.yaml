@@ -1,6 +1,6 @@
 # Copy to repo root or {output_dir}/params.yaml and fill.
 # Schema: ../params.schema.yaml
-# Worked example: ../examples/lessonorca.params.yaml
+# Shape reference (fictional): ../examples/kiln.params.yaml
 
 company_name: ""
 product_name: ""
