@@ -34,7 +34,7 @@ The settled toolkit of rigorous empirical ML and quantitative research. Per tech
 22. **W1.22 Baselines-first protocol** — establish the strong simple baseline (logistic regression, GBM, buy-and-hold) before anything exotic. [D5] civil-war case study (ML failed to beat logistic regression after leakage fix)
 23. **W1.23 Ablation studies** — remove one component at a time to attribute gains; the difference between a system claim and a story. Paper C.2; standard practice per [D24] methodology
 24. **W1.24 Negative controls** — run with shuffled labels / permuted features; any "signal" found is the leakage detector firing. Kapoor–Narayanan remedy family [D5]
-25. **W1.25 Early stopping with patience** — stop training on validation plateau; prevents test-set peeking disguised as tuning. Prechelt, "Early Stopping — But When?" 1998 (classical); repo runner config
+25. **W1.25 Early stopping with patience** — halt training when the validation metric stops improving; prevents training overfit. Note honestly: it *is* adaptive reuse of the validation set, which is one reason the composite's `min(val, test)` form penalizes val/test divergence. Prechelt, "Early Stopping — But When?" 1998 (classical); repo runner config
 26. **W1.26 Regression testing of the harness** — the evaluation harness is immutable and tested; experiments change the model, never the judge. [A1] (immutable harness); constitution §12
 
 ## Cluster D — Statistical rigor of results (8)

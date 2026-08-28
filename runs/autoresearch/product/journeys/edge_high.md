@@ -1,5 +1,7 @@
 # Journey — Edge-high: Elena runs parallel campaigns
 
+**Calendar anchor: this journey is set in year 2, post block-D — it runs on Later-tier features (Team #43–47, family thresholds #45) plus the shipped Next tier; nothing here is claimed for launch.**
+
 **Persona:** Elena R., head of research at a systematic fund, ~40 researchers (strategy/personas.md card 4). Payer = her; users = her pods. Her stated buy: *"I'm buying the audit trail and the campaign memory, not the hill-climbing — my people can climb hills."* This journey stretches the power user: the system must be genuinely harder to outgrow than her internal platform, and honest about what it can't do yet (A9/A10). Entry is bottom-up — one pod adopted Ascent months ago (the Cursor path [C17]); Elena is now evaluating Team.
 
 Format: *component → action → durable record.*
@@ -30,4 +32,4 @@ Format: *component → action → durable record.*
 
 ## Recommended next
 
-Build the org-ledger family-level trial accounting (beat 7) as the first Team-tier differentiator — it is the direct organizational scale-up of the acceptance-gate spine (features #1→#3→#19), reuses the same ledger machinery, and is the one capability Elena's internal platform provably lacks. Gate any Enterprise motion on the vendor-DD prerequisites (personas card 5): entity, security docs, escrow — no exceptions, no cold sales.
+Build the org-ledger family-level trial accounting (beat 7; now a tracked feature — features_prioritized **#45, Later tier**) as the first Team-tier differentiator — it is the direct organizational scale-up of the honesty chain (#1+#2 → #7 → #25 → #45), reuses the same ledger machinery, and is the one capability Elena's internal platform provably lacks. Gate any Enterprise motion on the vendor-DD prerequisites (personas card 5): entity, security docs, escrow — no exceptions, no cold sales.

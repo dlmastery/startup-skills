@@ -6,7 +6,7 @@ Every title is the takeaway. Every number traces to research/ or carries an assu
 
 ## Slide 1 — 94,800 people starred a research loop nobody maintains
 
-- Karpathy's autoresearch (Mar 2026): agents grinding one metric overnight — 8k stars in 48 hours, 94.8k stars / 13.4k forks in six months [A1][A3]
+- Karpathy's autoresearch (released Mar 7, 2026): agents grinding one metric overnight — 8k stars in 48 hours, 94.8k stars / 13.4k forks in six months [A1][A3]
 - No active maintainer since March 26, 2026; ~185 issues and PRs piling up unanswered [C35]
 - The community's own curated fork list: 14 of 16 notable forks are hardware ports or translations; **zero add rigor** [A2]
 - Massive proven demand. Abandoned supply. An empirically unfilled gap.
@@ -154,16 +154,17 @@ visual: V-domain-grid
 - Built the entire PoC through pure natural-language steering — zero hand-written Python — across six disparate domains, on a consumer Intel laptop, through BSODs, thanks to aggressive checkpointing (A5)
 - The steering_log.md is itself the demo: proof that a technical lead can run a research factory by steering alone
 - The asymmetric insight: execution stopped being the bottleneck; discipline did — and the constitution is discipline, made enforceable
-- Already holds the first cross-domain ledger — the moat's month zero (A11); hiring plan: first 2–3 engineers post-raise
+- Already holds the first cross-domain ledger — the moat's month zero (A11); hiring plan per use_of_funds: founding engineer at month 6 (after the trust gate, not before), devrel/community engineer at month 12, optional third hire only if Team usage revenue is live
 
 visual: V-deck-team
 
 ---
 
-## Slide 15 — The raise buys the trust test, the corpus instrumentation, and the window
+## Slide 15 — $1.2M pre-seed buys 24 months of milestone-gated de-risking
 
-- (assumption: pre-seed/seed sizing from financials once written — see financials/use_of_funds.md; not invented here)
-- Funds three things, in order: the 15-practitioner trust test and DSR/CPCV computation (the decision gate for everything downstream); day-1 corpus instrumentation (log every discard, seed violations, measure catch-rates — the moat only exists if captured); community maintenance + BYOK Pro launch on pre-order evidence
+- **$1.2M pre-seed, 24 months of runway** ($1.04M across four blocks + 15% buffer), spent in milestone-linked blocks [use_of_funds §1–2]:
+- **Block A, months 0–6, $95k** — ascent v0 + the 15-practitioner trust test (ends when E1 passes all three legs). **Block B, months 4–12, $260k** — pre-order gate, BYOK Pro GA, 150 paying ≈ $225k run-rate. **Block C, months 10–18, $330k** — Team tier + the instrumented corpus (E8 measures the moat). **Block D, months 15–24, $355k** — the enterprise-DD package and first 3 audit-led deals.
+- Stage-gate discipline: **block B money is not spent if block A's milestone fails** — the wire is one check, the spending is milestone-sequenced [use_of_funds §2]
 - Pre-committed kill trigger: <0.5% paid conversion of measured active users, or active base stuck under ~3k at month 6 [market_sizing §6]
 - What you're buying: the only team in the empty quadrant, 12–24 months before anyone else notices it
 

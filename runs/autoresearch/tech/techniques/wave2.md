@@ -27,7 +27,7 @@ The layer above standard practice: sequential error control, Goodhart theory, ov
 
 16. **W2.16 CSCV / PBO estimation** — combinatorially symmetric CV to estimate the probability the selected winner is overfit. [D7]
 17. **W2.17 Effective number of trials** — cluster correlated configs to estimate true N for deflation; 265 tweaks of one architecture are not 265 independent bets. [D6] guidance; [D9]
-18. **W2.18 Minimum backtest length** — required sample length grows with trials; compute it before believing any champion. Bailey & López de Prado 2014 [D6 lineage]
+18. **W2.18 Minimum backtest length (MinBTL)** — required sample length grows with the number of trials; compute it before believing any champion. Bailey, Borwein, López de Prado & Zhu, "Pseudo-Mathematics and Financial Charlatanism," Notices of the AMS, 2014
 19. **W2.19 Haircut Sharpe ratios** — shrink reported performance as a function of search intensity. Harvey & Liu, "Backtesting," 2015 (classical)
 20. **W2.20 In-sample/out-of-sample decay curves** — plot IS vs OOS performance across the ledger; a negative slope is the [D7] signature of overfit search.
 21. **W2.21 Adaptive-data-analysis reuse bounds** — differential-privacy-based limits on how many adaptive queries a holdout supports before it's burned. Dwork et al., Science 2015 (classical theory)

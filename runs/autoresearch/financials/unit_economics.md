@@ -13,8 +13,9 @@ Per-tier P&L, CAC by channel, payback, LTV. Everything recomputable: change any 
 | Payment processing | ~3.90 | 2.9% + $0.30 (assumption: standard card rails) |
 | **Cash COGS** | **7.90–14.90** | sum |
 | **Cash gross margin** | **88–94%** — call it **~90%** | (125 − 14.9)/125 = 88.1%; (125 − 7.9)/125 = 93.7% |
-| Support, imputed founder-hours | ~5.00–10.00 | (assumption: at 150 users, ~5 hrs/wk of the gtm.md §4 community budget is support ≈ 21.5 hrs/mo; imputed $75/hr → $1,600/mo ÷ 150 ≈ $10.75, falling with self-serve docs) |
-| **Fully-loaded gross margin** | **≥85%** | (125 − 14.9 − 10.75)/125 = 79.5% at 150 users worst case → crosses 85% at ~300 users as support amortizes; ≥85% is the steady-state claim, 90% the cash claim |
+| Support, imputed founder-hours | ~3.80–7.60 | (assumption: at 150 users, ~5 hrs/wk of the gtm.md §4 community budget is support ≈ 21.5 hrs/mo; imputed at **$53/hr** — the one pack-wide rate, from use_of_funds founder comp $110k/yr ÷ 2,080 hr — → $1,140/mo ÷ 150 ≈ $7.60, halving as the base doubles) |
+| **Fully-loaded gross margin at 150 users (~mo 12–18)** | **82.0%** worst case | (125 − 14.90 − 7.60)/125 = 82.0%; best case (125 − 7.90 − 7.60)/125 = 87.6%. (Prior version printed 79.5% — an artifact of a $75/hr imputed rate; rate unified at $53/hr per use_of_funds comp) |
+| **Fully-loaded gross margin at ~300+ users** | **≥85%** | support amortizes to $3.80/user at 300 → (125 − 14.90 − 3.80)/125 = 85.0% worst case; ≥85% is the steady-state claim, ~90% the cash claim — quote whichever matches the question asked, never blend them |
 
 Contrast that must appear in every investor conversation: a **hosted** flat-rate Pro would carry $90–360/mo of token COGS per heavy user ($3–12/day × 30) against $125 revenue — negative margin on exactly the best users. BYOK is why this tier works at all (A12's whole rationale).
 
@@ -35,9 +36,9 @@ Blended Team GM at $9–12k ACV: base ~90% GM dominates unless a team runs >5 ho
 
 ## 3. CAC by channel (hypothesis + basis, per gtm.md §3)
 
-| Channel | Cash CAC | Founder-time CAC (imputed $75/hr) | Basis |
+| Channel | Cash CAC | Founder-time CAC (imputed $53/hr, the pack-wide rate) | Basis |
 |---|---|---|---|
-| OSS-organic (issue answers, maintained fork) | ~$0 | ~$180–360/convert early: 15–20 hrs/wk × 8 wks ≈ 140 hrs against first 30–50 converts | gtm.md ch. 1; falls toward ~$0 as content compounds |
+| OSS-organic (issue answers, maintained fork) | ~$0 | ~$150–250/convert early: 15–20 hrs/wk × 8 wks ≈ 140 hrs × $53 ≈ $7,400 against first 30–50 converts | gtm.md ch. 1; falls toward ~$0 as content compounds |
 | Bundle/content loop | ~$0 cash | $50–200/signup-equivalent | gtm.md ch. 2 (assumption: devtool content CAC with existing audience); permanent assets, reproductions compound |
 | Pre-order/design-partner cohort | <$300 blended | included above | gtm.md ch. 3 (assumption: ≤2 months Pro revenue, self-serve devtool norm) |
 | Team pull-through | ~$0 (product-led) | sales-assist hours only | gate-line conversion [C31][C18] |
@@ -67,6 +68,6 @@ Payback under 3 months at every churn point because CAC is organic-dominated; th
 
 | Phase | Pro GM | Blended contribution after CAC amortization |
 |---|---|---|
-| 150 users (mo 18) | ~80–85% fully-loaded (support-heavy) | positive from month 3 of each cohort |
+| 150 users (~mo 20, revenue_build §4) | 82.0% fully-loaded (support-heavy) | positive from month 3 of each cohort |
 | ~500 users (stage 2) | ~88–90% | support amortized, copilot cost falling with curve |
 | Stage 3+ | 90%+ | usage revenue dilutes % margin, grows $ margin — report both, never just the percentage |

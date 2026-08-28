@@ -10,13 +10,13 @@ The unit of value is **one audited, kept improvement to the user's metric** (BRI
 2. **The compute-adjacent piece is metered** (hosted/managed runs on Team+, usage-billed — the Devin ACU precedent [C21], the only working pricing model for autonomous-agent compute where a "$20 budget" team gets invoiced $400 when the agent actually works). Metering lands only where marginal cost is real (our GPUs, our tokens), never on the rigor layer.
 3. **Seats scale the collaboration layer** (Team/Enterprise) — the historically proven open-core gate line: collaboration, hosting, compliance [C31][C18].
 
-Why BYOK is the architecture and not a discount gimmick (A12): tokens are user-side **by construction**, so Pro carries ~zero token COGS (see `unit_economics.md`), the user keeps model choice (A9, platform-risk hedge), and the user's own bill is small and legible — a 24/7 steering loop on mid-tier models costs **$3–12/day** (Haiku 4.5 / Gemini 3.7 Flash tier, computed in capability_table §3 [B18][B20][B22]). That is the persona-2 ("Marcus", personas.md) own-wallet math: $3–12/day of tokens + $125/mo for the layer that makes the output trustworthy, vs ~$600/day of his own loaded time [C25].
+Why BYOK is the architecture and not a discount gimmick (A12): tokens are user-side **by construction**, so Pro carries ~zero token COGS (see `unit_economics.md`), the user keeps model choice (A9, platform-risk hedge), and the user's own bill is small and legible — a 24/7 steering loop on mid-tier models costs **$3–12/day** (Haiku 4.5 / Gemini 3.7 Flash tier, computed in capability_table §3 [B18][B20][B22]). That is the persona-2 ("Marcus", personas.md) own-wallet math: $3–12/day of tokens + $125/mo for the layer that makes the output trustworthy, vs a conservative **$1,100/day** for Marcus's own time (pack-wide day-rate corridor: $279k avg comp [C25] ÷ 250 working days ≈ $1,116/day raw; ×1.25–1.5 loading → $1,400–1,700/day loaded; all conservative arithmetic uses $1,100).
 
 ## 2. Anchor analysis: the budget line this replaces
 
 | Anchor | Number | Read for Ascent |
 |---|---|---|
-| ML engineer iteration time | $279k avg total comp; $350–550k/yr loaded senior [C25] → ~$600–1,500/working day | Pro at $125/mo = **<0.1% of one engineer's loaded cost**; recovering 2 engineer-hours/mo pays for it |
+| ML engineer iteration time | $279k avg total comp [C25] ÷ 250 working days ≈ $1,116/day raw; ×1.25–1.5 loading → **$1,400–1,700/day loaded**; conservative arithmetic uses **$1,100/day** (pack-wide corridor) | Pro at $125/mo ≈ **one-tenth of one loaded working day per month**; recovering a single engineer-hour/mo more than pays for it |
 | AI power-individual tier | Claude Max $100/$200; ChatGPT Pro $100/$200 [C23] | The $100–200/mo price point is already normalized for the exact beachhead persona |
 | Quant information edge | Bloomberg $31,980/yr/seat [C24]; alt-datasets $100–250k/yr each [C37][C38] | The vertical ceiling: audit-grade research automation at $5–20k/yr/seat is cheap against existing edge spend |
 | Enterprise AutoML displacement | DataRobot $150k–500k+/yr [C19][A27]; H2O $250–550k/yr [C20] | The Enterprise tier's price corridor already exists as a budget line |
@@ -49,7 +49,7 @@ Enterprise prerequisites are costed before the tier opens (gtm.md §3 row 5, mar
 ## 5. Willingness-to-pay logic per persona
 
 1. **Persona 1 (domain scientist, edge-low):** WTP ~$0–50/mo — served by Free; conversion target is *reproductions and citations*, not revenue. Deliberately unmonetized (quality-bar full-spectrum rule: same system, no lite fork).
-2. **Personas 2–3 (solo quant / applied-ML engineer, beachhead):** WTP $100–200/mo demonstrated by the tier they already buy [C23] and by Cursor's ramp [C17]; the substitution math ($125/mo vs $600+/day of own time [C25]) gives ~10x headroom above the price.
+2. **Personas 2–3 (solo quant / applied-ML engineer, beachhead):** WTP $100–200/mo demonstrated by the tier they already buy [C23] and by Cursor's ramp [C17]; the substitution math ($125/mo vs the conservative $1,100/day own-time rate, D-RATE corridor [C25]) gives order-of-magnitude headroom above the price.
 3. **Persona 4 (research lead):** WTP $6–12k/yr base + usage — one team convert ≈ 4–8 Pro seats (gtm.md §3); anchored under W&B team spend for a tool that *designs* experiments rather than logging them.
 4. **Persona 5 (fund/enterprise compliance):** WTP $100k–500k/yr — the DataRobot budget line [C19], with the quant ceiling at Bloomberg-seat territory [C24] if the audit story lands. Outcome-elastic: "no budget limit if it makes money and is uncorrelated" [C38].
 
@@ -63,4 +63,4 @@ Per A11, the moat is not the open constitution file; it is three accumulating as
 
 ## 7. Decision
 
-Commit: Free OSS core / **Pro $125/mo BYOK** (launch price; $99 pre-order honored for life per gtm.md) / **Team $750/mo base + usage-billed hosted runs + seats** / **Enterprise $100k+ year-2+**. First repricing review after the E8 corpus-effect measurement (A11 test) — raise Pro only with measured steering-efficiency evidence in hand.
+Commit: Free OSS core / **Pro $125/mo BYOK** / **Team $750/mo base + usage-billed hosted runs + seats** / **Enterprise $100k+ year-2+**. **Pre-order definition (binding):** the $99 pre-order is a **lifetime price lock at $99/mo** — not a deposit, not a one-time fee. The ≤30 pre-order users and 5 design partners pay $99/mo for as long as they stay subscribed; revenue_build bills that cohort at $99/mo forever. Cost of the lock: $26/mo × ≤35 users ≈ ≤$11k/yr foregone at full retention — cheap for the conversion evidence and the founding-cohort loyalty it buys. First repricing review after the E8 corpus-effect measurement (A11 test) — raise Pro only with measured steering-efficiency evidence in hand.

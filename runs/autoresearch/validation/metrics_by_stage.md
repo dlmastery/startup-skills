@@ -10,8 +10,8 @@ North-star **pair** carried through every stage (lean_canvas Key metrics, unchan
 
 **Track (5):**
 1. Trust-test counts: reproductions /15, private-data runs /15, deploy-evidence answers /15 (E1 — the stage's decisive numbers).
-2. Measured active users: cloned + ran a campaign ≤90 days (the kill-trigger denominator, market_sizing §6) — instrumented from v0 day 1.
-3. The three loop numbers: bundles published/mo × reproductions/bundle × reproduction→signup rate (gtm §2 — the growth model, no substitutes).
+2. Corrected active users: registry-measured actives (opt-in reproduction-registry ping at `ascent reproduce`) + GitHub clone stats, corrected by the frozen E3 methodology — registry ÷ 0.35 assumed opt-in, reported with the 20–50% band (assumption), bounded between raw registry count and unique 90-day cloners. This corrected estimate is the kill-trigger denominator (market_sizing §6, D-TELEMETRY); raw registry counts are never quoted without the band.
+3. The three loop numbers: bundles published/mo × reproductions/bundle × reproduction→signup rate (gtm §2 — the growth model, no substitutes; reproductions registry-measured, same correction band).
 4. Gate catch-rate on seeded violations + trial-ledger completeness (E6/E2 — the internal north-star twin; also the demo).
 5. Discovery-interview count with must-have-language confirmations vs. contradictions (discovery_guide §4).
 
@@ -24,11 +24,11 @@ North-star **pair** carried through every stage (lean_canvas Key metrics, unchan
 ## Stage 2 — Customer Validation (after the five exit criteria in stage_gate.md)
 
 **Track (5):**
-1. Paying individuals + conversion as % of measured active (floor 0.5%, plan ~1.6%, norm 1–5% [C32]).
+1. Paying individuals + conversion as % of corrected active (E3 denominator; floor 0.5%, plan ~1.6%, norm 1–5% [C32]).
 2. North-star pair: kept improvements/week × reproduction rate — now on *customer* campaigns, not founder runs.
 3. Activation rate: % of signups reaching first own-data gate-surviving campaign (the declared activation moment, get_keep_grow).
 4. Retention pair: campaigns/week per user + reproduction shares; week-4 retained % of activated.
-5. CAC by channel vs. the gtm §3 hypotheses (community ~$0, content $50–200/signup-equivalent) — measured, hypothesis-corrected.
+5. CAC by channel vs. the gtm §3 hypotheses — **with founder-hours priced in, not waved as free**: the "community ~$0" channel actually costs ~15 hrs/wk, which at the $53/hr imputed rate (use_of_funds comp) is ~$800/wk of real acquisition spend; content CAC likewise re-priced from the $50–200/signup-equivalent founder-time hypothesis into imputed dollars. Measured, hypothesis-corrected, and comparable across channels only in the imputed-dollar form.
 
 **Ignore:** stars (still); MRR growth % off a tiny base (report absolute payers); token volume processed (BYOK makes it the user's cost, not our traction, A12); logo count of design partners without usage; press mentions.
 
