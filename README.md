@@ -30,9 +30,15 @@ or run phases individually:
 /startup-audit                 # coverage check + INDEX.md
 ```
 
-## Install
+## Install (harness-agnostic)
 
-Install the repo as a Claude Code plugin (recommended — it ships a `.claude-plugin/plugin.json`), or copy/symlink the directories under `skills/` into `~/.claude/skills/` or `<project>/.claude/skills/`. The `references/` directory (quality bar, artifact manifest, grill question bank) must remain reachable alongside the skills — it is the shared contract they all cite; keep the repo intact rather than cherry-picking single skill folders.
+The skills use the standard `SKILL.md` format (agentskills.io spec) and are written to run under **any** coding agent:
+
+- **Claude Code** — install the repo as a plugin (it ships `.claude-plugin/plugin.json`), or copy/symlink `skills/*` into `~/.claude/skills/` or `<project>/.claude/skills/`.
+- **Codex / Copilot CLI / Gemini CLI** — copy/symlink `skills/*` into `~/.agents/skills/` (the cross-runtime skills directory they all recognize).
+- **Grok Build / Antigravity / anything else** — clone the repo and point the agent at it; `AGENTS.md` tells any agent how to drive the pipeline by reading the skill files directly, no skill loader required.
+
+Whatever the harness: keep the repo intact rather than cherry-picking single skill folders — `references/` (quality bar, artifact manifest, grill question bank) is the shared contract every skill cites.
 
 ## Output contract
 
