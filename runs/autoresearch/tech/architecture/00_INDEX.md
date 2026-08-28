@@ -12,7 +12,7 @@ Ten diagrams, each grounded in the real PoC repo (`generalized_ml_autoresearch/`
 | [D06](D06.md) | Security & privacy boundaries | Data never leaves the machine; only reasoning tokens cross today; BYO-endpoint roadmap | exists / planned split |
 | [D07](D07.md) | Integrations & ecosystem | Data sources, git, arXiv/S2/OpenAlex, notebooks, dashboards | exists / planned split |
 | [D08](D08.md) | Observability, evaluation & safety monitoring | Gate telemetry, seed variance, proxy-divergence watch, reproduction checks | planned (signals exist in logs) |
-| [D09](D09.md) | Team & multi-campaign scale-out | N campaigns, shared winner archives, one steering surface | planned |
+| [D09](D09.md) | Team & multi-campaign scale-out | N campaigns, shared winner archives, org ledger, one steering surface | planned |
 | [D10](D10.md) | Human-in-the-loop steering & escalation | Stall → self-reflect → literature pivot → human, as a logged protocol | partial |
 
 **Validation:** every Mermaid block below was syntax-checked (see `not_vaporware.md` for method).
