@@ -1,0 +1,19 @@
+# Ascent — one-pager
+
+**Ascent improves your metric around the clock — and shows you the evidence behind every kept result.**
+
+Ascent is the autonomous ML research operating system: point it at your dataset and your metric, and it runs literature-grounded, audit-gated experiments for days on a commodity laptop, keeping only strict improvements — monotonic in a tamper-evident composite metric — and handing you a fingerprinted, one-command-reproducible bundle for every kept champion.
+
+**Problem.** Rigorous ML experimentation is policed by nothing but human discipline, and discipline fails at published scale: data leakage has been documented in at least 294 papers across 17 fields [D5], and a practitioner hand-runs 1–3 experiments a day between harness-building and plumbing that eats 38–45% of their time [A39]. The automated alternatives fail the other way — the most famous AI-scientist system had 42% of its experiments fail on coding errors under independent evaluation [A16] — and the market has noticed: 46% of developers now distrust AI output accuracy, up from 31% a year earlier [C3].
+
+**Solution.** A binding, open-source constitution enforces a 7-step scientific method (Diagnose → Literature-ground → Hypothesize → Execute → Analyze → Document → Checkpoint) on every experiment; three programmatic pre-commit audit gates check data integrity, citation rigor, and reasoning completeness; purged/embargoed evaluation splits make temporal and overlap leakage structurally impossible; a SHA-256-fingerprinted composite metric makes keep-or-discard decisions tamper-evident. The user steers in natural language; the constitution supplies the judgment a tired human skips.
+
+**Why now.** Agent task horizons hit ~12 hours at 50% reliability by mid-2026, doubling every ~4 months [B2] — the multi-hour experiment loop did not exist as a dependable capability 18 months ago. Cost per unit of model capability falls ~40–50× per year, putting 24/7 steering at $3–60/day — under 10% of one ML engineer's loaded daily cost [B16][B18][B22]. And Karpathy's autoresearch proved the demand: 94,800 stars and 13,400 forks in six months for the minimal loop, now maintainerless — with 0 of its 16 notable forks adding any rigor [A1][A2][C35]. The gap Ascent fills is empirically unfilled.
+
+**Evidence.** A working PoC, built solo through pure natural-language steering, validated across six domains — including a 265-experiment EUR/USD campaign (champion test Sharpe +6.52, founder-reported and reproducible from the repo; a champion selected from 265+ trials is exactly what the deflated Sharpe ratio discounts, so the deflated number ships alongside the raw one before any critic computes it [A6-assumption][D6][D7]) and a fraud-detection benchmark where the PoC beat AutoGluon and H2O (founder-reported, reproducible) [BRIEF]. Every run leaves a full forensic log.
+
+**Market.** Job-filtered core TAM ≈ $2–2.5B/yr (metric-grinding individuals + quant funds + enterprise compliance) [market_sizing §1]; SAM ~$0.7B; 36-month SOM plan of $1.0M ARR built from a corrected funnel — active users, not stars — with year-1 beachhead at $225k run-rate [market_sizing §3–5]. Priced into the normalized $100–200/mo individual AI-tool spend line [C23]; Pro is BYOK, so token costs are the user's by construction [A12-assumption].
+
+**Team edge.** The founder ran the research factory for months before naming the company: zero hand-written Python across six domains, a steering log that is itself the demo, and the first cross-domain ledger of what worked, what got discarded, and why — the corpus a fork cannot backfill [A11-assumption].
+
+**The ask.** Pre-seed to fund the 15-practitioner trust test, day-1 corpus instrumentation, and the 12–24-month window before incumbents ship a research mode — sizing and allocation in financials/use_of_funds.md.

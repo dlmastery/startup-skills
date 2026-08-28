@@ -1,7 +1,9 @@
 .DS_Store
 Thumbs.db
 /params.yaml
-runs/
+# user runs stay private by default; the shipped demo run is whitelisted
+runs/*
+!runs/autoresearch/
 *.pyc
 __pycache__/
 .idea/
