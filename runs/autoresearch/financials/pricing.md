@@ -57,10 +57,10 @@ Enterprise prerequisites are costed before the tier opens (gtm.md §3 row 5, mar
 
 Per A11, the moat is not the open constitution file; it is three accumulating assets, two of which are priced here:
 
-1. **The private calibration corpus** (full trial ledgers *including discards*, gate catch-rates, what-worked-where priors) makes the steering copilot measurably more efficient over time — fewer wasted experiments per kept improvement. If corpus-informed steering cuts experiments-per-kept-improvement even 20–30% (assumption: to be measured from instrumented campaigns — this is A11's kills-if-wrong test), the flat Pro price buys strictly more outcome each year: price can follow value upward ($125 → $150–200 band) without repricing the metric.
+1. **The private calibration corpus** (full trial ledgers *including discards*, gate catch-rates, what-worked-where priors) makes the steering copilot measurably more efficient over time — fewer wasted experiments per kept improvement. If corpus-informed steering cuts experiments-per-kept-improvement ≥20% (the pre-declared E8 pass threshold, validation/experiment_board.md — A11's kills-if-wrong test, measurable ~month 4–6 once two domains have full ledgers), the flat Pro price buys strictly more outcome each year: price can follow value upward ($125 → $150–200 band) without repricing the metric.
 2. **The catalog + reproduction network** compounds as a subscription good: each published, reproduced bundle raises the catalog's value to every subscriber at zero marginal cost.
 3. Frontier list prices are flat-to-rising while capability-per-dollar collapses 40–50x/yr [B16][B19]; BYOK users ride the cost curve down on their own bill while Ascent's flat layer captures none of that deflation as COGS — margin structurally improves (unit_economics.md §5).
 
 ## 7. Decision
 
-Commit: Free OSS core / **Pro $125/mo BYOK** (launch price; $99 pre-order honored for life per gtm.md) / **Team $750/mo base + usage-billed hosted runs + seats** / **Enterprise $100k+ year-2+**. First repricing review after the corpus-effect measurement (A11 test) — raise Pro only with measured steering-efficiency evidence in hand.
+Commit: Free OSS core / **Pro $125/mo BYOK** (launch price; $99 pre-order honored for life per gtm.md) / **Team $750/mo base + usage-billed hosted runs + seats** / **Enterprise $100k+ year-2+**. First repricing review after the E8 corpus-effect measurement (A11 test) — raise Pro only with measured steering-efficiency evidence in hand.
