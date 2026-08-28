@@ -87,7 +87,7 @@ visual: V-deflation-ledger
 - Job filter applied at TAM: only people who repeatedly grind a dataset+metric — ~500–750k individuals + ~1,000 quant funds + ~4,000 enterprise platform payers ≈ **$2–3B/yr core TAM** [market_sizing §1]
 - SAM ~$0.7B (self-serve reach, laptop-envelope compute) [market_sizing §2]
 - SOM plan: **$1.0M ARR in 36 months** — 94.8k stars × 10% active × 3% paid × $1,500 + teams + 5 audit-led deals; stars are not users, and the funnel says so [market_sizing §3]
-- No "1% of $100B" anywhere; year-1 beachhead target $225k run-rate [market_sizing §5]
+- No "1% of $100B" anywhere; beachhead ramp per the recomputed waterfall: ~$110k run-rate at month 12, 150 paying ≈ $225k+ crossing ~month 20–21 [revenue_build §4]
 
 visual: V-som-funnel
 
@@ -154,7 +154,7 @@ visual: V-domain-grid
 - Built the entire PoC through pure natural-language steering — zero hand-written Python — across six disparate domains, on a consumer Intel laptop, through BSODs, thanks to aggressive checkpointing (A5)
 - The steering_log.md is itself the demo: proof that a technical lead can run a research factory by steering alone
 - The asymmetric insight: execution stopped being the bottleneck; discipline did — and the constitution is discipline, made enforceable
-- Already holds the first cross-domain ledger — the moat's month zero (A11); hiring plan per use_of_funds: founding engineer at month 6 (after the trust gate, not before), devrel/community engineer at month 12, optional third hire only if Team usage revenue is live
+- Already holds the first cross-domain ledger — the moat's month zero (A11); hiring plan per use_of_funds §2b: founding engineer at month 6 (after the trust gate, not before), devrel/community engineer at month 13 (triggered by E3's month-6 pass or MRR ≥ $10k, whichever comes first), optional third hire only if Team usage revenue is live
 
 visual: V-deck-team
 
@@ -162,8 +162,8 @@ visual: V-deck-team
 
 ## Slide 15 — $1.2M pre-seed buys 24 months of milestone-gated de-risking
 
-- **$1.2M pre-seed, 24 months of runway** ($1.04M across four blocks + 15% buffer), spent in milestone-linked blocks [use_of_funds §1–2]:
-- **Block A, months 0–6, $95k** — ascent v0 + the 15-practitioner trust test (ends when E1 passes all three legs). **Block B, months 4–12, $260k** — pre-order gate, BYOK Pro GA, 150 paying ≈ $225k run-rate. **Block C, months 10–18, $330k** — Team tier + the instrumented corpus (E8 measures the moat). **Block D, months 15–24, $355k** — the enterprise-DD package and first 3 audit-led deals.
+- **$1.2M pre-seed, 24 months of runway** ($995k across four blocks + $205k buffer, ~21%; average burn ~$41k/mo), spent in milestone-linked blocks [use_of_funds §1–2]:
+- **Block A, months 0–6, $95k** — ascent v0 + the 15-practitioner trust test (ends when E1 passes all three legs). **Block B, months 4–12, $260k** — launch: pre-order gate, BYOK Pro GA, first ~75 paying ≈ $110k run-rate at month 12. **Block C, months 10–18, $285k** — Team tier + the instrumented corpus (E8 measures the moat); ~135 paying ≈ $199k at month 18, crossing 150 paying ≈ $225k+ at ~month 20–21 [revenue_build §4]. **Block D, months 15–24, $355k** — the enterprise-DD package and first 3 audit-led deals.
 - Stage-gate discipline: **block B money is not spent if block A's milestone fails** — the wire is one check, the spending is milestone-sequenced [use_of_funds §2]
 - Pre-committed kill trigger: <0.5% paid conversion of measured active users, or active base stuck under ~3k at month 6 [market_sizing §6]
 - What you're buying: the only team in the empty quadrant, 12–24 months before anyone else notices it
