@@ -1,47 +1,65 @@
 # startup-skills
 
-A self-contained Grok skill pack. Give it any startup idea. It produces a complete founder artifact pack for that idea: research, PRD, white paper, technical VC memo, journeys, features, techniques, market, Steve Blank boards, system diagrams, UX collages, and dense infographics — then a coverage audit that fills gaps.
+Claude Code skills that take a **vague startup idea** and produce a complete, research-grounded founder artifact pack — the kind of package you'd walk into YC or a deep-tech VC meeting with.
 
-No other repository is required. Every noun comes from a `params.yaml` you (or the agent) write for *this* idea.
+The system has four modes, run in order:
 
-## What a complete run contains
+1. **Grill** (`grill-me`) — a YC-partner-grade interrogation that turns a vague idea into a sharp founder brief. Nothing else runs until the brief exists.
+2. **Research** (`startup-research`) — deep web research: landscape, competitors, capability table, survey. Every later artifact must cite this layer; no invented market numbers.
+3. **Generate + critique** — seven generator skills, each with a strict output contract:
+   `startup-strategy`, `startup-product`, `startup-tech`, `startup-narrative`, `startup-validation`, `startup-financials`, `startup-visuals`.
+   Every generated phase passes through `startup-critic` — a three-persona red-team panel (skeptical deep-tech VC, domain PhD, elite operator) with up to three revise rounds — before its gate counts as passed.
+4. **Audit** (`startup-audit`) — coverage audit against the artifact manifest, generation of anything missing, and a final pack index. This replaces the "I don't see it, regenerate" loop with a deterministic checklist.
+5. **Ship** (`startup-website`) — turns the finished pack into a deployable landing site: hero, problem/solution, feature showcase, social proof scaffold, waitlist CTA — copy drawn from the pack, never invented fresh.
 
-- landscape survey + latest-capability table + dated survey paper
-- superset PRD grounded in domain science
-- mechanistic 10x white paper (full-spectrum users, every modality)
-- founder framing + technical VC writeup (scenarios, not vaporware)
-- e2e journeys for the underserved edge, the beachhead, and the elite edge
-- deep-tech use cases as real product screens
-- 20-feature then 50-priority feature lists, illustrated
-- three waves of 50 domain techniques + decision tree + technique↔feature matrix
-- TAM/SAM/SOM, competitive matrix, neo-alternative teardown
-- full Steve Blank / *Startup Owner's Manual* board set
-- 10 system-design diagrams
-- 4-up UX collages in product chrome
-- VC decision boards, buyer boards, spectrum boards, future-press
-- optional external-source ingest that keeps only **novel** angles
-- a coverage audit that lists missing artifacts and then generates them
+`startup-forge` orchestrates all of the above end-to-end. `startup-ingest` optionally folds in external sources (YouTube talks, PDFs, podcasts) keeping only *novel* angles.
 
-## How to run
-
-1. Point Grok at this directory (clone, or add as a Grok skill root).
-2. Say: `Run /startup-skills for this startup:` and paste a description (or a PDF / transcript).
-3. The agent writes `params.yaml` from your description, then walks the 16 phases in `GROK.md`.
-
-To resume: `continue` / `next image` / `keep going`. It picks up at the first unfinished catalog type.
-
-## Layout
+## Quick start
 
 ```
-GROK.md                         # spine — read first
-SKILL.md                        # pack trigger
-params.schema.yaml              # every substitutable field
-templates/params.yaml           # empty form
-examples/kiln.params.yaml       # fictional filled example (shape only)
-skills/                         # one skill per phase
-references/                     # catalogs, visual spec, pipeline
+# from any project directory with these skills installed
+/startup-forge An AI copilot for independent pharmacies
 ```
 
-## Fidelity rule
+or run phases individually:
 
-Do not thin the pipeline. The failure mode this pack exists to prevent is missing images and missing Blank / system / VC boards.
+```
+/grill-me <your idea>          # produces runs/<slug>/BRIEF.md
+/startup-research              # produces runs/<slug>/research/
+/startup-product               # PRD, features, journeys ...
+/startup-audit                 # coverage check + INDEX.md
+```
+
+## Install
+
+Install the repo as a Claude Code plugin (recommended — it ships a `.claude-plugin/plugin.json`), or copy/symlink the directories under `skills/` into `~/.claude/skills/` or `<project>/.claude/skills/`. The `references/` directory (quality bar, artifact manifest, grill question bank) must remain reachable alongside the skills — it is the shared contract they all cite; keep the repo intact rather than cherry-picking single skill folders.
+
+## Output contract
+
+Each run writes to `runs/<slug>/` in the current project:
+
+```
+runs/<slug>/
+  BRIEF.md  ASSUMPTIONS.md          # grill-me
+  research/                        # startup-research
+  strategy/                        # startup-strategy
+  product/                         # startup-product
+  tech/                            # startup-tech (incl. Mermaid architecture diagrams)
+  narrative/                       # startup-narrative
+  validation/                      # startup-validation (Steve Blank board set)
+  financials/                      # startup-financials
+  visuals/                         # startup-visuals (HTML infographics + image prompts)
+  ingest/                          # startup-ingest (optional)
+  audit/COVERAGE.md  INDEX.md      # startup-audit
+  website/                         # startup-website (deployable landing site)
+```
+
+The full file-by-file manifest lives in `references/artifact-manifest.md` — it is the audit skill's checklist.
+
+## Design principles (why this pack is shaped this way)
+
+- **Grill before generate.** Generic inputs produce generic packs. The brief is the single source of truth every generator reads.
+- **Research before claims.** Market sizes, competitor facts, and capability statements must trace to `research/sources.md` or be marked `(assumption)`.
+- **Contracts, not vibes.** Each generator specifies its artifact's sections, numbering, and quality bar. Artifacts are numbered, priority-ranked, span the full user spectrum, and end with a "recommended next" decision.
+- **Deterministic visuals.** Diagrams are Mermaid/HTML (verifiable text), and raster-image needs become *prompt files* for external generators — never a flaky "hope the image rendered" loop.
+- **Audit closes the loop.** Done is defined by the manifest, not by memory.
