@@ -4,20 +4,20 @@
 
 ## Executive summary
 
-Ascent's unit of value is **one audited, kept improvement to the user's metric**. Today that unit is produced by a human ML practitioner at $1,400–2,200 per working day (loaded cost, [C25]-derived: $350–550k/yr ÷ 250 days) running 1–3 serial experiments a day, spending 38–45% of time on data preparation alone [A39], with a documented base rate of invalid results (leakage in ≥294 published papers across 17 fields [D5]) and a verification tax that is rising, not falling (46% of developers distrust AI-produced output, up from 31% a year earlier [C3]).
+Ascent's unit of value is **one audited, kept improvement to the user's metric**. Today that unit is produced by a human ML practitioner at $1,100–1,700 per working day (pack-wide corridor: $279k average US ML-engineer total comp [C25] ≈ $1,116/day raw over 250 days; ×1.25–1.5 employer loading → $1,400–1,700/day loaded; **conservative arithmetic below uses the $1,100 raw low end**), running 1–3 serial experiments a day, spending 38–45% of time on data preparation alone [A39], with a documented base rate of invalid results (leakage in ≥294 published papers across 17 fields [D5]) and a verification tax that is rising, not falling (46% of developers distrust AI-produced output, up from 31% a year earlier [C3]).
 
-Ascent replaces that production function with a constitution-enforced agent loop that runs 24/7 on the user's laptop, executes fixed-duration experiments in minutes, grounds every hypothesis in retrieved literature, and refuses to commit any result that fails three programmatic audit gates. The arithmetic below decomposes the gain into five named frictions, attaches a sourced multiplier with a confidence band to each, and multiplies only the non-overlapping ones. The conservative product is **≥10x reduction in cost per audited kept improvement**, with the upper band above 60x. The aggressive case is not the claim; the conservative case is.
+Ascent replaces that production function with a constitution-enforced agent loop that runs 24/7 on the user's laptop, executes fixed-duration experiments in minutes, grounds every hypothesis in retrieved literature, and refuses by default to run any experiment that fails three programmatic audit gates — the one documented bypass flag sentinel-tags the entry `TODO-REWRITE` and surfaces it red on the dashboard, so there is no *silent* path around the gates. The composite metric is frozen behind a logged SHA-256 fingerprint: **tamper-evident today** (a mid-run rewrite changes the fingerprint on every subsequent ledger row); automatic *refusal* of an unlogged rewrite is roadmap (see `not_vaporware.md`). The arithmetic below decomposes the gain into five named frictions, attaches a sourced multiplier with a confidence band to each, and multiplies only the non-overlapping ones. The conservative product is **≥10x reduction in cost per audited kept improvement**, with the upper band above 60x. The aggressive case is not the claim; the conservative case is.
 
 | # | Friction removed | Mechanism | Conservative multiplier | Upper band |
 |---|---|---|---|---|
-| 1 | Harness construction + leakage rework | Purge/embargo super-folds, programmatic overlap check | 1.4x | 1.8x |
-| 2 | Serial human iteration (quality-adjusted) | Fixed-duration agent experiments, minutes each | 3x | 30x |
+| 1 | Harness construction + leakage rework | Purge/embargo super-folds, programmatic overlap check | 1.2x | 1.6x |
+| 2 | Serial human iteration (quality-adjusted) | Fixed-duration agent experiments, minutes each | 3x | 20x |
 | 3 | 8 h/day vs 24/7 | Checkpointed crash-proof campaigns | (inside #2) | (inside #2) |
 | 4 | Blind-search plateau | Literature-grounded diagnosis re-seeds stalled search | 1.1x (quality) | 1.25x |
 | 5 | Trust/verification overhead | Deterministic audit gates + reproducible evidence bundle | 1.3x | 2x |
-| — | Labor-cost substitution (cross-cutting) | $3–60/day tokens vs $1,400–2,200/day engineer | 6x | 15x |
+| — | Labor-cost substitution (cross-cutting) | $3–60/day tokens vs $1,100–1,700/day engineer | 6x | 15x |
 
-Conservative product of the independent terms (1.4 × 3 × 1.1 × 1.3 ≈ **6x more valid output per human-day**, at **6–15x lower cost per day**) → ≥10x on cost per audited kept improvement even after heavy discounting. Details and double-count controls in §2.
+Conservative product: 1.2 × 3 × 1.1 × 1.3 ≈ **5.1x more valid output per human-day**, at **6x lower cost per day** → 30.9x raw, ÷3 global honesty discount (which explicitly absorbs the M1×M2 overlap and residual correlations, §2) ≈ **10.4x** on cost per audited kept improvement — the ≥10x claim survives on corrected arithmetic. Details and double-count controls in §2.
 
 ---
 

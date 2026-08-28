@@ -48,11 +48,12 @@ visual: V-ratchet-loop
 
 ---
 
-## Slide 5 — The trial ledger is the demo: 265 experiments, discards included
+## Slide 5 — The trial ledger is the demo: every runner-executed trial logged, kept and discarded
 
-- Marcus, solo quant, 11pm: 40th signal variant this month, in-sample Sharpe looks great — and he knows enough trials guarantee that at true zero [D7]
-- He sets the embargo window, sleeps; overnight, two experiments survive the gates, ten are discarded — and the discards are recorded
-- Morning: he reads the ledger before the champion number — trial count, embargo geometry, every discard — the artifact his notebook folder never contained
+- Canonical throughput: the PoC sustained ~3–4 experiments/day over months (265+, founder-reported); short-trial tasks project 10–40 gate-passed experiments/night — a projection from PoC per-experiment timings, not yet demonstrated end-to-end
+- Every runner-executed trial is logged, kept and discarded; the ledger-completeness audit (E2) is week-1 work
+- Persona illustration — Marcus, solo quant, 11pm: 40th signal variant this month, in-sample Sharpe looks great, and he knows enough trials guarantee that at true zero [D7]; he sets the embargo window and sleeps
+- In the illustration's morning he reads the ledger before the champion number — trial count, embargo geometry, the discards — the artifact his notebook folder never contained
 - Every kept champion is a fingerprinted winner archive: config, model, reasoning, logs — reproducible in one command
 
 visual: V-trial-ledger
@@ -74,16 +75,16 @@ visual: V-gate-stack
 
 - Champion test Sharpe +6.52 on EUR/USD after 265+ experiments — founder-reported, reproducible from the repo, **and precisely the statistic the deflated Sharpe ratio exists to discount** [D6][D7]
 - So we publish the deflated number first: "+6.52 raw, X deflated over N trials — here's the ledger," before any critic computes it [positioning §4]
-- Roadmap: trial-count-corrected acceptance gates — the keep/discard bar rises with experiment count; no published system has one, ours included [survey §6]
+- Roadmap: trial-count-corrected acceptance gates — the keep/discard bar rises with experiment count; no published system has one, ours included [survey §6] (closed form exists for Sharpe-family metrics; the permutation-null analogue for other metrics is research risk)
 - Competitors chasing benchmark headlines cannot copy this posture without deflating their own headlines
 
 visual: V-deflation-ledger
 
 ---
 
-## Slide 8 — The core market is $2–2.5B, sized bottom-up with the arithmetic shown
+## Slide 8 — The core market is $2–3B, sized bottom-up with the arithmetic shown
 
-- Job filter applied at TAM: only people who repeatedly grind a dataset+metric — ~500–750k individuals + ~1,000 quant funds + ~4,000 enterprise platform payers ≈ **$2–2.5B/yr core TAM** [market_sizing §1]
+- Job filter applied at TAM: only people who repeatedly grind a dataset+metric — ~500–750k individuals + ~1,000 quant funds + ~4,000 enterprise platform payers ≈ **$2–3B/yr core TAM** [market_sizing §1]
 - SAM ~$0.7B (self-serve reach, laptop-envelope compute) [market_sizing §2]
 - SOM plan: **$1.0M ARR in 36 months** — 94.8k stars × 10% active × 3% paid × $1,500 + teams + 5 audit-led deals; stars are not users, and the funnel says so [market_sizing §3]
 - No "1% of $100B" anywhere; year-1 beachhead target $225k run-rate [market_sizing §5]
@@ -131,7 +132,7 @@ visual: V-quadrant-map
 - 1. Private cross-domain calibration corpus: full trial ledgers *including discarded experiments*, gate catch-rates on seeded violations, what-worked-where priors — never shipped in bundles
 - 2. Hosted trust infrastructure: DSR/attestation service, SOTA catalog, the reproduction network
 - 3. The rigor brand, compounded by public self-deflation — structurally resistant to copying by headline-chasers
-- Honest window: 12–24 months before a Cursor/Cognition-class "research mode" [positioning §5]; a follower starting at month 18 is 18 months of ledger behind, permanently
+- Honest window: 12–24 months before a Cursor/Cognition-class "research mode" [positioning §5]; a follower starting at month 18 is 18 months of ledger behind — if the corpus effect measures (E8, pre-registered)
 
 visual: V-moat-ledger
 
