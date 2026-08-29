@@ -12,6 +12,21 @@ Generate every visual as **verifiable text first** — self-contained HTML infog
 1. Build `visual_manifest.md` first — the complete list of visuals this pack needs, grouped **by audience**: users, operators/team, investors, buyers/partners. Derive it from what exists: every deck slide's `visual:` line, the architecture diagrams, the feature collages, the Blank boards, plus the audience-specific set below. Rank within each audience; mark each row `required` or `optional`.
 2. Generate `required` rows one at a time; check each renders before moving on (that's startup-audit's grep target too).
 
+## Dossier coverage — every text-heavy artifact earns an illustration
+
+The audience sets above cover the *arguments*. They leave the **documents** bare: a pack routinely ends with a third of its artifacts as unbroken walls of prose, which is where readers stop. After the audience rows are placed, run a coverage pass:
+
+1. **Measure it.** For every artifact, count words and count the visuals that cite it. Any substantive artifact over roughly 400 words with **zero** visuals is a gap. Exclude only the meta files — the manifest, the prompt file, the coverage audit, the README.
+2. **Check the mapping before generating anything.** Most "missing" illustrations are mis-resolved ones. The manifest's source column contains bare filenames (`D04.md`, `pitch_deck.md`); resolve them against the **whole run tree**, not the top-level directories, or every nested document reads as unillustrated while its poster sits on disk. On this pack that single fix moved coverage from 37 documents to 45.
+3. **Add one row per genuinely uncovered artifact**, in a dedicated manifest section, sourced to that artifact.
+
+**These rows must be schematic, and that is a technical constraint, not a style preference.** Image models garble dense text — transposed letters, decimal commas, duplicated blocks — so a dossier illustration carries *structure*, never sentences:
+
+- Short labels only: a code plus two or three words. **No prose, no paragraphs, ideally under ten labels.**
+- Prefer honest diagram forms — a grid of cards, a ranked bar stack, a before/after ledger, a numbered path, a funnel triptych.
+- Quote every label verbatim in the prompt and forbid additions ("render ONLY the labels quoted above").
+- The document holds the words; the illustration holds the shape. If a visual needs a paragraph to work, it is an **HTML infographic**, not an image.
+
 ## Standard visual set (adapt nouns; drop rows only with a reason in the manifest)
 
 - **System map** — the full architecture on one canvas (from `tech/architecture/`).

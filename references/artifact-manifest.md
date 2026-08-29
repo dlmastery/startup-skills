@@ -57,6 +57,7 @@ Paths relative to `runs/<slug>/`. `req` = required for a complete pack; `opt` = 
 | A50 | `visuals/infographics/*.html` — every `required` manifest row | startup-visuals | req |
 | A51 | `visuals/image_prompts.md` | startup-visuals | req |
 | A52 | `visuals/images/*.png` — rendered when text2image available | startup-visuals | opt |
+| A52b | `visuals/docimages.json` — artifact→visual map; **no substantive artifact over ~400 words left with zero illustrations** | startup-visuals | req |
 | A53 | `ingest/SOURCE_<n>.md` — one per ingested source | startup-ingest | opt |
 | A54 | `audit/COVERAGE.md` | startup-audit | req |
 | A55 | `README.md` — the run's front door (see contract below) | startup-audit | req |

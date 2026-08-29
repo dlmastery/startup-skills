@@ -147,3 +147,23 @@
 | V98 | Hosted-run economics — Campaign COGS $135–540 billed at cost × 1.3–1.5: passthrough plus margin, never a loss-maker, never the margin story. | VC | unit_economics.md §2 | image | **optional** · pending |
 | V99 | W2.E orphan-cluster decision — Eight experiment-selection techniques power nothing named; until #29 is built, marketing must not claim search-efficiency IP. | research-lead | technique_feature_matrix.md finding 1; features_prioritized.md #29 | image | **optional** · pending |
 | V100 | Teardown mega-table — All 20 competitor rows on one canvas: every casualty either automated one step or automated search without trust; nobody died from automating too much rigor. | VC | competitors.md; landscape.md post-mortems | image | **optional** · pending |
+
+
+## H. Dossier illustrations (one per text-heavy artifact no other row covers)
+
+Deliberately **schematic**: short labels only, no prose. Dense text is exactly what image models garble, so these carry structure rather than sentences — the artifact itself holds the words.
+
+| ID | Title — headline takeaway | Audience | Source artifact(s) | Form | Status |
+|---|---|---|---|---|---|
+| V101 | Assumption ledger — Twelve declared assumptions, each with the evidence that would kill it. | cross | ASSUMPTIONS.md | image | pending |
+| V102 | The steering log — Months of natural-language steering, six domains, zero hand-written Python. | VC | narrative/founder_story.md | image | pending |
+| V103 | Future press — The headline we intend to earn, dated and framed as vision. | cross | narrative/future_press.md | image | pending |
+| V104 | One-pager map — The whole company in six tiles, each traceable to a source. | VC | narrative/one_pager.md | image | pending |
+| V105 | Diligence path — The order a skeptic should read this pack in, sharpest objection first. | VC | narrative/vc_memo.md | image | pending |
+| V106 | PRD surface map — Four tiers, three surfaces: the kernel ships on CLI and files alone. | practitioner | product/PRD.md | image | pending |
+| V107 | Source map — Four evidence families, every number in the pack traceable to one of them. | research-lead | research/sources.md | image | pending |
+| V108 | Architecture index — Ten diagrams, one system: from data pipeline to escalation ladder. | research-lead | tech/architecture/00_INDEX.md | image | pending |
+| V109 | Discovery arc — Five stages of the practitioner interview; the deploy question is the one that matters. | operator | validation/discovery_guide.md | image | pending |
+| V110 | Get / Keep / Grow — Three funnels, one loop: the published bundle is the acquisition engine. | operator | validation/get_keep_grow.md | image | pending |
+| V111 | Pivot ledger — Every correction recorded with what triggered it, including the ones that cost us the plan. | operator | validation/pivot_log.md | image | pending |
+| V112 | Risk stack — Ranked by what would kill the company soonest; the top one is a two-week test. | VC | validation/riskiest_assumptions.md | image | pending |
