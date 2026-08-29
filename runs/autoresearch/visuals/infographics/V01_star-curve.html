@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>V01 — Star curve</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1e293b;display:flex;justify-content:center;padding:20px}
+.cv{width:1600px;max-width:100%;background:#fff;border:1px solid #e2e8f0;padding:44px 52px;display:flex;flex-direction:column;gap:18px}
+.mono{font-family:Consolas,'Courier New',monospace}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0d9488;font-weight:700}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:1.12;color:#312e81;margin:6px 0 2px}
+.tk{font-size:18px;color:#475569}
+.zl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#6366f1;margin-bottom:8px}
+.zone{border:1px solid #e2e8f0;border-radius:10px;padding:16px 22px;background:#fff}
+.ft{border-top:3px solid #312e81;padding-top:10px;font-size:12px;color:#64748b}
+.verdict{background:#f0fdfa;border:1px solid #0d9488;border-radius:10px;padding:18px 24px;text-align:center;font-family:Georgia,serif;font-size:24px;color:#0f766e;font-weight:700}
+.barwrap{display:flex;height:54px;border-radius:8px;overflow:hidden;border:1px solid #cbd5e1;margin-top:10px}
+.seg{display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:600;text-align:center;line-height:1.2}
+.legend{display:flex;gap:26px;margin-top:10px;font-size:13.5px;color:#475569;flex-wrap:wrap}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+</style>
+</head>
+<body>
+<div class="cv">
+  <div>
+    <div class="eb">Ascent · V01 · Audience: VC</div>
+    <h1>94,800 people starred a research loop nobody maintains</h1>
+    <div class="tk">Massive proven demand. Abandoned supply. An empirically unfilled gap.</div>
+  </div>
+
+  <div class="zone">
+    <div class="zl">Zone 1 &amp; 2 — Star trajectory (Mar–Aug 2026) with the maintenance-vacuum band</div>
+    <svg viewBox="0 0 1480 380" width="100%" role="img" aria-label="Star trajectory curve with maintenance vacuum band">
+      <!-- amber maintenance-vacuum band from Mar 26 onward -->
+      <rect x="245" y="18" width="1195" height="322" fill="#FFFBEB"/>
+      <line x1="245" y1="18" x2="245" y2="340" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="258" y="36" font-size="14" fill="#B45309" font-weight="bold">Maintenance vacuum — no active maintainer since March 26, 2026</text>
+      <text x="258" y="58" font-size="13" fill="#B45309" font-family="Consolas,monospace">~185 issues and PRs piling up unanswered &#183; 52 open issues</text>
+      <!-- axes -->
+      <line x1="60" y1="340" x2="1440" y2="340" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="60" y1="18" x2="60" y2="340" stroke="#94a3b8" stroke-width="1.5"/>
+      <text x="30" y="52" font-size="12" fill="#64748b" font-family="Consolas,monospace">100k</text>
+      <text x="36" y="198" font-size="12" fill="#64748b" font-family="Consolas,monospace">50k</text>
+      <text x="46" y="344" font-size="12" fill="#64748b" font-family="Consolas,monospace">0</text>
+      <text x="95" y="362" font-size="12.5" fill="#64748b">Mar 2026</text>
+      <text x="330" y="362" font-size="12.5" fill="#64748b">Apr</text>
+      <text x="560" y="362" font-size="12.5" fill="#64748b">May</text>
+      <text x="790" y="362" font-size="12.5" fill="#64748b">Jun</text>
+      <text x="1020" y="362" font-size="12.5" fill="#64748b">Jul</text>
+      <text x="1330" y="362" font-size="12.5" fill="#64748b">Aug 2026</text>
+      <!-- star curve -->
+      <path d="M104,340 L119,317 C150,270 200,205 245,183 C480,105 900,70 1385,54" fill="none" stroke="#312E81" stroke-width="4" stroke-linecap="round"/>
+      <!-- markers + annotations -->
+      <circle cx="104" cy="340" r="6" fill="#312E81"/>
+      <text x="80" y="322" font-size="13.5" fill="#312e81" font-weight="bold">Released Mar 7, 2026</text>
+      <circle cx="119" cy="317" r="6" fill="#312E81"/>
+      <text x="132" y="308" font-size="13.5" fill="#312e81" font-family="Consolas,monospace">8k stars in 48 hours</text>
+      <circle cx="245" cy="183" r="6" fill="#312E81"/>
+      <text x="262" y="176" font-size="13.5" fill="#312e81" font-family="Consolas,monospace">54k stars in 19 days</text>
+      <text x="262" y="194" font-size="12.5" fill="#475569">(faster than nanoGPT&#8217;s 3-year run)</text>
+      <circle cx="1385" cy="54" r="7" fill="#0D9488"/>
+      <text x="1050" y="94" font-size="15" fill="#0f766e" font-weight="bold" font-family="Consolas,monospace">94.8k stars / 13.4k forks at 6 months (Aug 2026)</text>
+    </svg>
+  </div>
+
+  <div class="zone">
+    <div class="zl">Zone 3 — Fork census: 16 notable forks curated by the community</div>
+    <div class="barwrap">
+      <div class="seg" style="width:87.5%;background:#312E81">14 hardware ports or translations</div>
+      <div class="seg" style="width:6.5%;background:#0D9488">~1</div>
+      <div class="seg" style="width:6%;background:#fff;color:#B91C1C;border-left:2px dashed #B91C1C">0</div>
+    </div>
+    <div class="legend">
+      <span><span class="sw" style="background:#312E81"></span>14 hardware ports or translations</span>
+      <span><span class="sw" style="background:#0D9488"></span>~1 domain extension</span>
+      <span><span class="sw" style="background:#fff;border:2px dashed #B91C1C"></span><b style="color:#B91C1C">0 add rigor</b></span>
+    </div>
+  </div>
+
+  <div class="verdict">Massive proven demand. Abandoned supply. An empirically unfilled gap.</div>
+
+  <div class="ft">Sources: karpathy/autoresearch repo [A1][A3]; fork discussion #225 [A2]; [C35] &#183; Pack: narrative/pitch_deck.md s1 &#183; research/landscape.md &#183; research/market_structure.md</div>
+</div>
+</body>
+</html>

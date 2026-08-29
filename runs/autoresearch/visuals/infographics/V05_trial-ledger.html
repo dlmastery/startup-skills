@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>V05 — Trial ledger</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1e293b;display:flex;justify-content:center;padding:20px}
+.cv{width:1600px;max-width:100%;background:#fff;border:1px solid #e2e8f0;padding:44px 52px;display:flex;flex-direction:column;gap:18px}
+.mono{font-family:Consolas,'Courier New',monospace}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0d9488;font-weight:700}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:1.12;color:#312e81;margin:6px 0 2px}
+.tk{font-size:18px;color:#475569;max-width:1350px}
+.zl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#6366f1;margin-bottom:8px}
+.zone{border:1px solid #e2e8f0;border-radius:10px;padding:18px 24px;background:#fff}
+.ft{border-top:3px solid #312e81;padding-top:10px;font-size:12px;color:#64748b}
+.ledger{background:#312e81;color:#fff;border-radius:10px;padding:26px 30px;text-align:center}
+.ledger .big{font-family:Consolas,'Courier New',monospace;font-size:44px;font-weight:700;letter-spacing:.02em}
+.ledger .cap{font-size:16px;color:#c7d2fe;margin-top:8px;font-style:italic}
+.caveat{background:#FFFBEB;border:1px solid #F59E0B;border-radius:8px;padding:12px 16px;color:#92400e;font-size:14.5px;margin-top:10px;line-height:1.5}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.teal{background:#f0fdfa;border-color:#0d9488}
+li{margin:6px 0 6px 20px;font-size:15.5px;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="cv">
+  <div>
+    <div class="eb">Ascent · V05 · Audience: cross</div>
+    <h1>The trial ledger is the demo: every runner-executed trial logged, kept and discarded</h1>
+    <div class="tk">In the morning he reads the ledger before the champion number — trial count, embargo geometry, the discards — the artifact his notebook folder never contained.</div>
+  </div>
+
+  <div class="ledger">
+    <div class="zl" style="color:#a5b4fc">Zone 1 — Ledger header strip</div>
+    <div class="big">Trial 218 — 9 kept, 209 discarded</div>
+    <div class="cap">nothing is ever quietly deleted</div>
+  </div>
+
+  <div class="zone">
+    <div class="zl">Zone 2 — Throughput facts</div>
+    <ul>
+      <li>PoC sustained <span class="mono"><b>~3–4 experiments/day</b></span> over months (<span class="mono">265+</span>, founder-reported)</li>
+      <li>Ledger-completeness audit (E2) is week-1 work</li>
+    </ul>
+    <div class="caveat"><b>Caveat:</b> <span class="mono">10–40</span> gate-passed experiments/night is a projection from PoC per-experiment timings, not yet demonstrated end-to-end</div>
+  </div>
+
+  <div class="row">
+    <div class="zone">
+      <div class="zl">Zone 3 — Persona vignette: Marcus, solo quant, 11pm</div>
+      <div style="font-size:16px;line-height:1.6;font-style:italic;color:#334155">40th signal variant this month — enough trials guarantee a great in-sample Sharpe at true zero <span class="mono" style="font-style:normal">[D7]</span>; he sets the embargo window and sleeps.</div>
+    </div>
+    <div class="zone teal">
+      <div class="zl" style="color:#0f766e">Zone 4 — Bundle card</div>
+      <div style="font-size:16px;line-height:1.6;color:#0f766e">Every kept champion is a <b>fingerprinted winner archive</b>: config, model, reasoning, logs — <b>reproducible in one command</b>.</div>
+    </div>
+  </div>
+
+  <div class="ft">Sources: narrative/pitch_deck.md s5 &#183; product/features_flagship.md #1 &#183; product/ux_spec.md globals &#183; PoC metrics founder-reported (A6)</div>
+</div>
+</body>
+</html>
