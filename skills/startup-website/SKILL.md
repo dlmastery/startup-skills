@@ -56,6 +56,21 @@ Load the frontend-design skill for judgment, then apply these tokens. They are C
 4. Verify: build/serve locally, check every section renders, every internal anchor works, no lorem ipsum, no unsourced claim. Screenshot for the user when browser tooling is available.
 5. **Publish to GitHub Pages and hand back the live URL** (below). A site nobody can open is not a shipped site.
 
+## The pack browser — never link raw `.md` from the site
+
+A landing page that links `research/landscape.md` directly hands the reader unstyled plaintext: with `.nojekyll` set, GitHub Pages serves markdown raw, so the pack's best writing arrives looking like a config file. **The site must never link a `.md` file as a destination.** Every artifact is reached through a reader.
+
+Write **`runs/<slug>/pack.html`** — a self-contained document browser over the whole pack:
+
+1. **Manifest first.** A JS array of `{group, path, title, blurb}` covering every artifact that exists on disk — grouped by layer (Brief, Research, Strategy, Product, Tech, Narrative, Validation, Financials, Visuals, Audit). Generate it from the glob, never by hand.
+2. **Sidebar + reader.** Grouped, filterable document list on the left; rendered document on the right. Deep-link by hash (`pack.html#tech/whitepaper.md`) so any artifact is directly shareable, and restore that hash on load.
+3. **Render markdown client-side** with a pinned CDN library (`marked`), styled with the site's own tokens — the serif for headings, mono for tables and every number, generous measure (~70ch), styled tables with sticky headers, and horizontal scroll containers so wide tables never break the page.
+4. **Render Mermaid as diagrams, not code.** Architecture docs ship ```mermaid fences; initialize `mermaid` with a theme built from the site tokens and render each fence. A pack whose diagrams show as raw text has failed this step — those diagrams are the tech layer's whole argument.
+5. **Preserve the honesty signatures in the reader's CSS:** source tags (`[A1]`, `[D5]`) and `(assumption)` flags get the same chip treatment as the landing page; `[ROADMAP]` renders in amber wherever it appears.
+6. **Link it prominently** — top nav plus the landing page's primary CTA. "Read the full pack" must land in the reader, not a directory listing.
+
+Verify by loading the published page and confirming: a document renders, its tables are styled, a Mermaid diagram draws, and a deep link opens the right file.
+
 ## Publish — the run gets a real, public URL
 
 The deliverable is a link, not a directory. Default to **GitHub Pages served from the repository root on the default branch**, which makes the run's own `visuals/images/*.png` reachable by relative path — no duplicated asset tree, no build step.
