@@ -60,7 +60,8 @@ Paths relative to `runs/<slug>/`. `req` = required for a complete pack; `opt` = 
 | A53 | `ingest/SOURCE_<n>.md` — one per ingested source | startup-ingest | opt |
 | A54 | `audit/COVERAGE.md` | startup-audit | req |
 | A55 | `README.md` — the run's front door (see contract below) | startup-audit | req |
-| A56 | `website/` — buildable site | startup-website | opt |
+| A56 | `index.html` — the run's public site, self-contained, relative asset paths | startup-website | opt |
+| A57 | Live GitHub Pages URL, recorded in `README.md` and verified loading | startup-website | opt |
 
 Stub threshold: a `req` file under ~40 substantive lines, or missing sections its owner skill's contract names, counts as **stub**, not present. A24/A50 count each file individually.
 

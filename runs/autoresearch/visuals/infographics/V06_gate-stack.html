@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>V06 — Gate stack</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1e293b;display:flex;justify-content:center;padding:20px}
+.cv{width:1600px;max-width:100%;background:#fff;border:1px solid #e2e8f0;padding:44px 52px;display:flex;flex-direction:column;gap:18px}
+.mono{font-family:Consolas,'Courier New',monospace}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0d9488;font-weight:700}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:1.12;color:#312e81;margin:6px 0 2px}
+.tk{font-size:18px;color:#475569;max-width:1350px}
+.zl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#6366f1;margin-bottom:8px}
+.zone{border:1px solid #e2e8f0;border-radius:10px;padding:18px 24px;background:#fff}
+.ft{border-top:3px solid #312e81;padding-top:10px;font-size:12px;color:#64748b}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.row{display:grid;grid-template-columns:1.15fr 1fr;gap:18px}
+.gate{border:2px solid #312e81;border-radius:10px;padding:16px 20px;background:#fff}
+.gate .n{font-family:Consolas,'Courier New',monospace;font-size:13px;font-weight:700;color:#fff;background:#312e81;border-radius:4px;padding:2px 8px;display:inline-block}
+.gate .t{font-size:17px;font-weight:700;color:#312e81;margin:8px 0 6px}
+.gate .d{font-size:14.5px;color:#475569;line-height:1.5}
+.chain{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px;margin-top:6px}
+.step{background:#eef2ff;border:1px solid #c7d2fe;border-radius:6px;padding:7px 12px;font-weight:600;color:#312e81;font-size:14px}
+.arr{color:#94a3b8;font-weight:700}
+.stat{font-family:Consolas,'Courier New',monospace;font-size:34px;font-weight:700;color:#b45309;line-height:1.1}
+.lab{font-size:14.5px;color:#475569;line-height:1.45;margin-top:6px}
+.caveat{background:#FFFBEB;border:1px solid #F59E0B;border-radius:8px;padding:12px 16px;color:#92400e;font-size:14.5px;margin-top:10px;line-height:1.5}
+.red{background:#FEF2F2;border:1px solid #DC2626;border-radius:8px;padding:12px 16px;color:#991B1B;font-size:14.5px;line-height:1.5}
+.teal{background:#f0fdfa;border-color:#0d9488}
+</style>
+</head>
+<body>
+<div class="cv">
+  <div>
+    <div class="eb">Ascent · V06 · Audience: cross</div>
+    <h1>A constitution enforces what a tired human skips</h1>
+    <div class="tk">Three programmatic checks run <b>before any commit</b>. They are not linting and not advice: an experiment that fails a gate does not enter the champion line at all. Refusal is the default state.</div>
+  </div>
+
+  <div class="zone">
+    <div class="zl">Zone 1 — The 7-step method, enforced on every experiment</div>
+    <div class="chain">
+      <span class="step">Diagnose</span><span class="arr">→</span>
+      <span class="step">Literature-ground</span><span class="arr">→</span>
+      <span class="step">Hypothesize</span><span class="arr">→</span>
+      <span class="step">Execute</span><span class="arr">→</span>
+      <span class="step">Analyze</span><span class="arr">→</span>
+      <span class="step">Document</span><span class="arr">→</span>
+      <span class="step">Checkpoint</span>
+    </div>
+    <div class="lab" style="margin-top:10px">Codified in a binding <b class="mono">52-section</b> constitution — the encoded research judgment that is the product's core IP, and the thing a fork can copy in a day but cannot have <i>refined across domains</i>.</div>
+  </div>
+
+  <div class="row3">
+    <div class="gate">
+      <span class="n">GATE 1</span>
+      <div class="t">Data integrity</div>
+      <div class="d">Purged and embargoed super-folds; train = data − union(val + test + buffers). Temporal and overlap leakage are made <b>structurally impossible</b>, not merely checked for.</div>
+    </div>
+    <div class="gate">
+      <span class="n">GATE 2</span>
+      <div class="t">Citation rigor</div>
+      <div class="d">Every hypothesis must be literature-grounded before compute is spent. A refused experiment costs a message, not a GPU-hour.</div>
+    </div>
+    <div class="gate">
+      <span class="n">GATE 3</span>
+      <div class="t">Reasoning completeness</div>
+      <div class="d">The reasoning trace must be present and complete before a result may be written. The agent may not, by contract, write a result row — the runner writes what actually happened.</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="zone">
+      <div class="zl">Zone 3 — The ablation: what the gates are worth</div>
+      <div class="stat">+42% invalid experiments</div>
+      <div class="lab">when the citation gate was removed — plus <b class="mono">3 leakage incidents</b> that the gated arm did not produce. The rigor layer measurably pays for its own overhead.</div>
+      <div class="caveat"><b>Founder-reported, one task, one seed.</b> This is a real experiment with a real ledger, not a benchmark claim — and it is single-seed, so it is stated as directional evidence, not a measured effect size.</div>
+    </div>
+    <div class="zone">
+      <div class="zl">Zone 4 — No silent path around the machinery</div>
+      <div class="red"><b>Refusal by default.</b> There is exactly <b>one</b> bypass, it is visible, and it writes a sentinel tag into the run log. An auditor grepping for the sentinel finds every experiment that ever went around a gate. There is no quiet override, no debug flag, no "just this once."</div>
+      <div class="lab" style="margin-top:12px">Safety and metric-integrity branches structurally outrank progress branches in the decision tree — the agent cannot trade rigor for a better number, because the ordering is not the agent's to choose.</div>
+    </div>
+  </div>
+
+  <div class="zone teal">
+    <div class="zl" style="color:#0f766e">Zone 5 — The claim, scoped exactly</div>
+    <div style="font-size:16.5px;line-height:1.6;color:#0f766e">The gates make keep-or-discard <b>tamper-evident, not tamper-refusing</b> — refusal is <b>[ROADMAP]</b>, a ~15-line patch. And "monotonic" always means <b>monotonic in the composite proxy</b>: a ratchet guarantees monotonicity in the proxy, not in the truth.</div>
+  </div>
+
+  <div class="ft">Sources: narrative/pitch_deck.md s6 &#183; tech/deep_dives.md §3 &#183; research/survey.md §4.4 &#183; tech/not_vaporware.md §3 (ablation, founder-reported single-seed)</div>
+</div>
+</body>
+</html>

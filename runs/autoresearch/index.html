@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ascent — the autonomous ML research operating system</title>
+<meta name="description" content="Point Ascent at your dataset and metric. It runs literature-grounded, audit-gated experiments for days on a commodity laptop, keeps only strict improvements, and hands you the evidence behind every kept result.">
+<meta property="og:title" content="Ascent — the autonomous ML research operating system">
+<meta property="og:description" content="Improves your metric around the clock — and shows you the evidence behind every kept result.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23312E81'/><path d='M22 72 L50 28 L78 72' stroke='%23D97757' stroke-width='11' fill='none' stroke-linejoin='round' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F0EEE6; --paper-raised:#FAF9F5; --ink:#1F1E1D; --ink-soft:#605A57;
+  --rule:#DEDBD2; --clay:#D97757; --indigo:#312E81; --teal:#0D9488; --amber:#B45309;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',Consolas,'Courier New',monospace;
+  --wide:1180px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#1B1A19; --paper-raised:#232220; --ink:#F0EEE6; --ink-soft:#A8A29B;
+        --rule:#3A3835; --indigo:#A5B4FC; --teal:#5EEAD4; --amber:#FBBF24;}
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--wide);margin:0 auto;padding:0 28px}
+a{color:var(--clay);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:var(--clay)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--clay);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-0.01em;line-height:1.14}
+.mono{font-family:var(--mono);font-variant-ligatures:none}
+
+/* signature device: inline source chips */
+.src{font-family:var(--mono);font-size:.66em;font-weight:500;color:var(--clay);
+     background:color-mix(in srgb,var(--clay) 12%,transparent);
+     border:1px solid color-mix(in srgb,var(--clay) 28%,transparent);
+     border-radius:4px;padding:1px 5px;margin-left:5px;vertical-align:.18em;white-space:nowrap}
+.src.assume{color:var(--amber);background:color-mix(in srgb,var(--amber) 12%,transparent);border-color:color-mix(in srgb,var(--amber) 30%,transparent)}
+.roadmap{font-family:var(--mono);font-size:.7em;font-weight:700;letter-spacing:.06em;color:var(--amber);
+     background:color-mix(in srgb,var(--amber) 13%,transparent);border:1px solid color-mix(in srgb,var(--amber) 32%,transparent);
+     border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:.16em}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);
+     backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:20px}
+.brand{font-family:var(--serif);font-size:23px;font-weight:600;color:var(--ink);border:0;letter-spacing:-.02em}
+.brand:hover{border:0}
+.navlinks{display:flex;gap:26px;font-size:14.5px;font-weight:500}
+.navlinks a{color:var(--ink-soft)}
+.navlinks a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+@media(max-width:760px){.navlinks{display:none}}
+
+/* hero */
+.hero{padding:86px 0 64px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:22px}
+h1{font-size:clamp(38px,5.6vw,68px);max-width:16ch;margin-bottom:26px}
+h1 em{font-style:italic;color:var(--clay)}
+.lede{font-size:clamp(18px,2.1vw,21.5px);color:var(--ink-soft);max-width:60ch;margin-bottom:38px}
+.ledger{background:var(--indigo);border-radius:14px;padding:30px 34px;color:#F0EEE6;max-width:820px}
+@media (prefers-color-scheme:dark){.ledger{background:#25235C}}
+.ledger .lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:#A5B4FC;margin-bottom:12px}
+.ledger .line{font-family:var(--mono);font-size:clamp(19px,2.7vw,29px);font-weight:700;letter-spacing:-.01em;line-height:1.35}
+.ledger .line .raw{color:#FDBA74}
+.ledger .note{font-size:15.5px;color:#C7D2FE;margin-top:14px;font-style:italic;line-height:1.55}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;padding:13px 24px;border-radius:9px;font-weight:600;font-size:15.5px;border:1px solid var(--clay);
+     background:var(--clay);color:#fff;transition:opacity .15s}
+.btn:hover{opacity:.88;border-bottom-color:var(--clay)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn.ghost:hover{border-color:var(--ink)}
+
+/* sections */
+section{padding:74px 0;border-bottom:1px solid var(--rule)}
+.shead{font-family:var(--mono);font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:var(--clay);margin-bottom:16px}
+h2{font-size:clamp(29px,3.7vw,42px);max-width:22ch;margin-bottom:18px}
+.sub{font-size:18.5px;color:var(--ink-soft);max-width:68ch;margin-bottom:44px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:22px}
+.card{background:var(--paper-raised);border:1px solid var(--rule);border-radius:13px;padding:26px 28px}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{font-size:15.8px;color:var(--ink-soft);line-height:1.6}
+.stat{font-family:var(--mono);font-size:clamp(30px,4vw,42px);font-weight:700;color:var(--indigo);line-height:1.05;letter-spacing:-.02em}
+.stat.warn{color:var(--amber)}
+.statlab{font-size:15.5px;color:var(--ink-soft);margin-top:11px;line-height:1.55}
+
+/* loop */
+.loop{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:30px}
+.step{font-family:var(--mono);font-size:13.5px;font-weight:500;background:var(--paper-raised);border:1px solid var(--rule);
+      border-radius:7px;padding:8px 13px;color:var(--ink)}
+.step.gate{border-color:var(--clay);color:var(--clay);font-weight:700}
+.arrow{color:var(--ink-soft);font-size:14px}
+
+/* moments */
+.moment{border-left:3px solid var(--indigo);padding:4px 0 4px 22px;margin-bottom:26px}
+.moment .name{font-family:var(--serif);font-size:20.5px;font-weight:600;margin-bottom:7px}
+.moment .see{font-family:var(--mono);font-size:14.2px;background:var(--paper-raised);border:1px solid var(--rule);
+     border-radius:8px;padding:12px 15px;color:var(--ink);line-height:1.6;margin-top:9px}
+.moment p{font-size:15.8px;color:var(--ink-soft)}
+
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:15.5px}
+.tbl th{text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+        color:var(--ink-soft);padding:10px 14px;border-bottom:2px solid var(--rule);font-weight:500}
+.tbl td{padding:13px 14px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.55}
+.tbl td.num{font-family:var(--mono);color:var(--indigo);font-weight:500;white-space:nowrap}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* pricing */
+.tier{background:var(--paper-raised);border:1px solid var(--rule);border-radius:13px;padding:26px 26px 28px;display:flex;flex-direction:column}
+.tier.feature{border-color:var(--clay);border-width:2px}
+.tier .tn{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px}
+.tier .tp{font-family:var(--mono);font-size:31px;font-weight:700;color:var(--ink);letter-spacing:-.02em}
+.tier .tp small{font-size:14px;font-weight:400;color:var(--ink-soft)}
+.tier ul{list-style:none;margin-top:16px;font-size:15.3px;color:var(--ink-soft)}
+.tier li{padding:6px 0 6px 20px;position:relative;line-height:1.55}
+.tier li::before{content:'—';position:absolute;left:0;color:var(--clay);font-family:var(--mono)}
+
+/* caveat */
+.caveat{background:color-mix(in srgb,var(--amber) 9%,transparent);border:1px solid color-mix(in srgb,var(--amber) 34%,transparent);
+        border-radius:10px;padding:17px 21px;font-size:15.5px;color:var(--ink);line-height:1.62;margin-top:26px}
+.caveat b{color:var(--amber)}
+
+/* visuals */
+figure{margin:0 0 26px}
+figure img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:11px;background:#fff}
+figcaption{font-size:14.5px;color:var(--ink-soft);margin-top:10px;line-height:1.55}
+
+/* founder */
+.quote{font-family:var(--serif);font-size:clamp(22px,3vw,31px);line-height:1.4;max-width:26ch}
+.quote em{font-style:italic;color:var(--clay)}
+
+/* footer */
+footer{padding:52px 0 66px;font-size:15px;color:var(--ink-soft)}
+.flinks{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:22px;font-size:15px}
+.fine{font-size:13.6px;line-height:1.65;max-width:78ch}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Ascent</a>
+    <div class="navlinks">
+      <a href="#problem">The problem</a>
+      <a href="#how">How it works</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#pack">The pack</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Autonomous ML research operating system</div>
+    <h1>Improves your metric around the clock — and shows you the <em>evidence</em> behind every kept result.</h1>
+    <p class="lede">Point Ascent at your dataset and your metric. It runs literature-grounded, audit-gated experiments for days on a commodity laptop, keeps only strict improvements, and hands you a fingerprinted, one-command-reproducible bundle for every kept champion.</p>
+
+    <div class="ledger">
+      <div class="lab">The number we lead with is the one our own audit discounts</div>
+      <div class="line"><span class="raw">+6.52 raw</span> (founder-reported) · deflated: week-1 work · N=265+ trials</div>
+      <div class="note">A champion selected from 265+ trials is exactly what the deflated Sharpe ratio exists to discount. So we publish the corrected number ourselves, ledger attached, before anyone else computes it.</div>
+    </div>
+
+    <div class="cta">
+      <a class="btn" href="#pack">Read the full pack</a>
+      <a class="btn ghost" href="https://github.com/dlmastery/startup-skills">View on GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="shead">The problem</div>
+    <h2>Rigorous experimentation is policed by nothing but human discipline</h2>
+    <p class="sub">And discipline fails at published scale. Both sides of this market are broken, in opposite directions: humans are slow and leak; machines are fast and fail. Neither is a failure of execution. Both are failures of enforced method.</p>
+
+    <div class="grid3">
+      <div class="card">
+        <div class="stat">294 papers</div>
+        <div class="statlab">with documented data leakage, across <span class="mono">17</span> fields — in peer-reviewed, published work.<span class="src">D5</span></div>
+      </div>
+      <div class="card">
+        <div class="stat warn">42%</div>
+        <div class="statlab">of experiments failed on coding errors in the most famous AI-scientist system, under independent evaluation.<span class="src">A16</span></div>
+      </div>
+      <div class="card">
+        <div class="stat warn">46%</div>
+        <div class="statlab">of developers now distrust AI output accuracy — up from <span class="mono">31%</span> a year earlier.<span class="src">C3</span></div>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:22px">
+      <div class="card">
+        <div class="stat">38–45%</div>
+        <div class="statlab">of a practitioner's time goes to plumbing and harness-building rather than experiments — while they hand-run <span class="mono">1–3</span> experiments a day.<span class="src">A39</span></div>
+      </div>
+      <div class="card">
+        <div class="stat">4 modes</div>
+        <div class="statlab">CMU's audit of flagship open-source AI-scientist systems found four recurring failures: benchmark mis-selection, data leakage, metric misuse, post-hoc selection bias.<span class="src">A46</span></div>
+      </div>
+    </div>
+
+    <div class="caveat"><b>Scoped exactly:</b> Ascent's splits make <b>temporal and overlap leakage</b> structurally impossible — not semantic leakage, and not multiple-testing inflation.<span class="src">D5</span><span class="src">D8</span> Three of CMU's four modes are addressed today; the fourth, post-hoc selection bias, is the trial-count-corrected acceptance gate<span class="roadmap">ROADMAP</span></div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="shead">How it works</div>
+    <h2>A constitution enforces what a tired human skips</h2>
+    <p class="sub">A binding 52-section protocol governs every experiment. Three programmatic checks run before any commit — not linting, not advice: an experiment that fails a gate never enters the champion line. Refusal is the default state.</p>
+
+    <div class="loop">
+      <span class="step">Diagnose</span><span class="arrow">→</span>
+      <span class="step gate">Literature-ground</span><span class="arrow">→</span>
+      <span class="step">Hypothesize</span><span class="arrow">→</span>
+      <span class="step">Execute</span><span class="arrow">→</span>
+      <span class="step">Analyze</span><span class="arrow">→</span>
+      <span class="step">Document</span><span class="arrow">→</span>
+      <span class="step">Checkpoint</span>
+    </div>
+
+    <div class="grid3">
+      <div class="card">
+        <h3>Gate 1 — Data integrity</h3>
+        <p>Purged and embargoed super-folds. <span class="mono">validate_no_overlap()</span> runs programmatically and the runner refuses to launch on any overlap.<span class="src">D8</span></p>
+      </div>
+      <div class="card">
+        <h3>Gate 2 — Citation rigor</h3>
+        <p>Every reference verified against live indexes before compute is spent. Ungated fabrication rates run <span class="mono">14–95%</span>; a refused experiment costs a message, not a GPU-hour.<span class="src">D35</span></p>
+      </div>
+      <div class="card">
+        <h3>Gate 3 — Reasoning completeness</h3>
+        <p>The agent may not, by contract, write a result row. The runner writes what actually happened.<span class="src">D33</span></p>
+      </div>
+    </div>
+
+    <div class="caveat"><b>One bypass, and it is visible.</b> There is no silent path around the gates: the single override writes a sentinel tag into the run log, so an auditor grepping for it finds every experiment that ever went around a gate. And the guarantees are stated in scope — the fingerprint makes the metric <b>tamper-evident, not tamper-refusing</b><span class="roadmap">ROADMAP</span> and "monotonic" always means <b>monotonic in the composite proxy</b>, not in the truth.</div>
+  </div>
+</section>
+
+<section id="see">
+  <div class="wrap">
+    <div class="shead">What you actually see</div>
+    <h2>The trial ledger is the demo</h2>
+    <p class="sub">Not a dashboard of green numbers. A laboratory notebook that cannot be falsified — read like a trading terminal, steered like a chat.</p>
+
+    <div class="moment">
+      <div class="name">Trial ledger, discards included</div>
+      <p>An append-only log records every experiment — kept <em>and</em> discarded — with seed, config, git commit, and gate verdicts. It is the denominator every honest statistic needs.<span class="src">D6</span><span class="src">D9</span></p>
+      <div class="see">Trial 218 of this campaign — 9 kept, 209 discarded. Nothing is ever quietly deleted.</div>
+    </div>
+
+    <div class="moment">
+      <div class="name">Deflated-statistic panel</div>
+      <p>The deflated Sharpe ratio — or the trial-count-corrected analogue for other metrics — computed from the true ledger count and displayed beside every raw champion figure.<span class="src">D6</span><span class="src">D7</span></p>
+      <div class="see">Sharpe +6.52 raw · deflated X over 265 trials — full ledger attached.</div>
+    </div>
+
+    <div class="moment">
+      <div class="name">Super-fold split builder</div>
+      <p>A visual constructor with purge, embargo, and label-horizon buffers, drawn on your actual dates.<span class="src">D8</span></p>
+      <div class="see">0 overlapping rows across 7 folds — verified.</div>
+    </div>
+
+    <div class="moment">
+      <div class="name">Constitution editor with locked invariants</div>
+      <p>Audit-gate and metric sections become read-only once a campaign starts. The runner enforces it against the agent too.</p>
+      <div class="see">Locked while campaign live — the agent can't change this either.</div>
+    </div>
+
+    <div class="moment">
+      <div class="name">Goodhart divergence monitor</div>
+      <p>Tracks the composite proxy against each raw target metric, and alerts when they diverge past a band — because proxy optimization characteristically helps, then hurts.<span class="src">D31</span></p>
+      <div class="see">Composite up 4% over last 30 trials; raw test AUC flat — review metric weights or steer.</div>
+    </div>
+
+    <div class="moment">
+      <div class="name">Trial-count-corrected acceptance gate<span class="roadmap">ROADMAP</span></div>
+      <p>The keep/discard threshold rises with ledger count: a candidate that would have been kept at trial 20 is rejected at trial 220 unless it clears the inflation-adjusted bar. No published system has this gate — the proof of concept included.<span class="src">D6</span></p>
+      <div class="see">Improvement +0.011 &lt; deflated threshold +0.019 at N=218 trials — discarded; logged to ledger.</div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="shead">Who it's for</div>
+    <h2>One adaptive system, three edges, no lite fork</h2>
+    <p class="sub">The constitution adapts its rigor vocabulary per domain. Nobody gets a diminished version of the method.</p>
+    <div class="grid3">
+      <div class="card">
+        <h3>The domain scientist</h3>
+        <p>A computational-biology postdoc with an interesting dataset, a clear metric, and no ML engineering depth. The system caught her preprocessing leakage before any metric existed — the method she lacked, supplied without shame.</p>
+      </div>
+      <div class="card">
+        <h3>The solo quant</h3>
+        <p>The 40th signal variant this month, at 11pm. Enough trials guarantee a great in-sample Sharpe at true zero.<span class="src">D7</span> He sets the embargo window and sleeps. The self-deflation stops his scroll; the ledger, discards included, earns his renewal.</p>
+      </div>
+      <div class="card">
+        <h3>The research lead</h3>
+        <p>Head of research at a systematic fund. She is buying the audit trail and the campaign memory, not the hill-climbing — fingerprints, reasoning traces and winner archives as a review artifact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="evidence">
+  <div class="wrap">
+    <div class="shead">Evidence</div>
+    <h2>Six domains, one protocol, full ledgers</h2>
+    <p class="sub">All results below are <strong>founder-reported</strong>, single-seed in most domains, on public datasets with contamination caveats, and reproducible from the repo — not independently verified. That framing is binding on every artifact we publish.<span class="src assume">A6</span></p>
+
+    <div class="scroll">
+      <table class="tbl">
+        <thead><tr><th>Domain</th><th>Result</th><th>Trials</th></tr></thead>
+        <tbody>
+          <tr><td>EUR/USD signals</td><td class="num">Sharpe +6.52 <span style="font-family:var(--sans);color:var(--ink-soft)">— raw, pre-deflation</span></td><td class="num">265+</td></tr>
+          <tr><td>QQQ signals</td><td class="num">Composite Sharpe +1.32 · PSR 0.997</td><td class="num">216+</td></tr>
+          <tr><td>Higgs classification</td><td class="num">AUROC ≈ 0.8675+</td><td class="num">—</td></tr>
+          <tr><td>PathMNIST OOD</td><td class="num">AUC 0.997</td><td class="num">—</td></tr>
+          <tr><td>Olivetti faces</td><td class="num">Conditional ARI 0.874</td><td class="num">—</td></tr>
+          <tr><td>Fraud detection</td><td class="num">AUC 0.6097 <span style="font-family:var(--sans);color:var(--ink-soft)">vs AutoGluon 0.522 / H2O 0.518</span></td><td class="num">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid2" style="margin-top:34px">
+      <div class="card">
+        <div class="stat">+42% invalid</div>
+        <div class="statlab">experiments when the citation gate was removed — plus <span class="mono">3</span> leakage incidents the gated arm did not produce. The rigor layer measurably pays for its overhead. <em>One task, one seed, founder-reported.</em></div>
+      </div>
+      <div class="card">
+        <div class="stat">0 of 16</div>
+        <div class="statlab">community-curated forks of the dormant upstream repo added any rigor — <span class="mono">14</span> are hardware ports or translations. <span class="mono">94,800</span> stars proved the demand; the gap is empirically unfilled.<span class="src">A1</span><span class="src">A2</span></div>
+      </div>
+    </div>
+
+    <figure style="margin-top:38px">
+      <img src="visuals/images/V01_star-curve.png" alt="Star trajectory of the upstream autoresearch repo: 94,800 stars and 13,400 forks in six months, no active maintainer since March 2026, and a fork census showing 14 of 16 notable forks are ports or translations with none adding rigor." loading="lazy">
+      <figcaption>Massive proven demand, abandoned supply — an empirically unfilled gap. Sources: research/landscape.md <span class="mono">[A1][A3]</span>, market_structure.md <span class="mono">[C35]</span>.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="visuals/images/V07_deflation-ledger.png" alt="The deflation ledger: the raw founder-reported Sharpe of +6.52 shown alongside the policy that the deflated number ships first, with the full trial ledger as the denominator." loading="lazy">
+      <figcaption>Our flagship number, deflated by our own audit — that's the brand. Sources: narrative/pitch_deck.md s7, strategy/positioning.md §4.</figcaption>
+    </figure>
+
+    <div class="caveat"><b>What we don't claim.</b> Attestation packs, BYO-endpoint, fingerprint <em>refusal</em>, and the acceptance gate are roadmap<span class="roadmap">ROADMAP</span> — named as such everywhere, never sold as shipped. The honesty ledger listing what the story implies and the repo lacks is published in the pack itself.</div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="shead">Pricing</div>
+    <h2>Bring your own key, so token costs never touch our margin</h2>
+    <p class="sub">A 24/7 steering loop on mid-tier models costs <span class="mono">$3–12/day</span> of your own tokens — against a conservative <span class="mono">$1,100/day</span> for your own time.<span class="src">C25</span> BYOK is the architecture, not a discount gimmick.<span class="src assume">A12</span></p>
+
+    <div class="grid2">
+      <div class="tier">
+        <div class="tn">Free — open-source core</div>
+        <div class="tp">$0</div>
+        <ul>
+          <li>The full loop, constitution, audit gates and super-folds</li>
+          <li>Laptop-native, BYOK</li>
+          <li>Genuinely complete for a solo run — this is the trust channel, not a crippled trial</li>
+        </ul>
+      </div>
+      <div class="tier feature">
+        <div class="tn">Pro — BYOK</div>
+        <div class="tp">$125<small> / mo · $100–150 band</small></div>
+        <ul>
+          <li>Hosted campaign dashboards</li>
+          <li>SOTA catalog subscription</li>
+          <li>Deflation reports on demand</li>
+          <li>Champion-bundle publishing</li>
+          <li>Steering copilot, house-metered and capped</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <div class="tn">Team</div>
+        <div class="tp">$500–1k<small> / mo + usage</small></div>
+        <ul>
+          <li>Parallel research streams and shared winner archives</li>
+          <li>Hosted runs billed at cost × 1.3–1.5<span class="src assume">C21</span></li>
+          <li>Org-wide catalog</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <div class="tn">Enterprise / Compliance<span class="roadmap">YEAR 2+</span></div>
+        <div class="tp">$100k+<small> / yr</small></div>
+        <ul>
+          <li>Audit-trail retention SLAs</li>
+          <li>On-prem / VPC and source escrow</li>
+          <li>Priced now to anchor the corridor — <em>not sold now</em>: a solo founder fails vendor diligence today, and we say so</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="wrap">
+    <div class="shead">Why us</div>
+    <blockquote class="quote">I ran 265+ experiments across six domains, logged every trial kept and discarded, and <em>never wrote a line of Python.</em></blockquote>
+    <p class="sub" style="margin-top:30px">Every instruction given to the system over months of operation fits in one readable file, and none of it is code. Somewhere in month two the pattern became obvious: everything the human contributed was some form of <em>no</em> — no, that split leaks; no, cite the paper or discard the idea; no, one change per experiment; no, the champion stands until something strictly beats it.</p>
+    <p class="sub"><strong>Execution stopped being the bottleneck; discipline did.</strong> The field keeps making agents more capable. Nobody is making them more honest. So the discipline got written down — all of it — into a constitution that never gets tired at 2am.</p>
+  </div>
+</section>
+
+<section id="pack">
+  <div class="wrap">
+    <div class="shead">The pack</div>
+    <h2>Every claim on this page traces to an artifact</h2>
+    <p class="sub">This site arranges the pack; it invents nothing. Sixty-six documents and twenty-one rendered visuals, generated by the <a href="https://github.com/dlmastery/startup-skills">startup-skills</a> pipeline and cross-reconciled across layers.</p>
+
+    <div class="grid3">
+      <div class="card"><h3>Start here</h3><p><a href="README.md">The run README</a> · <a href="narrative/one_pager.md">One-pager</a> · <a href="narrative/pitch_deck.md">Pitch deck</a> · <a href="tech/whitepaper.md">Whitepaper</a></p></div>
+      <div class="card"><h3>The mechanism</h3><p><a href="tech/architecture/00_INDEX.md">Architecture D01–D10</a> · <a href="tech/deep_dives.md">Deep dives</a> · <a href="tech/not_vaporware.md">Honesty ledger</a></p></div>
+      <div class="card"><h3>The business</h3><p><a href="strategy/market_sizing.md">Market sizing</a> · <a href="financials/unit_economics.md">Unit economics</a> · <a href="financials/risk_matrix.md">Risk matrix</a> · <a href="validation/experiment_board.md">Experiment board</a></p></div>
+    </div>
+
+    <figure style="margin-top:38px">
+      <img src="visuals/images/V04_ratchet-loop.png" alt="The ratchet loop: sense, diagnose, ground, change one thing, measure, keep or discard, remember — with minutes-scale latencies at every hop." loading="lazy">
+      <figcaption>Point Ascent at your dataset and metric; wake up to audited, kept improvements.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <a href="README.md">Run README</a>
+      <a href="audit/COVERAGE.md">Coverage audit</a>
+      <a href="visuals/visual_manifest.md">Visual manifest</a>
+      <a href="https://github.com/dlmastery/startup-skills">GitHub</a>
+    </div>
+    <p class="fine"><strong>Ascent</strong> is a demonstration run of the <span class="mono">startup-skills</span> artifact pipeline, generated 2026-08-28. It is a founder-artifact pack, not a funded company or a shipping product. All proof-of-concept metrics are founder-reported and reproducible from the source repository; none are independently verified. Roadmap items are tagged as such throughout and are not claimed as shipped. Upstream credit: the minimal research loop this work extends is Karpathy's <em>autoresearch</em>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
