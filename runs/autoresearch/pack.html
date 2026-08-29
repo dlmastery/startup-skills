@@ -125,6 +125,9 @@ article ul.spaced>li{border-bottom:1px solid var(--rule-soft);padding-bottom:11p
 article ul.spaced>li:last-child{border-bottom:0}
 .mermaid{background:#FBFAF7;border:1px solid var(--rule);border-radius:10px;padding:24px;margin:0 0 26px;overflow-x:auto;text-align:center}
 .mermaid svg{max-width:100%;height:auto}
+/* link affordances: internal cross-reference vs asset that opens elsewhere */
+article a.xref{border-bottom:1px solid rgba(196,99,63,.4)}
+article a.asset::after{content:'↗';font-size:.78em;margin-left:3px;opacity:.75;vertical-align:.15em}
 .loading{color:var(--ink-soft);font-family:var(--mono);font-size:14px}
 .err{background:rgba(150,89,12,.09);border:1px solid var(--amber);border-radius:9px;padding:16px 20px;font-size:15px}
 </style>
@@ -242,6 +245,41 @@ async function render(){
         }
       }
     });
+    // Links authored inside the markdown must not blow the reader away.
+    //  - another artifact  -> stay in the reader, as a hash route
+    //  - an image or asset -> open in a new tab
+    //  - anything external -> open in a new tab
+    const baseDir = p.includes('/') ? p.slice(0, p.lastIndexOf('/') + 1) : '';
+    const resolve = (href) => {
+      if (href.startsWith('/')) return href.slice(1);
+      const parts = (baseDir + href).split('/'), out = [];
+      for (const seg of parts) {
+        if (seg === '.' || seg === '') continue;
+        if (seg === '..') out.pop(); else out.push(seg);
+      }
+      return out.join('/');
+    };
+    el.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('#')) return;
+      if (/^(https?:|mailto:)/i.test(href)) { a.target = '_blank'; a.rel = 'noopener'; return; }
+      const target = resolve(href.split('#')[0]);
+      if (/\.md$/i.test(target)) {
+        a.setAttribute('href', '#' + target);      // route inside the reader
+        a.classList.add('xref');
+      } else {
+        a.setAttribute('href', dir + target);      // asset: new tab, reader survives
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.classList.add('asset');
+      }
+    });
+    // Markdown-authored images need the same depth correction as our own figures.
+    el.querySelectorAll('img').forEach(im => {
+      const s = im.getAttribute('src');
+      if (s && !/^(https?:|data:)/i.test(s) && !s.startsWith(dir)) im.setAttribute('src', dir + resolve(s));
+    });
+
     // Number the sections so long documents are navigable at a glance.
     el.querySelectorAll('h2').forEach((h,i)=>{
       if(h.querySelector('.secno')) return;
