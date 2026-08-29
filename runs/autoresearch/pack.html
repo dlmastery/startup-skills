@@ -3,103 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>The Ascent founder pack — 64 documents</title>
-<meta name="description" content="Read the full Ascent founder artifact pack: research, strategy, product, tech, narrative, validation and financials — rendered, cross-linked and sourced.">
+<meta name="description" content="Read the full Ascent founder artifact pack: research, strategy, product, tech, narrative, validation and financials — rendered, illustrated and sourced.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23312E81'/><path d='M22 72 L50 28 L78 72' stroke='%23D97757' stroke-width='11' fill='none' stroke-linejoin='round' stroke-linecap='round'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+/* Light only, by request: the reading column is white, the chrome is warm ivory. */
 :root{
-  --paper:#F0EEE6;--paper-raised:#FAF9F5;--ink:#1F1E1D;--ink-soft:#605A57;--rule:#DEDBD2;
-  --clay:#D97757;--indigo:#312E81;--teal:#0D9488;--amber:#B45309;
+  --page:#FFFFFF;--chrome:#F4F2EC;--raised:#FAF9F5;--ink:#1F1E1D;--ink-soft:#5A554F;
+  --rule:#E2DFD6;--rule-soft:#EFEDE6;--clay:#C4633F;--indigo:#312E81;--teal:#0D7A70;--amber:#96590C;
   --serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,-apple-system,sans-serif;
-  --mono:'JetBrains Mono',Consolas,'Courier New',monospace;--side:310px;
-}
-@media (prefers-color-scheme:dark){
-  :root{--paper:#1B1A19;--paper-raised:#232220;--ink:#F0EEE6;--ink-soft:#A8A29B;--rule:#3A3835;
-        --indigo:#A5B4FC;--teal:#5EEAD4;--amber:#FBBF24}
+  --mono:'JetBrains Mono',Consolas,'Courier New',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+body{background:var(--page);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:var(--clay);text-decoration:none}
 a:hover{text-decoration:underline}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--clay);outline-offset:2px;border-radius:3px}
 
-/* layout */
-.shell{display:grid;grid-template-columns:var(--side) 1fr;min-height:100vh}
-aside{border-right:1px solid var(--rule);background:var(--paper-raised);position:sticky;top:0;height:100vh;overflow-y:auto;padding:22px 0 40px}
-main{padding:38px 46px 90px;min-width:0}
+.shell{display:grid;grid-template-columns:296px minmax(0,1fr);min-height:100vh}
+aside{background:var(--chrome);border-right:1px solid var(--rule);position:sticky;top:0;height:100vh;overflow-y:auto;padding:22px 0 44px}
+main{padding:0;min-width:0;background:var(--page)}
+.inner{display:grid;grid-template-columns:minmax(0,1fr) 208px;gap:44px;max-width:1180px;margin:0 auto;padding:40px 44px 100px}
+@media(max-width:1180px){.inner{grid-template-columns:minmax(0,1fr);gap:0}.toc{display:none}}
 @media(max-width:900px){
   .shell{grid-template-columns:1fr}
-  aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--rule)}
-  main{padding:26px 20px 60px}
+  aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--rule);max-height:none}
+  .inner{padding:24px 20px 60px}
 }
 
 /* sidebar */
-.sbhead{padding:0 22px 16px;border-bottom:1px solid var(--rule);margin-bottom:14px}
-.sbhead .home{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);letter-spacing:-.02em;display:inline-block}
-.sbhead .home:hover{text-decoration:none;color:var(--clay)}
-.sbhead .cnt{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.04em}
-.filter{width:calc(100% - 44px);margin:0 22px 16px;padding:9px 12px;border:1px solid var(--rule);border-radius:8px;
-        background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14.5px}
-.grp{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);
-     padding:16px 22px 7px;font-weight:500}
-.doc{display:block;padding:6px 22px 6px 22px;font-size:14.6px;color:var(--ink-soft);line-height:1.45;border-left:3px solid transparent}
-.doc:hover{color:var(--ink);background:color-mix(in srgb,var(--clay) 7%,transparent);text-decoration:none}
-.doc.on{color:var(--ink);border-left-color:var(--clay);background:color-mix(in srgb,var(--clay) 11%,transparent);font-weight:500}
-.doc .fn{font-family:var(--mono);font-size:11.4px;color:var(--ink-soft);opacity:.72;display:block}
+.sbhead{padding:0 22px 15px;border-bottom:1px solid var(--rule);margin-bottom:12px}
+.sbhead .home{font-family:var(--serif);font-size:23px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
+.sbhead .home:hover{color:var(--clay);text-decoration:none}
+.sbhead .cnt{font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:4px}
+.sbhead .back{display:inline-block;margin-top:9px;font-size:13.5px}
+.filter{width:calc(100% - 44px);margin:0 22px 14px;padding:9px 12px;border:1px solid var(--rule);border-radius:8px;
+        background:#fff;color:var(--ink);font-family:var(--sans);font-size:14.5px}
+.grp{font-family:var(--mono);font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--clay);padding:15px 22px 6px;font-weight:500}
+.doc{display:block;padding:6px 20px;font-size:14.4px;color:var(--ink-soft);line-height:1.45;border-left:3px solid transparent}
+.doc:hover{color:var(--ink);background:rgba(196,99,63,.07);text-decoration:none}
+.doc.on{color:var(--ink);border-left-color:var(--clay);background:rgba(196,99,63,.11);font-weight:500}
+.doc .fn{font-family:var(--mono);font-size:10.8px;color:var(--ink-soft);opacity:.68;display:block}
+.doc .pill{font-family:var(--mono);font-size:9.5px;color:var(--indigo);background:#EEF0FB;border:1px solid #D9DCF2;
+           border-radius:20px;padding:0 5px;margin-left:5px;vertical-align:1px}
 
-/* reader */
-.crumb{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-bottom:22px;letter-spacing:.03em}
-article{max-width:78ch}
-article h1{font-family:var(--serif);font-size:clamp(30px,4vw,44px);font-weight:500;line-height:1.15;letter-spacing:-.01em;margin:0 0 22px}
-article h2{font-family:var(--serif);font-size:28px;font-weight:600;margin:44px 0 14px;line-height:1.22;
-           padding-bottom:8px;border-bottom:1px solid var(--rule)}
-article h3{font-family:var(--serif);font-size:21.5px;font-weight:600;margin:32px 0 10px}
-article h4{font-size:17px;font-weight:700;margin:24px 0 8px;color:var(--ink)}
-article p{margin:0 0 17px}
-article ul,article ol{margin:0 0 18px 26px}
-article li{margin:7px 0}
-article li>ul,article li>ol{margin-top:7px;margin-bottom:7px}
-article strong{font-weight:700;color:var(--ink)}
-article em{font-style:italic}
-article hr{border:0;border-top:1px solid var(--rule);margin:36px 0}
-article blockquote{border-left:3px solid var(--clay);padding:4px 0 4px 20px;margin:0 0 18px;color:var(--ink-soft);font-style:italic}
-article code{font-family:var(--mono);font-size:.88em;background:var(--paper-raised);border:1px solid var(--rule);
+/* document header */
+.dochead{border-bottom:2px solid var(--rule);padding-bottom:24px;margin-bottom:34px}
+.dochead .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin-bottom:12px}
+.dochead .path{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-top:12px}
+
+/* TOC rail */
+.toc{position:sticky;top:34px;align-self:start;max-height:calc(100vh - 70px);overflow-y:auto;
+     border-left:1px solid var(--rule-soft);padding-left:18px}
+.toc h4{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px;font-weight:500}
+.toc a{display:block;font-size:13.2px;line-height:1.4;color:var(--ink-soft);padding:5px 0;border-bottom:1px solid var(--rule-soft)}
+.toc a:hover{color:var(--clay);text-decoration:none}
+
+/* article */
+article{max-width:74ch}
+article h1{font-family:var(--serif);font-size:clamp(32px,4.2vw,46px);font-weight:500;line-height:1.13;letter-spacing:-.015em;margin:0}
+article h2{font-family:var(--serif);font-size:30px;font-weight:600;margin:52px 0 16px;line-height:1.2;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+article h3{font-family:var(--serif);font-size:22.5px;font-weight:600;margin:36px 0 11px}
+article h4{font-size:16.5px;font-weight:700;margin:26px 0 8px}
+article p{margin:0 0 19px}
+/* the opening paragraph carries the document, so let it lead */
+article>p:first-of-type{font-size:20px;line-height:1.6;color:var(--ink-soft);margin-bottom:26px}
+article ul,article ol{margin:0 0 20px 24px}
+article li{margin:8px 0;padding-left:4px}
+article li::marker{color:var(--clay)}
+article strong{font-weight:700}
+article hr{border:0;border-top:1px solid var(--rule);margin:42px 0}
+article blockquote{border-left:3px solid var(--clay);background:var(--raised);padding:14px 22px;margin:0 0 20px;
+                   color:var(--ink-soft);font-style:italic;border-radius:0 8px 8px 0}
+article code{font-family:var(--mono);font-size:.86em;background:var(--raised);border:1px solid var(--rule-soft);
              border-radius:4px;padding:1px 5px;color:var(--indigo)}
-article pre{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;
-            overflow-x:auto;margin:0 0 20px}
-article pre code{background:none;border:0;padding:0;font-size:13.4px;line-height:1.6;color:var(--ink)}
-article a{border-bottom:1px solid color-mix(in srgb,var(--clay) 45%,transparent)}
+article pre{background:#FBFAF7;border:1px solid var(--rule);border-radius:10px;padding:17px 19px;overflow-x:auto;margin:0 0 22px}
+article pre code{background:none;border:0;padding:0;font-size:13.2px;line-height:1.65;color:var(--ink)}
 
-/* tables: the pack is mostly tables, so these matter most */
-.tw{overflow-x:auto;margin:0 0 24px;border:1px solid var(--rule);border-radius:10px;background:var(--paper-raised)}
-article table{border-collapse:collapse;width:100%;font-size:14.6px;line-height:1.55}
-article th{position:sticky;top:0;background:var(--paper-raised);text-align:left;font-family:var(--mono);
-           font-size:10.8px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);
-           font-weight:500;padding:11px 14px;border-bottom:2px solid var(--rule);white-space:nowrap}
-article td{padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+/* tables */
+.tw{overflow-x:auto;margin:0 0 26px;border:1px solid var(--rule);border-radius:10px}
+article table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.55;background:#fff}
+article th{position:sticky;top:0;background:var(--raised);text-align:left;font-family:var(--mono);font-size:10.4px;
+           letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);font-weight:500;padding:12px 14px;
+           border-bottom:2px solid var(--rule);white-space:nowrap}
+article td{padding:12px 14px;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+article tbody tr:nth-child(even){background:#FCFBF8}
 article tr:last-child td{border-bottom:0}
-article td code{font-size:.86em}
 
-/* honesty signatures preserved from the artifacts */
-.tag{font-family:var(--mono);font-size:.72em;font-weight:500;color:var(--clay);
-     background:color-mix(in srgb,var(--clay) 12%,transparent);
-     border:1px solid color-mix(in srgb,var(--clay) 28%,transparent);
-     border-radius:4px;padding:0 5px;margin:0 1px;white-space:nowrap;vertical-align:.1em}
-.tag.roadmap,.tag.assume{color:var(--amber);background:color-mix(in srgb,var(--amber) 13%,transparent);
-     border-color:color-mix(in srgb,var(--amber) 32%,transparent);font-weight:700}
+/* honesty chips */
+.tag{font-family:var(--mono);font-size:.71em;font-weight:500;color:var(--clay);background:rgba(196,99,63,.1);
+     border:1px solid rgba(196,99,63,.3);border-radius:4px;padding:0 5px;margin:0 1px;white-space:nowrap;vertical-align:.1em}
+.tag.roadmap,.tag.assume{color:var(--amber);background:rgba(150,89,12,.1);border-color:rgba(150,89,12,.32);font-weight:700}
 
-/* mermaid */
-.mermaid{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;padding:22px;
-         margin:0 0 24px;overflow-x:auto;text-align:center}
+/* figures */
+.figs{margin:38px 0 8px;padding-top:26px;border-top:2px solid var(--rule)}
+.figs h4{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);margin-bottom:16px;font-weight:500}
+figure{margin:0 0 26px}
+figure img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:10px;background:#fff}
+figure img:hover{border-color:var(--clay)}
+figcaption{font-size:13.8px;color:var(--ink-soft);margin-top:9px;line-height:1.5}
+figcaption .vid{font-family:var(--mono);color:var(--indigo);font-weight:500}
+.hero-fig{margin:0 0 34px}
+
+/* structure devices that break up the wall of text */
+.callout{background:var(--raised);border:1px solid var(--rule);border-left:4px solid var(--clay);
+         border-radius:0 10px 10px 0;padding:16px 22px;margin:0 0 22px}
+.callout>strong:first-child{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;
+         text-transform:uppercase;color:var(--clay);margin-bottom:7px;font-weight:700}
+.callout.warn{border-left-color:var(--amber);background:rgba(150,89,12,.05)}
+.callout.warn>strong:first-child{color:var(--amber)}
+article h2 .secno{font-family:var(--mono);font-size:13px;color:var(--clay);background:rgba(196,99,63,.1);
+         border:1px solid rgba(196,99,63,.25);border-radius:6px;padding:2px 8px;margin-right:11px;vertical-align:.22em;font-weight:500}
+/* long top-level lists read better as separated rows than as a dense block */
+article ul.spaced>li{border-bottom:1px solid var(--rule-soft);padding-bottom:11px;margin-bottom:11px}
+article ul.spaced>li:last-child{border-bottom:0}
+.mermaid{background:#FBFAF7;border:1px solid var(--rule);border-radius:10px;padding:24px;margin:0 0 26px;overflow-x:auto;text-align:center}
 .mermaid svg{max-width:100%;height:auto}
-
 .loading{color:var(--ink-soft);font-family:var(--mono);font-size:14px}
-.err{background:color-mix(in srgb,var(--amber) 10%,transparent);border:1px solid var(--amber);
-     border-radius:9px;padding:16px 20px;color:var(--ink);font-size:15px}
+.err{background:rgba(150,89,12,.09);border:1px solid var(--amber);border-radius:9px;padding:16px 20px;font-size:15px}
 </style>
 </head>
 <body>
@@ -107,120 +134,155 @@ article td code{font-size:.86em}
   <aside>
     <div class="sbhead">
       <a class="home" href="index.html">Ascent</a>
-      <div class="cnt" id="cnt">loading pack…</div>
+      <div class="cnt" id="cnt">loading…</div>
+      <a class="back" href="index.html">← Back to the site</a>
     </div>
     <input class="filter" id="filter" type="search" placeholder="Filter documents…" aria-label="Filter documents">
     <nav id="nav"></nav>
   </aside>
   <main>
-    <div class="crumb" id="crumb"></div>
-    <article id="doc"><p class="loading">Loading…</p></article>
+    <div class="inner">
+      <div>
+        <div class="dochead" id="dochead"></div>
+        <article id="doc"><p class="loading">Loading…</p></article>
+      </div>
+      <nav class="toc" id="toc"></nav>
+    </div>
   </main>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script>
-const DEFAULT_DOC = 'README.md';
-let DOCS = [];
+const DEFAULT_DOC='README.md';
+let DOCS=[], IMGS={};
 
-const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-if (window.mermaid) mermaid.initialize({
-  startOnLoad:false,
-  theme: dark ? 'dark' : 'base',
-  themeVariables: dark
-    ? {primaryColor:'#2A2860',primaryTextColor:'#F0EEE6',lineColor:'#A5B4FC',fontFamily:'Inter, system-ui, sans-serif'}
-    : {primaryColor:'#EEF2FF',primaryTextColor:'#1F1E1D',primaryBorderColor:'#312E81',lineColor:'#312E81',
-       secondaryColor:'#F0FDFA',tertiaryColor:'#FAF9F5',fontFamily:'Inter, system-ui, sans-serif'}
+if(window.mermaid) mermaid.initialize({
+  startOnLoad:false, theme:'base',
+  themeVariables:{primaryColor:'#EEF0FB',primaryTextColor:'#1F1E1D',primaryBorderColor:'#312E81',
+    lineColor:'#312E81',secondaryColor:'#EAF6F4',tertiaryColor:'#FAF9F5',
+    fontFamily:'Inter, system-ui, sans-serif',fontSize:'14px'}
 });
 
-function buildNav(filter){
-  const q = (filter||'').toLowerCase();
-  const shown = DOCS.filter(d => !q || d.t.toLowerCase().includes(q) || d.p.toLowerCase().includes(q));
-  const nav = document.getElementById('nav');
-  nav.innerHTML = '';
-  let last = null;
-  for (const d of shown){
-    if (d.g !== last){
-      const h = document.createElement('div');
-      h.className = 'grp'; h.textContent = d.g;
-      nav.appendChild(h); last = d.g;
-    }
-    const a = document.createElement('a');
-    a.className = 'doc'; a.href = '#' + d.p; a.dataset.path = d.p;
-    a.innerHTML = '';
+function buildNav(q){
+  q=(q||'').toLowerCase();
+  const shown=DOCS.filter(d=>!q||d.t.toLowerCase().includes(q)||d.p.toLowerCase().includes(q));
+  const nav=document.getElementById('nav'); nav.innerHTML=''; let last=null;
+  for(const d of shown){
+    if(d.g!==last){const h=document.createElement('div');h.className='grp';h.textContent=d.g;nav.appendChild(h);last=d.g;}
+    const a=document.createElement('a');
+    a.className='doc'; a.href='#'+d.p; a.dataset.path=d.p;
     a.appendChild(document.createTextNode(d.t));
-    const fn = document.createElement('span');
-    fn.className = 'fn'; fn.textContent = d.p;
-    a.appendChild(fn);
+    const n=(IMGS[d.p]||[]).length;
+    if(n){const p=document.createElement('span');p.className='pill';p.textContent=n+'◆';a.appendChild(p);}
+    const fn=document.createElement('span'); fn.className='fn'; fn.textContent=d.p; a.appendChild(fn);
     nav.appendChild(a);
   }
   markActive();
 }
-
 function markActive(){
-  const cur = decodeURIComponent(location.hash.slice(1)) || DEFAULT_DOC;
-  document.querySelectorAll('.doc').forEach(a => a.classList.toggle('on', a.dataset.path === cur));
+  const cur=decodeURIComponent(location.hash.slice(1))||DEFAULT_DOC;
+  document.querySelectorAll('.doc').forEach(a=>a.classList.toggle('on',a.dataset.path===cur));
 }
-
-// Wrap the artifacts' own source tags so they read on the page the way they read in the pack.
-function chipTags(html){
-  return html.replace(/\[([A-D]\d{1,3}(?:-assumption)?)\]/g, (m,t)=>`<span class="tag">[${t}]</span>`)
-             .replace(/\[ROADMAP\]/g, '<span class="tag roadmap">[ROADMAP]</span>')
-             .replace(/\((assumption[^)]*)\)/g, (m,t)=>`<span class="tag assume">(${t})</span>`);
+function chipTags(h){
+  return h.replace(/\[([A-D]\d{1,3}(?:-assumption)?)\]/g,(m,t)=>`<span class="tag">[${t}]</span>`)
+          .replace(/\[ROADMAP\]/g,'<span class="tag roadmap">[ROADMAP]</span>')
+          .replace(/\((assumption[^)]*)\)/g,(m,t)=>`<span class="tag assume">(${t})</span>`);
+}
+function figure(im, dir, cls){
+  const src = dir + 'visuals/images/' + im.file;
+  return `<figure class="${cls||''}"><a href="${src}" target="_blank" rel="noopener">
+    <img src="${src}" alt="${im.title.replace(/"/g,'&quot;')}" loading="lazy"></a>
+    <figcaption><span class="vid">${im.id}</span> — ${im.title}</figcaption></figure>`;
 }
 
 async function render(){
-  const path = decodeURIComponent(location.hash.slice(1)) || DEFAULT_DOC;
-  const el = document.getElementById('doc');
-  const crumb = document.getElementById('crumb');
-  el.innerHTML = '<p class="loading">Loading ' + path + '…</p>';
-  crumb.textContent = '';
-  try {
-    const res = await fetch(path, {cache:'no-cache'});
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const md = await res.text();
+  const p=decodeURIComponent(location.hash.slice(1))||DEFAULT_DOC;
+  const el=document.getElementById('doc'), head=document.getElementById('dochead'), toc=document.getElementById('toc');
+  el.innerHTML='<p class="loading">Loading '+p+'…</p>'; head.innerHTML=''; toc.innerHTML='';
+  const depth=(p.match(/\//g)||[]).length, dir='../'.repeat(depth);
+  try{
+    const r=await fetch(p,{cache:'no-cache'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const md=await r.text();
+    const blocks=[];
+    const stripped=md.replace(/```mermaid\n([\s\S]*?)```/g,(m,c)=>{blocks.push(c);return `\n\nMERMAIDBLOCK${blocks.length-1}ENDBLOCK\n\n`;});
+    let html=marked.parse(stripped,{mangle:false,headerIds:true});
+    html=chipTags(html);
+    html=html.replace(/<p>MERMAIDBLOCK(\d+)ENDBLOCK<\/p>/g,(m,i)=>
+      `<div class="mermaid">${blocks[i].replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</div>`);
 
-    // Pull mermaid fences out before markdown parsing, then re-insert as diagrams.
-    const blocks = [];
-    const stripped = md.replace(/```mermaid\n([\s\S]*?)```/g, (m, code) => {
-      blocks.push(code);
-      return `\n\nMERMAIDBLOCK${blocks.length - 1}ENDBLOCK\n\n`;
+    // Lift the document's own H1 into the header block.
+    const tmp=document.createElement('div'); tmp.innerHTML=html;
+    const h1=tmp.querySelector('h1'); const meta=DOCS.find(d=>d.p===p);
+    if(h1) h1.remove();
+    head.innerHTML=`<div class="eyebrow">${meta?meta.g:'Document'}</div>
+      <h1 style="font-family:var(--serif);font-size:clamp(32px,4.2vw,46px);font-weight:500;line-height:1.13;letter-spacing:-.015em">
+      ${h1?h1.innerHTML:(meta?meta.t:p)}</h1><div class="path">${p}</div>`;
+
+    const mine=IMGS[p]||[];
+    // one image leads the document; the rest close it
+    const hero = mine.length ? figure(mine[0], dir, 'hero-fig') : '';
+    const rest = mine.slice(1);
+    const gallery = rest.length
+      ? `<div class="figs"><h4>Visuals generated from this document</h4>${rest.map(im=>figure(im,dir)).join('')}</div>`
+      : '';
+    el.innerHTML = hero + tmp.innerHTML + gallery;
+
+    el.querySelectorAll('table').forEach(t=>{const w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t);});
+
+    // A paragraph that opens with a bold label is a callout in disguise — render it as one.
+    el.querySelectorAll('article > p, p').forEach(par=>{
+      const s=par.firstElementChild;
+      if(s && s.tagName==='STRONG' && par.firstChild===s){
+        const label=s.textContent.trim();
+        if(label.length<64 && /[:.—-]$/.test(label)){
+          par.classList.add('callout');
+          if(/caveat|warn|risk|note|careful|scope|limit|honest/i.test(label)) par.classList.add('warn');
+        }
+      }
+    });
+    // Number the sections so long documents are navigable at a glance.
+    el.querySelectorAll('h2').forEach((h,i)=>{
+      if(h.querySelector('.secno')) return;
+      const c=document.createElement('span'); c.className='secno';
+      c.textContent=String(i+1).padStart(2,'0');
+      h.insertBefore(c,h.firstChild);
+    });
+    // Give breathing room to long lists of substantive items.
+    el.querySelectorAll('ul').forEach(u=>{
+      if(u.children.length>=4 && u.innerText.length>360) u.classList.add('spaced');
     });
 
-    let html = marked.parse(stripped, {mangle:false, headerIds:true});
-    html = chipTags(html);
-    html = html.replace(/<p>MERMAIDBLOCK(\d+)ENDBLOCK<\/p>/g,
-      (m,i) => `<div class="mermaid">${blocks[i].replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</div>`);
-
-    el.innerHTML = html;
-    el.querySelectorAll('table').forEach(t => {
-      const w = document.createElement('div'); w.className = 'tw';
-      t.parentNode.insertBefore(w, t); w.appendChild(t);
-    });
-
-    crumb.textContent = path;
-    document.title = (DOCS.find(d=>d.p===path)?.t || path) + ' — Ascent pack';
-
-    if (window.mermaid && el.querySelector('.mermaid')){
-      try { await mermaid.run({nodes: el.querySelectorAll('.mermaid')}); } catch(e){}
+    const heads=[...el.querySelectorAll('h2')];
+    if(heads.length>1){
+      toc.innerHTML='<h4>On this page</h4>';
+      heads.forEach((h,i)=>{
+        if(!h.id) h.id='s'+i;
+        const a=document.createElement('a'); a.href='#'+p; a.textContent=h.textContent.slice(0,64);
+        a.onclick=e=>{e.preventDefault();h.scrollIntoView({block:'start'});};
+        toc.appendChild(a);
+      });
     }
-    window.scrollTo(0,0);
-    markActive();
-  } catch (e) {
-    el.innerHTML = '<div class="err"><strong>Could not load <code>'+path+'</code></strong><br>'+e.message+'</div>';
+    document.title=(meta?meta.t:p)+' — Ascent pack';
+    if(window.mermaid && el.querySelector('.mermaid')){
+      try{ await mermaid.run({nodes:el.querySelectorAll('.mermaid')}); }catch(e){}
+    }
+    window.scrollTo(0,0); markActive();
+  }catch(e){
+    el.innerHTML='<div class="err"><strong>Could not load <code>'+p+'</code></strong><br>'+e.message+'</div>';
   }
 }
 
 (async function init(){
-  try {
-    const r = await fetch('visuals/docmanifest.json', {cache:'no-cache'});
-    DOCS = await r.json();
-  } catch(e){ DOCS = [{g:'Brief', p:'README.md', t:'README'}]; }
-  document.getElementById('cnt').textContent = DOCS.length + ' documents · generated 2026-08-28';
+  try{ DOCS=await (await fetch('visuals/docmanifest.json',{cache:'no-cache'})).json(); }
+  catch(e){ DOCS=[{g:'Brief',p:'README.md',t:'README'}]; }
+  try{ IMGS=await (await fetch('visuals/docimages.json',{cache:'no-cache'})).json(); }catch(e){ IMGS={}; }
+  const shots=Object.values(IMGS).flat().length;
+  document.getElementById('cnt').textContent=DOCS.length+' documents · '+shots+' visuals inline';
   buildNav('');
-  document.getElementById('filter').addEventListener('input', e => buildNav(e.target.value));
-  addEventListener('hashchange', render);
+  document.getElementById('filter').addEventListener('input',e=>buildNav(e.target.value));
+  addEventListener('hashchange',render);
   render();
 })();
 </script>

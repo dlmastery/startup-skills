@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>V08 — SOM funnel</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1e293b;display:flex;justify-content:center;padding:20px}
+.cv{width:1600px;max-width:100%;background:#fff;border:1px solid #e2e8f0;padding:44px 52px;display:flex;flex-direction:column;gap:18px}
+.mono{font-family:Consolas,'Courier New',monospace}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0d9488;font-weight:700}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:1.12;color:#312e81;margin:6px 0 2px}
+.tk{font-size:18px;color:#475569;max-width:1350px}
+.zl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#6366f1;margin-bottom:8px}
+.zone{border:1px solid #e2e8f0;border-radius:10px;padding:18px 24px;background:#fff}
+.ft{border-top:3px solid #312e81;padding-top:10px;font-size:12px;color:#64748b}
+table{border-collapse:collapse;width:100%;font-size:14.8px}
+th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6366f1;padding:8px 10px;border-bottom:2px solid #e2e8f0;font-weight:700}
+td{padding:9px 10px;border-bottom:1px solid #f1f5f9;line-height:1.45}
+td.n{font-family:Consolas,'Courier New',monospace;color:#312e81;font-weight:700;white-space:nowrap}
+.funnel{display:flex;flex-direction:column;gap:7px;align-items:center}
+.fb{background:#312e81;color:#fff;border-radius:8px;padding:11px 18px;text-align:center;font-size:15px;line-height:1.35}
+.fb .v{font-family:Consolas,'Courier New',monospace;font-weight:700;font-size:19px}
+.fb small{color:#c7d2fe;font-size:12.5px;display:block;margin-top:2px}
+.fb.teal{background:#0d9488}
+.arrow{color:#94a3b8;font-size:15px;line-height:1}
+.eq{background:#312e81;color:#fff;border-radius:10px;padding:20px 26px;text-align:center}
+.eq .big{font-family:Consolas,'Courier New',monospace;font-size:23px;font-weight:700;line-height:1.5}
+.eq .cap{font-size:14.5px;color:#c7d2fe;margin-top:8px;font-style:italic}
+.caveat{background:#FFFBEB;border:1px solid #F59E0B;border-radius:8px;padding:12px 16px;color:#92400e;font-size:14.5px;margin-top:10px;line-height:1.5}
+.row{display:grid;grid-template-columns:1.05fr 1fr;gap:18px}
+</style>
+</head>
+<body>
+<div class="cv">
+  <div>
+    <div class="eb">Ascent · V08 · Audience: VC</div>
+    <h1>The core market is $2–3B, sized bottom-up with the arithmetic shown</h1>
+    <div class="tk">The job filter is applied at the <b>TAM</b> layer, not hidden in SAM: only people who repeatedly grind a dataset toward a scalar metric are TAM. The wider practitioner pool is a behaviour-expansion ceiling, and it is labelled as one.</div>
+  </div>
+
+  <div class="zone">
+    <div class="zl">Zone 1 — Core TAM, job-filtered, three layers</div>
+    <table>
+      <tr><th>Layer</th><th>Units</th><th>Price/yr</th><th>Arithmetic</th><th>Layer TAM</th></tr>
+      <tr><td>Metric-grinding individuals</td><td class="n">500k–750k</td><td class="n">$1,800</td><td class="n">625k mid × $1,800</td><td class="n">$0.9–1.35B</td></tr>
+      <tr><td>Quant funds (edge budgets)</td><td class="n">~1,000</td><td class="n">$150k</td><td class="n">1,000 × $150,000</td><td class="n">$0.15B</td></tr>
+      <tr><td>Enterprise compliance / platform</td><td class="n">~4,000 orgs</td><td class="n">$250k</td><td class="n">4,000 × $250,000</td><td class="n">$1.0B</td></tr>
+      <tr><td colspan="4" style="text-align:right;font-weight:700">Core TAM ≈</td><td class="n" style="font-size:17px">$2–3B/yr</td></tr>
+    </table>
+    <div class="caveat"><b>The $10B figure is a ceiling, not a market.</b> It only exists if research-OS behaviour spreads to the full 3–10M practitioner pool. It is cited as a ceiling and never as TAM. <b>SAM ≈ $0.5–0.85B; plan on $0.7B.</b></div>
+  </div>
+
+  <div class="row">
+    <div class="zone">
+      <div class="zl">Zone 2 — The corrected SOM funnel (stars are not users)</div>
+      <div class="funnel">
+        <div class="fb" style="width:100%"><span class="v">94,800</span><small>starred users on the dormant upstream repo <span class="mono">[A1]</span></small></div>
+        <div class="arrow">▼ × 5–15% ever-active</div>
+        <div class="fb" style="width:82%"><span class="v">4,700–14,200</span><small>ever-active users — the stage the old model was missing</small></div>
+        <div class="arrow">▼ × 1–5% paid conversion <span class="mono">[C32]</span></div>
+        <div class="fb" style="width:62%"><span class="v">47–711</span><small>paying individuals</small></div>
+        <div class="arrow">▼ × $1,200–1,800/yr</div>
+        <div class="fb teal" style="width:46%"><span class="v">$0.06M–$1.3M</span><small>individual ARR — plan band $0.1–1M</small></div>
+      </div>
+    </div>
+    <div class="zone">
+      <div class="zl">Zone 3 — The other two revenue legs</div>
+      <table>
+        <tr><th>Leg</th><th>Basis</th><th>Result</th></tr>
+        <tr><td>Team pull-through</td><td>2–4% of paying individuals convert a team at <span class="mono">$9k/yr</span></td><td class="n">$10k–$0.26M</td></tr>
+        <tr><td>Quant / enterprise deals<br><span style="color:#64748b;font-size:13px">year 2–3 only, gated on legal entity + security posture</span></td><td>3–8 audit-trail-led deals at <span class="mono">$100k</span> avg <span class="mono">[C19]</span></td><td class="n">$0.3M–$0.8M</td></tr>
+        <tr><td colspan="2" style="text-align:right;font-weight:700">Corrected SOM (36 mo)</td><td class="n">$0.4M–$2.4M</td></tr>
+      </table>
+      <div class="caveat"><b>What the correction cost us:</b> the prior version sized SOM off raw GitHub stars and put the job filter in SAM — two category errors. <b>The old $5M plan did not survive.</b> The milestone moved rather than the assumptions inflating.</div>
+    </div>
+  </div>
+
+  <div class="eq">
+    <div class="zl" style="color:#a5b4fc">Zone 4 — The plan number, in one line of arithmetic</div>
+    <div class="big">94.8k × 10% active × 3% paid × $1,500 = $427k &nbsp;+&nbsp; 10 teams × $9k = $90k &nbsp;+&nbsp; 5 deals × $100k = $500k &nbsp;→&nbsp; ≈ $1.0M ARR</div>
+    <div class="cap">every factor carries a source tag or an explicit (assumption: basis) flag — change one and the model recomputes trivially</div>
+  </div>
+
+  <div class="ft">Sources: narrative/pitch_deck.md s8 &#183; strategy/market_sizing.md §1–3, §5 <span class="mono">[A1][C6][C19][C23][C32][C36][C37]</span> &#183; financials/revenue_build.md §4</div>
+</div>
+</body>
+</html>

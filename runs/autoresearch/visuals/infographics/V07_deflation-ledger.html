@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>V07 — Deflation ledger</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1e293b;display:flex;justify-content:center;padding:20px}
+.cv{width:1600px;max-width:100%;background:#fff;border:1px solid #e2e8f0;padding:44px 52px;display:flex;flex-direction:column;gap:18px}
+.mono{font-family:Consolas,'Courier New',monospace}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0d9488;font-weight:700}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:1.12;color:#312e81;margin:6px 0 2px}
+.tk{font-size:18px;color:#475569;max-width:1350px}
+.zl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#6366f1;margin-bottom:8px}
+.zone{border:1px solid #e2e8f0;border-radius:10px;padding:18px 24px;background:#fff}
+.ft{border-top:3px solid #312e81;padding-top:10px;font-size:12px;color:#64748b}
+.hero{background:#312e81;color:#fff;border-radius:10px;padding:26px 30px;text-align:center}
+.hero .big{font-family:Consolas,'Courier New',monospace;font-size:34px;font-weight:700;line-height:1.4}
+.hero .big .raw{color:#FDBA74}
+.hero .cap{font-size:16px;color:#c7d2fe;margin-top:10px;font-style:italic}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.caveat{background:#FFFBEB;border:1px solid #F59E0B;border-radius:8px;padding:12px 16px;color:#92400e;font-size:14.5px;margin-top:10px;line-height:1.5}
+.teal{background:#f0fdfa;border-color:#0d9488}
+li{margin:7px 0 7px 20px;font-size:15.5px;line-height:1.5}
+.step{display:flex;gap:14px;align-items:flex-start;margin:10px 0}
+.num{font-family:Consolas,'Courier New',monospace;font-size:13px;font-weight:700;color:#fff;background:#0d9488;border-radius:5px;padding:3px 9px;flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="cv">
+  <div>
+    <div class="eb">Ascent · V07 · Audience: VC</div>
+    <h1>Our flagship number, deflated by our own audit — that's the brand</h1>
+    <div class="tk">Every competitor leads with its best number. We lead with the discount applied to ours, and publish the ledger that makes the discount checkable. The honesty is not a disclaimer bolted on the end; it is the product's only durable differentiator.</div>
+  </div>
+
+  <div class="hero">
+    <div class="zl" style="color:#a5b4fc">Zone 1 — The only way this number ever renders</div>
+    <div class="big"><span class="raw">+6.52 raw</span> (founder-reported) · deflated: week-1 work · N=265+ trials</div>
+    <div class="cap">never the raw number alone — binding on every artifact, slide and image in this pack</div>
+  </div>
+
+  <div class="row">
+    <div class="zone">
+      <div class="zl">Zone 2 — Why the raw number cannot stand</div>
+      <ul>
+        <li>A champion selected from <span class="mono">265+</span> trials is <b>exactly</b> the statistic the deflated Sharpe ratio exists to discount <span class="mono">[D6][D7]</span></li>
+        <li><span class="mono">+6.52</span> is therefore an <b>upper bound on the honest number</b>, not a result</li>
+        <li>Enough trials guarantee a great in-sample Sharpe at a true edge of <b>zero</b> <span class="mono">[D7]</span></li>
+      </ul>
+      <div class="caveat"><b>Computability caveat, stated up front:</b> the DSR requires the FULL trial ledger <i>including discarded experiments</i>. If the PoC did not log discards, the honest deliverable is "DSR computed on a fresh, fully instrumented run" — never a promise about the old number.</div>
+    </div>
+    <div class="zone">
+      <div class="zl">Zone 3 — The self-deflation protocol</div>
+      <div class="step"><span class="num">1</span><div>Before any champion bundle ships publicly, compute the DSR at the <b>true</b> trial count plus a CPCV path distribution <span class="mono">[D6][D8]</span></div></div>
+      <div class="step"><span class="num">2</span><div>Make the <b>corrected</b> number the headline: <span class="mono">"+6.52 raw, X deflated over N trials — here's the ledger."</span></div></div>
+      <div class="step"><span class="num">3</span><div>If the deflated number is weak: lead with the fraud-vs-AutoGluon result and reposition EUR/USD as the <b>methodology showcase</b>. The plan survives a bad number; it would not survive a hidden one.</div></div>
+    </div>
+  </div>
+
+  <div class="zone">
+    <div class="zl">Zone 4 — The same discipline applied to every other claim</div>
+    <div class="row">
+      <div>
+        <ul>
+          <li>"Leakage structurally impossible" → scoped to <b>temporal and overlap</b> leakage only <span class="mono">[D5][D8]</span></li>
+          <li>"Monotonic" → always <b>monotonic in the composite proxy</b>, never in the truth <span class="mono">[D31]</span></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>Fingerprint → <b>tamper-evident, not tamper-refusing</b> (refusal is <b>[ROADMAP]</b>)</li>
+          <li>All PoC metrics → <b>founder-reported, single-seed</b>, reproducible from the repo, not independently verified</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="zone teal">
+    <div class="zl" style="color:#0f766e">Zone 5 — Why this is a moat and not modesty</div>
+    <div style="font-size:16.5px;line-height:1.6;color:#0f766e">The one unrecoverable error with a quant is overclaiming. A vendor who publishes the discount on their own headline number before anyone else computes it has bought the only currency that matters in this market — and a competitor cannot copy it without also giving up their best slide.</div>
+  </div>
+
+  <div class="ft">Sources: narrative/pitch_deck.md s7 &#183; strategy/positioning.md §4 &#183; research/survey.md §6 <span class="mono">[D6][D7]</span> &#183; PoC metrics founder-reported (A6)</div>
+</div>
+</body>
+</html>

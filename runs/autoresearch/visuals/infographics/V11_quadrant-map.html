@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>V11 — Quadrant map</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1e293b;display:flex;justify-content:center;padding:20px}
+.cv{width:1600px;max-width:100%;background:#fff;border:1px solid #e2e8f0;padding:44px 52px;display:flex;flex-direction:column;gap:18px}
+.mono{font-family:Consolas,'Courier New',monospace}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0d9488;font-weight:700}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:1.12;color:#312e81;margin:6px 0 2px}
+.tk{font-size:18px;color:#475569;max-width:1350px}
+.zl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#6366f1;margin-bottom:8px}
+.zone{border:1px solid #e2e8f0;border-radius:10px;padding:18px 24px;background:#fff}
+.ft{border-top:3px solid #312e81;padding-top:10px;font-size:12px;color:#64748b}
+.grid{display:grid;grid-template-columns:44px 1fr 1fr;grid-template-rows:auto 1fr 1fr 34px;gap:10px}
+.yax{grid-row:2 / span 2;writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6366f1;font-weight:700;display:flex;align-items:center;justify-content:center}
+.colh{text-align:center;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#6366f1;font-weight:700;padding-bottom:2px}
+.q{border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;min-height:170px;background:#fff}
+.q .qt{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#64748b;font-weight:700;margin-bottom:9px}
+.q p{font-size:14.6px;line-height:1.55;color:#475569}
+.q.empty{border:3px solid #0d9488;background:#f0fdfa}
+.q.empty .qt{color:#0f766e}
+.q.empty .claim{font-family:Georgia,serif;font-size:25px;color:#0f766e;font-weight:700;line-height:1.25;margin-bottom:8px}
+.q.crowd{background:#f8fafc}
+.xax{grid-column:2 / span 2;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6366f1;font-weight:700;padding-top:4px}
+.caveat{background:#FFFBEB;border:1px solid #F59E0B;border-radius:8px;padding:12px 16px;color:#92400e;font-size:14.5px;line-height:1.5}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+li{margin:6px 0 6px 20px;font-size:15px;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="cv">
+  <div>
+    <div class="eb">Ascent · V11 · Audience: VC</div>
+    <h1>The sustained-campaign, audit-gated quadrant is empty — and incumbents are walking away from it</h1>
+    <div class="tk">Both axes were tested against all <span class="mono">20</span> competitor rows and survived. Three other candidate axes were tested and rejected as primary — including model/benchmark quality, which is precisely where Ascent must not fight.</div>
+  </div>
+
+  <div class="grid">
+    <div></div>
+    <div class="colh">Trust-me output</div>
+    <div class="colh">Audit-gated &amp; reproducible</div>
+
+    <div class="yax">Sustained campaign on the user's own metric</div>
+    <div class="q crowd">
+      <div class="qt">Sustained × trust-me</div>
+      <p><b>Karpathy autoresearch + its 13.4k forks</b> — free, unmaintained since <span class="mono">2026-03-26</span>, hard-coded to one task (<span class="mono">val_bpb</span> on nanochat).</p>
+      <p style="margin-top:8px"><b class="mono">0 of 16</b> curated notable forks added rigor; 14 are hardware ports or translations <span class="mono">[A1][A2]</span>.</p>
+    </div>
+    <div class="q empty">
+      <div class="qt">Sustained × audit-gated</div>
+      <div class="claim">Empty.<br>Ascent's claim.</div>
+      <p>The demand is proven by 94,800 stars; the supply is absent. Not "underserved" — <b>empirically unfilled</b>.</p>
+    </div>
+
+    <div class="q crowd">
+      <div class="qt">One-shot × trust-me</div>
+      <p>Sakana AI Scientist, Agent Laboratory, Zochi/Carl, AIDE/Weco, MLE-STAR, AutoGluon/H2O/DataRobot/SageMaker/Vertex, Devin/Cursor sessions, manual + ChatGPT.</p>
+      <p style="margin-top:8px;color:#b45309"><b>The crowded quadrant</b> — and where every documented failure mode lives.</p>
+    </div>
+    <div class="q">
+      <div class="qt">One-shot × audit-gated</div>
+      <p><b>Nearly empty.</b> Sargsyan's FDR architecture is a paper with no system <span class="mono">[D32]</span>; fragments exist in Google Co-Scientist's tournament debate, which does not execute <span class="mono">[A19]</span>.</p>
+    </div>
+
+    <div></div>
+    <div class="xax">Output trust →</div>
+  </div>
+
+  <div class="row">
+    <div class="zone">
+      <div class="zl">Zone 3 — Why the load-bearing clause is "on the user's own metric"</div>
+      <p style="font-size:15.2px;line-height:1.55;color:#475569">Without it, Karpathy-lineage systems look like quadrant-mates when they are hard-coded to a single task. Paper factories terminate in an artifact on <i>their</i> problem; AutoML terminates in a fitted model; MLE-bench agents terminate when the competition ends. Only Ascent's terminus is <b>your</b> metric, still climbing.</p>
+    </div>
+    <div class="zone">
+      <div class="zl">Zone 4 — Axes tested and rejected as primary</div>
+      <ul>
+        <li><b>Price/cost locus</b> (cloud vs laptop) — real, but divides cost structures, not buyer decisions. Retained as the <i>secondary</i> wedge.</li>
+        <li><b>Model/benchmark quality</b> — the default axis in public comparisons and exactly where we must not fight: benchmarks carry contamination and conflate model, scaffold and budget.</li>
+        <li><b>Degree of autonomy</b> — Devin and Cursor own it, and it is not what practitioners distrust. They distrust the <b>output</b> <span class="mono">[C3]</span>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="caveat"><b>Stated carefully:</b> rising developer distrust of AI output (46%, up from 31% <span class="mono">[C3]</span>) is <i>consistent with</i> verifiability being the gating variable — the survey did not name it as the stated blocker, and this pack does not claim it did.</div>
+
+  <div class="ft">Sources: narrative/pitch_deck.md s11 &#183; strategy/positioning.md §1–2 &#183; research/competitors.md (20 rows) <span class="mono">[A1][A2][A5–A22][A46][C3][D32]</span></div>
+</div>
+</body>
+</html>

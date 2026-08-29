@@ -64,12 +64,24 @@ Write **`runs/<slug>/pack.html`** — a self-contained document browser over the
 
 1. **Manifest first.** A JS array of `{group, path, title, blurb}` covering every artifact that exists on disk — grouped by layer (Brief, Research, Strategy, Product, Tech, Narrative, Validation, Financials, Visuals, Audit). Generate it from the glob, never by hand.
 2. **Sidebar + reader.** Grouped, filterable document list on the left; rendered document on the right. Deep-link by hash (`pack.html#tech/whitepaper.md`) so any artifact is directly shareable, and restore that hash on load.
-3. **Render markdown client-side** with a pinned CDN library (`marked`), styled with the site's own tokens — the serif for headings, mono for tables and every number, generous measure (~70ch), styled tables with sticky headers, and horizontal scroll containers so wide tables never break the page.
+3. **Render markdown client-side** with a pinned CDN library (`marked`), styled with the site's own tokens — the serif for headings, mono for tables and every number, generous measure (~74ch), styled tables with sticky headers and zebra rows, and horizontal scroll containers so wide tables never break the page.
 4. **Render Mermaid as diagrams, not code.** Architecture docs ship ```mermaid fences; initialize `mermaid` with a theme built from the site tokens and render each fence. A pack whose diagrams show as raw text has failed this step — those diagrams are the tech layer's whole argument.
 5. **Preserve the honesty signatures in the reader's CSS:** source tags (`[A1]`, `[D5]`) and `(assumption)` flags get the same chip treatment as the landing page; `[ROADMAP]` renders in amber wherever it appears.
 6. **Link it prominently** — top nav plus the landing page's primary CTA. "Read the full pack" must land in the reader, not a directory listing.
 
-Verify by loading the published page and confirming: a document renders, its tables are styled, a Mermaid diagram draws, and a deep link opens the right file.
+### The reader must present documents, not just style them
+
+Rendered markdown with correct fonts is still a wall of text. A reader that returns 4,000 words in one undifferentiated column has failed, however good its typography. Every one of these is required:
+
+- **White reading ground, always.** Set `<meta name="color-scheme" content="light">` and do **not** ship a dark-mode block for the reader. Long-form documents full of tables are read in light; a dark reader inheriting the OS theme is the single most common complaint. The sidebar may carry the warm chrome tone; the reading column is white.
+- **Put the visuals in the documents.** Build `visuals/docimages.json` by parsing the visual manifest's source column for the artifacts each rendered image cites, then invert it. Lead each document with its first image and close with the rest under "Visuals generated from this document." A pack that rendered images and shows none while reading has wasted them. Remember relative depth: a doc at `tech/architecture/D02.md` needs `../../` prefixes.
+- **Lift the H1 into a document header** with its layer eyebrow and path, and set the opening paragraph as a lede at ~20px. The reader should look composed before a single word is read.
+- **Auto-number `h2` sections** with a monospace chip, and add a sticky "On this page" rail built from them for any document with more than one section.
+- **Promote bold-label paragraphs to callouts.** A paragraph opening `<strong>Caveat:</strong>` is a callout in disguise — give it a left accent bar and a monospace uppercase label, in amber when the label matches caveat/warn/risk/scope/limit/honest. This alone breaks up most of the wall, because these packs are written that way throughout.
+- **Space long lists.** A `ul` with 4+ substantive items gets row separators instead of dense bullets.
+- **Show an image count** beside each sidebar entry so a reader can find the illustrated documents.
+
+Verify by loading the published page and confirming: a document renders, tables are styled, a Mermaid diagram draws, images appear inline, callouts and section numbers are present, and a deep link opens the right file.
 
 ## Publish — the run gets a real, public URL
 
