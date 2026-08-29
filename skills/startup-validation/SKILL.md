@@ -16,6 +16,8 @@ Generate the Steve Blank / customer-development board set: the artifacts that sh
 5. **`stage_gate.md`** — where the company sits in Discovery → Validation → Creation → Building, the evidence supporting that placement, and the explicit exit criteria (with numbers) required to pass the next gate.
 6. **`metrics_by_stage.md`** — the 3–5 metrics that matter at each stage and — equally important — the vanity metrics to ignore at each stage and why.
 7. **`pivot_log.md`** — decision journal: what has already been considered and killed (from the grill session and research), and the standing pivot-or-persevere criteria: "we pivot if X by date Y".
+8. **`mvp_definition.md`** — the two MVPs, kept distinct: the **low-fidelity** artifact that tests whether the *problem* is real (often not software), and the **high-fidelity** one that tests whether the *solution* is bought. State for each what it does, what it deliberately omits, the question it answers, and the result that would falsify it. Include the **earlyvangelist definition**: the five things a person must already have done for them to count as one.
+9. **`decision_making_unit.md`** — the buying unit: **user, payer, champion, saboteur**, plus anyone with a veto. Per role: what they want, what they fear, what evidence moves them, and what kills the deal. Personas cover who benefits; this covers who can say no, which is what actually stalls enterprise deals.
 
 ## Quality bar
 

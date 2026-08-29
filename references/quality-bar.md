@@ -1,6 +1,19 @@
 # The quality bar — what "beats an elite founder's own pack" means
 
-Every generator skill in this pack must satisfy these eight properties. They are checkable, not aspirational. The audit skill spot-checks them.
+Every generator skill in this pack must satisfy these nine properties. They are checkable, not aspirational. The audit skill spot-checks them.
+
+## 0. Every artifact opens by saying what it is and why it exists
+
+Immediately under the H1, before any section, argument, table or figure, every artifact carries a short **orientation block** — four labelled lines, roughly 80–120 words total:
+
+- **What this is** — one sentence naming the artifact's job in plain words.
+- **Why it exists** — the decision this document informs, and what goes wrong if it does not exist. Name the failure, not the benefit.
+- **How to read it** — where to look first, and what a skeptic should attack.
+- **Depends on / feeds** — the upstream artifacts whose conclusions it inherits, and the downstream ones that consume it, as links.
+
+This is listed as property zero because it is the one a generator most reliably skips. A document that opens on "## 1. Channel decision" assumes the reader already knows why they are reading it — which is true only for the author. The orientation block is what turns sixty files into a pack rather than a folder, and it is what lets any single artifact be opened cold, out of order, from a search result or a shared link.
+
+Boilerplate fails this bar. "This document describes the go-to-market strategy" restates the title and informs nothing. The test: **the "why it exists" line must name a decision or a failure that is specific to this venture**, not to documents of this type.
 
 ## 1. Mechanism over adjective
 

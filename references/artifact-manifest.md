@@ -61,10 +61,33 @@ Paths relative to `runs/<slug>/`. `req` = required for a complete pack; `opt` = 
 | A53 | `ingest/SOURCE_<n>.md` — one per ingested source | startup-ingest | opt |
 | A54 | `audit/COVERAGE.md` | startup-audit | req |
 | A55 | `README.md` — the run's front door (see contract below) | startup-audit | req |
+| A58 | `strategy/business_model_canvas.md` — Osterwalder 9 blocks, one hypothesis + test per block | startup-strategy | req |
+| A59 | `strategy/petal_diagram.md` — Blank's petal: adjacent markets we draw customers from, not a 2×2 | startup-strategy | req |
+| A60 | `strategy/channel_plan.md` — channel map **and channel economics** (discount/margin stack per channel) | startup-strategy | req |
+| A61 | `strategy/sales_roadmap.md` — organisation map, influence map, access map, sales process | startup-strategy | req |
+| A62 | `validation/mvp_definition.md` — low-fidelity → high-fidelity MVP, and the earlyvangelist definition | startup-validation | req |
+| A63 | `validation/decision_making_unit.md` — user / payer / champion / saboteur, and who can veto | startup-validation | req |
+| A64 | `narrative/mission_vision.md` — mission, vision, values, and the "why we exist" | startup-narrative | req |
 | A56 | `index.html` — the run's public site, self-contained, relative asset paths | startup-website | opt |
 | A57 | Live GitHub Pages URL, recorded in `README.md` and verified loading | startup-website | opt |
 
 Stub threshold: a `req` file under ~40 substantive lines, or missing sections its owner skill's contract names, counts as **stub**, not present. A24/A50 count each file individually.
+
+## Coverage against *The Startup Owner's Manual* (Blank & Dorf)
+
+The validation layer follows Blank's four steps, but a pack assembled from the audience sets alone reliably omits deliverables the Customer Development method treats as core. A58–A64 close the gaps found by auditing this manifest against the book:
+
+| Blank deliverable | Where it lives | Note |
+|---|---|---|
+| Business Model Canvas, 9 blocks, hypothesis per block | **A58** | The Lean Canvas (A11) is Maurya's variant and drops Key Partners, Key Activities and Customer Relationships — the blocks Blank tests explicitly. Keep both. |
+| Competitive **petal diagram** | **A59** | Blank's tool is not a 2×2. It asks which *adjacent markets* the company draws customers from, which is a different and harder question than where rivals sit. |
+| Channel plan **and channel economics** | **A60** | A GTM narrative usually names channels and omits the discount/margin stack, so channel viability is asserted rather than computed. |
+| Sales roadmap: organisation, influence and access maps | **A61** | Blank's Customer Validation Phase 1. Without it "we'll sell to funds" hides the fact that nobody has mapped who signs. |
+| MVP definition, low- then high-fidelity, plus earlyvangelist | **A62** | Distinguishes the artifact that tests the problem from the one that tests the solution. A PRD is neither. |
+| Decision-making unit: user / payer / champion / saboteur | **A63** | Personas cover who benefits; the DMU covers **who can veto**, which is what actually stalls enterprise deals. |
+| Mission, vision, values, the "why" | **A64** | Distinct from positioning: positioning is against competitors, mission is independent of them. |
+
+Already covered, do not duplicate: market type (A07), TAM/SAM/SOM (A09), customer archetypes (A10), value proposition (A12), get/keep/grow (A39), stage-gate and pivot-or-proceed (A40, A42), metrics by stage (A41), discovery scripts (A38), day-in-the-life (A20).
 
 ## A50 — which rows need an HTML version
 

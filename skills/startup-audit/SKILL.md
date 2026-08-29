@@ -11,6 +11,7 @@ Deterministic completeness check: compare what exists on disk against `reference
 
 1. **Inventory.** Glob `runs/<slug>/` and diff against the manifest. Three states per row: present · missing · stub (exists but under ~40 substantive lines or missing its contract sections — open and check, don't trust file size alone).
 2. **Spot-check quality.** Sample 3–5 present artifacts against `references/quality-bar.md`: unsourced numbers? adjective-claims? missing "recommended next" endings? Mermaid that doesn't parse? HTML that doesn't render? Log failures as `fix` rows.
+   - **Check property 0 on every artifact, not a sample** — it is mechanical: does an orientation block sit directly under the H1, with all four labelled lines? This is the most commonly skipped contract in the pack and the cheapest to verify. Grep for the labels; a missing block is a `fix` row, and a block whose "why it exists" line would read identically for any venture is also a `fix` row.
 3. **Write `audit/COVERAGE.md`** — the full manifest table with Status per row, then the gap list grouped in priority tiers:
    - Tier 1 core mechanism & architecture · Tier 2 end-to-end journeys · Tier 3 validation boards · Tier 4 market & positioning · Tier 5 feature/technique synthesis · Tier 6 proof & trust (safety, evidence, "not vaporware").
    - End with an explicit **priority draw order** (the exact sequence to generate next) and effort estimates.
