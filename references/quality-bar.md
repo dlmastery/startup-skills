@@ -1,6 +1,6 @@
 # The quality bar — what "beats an elite founder's own pack" means
 
-Every generator skill in this pack must satisfy these seven properties. They are checkable, not aspirational. The audit skill spot-checks them.
+Every generator skill in this pack must satisfy these eight properties. They are checkable, not aspirational. The audit skill spot-checks them.
 
 ## 1. Mechanism over adjective
 
@@ -32,3 +32,10 @@ Every abstract capability gets at least one named-persona, step-by-step operatin
 ## 7. Dense, not long
 
 Elite artifacts are information-dense: tables, tiered lists, and tight prose. Delete every sentence that survives deletion without loss. Length is a cost, density is the goal.
+
+## 8. Every run has a front door
+
+Work nobody can find is work nobody did. `runs/<slug>/README.md` exists from the first phase onward and is refreshed at every phase checkpoint — never deferred to the end, because runs get interrupted and a bare directory of sixty files is indistinguishable from a failed run. It embeds the pack's best visuals inline, links every directory, and states the honest completion count including what is still missing. Its contract is A55 in `references/artifact-manifest.md`.
+
+- Weak: sixty excellent artifacts across eight subdirectories, no README, images rendered but never linked.
+- Strong: a reader who opens the directory sees the pitch, the three best images, and the reading path for their role — in ten seconds, without opening a subdirectory.

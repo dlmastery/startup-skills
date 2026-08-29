@@ -6,7 +6,7 @@
 - **Honesty rules bind images too (non-negotiable):** every PoC metric carries "founder-reported"; the EUR/USD champion always renders as `+6.52 raw (founder-reported) · deflated: week-1 work · N=265+ trials` — never the raw number alone; unshipped capabilities (trial-count-corrected acceptance gate, attestation packs, BYO-endpoint, fingerprint *refusal*) carry a visible **[ROADMAP]** tag; the fingerprint claim is always "tamper-evident, **not** tamper-refusing (refusal is roadmap)"; "monotonic" is always "monotonic in the composite proxy."
 - **Every number on every visual exists in a pack artifact**; each row cites its source file(s); each image prompt in `image_prompts.md` carries the source citation as an HTML comment.
 - **Forms:** `image` = production text-to-image prompt exists in `image_prompts.md` / `prompts.json`; `mermaid-existing` = a syntax-checked Mermaid source already ships in the cited artifact (the image row renders its poster version); `html` = best built as a self-contained HTML infographic in a later pass.
-- **Counts:** 100 rows · **78 required · 22 optional**. All statuses `pending` (nothing is marked rendered until the file exists on disk with nonzero size).
+- **Counts:** 100 rows · **78 required · 22 optional**. **Status as of 2026-08-28 (reconciled to the glob): 21 images rendered (V01–V21), 3 HTML infographics rendered (V01, V04, V05).** A row is marked rendered only when the file exists on disk with nonzero size — verified, not assumed.
 - **Sizes:** 1536x1024 landscape default; 1024x1536 portrait for the technique-wave posters (V33–V35) and the decision-tree poster (V36) only.
 
 **Standard-set dedupe (contract rows satisfied by other rows, with reasons):** competitive positioning map → V11 (deck version is canonical); TAM/SAM/SOM bottom-up build → V08 + V57/V58 (deck + VC deep versions); use-of-funds milestone map → V15; journey maps → V23–V26; technique decision tree → V36; UX collages → V27–V32; risk matrix grid → V62 (placed in the VC set where the diligence read happens).
@@ -17,32 +17,32 @@
 
 | ID | Title — headline takeaway | Audience | Source artifact(s) | Form | Status |
 |---|---|---|---|---|---|
-| V01 | Star curve — 94,800 people starred a research loop nobody maintains. | VC | narrative/pitch_deck.md s1; research/landscape.md [A1][A3]; research/market_structure.md [C35] | image | pending |
-| V02 | Leakage census — Research rigor fails at published scale, manual and automated alike. | VC | pitch_deck.md s2; research/survey.md [D5]; landscape.md [A16][A46][A39]; market_structure.md [C3] | image | pending |
-| V03 | METR horizon — Execution is solved; judgment is the gap — we ship the judgment layer. | VC | pitch_deck.md s3; research/capability_table.md [B1][B2][B4][B16] | image | pending |
-| V04 | Ratchet loop — Point Ascent at your dataset and metric; wake up to audited, kept improvements. | cross | pitch_deck.md s4; BRIEF.md; tech/architecture/D02.md | image | pending |
-| V05 | Trial ledger — The trial ledger is the demo: every runner-executed trial logged, kept and discarded. | cross | pitch_deck.md s5; product/features_flagship.md #1; product/ux_spec.md | image | pending |
-| V06 | Gate stack — A constitution enforces what a tired human skips. | cross | pitch_deck.md s6; tech/deep_dives.md §3; survey.md §4.4 | image | pending |
-| V07 | Deflation ledger — Our flagship number, deflated by our own audit — that's the brand. | VC | pitch_deck.md s7; strategy/positioning.md §4; survey.md §6 [D6][D7] | image | pending |
-| V08 | SOM funnel — The core market is $2–3B, sized bottom-up with the arithmetic shown. | VC | pitch_deck.md s8; strategy/market_sizing.md §1–3 | image | pending |
-| V09 | Pricing ladder — BYOK pricing removes token costs from our margin by construction. | VC | pitch_deck.md s9; financials/pricing.md §4 | image | pending |
-| V10 | GTM timeline — Ninety days of scripted motion end in pre-orders, not a hosted fantasy. | VC | pitch_deck.md s10; strategy/gtm.md §4 | image | pending |
-| V11 | Quadrant map — The sustained-campaign, audit-gated quadrant is empty — and incumbents are walking away from it. | VC | pitch_deck.md s11; positioning.md §1–2; research/competitors.md | image | pending |
-| V12 | Moat ledger — Forks copy the constitution in a day; they cannot backfill the ledger. | VC | pitch_deck.md s12; positioning.md §5; strategy (A11) | image | pending |
-| V13 | Domain grid — Six domains, one protocol, reproducible in one command. | cross | pitch_deck.md s13; tech/not_vaporware.md §2 | image | pending |
-| V14 | Deck team — The founder already ran the factory for months. | VC | pitch_deck.md s14; BRIEF.md; financials/use_of_funds.md §2b | image | pending |
-| V15 | Use of funds — $1.2M pre-seed buys 24 months of milestone-gated de-risking. | VC | pitch_deck.md s15; use_of_funds.md §1–2 | image | pending |
+| V01 | Star curve — 94,800 people starred a research loop nobody maintains. | VC | narrative/pitch_deck.md s1; research/landscape.md [A1][A3]; research/market_structure.md [C35] | image | image rendered + html rendered |
+| V02 | Leakage census — Research rigor fails at published scale, manual and automated alike. | VC | pitch_deck.md s2; research/survey.md [D5]; landscape.md [A16][A46][A39]; market_structure.md [C3] | image | image rendered |
+| V03 | METR horizon — Execution is solved; judgment is the gap — we ship the judgment layer. | VC | pitch_deck.md s3; research/capability_table.md [B1][B2][B4][B16] | image | image rendered |
+| V04 | Ratchet loop — Point Ascent at your dataset and metric; wake up to audited, kept improvements. | cross | pitch_deck.md s4; BRIEF.md; tech/architecture/D02.md | image | image rendered + html rendered |
+| V05 | Trial ledger — The trial ledger is the demo: every runner-executed trial logged, kept and discarded. | cross | pitch_deck.md s5; product/features_flagship.md #1; product/ux_spec.md | image | image rendered + html rendered |
+| V06 | Gate stack — A constitution enforces what a tired human skips. | cross | pitch_deck.md s6; tech/deep_dives.md §3; survey.md §4.4 | image | image rendered |
+| V07 | Deflation ledger — Our flagship number, deflated by our own audit — that's the brand. | VC | pitch_deck.md s7; strategy/positioning.md §4; survey.md §6 [D6][D7] | image | image rendered |
+| V08 | SOM funnel — The core market is $2–3B, sized bottom-up with the arithmetic shown. | VC | pitch_deck.md s8; strategy/market_sizing.md §1–3 | image | image rendered |
+| V09 | Pricing ladder — BYOK pricing removes token costs from our margin by construction. | VC | pitch_deck.md s9; financials/pricing.md §4 | image | image rendered |
+| V10 | GTM timeline — Ninety days of scripted motion end in pre-orders, not a hosted fantasy. | VC | pitch_deck.md s10; strategy/gtm.md §4 | image | image rendered |
+| V11 | Quadrant map — The sustained-campaign, audit-gated quadrant is empty — and incumbents are walking away from it. | VC | pitch_deck.md s11; positioning.md §1–2; research/competitors.md | image | image rendered |
+| V12 | Moat ledger — Forks copy the constitution in a day; they cannot backfill the ledger. | VC | pitch_deck.md s12; positioning.md §5; strategy (A11) | image | image rendered |
+| V13 | Domain grid — Six domains, one protocol, reproducible in one command. | cross | pitch_deck.md s13; tech/not_vaporware.md §2 | image | image rendered |
+| V14 | Deck team — The founder already ran the factory for months. | VC | pitch_deck.md s14; BRIEF.md; financials/use_of_funds.md §2b | image | image rendered |
+| V15 | Use of funds — $1.2M pre-seed buys 24 months of milestone-gated de-risking. | VC | pitch_deck.md s15; use_of_funds.md §1–2 | image | image rendered |
 
 ## B. Contract standard set (rows not already satisfied above)
 
 | ID | Title — headline takeaway | Audience | Source artifact(s) | Form | Status |
 |---|---|---|---|---|---|
-| V16 | System map — The reasoning plane proposes; the deterministic execution plane owns the disk truth. | research-lead | tech/architecture/D03.md, D01.md | image (mermaid-existing in D03) | pending |
-| V17 | Core-loop closed circuit — Sense → Diagnose → Ground → change one thing → Measure → Keep-or-discard → Remember, with minutes-scale latencies at every hop. | cross | BRIEF.md vocabulary; D02.md; not_vaporware.md §4 | image | pending |
-| V18 | User-spectrum coverage — One adaptive system serves Priya's missing method, Marcus's midnight referee, and Elena's forensic audit trail — no lite fork. | cross | strategy/personas.md; tech/whitepaper.md §3 | image | pending |
-| V19 | Feature roadmap — 57 features in forced order: the 9-item trust-test kernel ships before any new UI. | practitioner | product/features_prioritized.md | image | pending |
-| V20 | Technique×feature heat table — 12 of 19 technique clusters feed the twin gravity wells: the audit gates and the acceptance gate. | research-lead | tech/techniques/technique_feature_matrix.md | image | pending |
-| V21 | Unit-economics engine — BYOK puts token COGS on the user's card, so fully-loaded gross margin is 82.0% at 150 users and ≥85% at 300+. | VC | financials/unit_economics.md §1, §3–4 | image | pending |
+| V16 | System map — The reasoning plane proposes; the deterministic execution plane owns the disk truth. | research-lead | tech/architecture/D03.md, D01.md | image (mermaid-existing in D03) | image rendered |
+| V17 | Core-loop closed circuit — Sense → Diagnose → Ground → change one thing → Measure → Keep-or-discard → Remember, with minutes-scale latencies at every hop. | cross | BRIEF.md vocabulary; D02.md; not_vaporware.md §4 | image | image rendered |
+| V18 | User-spectrum coverage — One adaptive system serves Priya's missing method, Marcus's midnight referee, and Elena's forensic audit trail — no lite fork. | cross | strategy/personas.md; tech/whitepaper.md §3 | image | image rendered |
+| V19 | Feature roadmap — 57 features in forced order: the 9-item trust-test kernel ships before any new UI. | practitioner | product/features_prioritized.md | image | image rendered |
+| V20 | Technique×feature heat table — 12 of 19 technique clusters feed the twin gravity wells: the audit gates and the acceptance gate. | research-lead | tech/techniques/technique_feature_matrix.md | image | image rendered |
+| V21 | Unit-economics engine — BYOK puts token COGS on the user's card, so fully-loaded gross margin is 82.0% at 150 users and ≥85% at 300+. | VC | financials/unit_economics.md §1, §3–4 | image | image rendered |
 | V22 | 10x mechanism breakdown — 5.1x more valid output × 6x cheaper days ÷ 3 honesty discount = a defended 10.4x. | VC | tech/whitepaper.md §2 | image | pending |
 
 ## C. Practitioner set

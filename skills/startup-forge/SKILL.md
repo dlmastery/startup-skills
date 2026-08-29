@@ -22,7 +22,7 @@ Orchestrates the full pipeline: vague idea → grilled brief → deep research �
 | 6 | Validation | startup-validation | Blank board set done |
 | 7 | Financials | startup-financials | pricing + revenue build + risk matrix done |
 | 8 | Visuals | startup-visuals | visual manifest complete, all HTML infographics render |
-| 9 | Audit | startup-audit | COVERAGE.md shows zero missing required artifacts |
+| 9 | Audit | startup-audit | COVERAGE.md shows zero missing required artifacts **and README.md renders the pack (A55 contract, every link resolves)** |
 | 10 | Website | startup-website | site builds locally |
 
 Every phase gate from 2 onward includes the **critic loop**: run startup-critic on the phase's artifacts (three personas, up to three revise rounds) before marking the gate passed. Research (phase 1) is critiqued implicitly by every downstream citation; grill output is critiqued by the founder's own corrections.
@@ -33,8 +33,9 @@ Every phase gate from 2 onward includes the **critic loop**: run startup-critic 
 2. **Research is upstream of all claims.** Phases 2–8 cite `research/` files; a claim with no source gets an `(assumption)` tag.
 3. **Parallelize where independent.** Phases 3–7 all depend on 0–2 but not on each other — dispatch them as parallel subagents when the runtime supports it, each reading `BRIEF.md` + `research/` + this pack's references. Visuals (8) waits for 3–7; audit (9) waits for everything.
 4. **Checkpoint after each phase.** One-paragraph status to the user: what was produced, the single most interesting finding, what's next. Long runs must be resumable: on "continue", read `audit/COVERAGE.md` (or the manifest) to find the first unfinished artifact and resume there.
+   - **Write `runs/<slug>/README.md` at the end of phase 0 and refresh it at every checkpoint** — a stub front door from the start, grown as phases land. Never leave the run root bare between phases: sessions get interrupted mid-run, and an interrupted run with no README is indistinguishable from a failed one. Phase 9 finalizes this file; it does not create it.
 5. **Domain vocabulary everywhere.** Use the nouns from `BRIEF.md` §Vocabulary, never placeholder nouns like "the product" or leftover nouns from other domains.
-6. **Done = manifest satisfied**, not "feels complete". The run ends only when startup-audit reports full coverage and writes `INDEX.md`.
+6. **Done = manifest satisfied**, not "feels complete". The run ends only when startup-audit reports full coverage and `README.md` presents the pack with every link resolving.
 
 ## Resume triggers
 

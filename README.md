@@ -27,7 +27,7 @@ or run phases individually:
 /grill-me <your idea>          # produces runs/<slug>/BRIEF.md
 /startup-research              # produces runs/<slug>/research/
 /startup-product               # PRD, features, journeys ...
-/startup-audit                 # coverage check + INDEX.md
+/startup-audit                 # coverage check + the run's README.md front door
 ```
 
 ## Install (harness-agnostic)
@@ -46,6 +46,8 @@ Each run writes to `runs/<slug>/` in the current project:
 
 ```
 runs/<slug>/
+  README.md                        # the front door: pitch, reading paths, embedded visuals,
+                                   #   honest completion count (written phase 0, refreshed every phase)
   BRIEF.md  ASSUMPTIONS.md          # grill-me
   research/                        # startup-research
   strategy/                        # startup-strategy
@@ -56,7 +58,7 @@ runs/<slug>/
   financials/                      # startup-financials
   visuals/                         # startup-visuals (HTML infographics + image prompts)
   ingest/                          # startup-ingest (optional)
-  audit/COVERAGE.md  INDEX.md      # startup-audit
+  audit/COVERAGE.md                # startup-audit
   website/                         # startup-website (deployable landing site)
 ```
 

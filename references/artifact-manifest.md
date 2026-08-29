@@ -59,7 +59,22 @@ Paths relative to `runs/<slug>/`. `req` = required for a complete pack; `opt` = 
 | A52 | `visuals/images/*.png` — rendered when text2image available | startup-visuals | opt |
 | A53 | `ingest/SOURCE_<n>.md` — one per ingested source | startup-ingest | opt |
 | A54 | `audit/COVERAGE.md` | startup-audit | req |
-| A55 | `INDEX.md` | startup-audit | req |
+| A55 | `README.md` — the run's front door (see contract below) | startup-audit | req |
 | A56 | `website/` — buildable site | startup-website | opt |
 
 Stub threshold: a `req` file under ~40 substantive lines, or missing sections its owner skill's contract names, counts as **stub**, not present. A24/A50 count each file individually.
+
+## A55 — the run README contract
+
+A pack of sixty files with no front door reads as an empty directory. `runs/<slug>/README.md` is the one artifact a human opens first, so it is `req` and it is written from the glob, never from memory. It must carry all eight sections:
+
+1. **Title + one-paragraph pitch** — what this venture is, in the founder's own framing, from `BRIEF.md`.
+2. **Status line** — generation date, run slug, and the honest completion state: `X/Y required artifacts · Z/N visuals rendered`. Never round up, never write "complete" while `audit/COVERAGE.md` lists open rows.
+3. **Start here** — the three-file 60-second path (typically one-pager → pitch deck → whitepaper), each as a working relative link.
+4. **Reading paths by audience** — investor, engineer, operator, practitioner. Each an ordered list of relative links with a clause on why that file is next.
+5. **Full artifact map** — every directory as a table: path · what it holds · file count · owning skill. Counts come from the glob.
+6. **Visual index** — every rendered image and HTML infographic as a relative link with its headline takeaway. **Images are embedded inline** (`![...](visuals/images/<ID>_<slug>.png)`) for at least the deck set, so the pack's best work is visible without opening a single subdirectory.
+7. **Top 5 sharpest claims** — each with its source tag, so a skeptic can start where it hurts.
+8. **What's missing / next draw** — the open rows from `audit/COVERAGE.md`, verbatim. A README that hides the gaps is a worse artifact than no README.
+
+Every link must resolve. A README with one broken relative link is a `fix` row, not a pass.
