@@ -192,8 +192,8 @@ function chipTags(h){
           .replace(/\[ROADMAP\]/g,'<span class="tag roadmap">[ROADMAP]</span>')
           .replace(/\((assumption[^)]*)\)/g,(m,t)=>`<span class="tag assume">(${t})</span>`);
 }
-function figure(im, dir, cls){
-  const src = dir + 'visuals/images/' + im.file;
+function figure(im, cls){
+  const src = 'visuals/images/' + im.file;
   return `<figure class="${cls||''}"><a href="${src}" target="_blank" rel="noopener">
     <img src="${src}" alt="${im.title.replace(/"/g,'&quot;')}" loading="lazy"></a>
     <figcaption><span class="vid">${im.id}</span> — ${im.title}</figcaption></figure>`;
@@ -225,10 +225,10 @@ async function render(){
 
     const mine=IMGS[p]||[];
     // one image leads the document; the rest close it
-    const hero = mine.length ? figure(mine[0], dir, 'hero-fig') : '';
+    const hero = mine.length ? figure(mine[0], 'hero-fig') : '';
     const rest = mine.slice(1);
     const gallery = rest.length
-      ? `<div class="figs"><h4>Visuals generated from this document</h4>${rest.map(im=>figure(im,dir)).join('')}</div>`
+      ? `<div class="figs"><h4>Visuals generated from this document</h4>${rest.map(im=>figure(im)).join('')}</div>`
       : '';
     el.innerHTML = hero + tmp.innerHTML + gallery;
 
@@ -268,7 +268,7 @@ async function render(){
         a.setAttribute('href', '#' + target);      // route inside the reader
         a.classList.add('xref');
       } else {
-        a.setAttribute('href', dir + target);      // asset: new tab, reader survives
+        a.setAttribute('href', target);            // asset: new tab, reader survives
         a.target = '_blank';
         a.rel = 'noopener';
         a.classList.add('asset');
@@ -277,7 +277,7 @@ async function render(){
     // Markdown-authored images need the same depth correction as our own figures.
     el.querySelectorAll('img').forEach(im => {
       const s = im.getAttribute('src');
-      if (s && !/^(https?:|data:)/i.test(s) && !s.startsWith(dir)) im.setAttribute('src', dir + resolve(s));
+      if (s && !/^(https?:|data:)/i.test(s)) im.setAttribute('src', resolve(s));
     });
 
     // Number the sections so long documents are navigable at a glance.
