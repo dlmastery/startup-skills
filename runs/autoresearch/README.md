@@ -8,8 +8,8 @@ Rigorous ML experimentation is policed by nothing but human discipline, and disc
 
 **Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/**
 **Run:** `autoresearch` · **Generated:** 2026-08-28 · **Status: PARTIAL**
-**52 of 53 required artifacts present · 78 of 100 visuals rendered · 12 of 78 required HTML infographics**
-The text pack is complete and cross-layer reconciled. The visual layer is 78% rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
+**52 of 53 required artifacts present · 83 of 100 visuals rendered (all 78 required rows closed) · 12 of 78 required HTML infographics**
+The text pack is complete and cross-layer reconciled. The visual layer is 83% rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
 
 ---
 
@@ -62,13 +62,13 @@ The text pack is complete and cross-layer reconciled. The visual layer is 78% re
 | [`narrative/`](narrative) | One-pager, VC memo, 15-slide deck, future press release, founder story | 5 | startup-narrative |
 | [`validation/`](validation) | Riskiest assumptions, E1–E8 board, discovery guide, get-keep-grow, stage gate, metrics by stage, pivot log | 7 | startup-validation |
 | [`financials/`](financials) | Pricing, revenue build, unit economics, use of funds, risk matrix, comps & exits | 6 | startup-financials |
-| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 78 rendered PNGs, 12 HTML infographics | 3 + 90 | startup-visuals |
+| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 83 rendered PNGs, 12 HTML infographics | 3 + 95 | startup-visuals |
 | [`audit/COVERAGE.md`](audit/COVERAGE.md) | Row-by-row completeness audit and draw order | 1 | startup-audit |
 | [`index.html`](index.html) | The public site — [live on GitHub Pages](https://dlmastery.github.io/startup-skills/runs/autoresearch/) | 1 | startup-website |
 
-## Visual index — 78 images, 12 HTML infographics
+## Visual index — 83 images, 12 HTML infographics
 
-Full spec for all 100 rows in [`visuals/visual_manifest.md`](visuals/visual_manifest.md); production prompts in [`visuals/image_prompts.md`](visuals/image_prompts.md).
+**All 78 required image rows are closed.** Full spec for all 100 rows in [`visuals/visual_manifest.md`](visuals/visual_manifest.md); production prompts in [`visuals/image_prompts.md`](visuals/image_prompts.md).
 
 | ID | Headline takeaway | Image | HTML |
 |---|---|---|---|
@@ -150,6 +150,11 @@ Full spec for all 100 rows in [`visuals/visual_manifest.md`](visuals/visual_mani
 | V76 | Eight experiments, every pass/fail number frozen on 2026-08-27, before any result exists. | [png](visuals/images/V76_threshold-cards.png) | — |
 | V77 | Monthly allocation so nothing double-counts: the audit that caught ~$45k of double-counte… | [png](visuals/images/V77_headcount-grid.png) | — |
 | V78 | The $4–6M seed is raised on exactly four proven facts, no more. | [png](visuals/images/V78_seed-story-four-facts.png) | — |
+| V81 | Five cards, one system: the must-have language is verbatim, and card 5's first objection… | [png](visuals/images/V81_persona-wall.png) | — |
+| V88 | Horizons doubled every ~4 months, agents win short sprints 4x, and capability cost falls… | [png](visuals/images/V88_why-now-triptych.png) | — |
+| V93 | Removing the citation gate spiked invalid experiments 42% and produced 3 leakage incident… | [png](visuals/images/V93_ablation-evidence.png) | — |
+| V95 | Six engineering items on existing rails vs five labeled research risks; the difference is… | [png](visuals/images/V95_quarter-vs-research-risk.png) | — |
+| V96 | No jump happens without its named milestone; stages 3–4 are the conditional expansion sto… | [png](visuals/images/V96_revenue-stages.png) | — |
 
 ## The five sharpest claims
 
