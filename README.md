@@ -15,7 +15,7 @@ Claude Code skills that take a **vague startup idea** and produce a complete, re
 
 One run, generated end to end: **64 documents · 113 rendered visuals · 12 HTML infographics**, every claim traced to a source tag.
 
-The system has four modes, run in order:
+The system runs in five modes, in order:
 
 1. **Grill** (`grill-me`) — a YC-partner-grade interrogation that turns a vague idea into a sharp founder brief. Nothing else runs until the brief exists.
 2. **Research** (`startup-research`) — deep web research: landscape, competitors, capability table, survey. Every later artifact must cite this layer; no invented market numbers.
@@ -27,21 +27,65 @@ The system has four modes, run in order:
 
 `startup-forge` orchestrates all of the above end-to-end. `startup-ingest` optionally folds in external sources (YouTube talks, PDFs, podcasts) keeping only *novel* angles.
 
-## Quick start
+## Run it end to end (any coding agent)
 
-```
-# from any project directory with these skills installed
-/startup-forge An AI copilot for independent pharmacies
-```
+Point any file-reading, web-searching, file-writing agent at this repo. Nothing here is Claude-specific.
 
-or run phases individually:
+**Step 0 — clone and orient.**
+```bash
+git clone https://github.com/dlmastery/startup-skills && cd startup-skills
+```
+Tell your agent: *"Read AGENTS.md, then drive the pipeline in skills/startup-forge/SKILL.md for this idea: <your one-liner>."* If your harness loads skills natively, `/startup-forge <idea>` is equivalent.
 
+**Step 1 — grill the idea into a brief.** `grill-me` interrogates the one-liner YC-partner style and writes `runs/<slug>/BRIEF.md` plus `ASSUMPTIONS.md`. **Nothing else may run until the brief exists.** If nobody is available to answer, the skill grills the *material* instead and logs every open question.
+
+**Step 2 — research.** `startup-research` produces the six-file evidence layer with dated citations. This phase needs real web search; if your harness cannot search, stop here rather than fabricate it. Everything downstream cites this layer.
+
+**Step 3 — generate the seven layers.** strategy → product → tech → narrative → validation → financials, each against its skill's output contract. Phases 3–7 depend on 0–2 but not on each other, so run them in parallel if your harness supports subagents.
+
+**Step 4 — critique each phase before it counts.** `startup-critic` runs a three-persona red team (skeptical deep-tech VC, domain PhD, elite operator), up to three revise rounds. A phase is not done because it exists; it is done when it survives this.
+
+**Step 5 — visuals.** `startup-visuals` writes the manifest first, then HTML infographics, then images if an image tool exists. Copy the builders rather than writing your own:
+```bash
+cp templates/build_docmanifest.js templates/build_docimages.js runs/<slug>/visuals/
+cd runs/<slug> && node visuals/build_docmanifest.js && node visuals/build_docimages.js
 ```
-/grill-me <your idea>          # produces runs/<slug>/BRIEF.md
-/startup-research              # produces runs/<slug>/research/
-/startup-product               # PRD, features, journeys ...
-/startup-audit                 # coverage check + the run's README.md front door
+Re-run both after **every** batch — they are the reconciliation step and they print what is still unillustrated.
+
+**Step 6 — audit.** `startup-audit` diffs the run against `references/artifact-manifest.md`, generates what is missing, and writes `runs/<slug>/README.md` — the pack's front door. Done means the manifest is satisfied, never memory.
+
+**Step 7 — ship the site.**
+```bash
+cp templates/site.css templates/build_site.js runs/<slug>/
+cd runs/<slug> && node build_site.js        # builds index/product/evidence/pricing/about
 ```
+Then publish (this makes the repo's contents public — confirm first):
+```bash
+touch .nojekyll
+gh api -X POST repos/<owner>/<repo>/pages -f "source[branch]=main" -f "source[path]=/"
+gh api repos/<owner>/<repo>/pages --jq .html_url
+```
+Record the live URL in the run README, in `audit/COVERAGE.md`, **and in this repo's root README** — the last one is the one that gets forgotten.
+
+**Commit at every step, not at the end.** These runs are long and get cut off mid-phase; uncommitted work is indistinguishable from work never done.
+
+## What you get
+
+| | |
+|---|---|
+| ~64 documents | brief, research, strategy, product, tech, narrative, validation, financials |
+| 100+ visuals | HTML infographics, Mermaid diagrams, rendered images, text-free hero art |
+| A reader | `pack.html` — every document rendered, diagrams drawn, sources chipped |
+| A site | five pages plus the reader, publishable to GitHub Pages |
+| An audit | `audit/COVERAGE.md`, row by row against the manifest |
+
+## What the pack enforces
+
+- **Every number** cites `research/sources.md` or carries an `(assumption: basis)` tag.
+- **Every artifact** opens with an orientation block: what it is, why it exists, how to read it, what it depends on.
+- **Mechanism over adjective** — no claim rests on "powerful" or "seamless".
+- **Gaps are named, not hidden** — the run README states an honest completion count.
+- **No fabricated traction** — no invented logos, testimonials or metrics, ever.
 
 ## Install (harness-agnostic)
 
