@@ -8,8 +8,8 @@ Rigorous ML experimentation is policed by nothing but human discipline, and disc
 
 **Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/**
 **Run:** `autoresearch` · **Generated:** 2026-08-28 · **Status: PARTIAL**
-**52 of 53 required artifacts present · 83 of 100 visuals rendered (all 78 required rows closed) · 12 of 78 required HTML infographics**
-The text pack is complete and cross-layer reconciled. The visual layer is 83% rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
+**52 of 53 required artifacts present · 113 visuals rendered (every manifest row closed) · 12 of 78 required HTML infographics**
+The text pack is complete and cross-layer reconciled. Every visual row is rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
 
 ---
 
@@ -62,13 +62,13 @@ The text pack is complete and cross-layer reconciled. The visual layer is 83% re
 | [`narrative/`](narrative) | One-pager, VC memo, 15-slide deck, future press release, founder story | 5 | startup-narrative |
 | [`validation/`](validation) | Riskiest assumptions, E1–E8 board, discovery guide, get-keep-grow, stage gate, metrics by stage, pivot log | 7 | startup-validation |
 | [`financials/`](financials) | Pricing, revenue build, unit economics, use of funds, risk matrix, comps & exits | 6 | startup-financials |
-| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 83 rendered PNGs, 12 HTML infographics | 3 + 95 | startup-visuals |
+| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 113 rendered PNGs, 12 HTML infographics | 3 + 125 | startup-visuals |
 | [`audit/COVERAGE.md`](audit/COVERAGE.md) | Row-by-row completeness audit and draw order | 1 | startup-audit |
 | [`index.html`](index.html) | The public site — [live on GitHub Pages](https://dlmastery.github.io/startup-skills/runs/autoresearch/) | 1 | startup-website |
 
-## Visual index — 83 images, 12 HTML infographics
+## Visual index — 113 images, 12 HTML infographics
 
-**All 78 required image rows are closed.** Full spec for all 100 rows in [`visuals/visual_manifest.md`](visuals/visual_manifest.md); production prompts in [`visuals/image_prompts.md`](visuals/image_prompts.md).
+**Every manifest row is rendered, and every substantive artifact carries at least one illustration** (60 documents, 178 placements — visible inline in the [pack reader](pack.html)). Full spec in [`visuals/visual_manifest.md`](visuals/visual_manifest.md); prompts in [`visuals/image_prompts.md`](visuals/image_prompts.md).
 
 | ID | Headline takeaway | Image | HTML |
 |---|---|---|---|
@@ -150,11 +150,41 @@ The text pack is complete and cross-layer reconciled. The visual layer is 83% re
 | V76 | Eight experiments, every pass/fail number frozen on 2026-08-27, before any result exists. | [png](visuals/images/V76_threshold-cards.png) | — |
 | V77 | Monthly allocation so nothing double-counts: the audit that caught ~$45k of double-counte… | [png](visuals/images/V77_headcount-grid.png) | — |
 | V78 | The $4–6M seed is raised on exactly four proven facts, no more. | [png](visuals/images/V78_seed-story-four-facts.png) | — |
+| V79 | The riskiest cell is Revenue streams: stars prove a free toy's demand, not $1,500/yr rigo… | [png](visuals/images/V79_lean-canvas.png) | — |
+| V80 | The #1 mapping is externally evidenced on both sides: the pain at published scale, the re… | [png](visuals/images/V80_value-prop-mappings.png) | — |
 | V81 | Five cards, one system: the must-have language is verbatim, and card 5's first objection… | [png](visuals/images/V81_persona-wall.png) | — |
+| V82 | Kept improvements/week and reproduction rate must move together; either alone is vanity. | [png](visuals/images/V82_north-star-pair.png) | — |
+| V83 | A good day = ≥1 dashboard read + ≤3 steering sentences + ≥20 gate-passed trials + $/day i… | [png](visuals/images/V83_activation-health-day.png) | — |
+| V84 | $6.90 across two campaigns overnight, 91% mid-tier — the user's own bill, visible per step. | [png](visuals/images/V84_spend-meter.png) | — |
+| V85 | Karpathy is notified before launch; if he returns or blesses another fork, the pre-writte… | [png](visuals/images/V85_fork-etiquette-plan-b.png) | — |
+| V86 | 40 candidates → 15 completers at ~40% show rate, from four named pools, incentive non-cas… | [png](visuals/images/V86_recruitment-funnel.png) | — |
+| V87 | Up to 45% contamination on popular benchmarks cuts against the PoC numbers and *for* the… | [png](visuals/images/V87_contamination-preemption.png) | — |
 | V88 | Horizons doubled every ~4 months, agents win short sprints 4x, and capability cost falls… | [png](visuals/images/V88_why-now-triptych.png) | — |
+| V89 | 16.9% (Oct 2024) → ~40–65% (2026): agents routinely medal, and unsupervised correctness i… | [png](visuals/images/V89_mle-bench-progress.png) | — |
+| V90 | Agents 4x humans at 2-hour budgets; humans 2x agents at 32 hours: execution is theirs, ju… | [png](visuals/images/V90_re-bench-division.png) | — |
+| V91 | 128 GB unified-memory laptops and 22 s–2.1 min experiments make "laptop-native research h… | [png](visuals/images/V91_laptop-envelope.png) | — |
+| V92 | ~4,000 LOC of running core Python, module by module: the mechanism is code with forensic… | [png](visuals/images/V92_repo-reality.png) | — |
 | V93 | Removing the citation gate spiked invalid experiments 42% and produced 3 leakage incident… | [png](visuals/images/V93_ablation-evidence.png) | — |
+| V94 | What the paper implies and the repo lacks, listed by name; none of it fatal, all of it on… | [png](visuals/images/V94_honesty-ledger.png) | — |
 | V95 | Six engineering items on existing rails vs five labeled research risks; the difference is… | [png](visuals/images/V95_quarter-vs-research-risk.png) | — |
 | V96 | No jump happens without its named milestone; stages 3–4 are the conditional expansion sto… | [png](visuals/images/V96_revenue-stages.png) | — |
+| V97 | $9k → $12k → $15k, one basis line each; usage revenue is upside, deliberately unforecast… | [png](visuals/images/V97_team-acv-steps.png) | — |
+| V98 | Campaign COGS $135–540 billed at cost × 1.3–1.5: passthrough plus margin, never a loss-ma… | [png](visuals/images/V98_hosted-run-economics.png) | — |
+| V99 | Eight experiment-selection techniques power nothing named; until #29 is built, marketing… | [png](visuals/images/V99_orphan-cluster-decision.png) | — |
+| V100 | All 20 competitor rows on one canvas: every casualty either automated one step or automat… | [png](visuals/images/V100_teardown-mega-table.png) | — |
+| V101 | Twelve declared assumptions, each with the evidence that would kill it. | [png](visuals/images/V101_assumption-ledger.png) | — |
+| V102 | Months of natural-language steering, six domains, zero hand-written Python. | [png](visuals/images/V102_steering-log.png) | — |
+| V103 | The headline we intend to earn, dated and framed as vision. | [png](visuals/images/V103_future-press.png) | — |
+| V104 | The whole company in six tiles, each traceable to a source. | [png](visuals/images/V104_one-pager-map.png) | — |
+| V105 | The order a skeptic should read this pack in, sharpest objection first. | [png](visuals/images/V105_diligence-path.png) | — |
+| V106 | Four tiers, three surfaces: the kernel ships on CLI and files alone. | [png](visuals/images/V106_prd-surface-map.png) | — |
+| V107 | Four evidence families, every number in the pack traceable to one of them. | [png](visuals/images/V107_source-map.png) | — |
+| V108 | Ten diagrams, one system: from data pipeline to escalation ladder. | [png](visuals/images/V108_architecture-index.png) | — |
+| V109 | Five stages of the practitioner interview; the deploy question is the one that matters. | [png](visuals/images/V109_discovery-arc.png) | — |
+| V110 | Three funnels, one loop: the published bundle is the acquisition engine. | [png](visuals/images/V110_get-keep-grow.png) | — |
+| V111 | Every correction recorded with what triggered it, including the ones that cost us the plan. | [png](visuals/images/V111_pivot-ledger.png) | — |
+| V112 | Ranked by what would kill the company soonest; the top one is a two-week test. | [png](visuals/images/V112_risk-stack.png) | — |
+| V113 | Four Blank stages, one metric each; a stage never borrows the next stage’s scoreboard. | [png](visuals/images/V113_metrics-ladder.png) | — |
 
 ## The five sharpest claims
 

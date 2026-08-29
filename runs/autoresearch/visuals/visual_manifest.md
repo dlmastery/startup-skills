@@ -6,7 +6,7 @@
 - **Honesty rules bind images too (non-negotiable):** every PoC metric carries "founder-reported"; the EUR/USD champion always renders as `+6.52 raw (founder-reported) · deflated: week-1 work · N=265+ trials` — never the raw number alone; unshipped capabilities (trial-count-corrected acceptance gate, attestation packs, BYO-endpoint, fingerprint *refusal*) carry a visible **[ROADMAP]** tag; the fingerprint claim is always "tamper-evident, **not** tamper-refusing (refusal is roadmap)"; "monotonic" is always "monotonic in the composite proxy."
 - **Every number on every visual exists in a pack artifact**; each row cites its source file(s); each image prompt in `image_prompts.md` carries the source citation as an HTML comment.
 - **Forms:** `image` = production text-to-image prompt exists in `image_prompts.md` / `prompts.json`; `mermaid-existing` = a syntax-checked Mermaid source already ships in the cited artifact (the image row renders its poster version); `html` = best built as a self-contained HTML infographic in a later pass.
-- **Counts:** 100 rows · **78 required · 22 optional**. **Status as of 2026-08-29 (reconciled to the glob): 83 images rendered, 12 HTML infographics rendered. All 78 required image rows are closed.** A row is marked rendered only when the file exists on disk with nonzero size — verified, not assumed.
+- **Counts:** 100 rows · **78 required · 22 optional**. **Status as of 2026-08-29 (reconciled to the glob): 113 images rendered, 12 HTML infographics rendered. Every manifest row is closed and every substantive artifact carries at least one illustration.** A row is marked rendered only when the file exists on disk with nonzero size — verified, not assumed.
 - **Sizes:** 1536x1024 landscape default; 1024x1536 portrait for the technique-wave posters (V33–V35) and the decision-tree poster (V36) only.
 
 **Standard-set dedupe (contract rows satisfied by other rows, with reasons):** competitive positioning map → V11 (deck version is canonical); TAM/SAM/SOM bottom-up build → V08 + V57/V58 (deck + VC deep versions); use-of-funds milestone map → V15; journey maps → V23–V26; technique decision tree → V36; UX collages → V27–V32; risk matrix grid → V62 (placed in the VC set where the diligence read happens).
@@ -125,28 +125,28 @@
 | V76 | E-board threshold cards — Eight experiments, every pass/fail number frozen on 2026-08-27, before any result exists. | research-lead | experiment_board.md | image | **optional** · image rendered |
 | V77 | Headcount grid — Monthly allocation so nothing double-counts: the audit that caught ~$45k of double-counted comp in the prior version. | VC | use_of_funds.md §2b | image | **optional** · image rendered |
 | V78 | Seed-story four facts — The $4–6M seed is raised on exactly four proven facts, no more. | VC | use_of_funds.md §4 | image | image rendered |
-| V79 | Lean canvas board — The riskiest cell is Revenue streams: stars prove a free toy's demand, not $1,500/yr rigor demand. | cross | strategy/lean_canvas.md | image | **optional** · pending |
-| V80 | Value-prop mappings — The #1 mapping is externally evidenced on both sides: the pain at published scale, the reliever from settled methodology. | cross | strategy/value_prop_canvas.md §4 | image | **optional** · pending |
+| V79 | Lean canvas board — The riskiest cell is Revenue streams: stars prove a free toy's demand, not $1,500/yr rigor demand. | cross | strategy/lean_canvas.md | image | **optional** · image rendered |
+| V80 | Value-prop mappings — The #1 mapping is externally evidenced on both sides: the pain at published scale, the reliever from settled methodology. | cross | strategy/value_prop_canvas.md §4 | image | **optional** · image rendered |
 | V81 | Persona card wall — Five cards, one system: the must-have language is verbatim, and card 5's first objection has no clever answer — which is why it's year-2+. | cross | strategy/personas.md | image | image rendered |
-| V82 | North-star pair — Kept improvements/week and reproduction rate must move together; either alone is vanity. | practitioner | lean_canvas.md key metrics; experiment_board.md rule 5 | image | **optional** · pending |
-| V83 | Activation-health day — A good day = ≥1 dashboard read + ≤3 steering sentences + ≥20 gate-passed trials + $/day inside the projected band. | practitioner | journeys/day_in_life.md recommended next | image | **optional** · pending |
-| V84 | Spend-meter exemplar — $6.90 across two campaigns overnight, 91% mid-tier — the user's own bill, visible per step. | practitioner | day_in_life.md; ux_spec.md screen 10 | image | **optional** · pending |
-| V85 | Fork etiquette & plan-B — Karpathy is notified before launch; if he returns or blesses another fork, the pre-written branch executes: congratulate, stay compatible, shift channels. | cross | gtm.md §4; experiment_board.md E5 | image | **optional** · pending |
-| V86 | Trust-test recruitment funnel — 40 candidates → 15 completers at ~40% show rate, from four named pools, incentive non-cash by design. | research-lead | gtm.md §4 step 5; experiment_board.md E1 | image | **optional** · pending |
-| V87 | Contamination pre-emption — Up to 45% contamination on popular benchmarks cuts against the PoC numbers and *for* the private-data product. | research-lead | survey.md §6 [D37][D38]; gtm.md §2.2 | image | **optional** · pending |
+| V82 | North-star pair — Kept improvements/week and reproduction rate must move together; either alone is vanity. | practitioner | lean_canvas.md key metrics; experiment_board.md rule 5 | image | **optional** · image rendered |
+| V83 | Activation-health day — A good day = ≥1 dashboard read + ≤3 steering sentences + ≥20 gate-passed trials + $/day inside the projected band. | practitioner | journeys/day_in_life.md recommended next | image | **optional** · image rendered |
+| V84 | Spend-meter exemplar — $6.90 across two campaigns overnight, 91% mid-tier — the user's own bill, visible per step. | practitioner | day_in_life.md; ux_spec.md screen 10 | image | **optional** · image rendered |
+| V85 | Fork etiquette & plan-B — Karpathy is notified before launch; if he returns or blesses another fork, the pre-written branch executes: congratulate, stay compatible, shift channels. | cross | gtm.md §4; experiment_board.md E5 | image | **optional** · image rendered |
+| V86 | Trust-test recruitment funnel — 40 candidates → 15 completers at ~40% show rate, from four named pools, incentive non-cash by design. | research-lead | gtm.md §4 step 5; experiment_board.md E1 | image | **optional** · image rendered |
+| V87 | Contamination pre-emption — Up to 45% contamination on popular benchmarks cuts against the PoC numbers and *for* the private-data product. | research-lead | survey.md §6 [D37][D38]; gtm.md §2.2 | image | **optional** · image rendered |
 | V88 | Why-now triptych — Horizons doubled every ~4 months, agents win short sprints 4x, and capability cost falls 40–50x/yr: the loop did not exist as a capability 18 months ago. | VC | capability_table.md "Why now" | image | image rendered |
-| V89 | MLE-bench progress curve — 16.9% (Oct 2024) → ~40–65% (2026): agents routinely medal, and unsupervised correctness is still unsolved. | research-lead | capability_table.md §2; survey.md §5 | image | **optional** · pending |
-| V90 | RE-bench division of labor — Agents 4x humans at 2-hour budgets; humans 2x agents at 32 hours: execution is theirs, judgment is ours. | research-lead | capability_table.md [B4] | image | **optional** · pending |
-| V91 | Laptop envelope — 128 GB unified-memory laptops and 22 s–2.1 min experiments make "laptop-native research hardware" a 2026 fact, not a projection. | practitioner | capability_table.md §5 [B26–B28]; not_vaporware.md §4 | image | **optional** · pending |
-| V92 | Repo reality table — ~4,000 LOC of running core Python, module by module: the mechanism is code with forensic logs, not a deck. | research-lead | not_vaporware.md §1 | image | **optional** · pending |
+| V89 | MLE-bench progress curve — 16.9% (Oct 2024) → ~40–65% (2026): agents routinely medal, and unsupervised correctness is still unsolved. | research-lead | capability_table.md §2; survey.md §5 | image | **optional** · image rendered |
+| V90 | RE-bench division of labor — Agents 4x humans at 2-hour budgets; humans 2x agents at 32 hours: execution is theirs, judgment is ours. | research-lead | capability_table.md [B4] | image | **optional** · image rendered |
+| V91 | Laptop envelope — 128 GB unified-memory laptops and 22 s–2.1 min experiments make "laptop-native research hardware" a 2026 fact, not a projection. | practitioner | capability_table.md §5 [B26–B28]; not_vaporware.md §4 | image | **optional** · image rendered |
+| V92 | Repo reality table — ~4,000 LOC of running core Python, module by module: the mechanism is code with forensic logs, not a deck. | research-lead | not_vaporware.md §1 | image | **optional** · image rendered |
 | V93 | Ablation evidence card — Removing the citation gate spiked invalid experiments 42% and produced 3 leakage incidents; the rigor layer measurably pays for its overhead (one task, one seed). | research-lead | not_vaporware.md §3; whitepaper.md M4 | image | image rendered |
-| V94 | Honesty ledger (implies vs lacks) — What the paper implies and the repo lacks, listed by name; none of it fatal, all of it on the this-quarter list. | research-lead | not_vaporware.md §5 honesty ledger | image | **optional** · pending |
+| V94 | Honesty ledger (implies vs lacks) — What the paper implies and the repo lacks, listed by name; none of it fatal, all of it on the this-quarter list. | research-lead | not_vaporware.md §5 honesty ledger | image | **optional** · image rendered |
 | V95 | This-quarter vs research-risk board — Six engineering items on existing rails vs five labeled research risks; the difference is the credibility. | research-lead | not_vaporware.md §5 | image | image rendered |
 | V96 | Revenue stages 0–4 — No jump happens without its named milestone; stages 3–4 are the conditional expansion story, explicitly not the plan of record. | VC | revenue_build.md §1 | image | image rendered |
-| V97 | Team ACV steps — $9k → $12k → $15k, one basis line each; usage revenue is upside, deliberately unforecast pre-measurement. | VC | revenue_build.md §1 note, §2 | image | **optional** · pending |
-| V98 | Hosted-run economics — Campaign COGS $135–540 billed at cost × 1.3–1.5: passthrough plus margin, never a loss-maker, never the margin story. | VC | unit_economics.md §2 | image | **optional** · pending |
-| V99 | W2.E orphan-cluster decision — Eight experiment-selection techniques power nothing named; until #29 is built, marketing must not claim search-efficiency IP. | research-lead | technique_feature_matrix.md finding 1; features_prioritized.md #29 | image | **optional** · pending |
-| V100 | Teardown mega-table — All 20 competitor rows on one canvas: every casualty either automated one step or automated search without trust; nobody died from automating too much rigor. | VC | competitors.md; landscape.md post-mortems | image | **optional** · pending |
+| V97 | Team ACV steps — $9k → $12k → $15k, one basis line each; usage revenue is upside, deliberately unforecast pre-measurement. | VC | revenue_build.md §1 note, §2 | image | **optional** · image rendered |
+| V98 | Hosted-run economics — Campaign COGS $135–540 billed at cost × 1.3–1.5: passthrough plus margin, never a loss-maker, never the margin story. | VC | unit_economics.md §2 | image | **optional** · image rendered |
+| V99 | W2.E orphan-cluster decision — Eight experiment-selection techniques power nothing named; until #29 is built, marketing must not claim search-efficiency IP. | research-lead | technique_feature_matrix.md finding 1; features_prioritized.md #29 | image | **optional** · image rendered |
+| V100 | Teardown mega-table — All 20 competitor rows on one canvas: every casualty either automated one step or automated search without trust; nobody died from automating too much rigor. | VC | competitors.md; landscape.md post-mortems | image | **optional** · image rendered |
 
 
 ## H. Dossier illustrations (one per text-heavy artifact no other row covers)
@@ -155,15 +155,16 @@ Deliberately **schematic**: short labels only, no prose. Dense text is exactly w
 
 | ID | Title — headline takeaway | Audience | Source artifact(s) | Form | Status |
 |---|---|---|---|---|---|
-| V101 | Assumption ledger — Twelve declared assumptions, each with the evidence that would kill it. | cross | ASSUMPTIONS.md | image | pending |
-| V102 | The steering log — Months of natural-language steering, six domains, zero hand-written Python. | VC | narrative/founder_story.md | image | pending |
-| V103 | Future press — The headline we intend to earn, dated and framed as vision. | cross | narrative/future_press.md | image | pending |
-| V104 | One-pager map — The whole company in six tiles, each traceable to a source. | VC | narrative/one_pager.md | image | pending |
-| V105 | Diligence path — The order a skeptic should read this pack in, sharpest objection first. | VC | narrative/vc_memo.md | image | pending |
-| V106 | PRD surface map — Four tiers, three surfaces: the kernel ships on CLI and files alone. | practitioner | product/PRD.md | image | pending |
-| V107 | Source map — Four evidence families, every number in the pack traceable to one of them. | research-lead | research/sources.md | image | pending |
-| V108 | Architecture index — Ten diagrams, one system: from data pipeline to escalation ladder. | research-lead | tech/architecture/00_INDEX.md | image | pending |
-| V109 | Discovery arc — Five stages of the practitioner interview; the deploy question is the one that matters. | operator | validation/discovery_guide.md | image | pending |
-| V110 | Get / Keep / Grow — Three funnels, one loop: the published bundle is the acquisition engine. | operator | validation/get_keep_grow.md | image | pending |
-| V111 | Pivot ledger — Every correction recorded with what triggered it, including the ones that cost us the plan. | operator | validation/pivot_log.md | image | pending |
-| V112 | Risk stack — Ranked by what would kill the company soonest; the top one is a two-week test. | VC | validation/riskiest_assumptions.md | image | pending |
+| V101 | Assumption ledger — Twelve declared assumptions, each with the evidence that would kill it. | cross | ASSUMPTIONS.md | image | image rendered |
+| V102 | The steering log — Months of natural-language steering, six domains, zero hand-written Python. | VC | narrative/founder_story.md | image | image rendered |
+| V103 | Future press — The headline we intend to earn, dated and framed as vision. | cross | narrative/future_press.md | image | image rendered |
+| V104 | One-pager map — The whole company in six tiles, each traceable to a source. | VC | narrative/one_pager.md | image | image rendered |
+| V105 | Diligence path — The order a skeptic should read this pack in, sharpest objection first. | VC | narrative/vc_memo.md | image | image rendered |
+| V106 | PRD surface map — Four tiers, three surfaces: the kernel ships on CLI and files alone. | practitioner | product/PRD.md | image | image rendered |
+| V107 | Source map — Four evidence families, every number in the pack traceable to one of them. | research-lead | research/sources.md | image | image rendered |
+| V108 | Architecture index — Ten diagrams, one system: from data pipeline to escalation ladder. | research-lead | tech/architecture/00_INDEX.md | image | image rendered |
+| V109 | Discovery arc — Five stages of the practitioner interview; the deploy question is the one that matters. | operator | validation/discovery_guide.md | image | image rendered |
+| V110 | Get / Keep / Grow — Three funnels, one loop: the published bundle is the acquisition engine. | operator | validation/get_keep_grow.md | image | image rendered |
+| V111 | Pivot ledger — Every correction recorded with what triggered it, including the ones that cost us the plan. | operator | validation/pivot_log.md | image | image rendered |
+| V112 | Risk stack — Ranked by what would kill the company soonest; the top one is a two-week test. | VC | validation/riskiest_assumptions.md | image | image rendered |
+| V113 | Metrics ladder — Four Blank stages, one metric each; a stage never borrows the next stage’s scoreboard. | operator | validation/metrics_by_stage.md | image | image rendered |

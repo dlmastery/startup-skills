@@ -45,7 +45,8 @@
 | A49 | `visuals/visual_manifest.md` | present | 100 rows · 78 req · 22 opt |
 | A50 | `visuals/infographics/*.html` | **PARTIAL — 10 of 78** | V01–V09, V11 (deck set less V10, V12–V15) |
 | A51 | `visuals/image_prompts.md` | present | 100 prompts + `prompts.json` |
-| A52 | `visuals/images/*.png` | present (opt) — 83 of 100 | **all 78 required rows closed**; 5 optional also rendered |
+| A52 | `visuals/images/*.png` | present (opt) — 113 | **every manifest row rendered**, incl. 13 dossier illustrations |
+| A52b | `visuals/docimages.json` | present | 60 documents, 178 placements — **0 substantive artifacts left unillustrated** |
 | A53 | `ingest/` | n/a (opt) | No sources ingested this run |
 | A54 | `audit/COVERAGE.md` | present | this file |
 | A55 | `README.md` | present | written this pass, A55 contract |

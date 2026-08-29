@@ -19,12 +19,15 @@ const byBase = {};
 for (const p of allDocs) (byBase[path.basename(p)] = byBase[path.basename(p)] || []).push(p);
 
 const imgs = {};
-for (const f of fs.readdirSync('visuals/images').filter(f => /\.png$/i.test(f))) imgs[f.slice(0, 3)] = f;
+for (const f of fs.readdirSync('visuals/images').filter(f => /\.png$/i.test(f))) {
+  const m = f.match(/^(V\d+)_/);            // V01..V112 - not a fixed slice
+  if (m) imgs[m[1]] = f;
+}
 
 const man = fs.readFileSync('visuals/visual_manifest.md', 'utf8');
 const docImg = {};
 for (const line of man.split('\n')) {
-  const m = line.match(/^\| (V\d\d) \|([^|]*)\|([^|]*)\|([^|]*)\|/);
+  const m = line.match(/^\| (V\d+) \|([^|]*)\|([^|]*)\|([^|]*)\|/);
   if (!m) continue;
   const id = m[1];
   if (!imgs[id]) continue;
