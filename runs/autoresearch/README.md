@@ -8,8 +8,8 @@ Rigorous ML experimentation is policed by nothing but human discipline, and disc
 
 **Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/**
 **Run:** `autoresearch` · **Generated:** 2026-08-28 · **Status: PARTIAL**
-**52 of 53 required artifacts present · 21 of 100 visuals rendered · 10 of 78 required HTML infographics**
-The text pack is complete and cross-layer reconciled. The visual layer is 21% rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
+**52 of 53 required artifacts present · 78 of 100 visuals rendered · 12 of 78 required HTML infographics**
+The text pack is complete and cross-layer reconciled. The visual layer is 78% rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
 
 ---
 
@@ -62,37 +62,94 @@ The text pack is complete and cross-layer reconciled. The visual layer is 21% re
 | [`narrative/`](narrative) | One-pager, VC memo, 15-slide deck, future press release, founder story | 5 | startup-narrative |
 | [`validation/`](validation) | Riskiest assumptions, E1–E8 board, discovery guide, get-keep-grow, stage gate, metrics by stage, pivot log | 7 | startup-validation |
 | [`financials/`](financials) | Pricing, revenue build, unit economics, use of funds, risk matrix, comps & exits | 6 | startup-financials |
-| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 21 rendered PNGs, 10 HTML infographics | 3 + 31 | startup-visuals |
+| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 78 rendered PNGs, 12 HTML infographics | 3 + 90 | startup-visuals |
 | [`audit/COVERAGE.md`](audit/COVERAGE.md) | Row-by-row completeness audit and draw order | 1 | startup-audit |
 | [`index.html`](index.html) | The public site — [live on GitHub Pages](https://dlmastery.github.io/startup-skills/runs/autoresearch/) | 1 | startup-website |
 
-## Visual index — 21 rendered
+## Visual index — 78 images, 12 HTML infographics
 
-Full spec for all 100 in [`visuals/visual_manifest.md`](visuals/visual_manifest.md); production prompts in [`visuals/image_prompts.md`](visuals/image_prompts.md).
+Full spec for all 100 rows in [`visuals/visual_manifest.md`](visuals/visual_manifest.md); production prompts in [`visuals/image_prompts.md`](visuals/image_prompts.md).
 
 | ID | Headline takeaway | Image | HTML |
 |---|---|---|---|
-| V01 | 94,800 people starred a research loop nobody maintains | [png](visuals/images/V01_star-curve.png) | [html](visuals/infographics/V01_star-curve.html) |
-| V02 | Research rigor fails at published scale, manual and automated alike | [png](visuals/images/V02_leakage-census.png) | [html](visuals/infographics/V02_leakage-census.html) |
-| V03 | Execution is solved; judgment is the gap — we ship the judgment layer | [png](visuals/images/V03_metr-horizon.png) | [html](visuals/infographics/V03_metr-horizon.html) |
-| V04 | Point Ascent at your dataset and metric; wake up to audited, kept improvements | [png](visuals/images/V04_ratchet-loop.png) | [html](visuals/infographics/V04_ratchet-loop.html) |
-| V05 | The trial ledger is the demo: every trial logged, kept and discarded | [png](visuals/images/V05_trial-ledger.png) | [html](visuals/infographics/V05_trial-ledger.html) |
-| V06 | A constitution enforces what a tired human skips | [png](visuals/images/V06_gate-stack.png) | [html](visuals/infographics/V06_gate-stack.html) |
-| V07 | Our flagship number, deflated by our own audit — that's the brand | [png](visuals/images/V07_deflation-ledger.png) | [html](visuals/infographics/V07_deflation-ledger.html) |
-| V08 | The core market is $2–3B, sized bottom-up with the arithmetic shown | [png](visuals/images/V08_som-funnel.png) | [html](visuals/infographics/V08_som-funnel.html) |
-| V09 | BYOK pricing removes token costs from our margin by construction | [png](visuals/images/V09_pricing-ladder.png) | [html](visuals/infographics/V09_pricing-ladder.html) |
-| V10 | Ninety days of scripted motion end in pre-orders, not a hosted fantasy | [png](visuals/images/V10_gtm-timeline.png) | — |
-| V11 | The sustained-campaign, audit-gated quadrant is empty | [png](visuals/images/V11_quadrant-map.png) | [html](visuals/infographics/V11_quadrant-map.html) |
-| V12 | Forks copy the constitution in a day; they cannot backfill the ledger | [png](visuals/images/V12_moat-ledger.png) | — |
-| V13 | Six domains, one protocol, reproducible in one command | [png](visuals/images/V13_domain-grid.png) | — |
-| V14 | The founder already ran the factory for months | [png](visuals/images/V14_deck-team.png) | — |
-| V15 | $1.2M pre-seed buys 24 months of milestone-gated de-risking | [png](visuals/images/V15_use-of-funds.png) | — |
-| V16 | The reasoning plane proposes; the execution plane owns the disk truth | [png](visuals/images/V16_system-map.png) | — |
-| V17 | Sense → Diagnose → Ground → change one thing → Measure → Keep-or-discard → Remember | [png](visuals/images/V17_core-loop-circuit.png) | — |
-| V18 | One adaptive system serves all three user edges — no lite fork | [png](visuals/images/V18_user-spectrum.png) | — |
-| V19 | 57 features in forced order: the 9-item trust-test kernel ships first | [png](visuals/images/V19_feature-roadmap.png) | — |
-| V20 | 12 of 19 technique clusters feed the audit gates and the acceptance gate | [png](visuals/images/V20_technique-feature-heat-table.png) | — |
-| V21 | BYOK puts token COGS on the user's card: 82.0% margin at 150 users | [png](visuals/images/V21_unit-economics-engine.png) | — |
+| V01 | 94,800 people starred a research loop nobody maintains. | [png](visuals/images/V01_star-curve.png) | [html](visuals/infographics/V01_star-curve.html) |
+| V02 | Research rigor fails at published scale, manual and automated alike. | [png](visuals/images/V02_leakage-census.png) | [html](visuals/infographics/V02_leakage-census.html) |
+| V03 | Execution is solved; judgment is the gap — we ship the judgment layer. | [png](visuals/images/V03_metr-horizon.png) | [html](visuals/infographics/V03_metr-horizon.html) |
+| V04 | Point Ascent at your dataset and metric; wake up to audited, kept improvements. | [png](visuals/images/V04_ratchet-loop.png) | [html](visuals/infographics/V04_ratchet-loop.html) |
+| V05 | The trial ledger is the demo: every runner-executed trial logged, kept and discarded. | [png](visuals/images/V05_trial-ledger.png) | [html](visuals/infographics/V05_trial-ledger.html) |
+| V06 | A constitution enforces what a tired human skips. | [png](visuals/images/V06_gate-stack.png) | [html](visuals/infographics/V06_gate-stack.html) |
+| V07 | Our flagship number, deflated by our own audit — that's the brand. | [png](visuals/images/V07_deflation-ledger.png) | [html](visuals/infographics/V07_deflation-ledger.html) |
+| V08 | The core market is $2–3B, sized bottom-up with the arithmetic shown. | [png](visuals/images/V08_som-funnel.png) | [html](visuals/infographics/V08_som-funnel.html) |
+| V09 | BYOK pricing removes token costs from our margin by construction. | [png](visuals/images/V09_pricing-ladder.png) | [html](visuals/infographics/V09_pricing-ladder.html) |
+| V10 | Ninety days of scripted motion end in pre-orders, not a hosted fantasy. | [png](visuals/images/V10_gtm-timeline.png) | [html](visuals/infographics/V10_gtm-timeline.html) |
+| V11 | The sustained-campaign, audit-gated quadrant is empty — and incumbents are walking away f… | [png](visuals/images/V11_quadrant-map.png) | [html](visuals/infographics/V11_quadrant-map.html) |
+| V12 | Forks copy the constitution in a day; they cannot backfill the ledger. | [png](visuals/images/V12_moat-ledger.png) | — |
+| V13 | Six domains, one protocol, reproducible in one command. | [png](visuals/images/V13_domain-grid.png) | [html](visuals/infographics/V13_domain-grid.html) |
+| V14 | The founder already ran the factory for months. | [png](visuals/images/V14_deck-team.png) | — |
+| V15 | $1.2M pre-seed buys 24 months of milestone-gated de-risking. | [png](visuals/images/V15_use-of-funds.png) | — |
+| V16 | The reasoning plane proposes; the deterministic execution plane owns the disk truth. | [png](visuals/images/V16_system-map.png) | — |
+| V17 | Sense → Diagnose → Ground → change one thing → Measure → Keep-or-discard → Remember, with… | [png](visuals/images/V17_core-loop-circuit.png) | — |
+| V18 | One adaptive system serves Priya's missing method, Marcus's midnight referee, and Elena's… | [png](visuals/images/V18_user-spectrum.png) | — |
+| V19 | 57 features in forced order: the 9-item trust-test kernel ships before any new UI. | [png](visuals/images/V19_feature-roadmap.png) | — |
+| V20 | 12 of 19 technique clusters feed the twin gravity wells: the audit gates and the acceptan… | [png](visuals/images/V20_technique-feature-heat-table.png) | — |
+| V21 | BYOK puts token COGS on the user's card, so fully-loaded gross margin is 82.0% at 150 use… | [png](visuals/images/V21_unit-economics-engine.png) | — |
+| V22 | 5.1x more valid output × 6x cheaper days ÷ 3 honesty discount = a defended 10.4x. | [png](visuals/images/V22_10x-mechanism.png) | — |
+| V23 | The system caught her preprocessing leakage before any metric existed — the method she la… | [png](visuals/images/V23_journey-priya.png) | — |
+| V24 | The self-deflation stops his scroll; the ledger, discards included, earns his renewal. | [png](visuals/images/V24_journey-marcus.png) | — |
+| V25 | She's buying the audit trail and the campaign memory, not the hill-climbing. | [png](visuals/images/V25_journey-elena.png) | — |
+| V26 | ~24 human minutes steer two campaigns running on ~$7/day of the user's own tokens. | [png](visuals/images/V26_journey-tuesday.png) | — |
+| V27 | Dataset + metric becomes a constitution-governed campaign in ≤20 minutes. | [png](visuals/images/V27_ux-collage-setup.png) | — |
+| V28 | A laboratory notebook that cannot be falsified, read like a trading terminal, steered lik… | [png](visuals/images/V28_ux-collage-daily-loop.png) | — |
+| V29 | Bundles travel to skeptics; the org ledger raises the bar as the family's trial count grows. | [png](visuals/images/V29_ux-collage-trust-scale.png) | — |
+| V30 | "Trial 218 — 9 kept, 209 discarded" renders identically in CLI, dashboard, and bundle cover. | [png](visuals/images/V30_ux-collage-honesty-signatures.png) | — |
+| V31 | The trust test runs on CLI and files only; no screen is a prerequisite for honesty. | [png](visuals/images/V31_ux-collage-kernel-cli.png) | — |
+| V32 | Error states are five-alarm by design; nothing red is hidden, nothing green is unexplaina… | [png](visuals/images/V32_ux-collage-states-of-truth.png) | — |
+| V33 | 50 foundational rigor techniques in 6 clusters: the discipline layer manual practice poli… | [png](visuals/images/V33_technique-wave-1.png) | — |
+| V34 | 50 statistical-defense techniques in 7 clusters: sequential error control to causal diagn… | [png](visuals/images/V34_technique-wave-2.png) | — |
+| V35 | 46 agentic-infrastructure techniques in 6 clusters: constitution engineering to AI-native… | [png](visuals/images/V35_technique-wave-3.png) | — |
+| V36 | Safety and metric-integrity branches structurally outrank progress branches; there is no… | [png](visuals/images/V36_decision-tree-poster.png) | — |
+| V37 | Nine kernel items gate E1; if the founder is over capacity, the pre-order gate slips firs… | [png](visuals/images/V37_kernel-roadmap.png) | — |
+| V38 | Gates run before any data work; refused experiments cost a message, not compute. | [png](visuals/images/V38_d01-data-pipeline.png) | — |
+| V39 | Validity is checked before compute and improvement before commit; neither an invalid nor… | [png](visuals/images/V39_d02-closed-loop.png) | — |
+| V40 | The agent may not, by contract, write a result row; the runner writes what actually happe… | [png](visuals/images/V40_d03-orchestration.png) | — |
+| V41 | Bundles ship champions and run logs; the discard ledger, gate catch-rates, and priors nev… | [png](visuals/images/V41_d04-run-record.png) | — |
+| V42 | The frontier slice is deliberately thin: $3–12/day mid-tier-routed vs $20–60/day all-fron… | [png](visuals/images/V42_d05-model-routing.png) | — |
+| V43 | Data never leaves the machine; reasoning tokens do — the boundary is engineered, not denied. | [png](visuals/images/V43_d06-security-boundaries.png) | — |
+| V44 | Thin on the way in, rich on the way out: every champion exports the evidence formats skep… | [png](visuals/images/V44_d07-integrations.png) | — |
+| V45 | Who audits the auditor: six monitors over signals the ledger already carries. | [png](visuals/images/V45_d08-observability.png) | — |
+| V46 | Federation of laptops, not a cluster; team-level deflation needs the aggregate N no track… | [png](visuals/images/V46_d09-team-scale-out.png) | — |
+| V47 | The two cheap rungs run without the human; integrity violations bypass the ladder entirely. | [png](visuals/images/V47_d10-steering-ladder.png) | — |
+| V48 | SHA-256 freezes the proxy: tamper-evident today, tamper-refusing is a ~15-line [ROADMAP]… | [png](visuals/images/V48_fingerprint-tamper-evidence.png) | — |
+| V49 | Train = data − union(val + test + buffers): settled financial-ML methodology as mandatory… | [png](visuals/images/V49_super-fold-geometry.png) | — |
+| V50 | Refusal by default; one visible, sentinel-tagged bypass; no silent path. | [png](visuals/images/V50_gate-stack-bypass.png) | — |
+| V51 | The keep/discard bar rises with trial count; no published system has this gate, the PoC i… | [png](visuals/images/V51_dsr-acceptance-roadmap.png) | — |
+| V52 | 14 of 16 notable forks are ports or translations; zero add rigor — the demand is proven a… | [png](visuals/images/V52_teardown-karpathy.png) | — |
+| V53 | 42% of experiments failed in independent evaluation; the family optimizes paper novelty,… | [png](visuals/images/V53_teardown-ai-scientist.png) | — |
+| V54 | The category leader took a 92% valuation haircut because search-without-science commoditi… | [png](visuals/images/V54_teardown-automl.png) | — |
+| V55 | Even successful trackers were features, not companies; value migrated to whoever owns com… | [png](visuals/images/V55_teardown-trackers.png) | — |
+| V56 | Your chatbot suggests; a tired human verifies. Ascent's protocol verifies; you steer. | [png](visuals/images/V56_teardown-manual-chatgpt.png) | — |
+| V57 | Job-filtered at the TAM layer: $0.9–1.35B individuals + $0.15B quant funds + $1.0B enterp… | [png](visuals/images/V57_tam-tiers.png) | — |
+| V58 | Stars are not users: the stars→active stage was missing, and the old $5M plan did not sur… | [png](visuals/images/V58_som-funnel-corrected.png) | — |
+| V59 | Every funded version of the thesis is cloud/wet-lab scale; the laptop-native, practitione… | [png](visuals/images/V59_funding-climate.png) | — |
+| V60 | Absorbed = low, commoditized = 1.8x, executing devtool = 15–29x, agent leader = ~53x, nar… | [png](visuals/images/V60_comps-corridor.png) | — |
+| V61 | Recomputed honestly, 150 paying arrives at ~month 20–21, not month 18; the milestone move… | [png](visuals/images/V61_revenue-waterfall.png) | — |
+| V62 | Three risks stay HIGH after mitigation and the pack says so: the bet, the clock, and the… | [png](visuals/images/V62_risk-matrix.png) | — |
+| V63 | E2 and E6 run before E1, E1 before E4; every threshold was declared before any result exi… | [png](visuals/images/V63_experiment-gantt.png) | — |
+| V64 | ≥8–10 measured-active users per $1k by month 12 is arithmetically the same statement as t… | [png](visuals/images/V64_kill-floor-unification.png) | — |
+| V65 | There is no Ascent cloud in the data path; the honest hole (reasoning tokens) is named on… | [png](visuals/images/V65_security-data-locality.png) | — |
+| V66 | $90k of block-D hard costs (SOC 2 Type I + pentest ~$50k, security docs + legal $25k, esc… | [png](visuals/images/V66_vendor-dd-timeline.png) | — |
+| V67 | Examiner-ready evidence packs mapped to SR 11-7-style review are [ROADMAP], never claimed… | [png](visuals/images/V67_attestation-roadmap.png) | — |
+| V68 | Discovery (with named early-Validation overlap): the gate opens only when all five pre-de… | [png](visuals/images/V68_stage-gate-ladder.png) | — |
+| V69 | At n=15 the joint AND-of-three test carries up to ~35% false-fail risk at healthy rates;… | [png](visuals/images/V69_e1-operating-characteristics.png) | — |
+| V70 | $3–12/day of the user's own tokens + $125/mo for the rigor layer, against a conservative… | [png](visuals/images/V70_substitution-math.png) | — |
+| V71 | Capability-per-dollar falls ~40–50x/yr while frontier list prices are flat-to-rising; rou… | [png](visuals/images/V71_cost-curve.png) | — |
+| V72 | A hosted flat-rate Pro would carry $90–360/mo of token COGS against $125 revenue: negativ… | [png](visuals/images/V72_byok-margin-bridge.png) | — |
+| V73 | LTV swings 2.3x across the 3–7%/mo planning band; payback stays 2.7 months at every point… | [png](visuals/images/V73_churn-ltv-sensitivity.png) | — |
+| V74 | Ledger → offline DSR → acceptance gate → family thresholds: this chain is also the market… | [png](visuals/images/V74_honesty-chain.png) | — |
+| V75 | Ledger + refusals → seeded violations → opt-in telemetry → copilot → priors: skip any lin… | [png](visuals/images/V75_corpus-chain.png) | — |
+| V76 | Eight experiments, every pass/fail number frozen on 2026-08-27, before any result exists. | [png](visuals/images/V76_threshold-cards.png) | — |
+| V77 | Monthly allocation so nothing double-counts: the audit that caught ~$45k of double-counte… | [png](visuals/images/V77_headcount-grid.png) | — |
+| V78 | The $4–6M seed is raised on exactly four proven facts, no more. | [png](visuals/images/V78_seed-story-four-facts.png) | — |
 
 ## The five sharpest claims
 
