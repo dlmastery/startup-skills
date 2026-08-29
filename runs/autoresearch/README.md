@@ -6,8 +6,9 @@ Rigorous ML experimentation is policed by nothing but human discipline, and disc
 
 ---
 
+**Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/**
 **Run:** `autoresearch` · **Generated:** 2026-08-28 · **Status: PARTIAL**
-**52 of 53 required artifacts present · 21 of 100 visuals rendered · 3 of 78 required HTML infographics**
+**52 of 53 required artifacts present · 21 of 100 visuals rendered · 6 of 78 required HTML infographics**
 The text pack is complete and cross-layer reconciled. The visual layer is 21% rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
 
 ---
@@ -63,6 +64,7 @@ The text pack is complete and cross-layer reconciled. The visual layer is 21% re
 | [`financials/`](financials) | Pricing, revenue build, unit economics, use of funds, risk matrix, comps & exits | 6 | startup-financials |
 | [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 21 rendered PNGs, 3 HTML infographics | 3 + 24 | startup-visuals |
 | [`audit/COVERAGE.md`](audit/COVERAGE.md) | Row-by-row completeness audit and draw order | 1 | startup-audit |
+| [`index.html`](index.html) | The public site — [live on GitHub Pages](https://dlmastery.github.io/startup-skills/runs/autoresearch/) | 1 | startup-website |
 
 ## Visual index — 21 rendered
 

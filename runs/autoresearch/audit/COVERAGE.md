@@ -43,13 +43,14 @@
 | A36–A42 | `validation/` (7) | present | Full Blank board set; E1–E8 thresholds frozen 2026-08-27 |
 | A43–A48 | `financials/` (6) | present | Reconciled to the honest waterfall (`17d2e53`) |
 | A49 | `visuals/visual_manifest.md` | present | 100 rows · 78 req · 22 opt |
-| A50 | `visuals/infographics/*.html` | **PARTIAL — 3 of 78** | V01, V04, V05 only |
+| A50 | `visuals/infographics/*.html` | **PARTIAL — 6 of 78** | V01, V02, V03, V04, V05, V06 |
 | A51 | `visuals/image_prompts.md` | present | 100 prompts + `prompts.json` |
 | A52 | `visuals/images/*.png` | partial (opt) — 21 of 100 | V01–V21, all valid |
 | A53 | `ingest/` | n/a (opt) | No sources ingested this run |
 | A54 | `audit/COVERAGE.md` | present | this file |
 | A55 | `README.md` | present | written this pass, A55 contract |
-| A56 | `website/` | missing (opt) | Phase 10, gated on this audit |
+| A56 | `index.html` | present (opt) | Self-contained public site, relative asset paths |
+| A57 | Live Pages URL | present (opt) | https://dlmastery.github.io/startup-skills/runs/autoresearch/ |
 
 ## Quality spot-check (5 sampled against `references/quality-bar.md`)
 
