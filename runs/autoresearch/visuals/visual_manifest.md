@@ -6,7 +6,7 @@
 - **Honesty rules bind images too (non-negotiable):** every PoC metric carries "founder-reported"; the EUR/USD champion always renders as `+6.52 raw (founder-reported) · deflated: week-1 work · N=265+ trials` — never the raw number alone; unshipped capabilities (trial-count-corrected acceptance gate, attestation packs, BYO-endpoint, fingerprint *refusal*) carry a visible **[ROADMAP]** tag; the fingerprint claim is always "tamper-evident, **not** tamper-refusing (refusal is roadmap)"; "monotonic" is always "monotonic in the composite proxy."
 - **Every number on every visual exists in a pack artifact**; each row cites its source file(s); each image prompt in `image_prompts.md` carries the source citation as an HTML comment.
 - **Forms:** `image` = production text-to-image prompt exists in `image_prompts.md` / `prompts.json`; `mermaid-existing` = a syntax-checked Mermaid source already ships in the cited artifact (the image row renders its poster version); `html` = best built as a self-contained HTML infographic in a later pass.
-- **Counts:** 100 rows · **78 required · 22 optional**. **Status as of 2026-08-29 (reconciled to the glob): 113 images rendered, 12 HTML infographics rendered. Every manifest row is closed and every substantive artifact carries at least one illustration.** A row is marked rendered only when the file exists on disk with nonzero size — verified, not assumed.
+- **Counts:** 100 rows · **78 required · 22 optional**. **Status as of 2026-08-29 (reconciled to the glob): 120 images rendered, 16 HTML infographics rendered.** A row is marked rendered only when the file exists on disk with nonzero size — verified, not assumed.
 - **Sizes:** 1536x1024 landscape default; 1024x1536 portrait for the technique-wave posters (V33–V35) and the decision-tree poster (V36) only.
 
 **Standard-set dedupe (contract rows satisfied by other rows, with reasons):** competitive positioning map → V11 (deck version is canonical); TAM/SAM/SOM bottom-up build → V08 + V57/V58 (deck + VC deep versions); use-of-funds milestone map → V15; journey maps → V23–V26; technique decision tree → V36; UX collages → V27–V32; risk matrix grid → V62 (placed in the VC set where the diligence read happens).
@@ -49,10 +49,10 @@
 
 | ID | Title — headline takeaway | Audience | Source artifact(s) | Form | Status |
 |---|---|---|---|---|---|
-| V23 | Journey: Priya (edge-low) — The system caught her preprocessing leakage before any metric existed — the method she lacked, supplied without shame. | practitioner | product/journeys/edge_low.md | image | image rendered |
-| V24 | Journey: Marcus weeks 0–12+ (beachhead) — The self-deflation stops his scroll; the ledger, discards included, earns his renewal. | practitioner | product/journeys/beachhead.md | image | image rendered |
-| V25 | Journey: Elena year 2 (edge-high) — She's buying the audit trail and the campaign memory, not the hill-climbing. | practitioner | product/journeys/edge_high.md | image | image rendered |
-| V26 | Journey: ordinary Tuesday — ~24 human minutes steer two campaigns running on ~$7/day of the user's own tokens. | practitioner | product/journeys/day_in_life.md | image | image rendered |
+| V23 | Journey: Priya (edge-low) — The system caught her preprocessing leakage before any metric existed — the method she lacked, supplied without shame. | practitioner | product/journeys/edge_low.md | image | image rendered + html rendered |
+| V24 | Journey: Marcus weeks 0–12+ (beachhead) — The self-deflation stops his scroll; the ledger, discards included, earns his renewal. | practitioner | product/journeys/beachhead.md | image | image rendered + html rendered |
+| V25 | Journey: Elena year 2 (edge-high) — She's buying the audit trail and the campaign memory, not the hill-climbing. | practitioner | product/journeys/edge_high.md | image | image rendered + html rendered |
+| V26 | Journey: ordinary Tuesday — ~24 human minutes steer two campaigns running on ~$7/day of the user's own tokens. | practitioner | product/journeys/day_in_life.md | image | image rendered + html rendered |
 | V27 | UX collage A: instantiation & setup — Dataset + metric becomes a constitution-governed campaign in ≤20 minutes. | practitioner | product/ux_spec.md screens 1, 2, 3, 10 | image | image rendered |
 | V28 | UX collage B: the daily loop — A laboratory notebook that cannot be falsified, read like a trading terminal, steered like a chat. | practitioner | ux_spec.md screens 4, 5, 6, 8 | image | image rendered |
 | V29 | UX collage C: trust & scale — Bundles travel to skeptics; the org ledger raises the bar as the family's trial count grows. | practitioner | ux_spec.md screens 7, 9, 11, 12 | image | image rendered |
@@ -168,3 +168,10 @@ Deliberately **schematic**: short labels only, no prose. Dense text is exactly w
 | V111 | Pivot ledger — Every correction recorded with what triggered it, including the ones that cost us the plan. | operator | validation/pivot_log.md | image | image rendered |
 | V112 | Risk stack — Ranked by what would kill the company soonest; the top one is a two-week test. | VC | validation/riskiest_assumptions.md | image | image rendered |
 | V113 | Metrics ladder — Four Blank stages, one metric each; a stage never borrows the next stage’s scoreboard. | operator | validation/metrics_by_stage.md | image | image rendered |
+| V114 | Business model canvas — Nine blocks, one falsifiable hypothesis and kill-test each. | cross | strategy/business_model_canvas.md | image | image rendered |
+| V115 | Petal map — Six adjacent markets we draw customers from, and what they already spend. | cross | strategy/petal_diagram.md | image | image rendered |
+| V116 | Channel margin stack — From list price to contribution, computed per channel. | cross | strategy/channel_plan.md | image | image rendered |
+| V117 | Access map — Three of ten routes to the largest budgets do not exist today. | cross | strategy/sales_roadmap.md | image | image rendered |
+| V118 | Two MVPs — One tests whether the problem is real, the other whether the solution is bought. | cross | validation/mvp_definition.md | image | image rendered |
+| V119 | The buying unit — Five roles, and the four vetoes nothing satisfies today. | cross | validation/decision_making_unit.md | image | image rendered |
+| V120 | Mission, vision, values — Values written as trade-offs, not virtues. | cross | narrative/mission_vision.md | image | image rendered |
