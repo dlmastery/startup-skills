@@ -16,6 +16,16 @@ Generate every visual as **verifiable text first** — self-contained HTML infog
 
 The audience sets above cover the *arguments*. They leave the **documents** bare: a pack routinely ends with a third of its artifacts as unbroken walls of prose, which is where readers stop. After the audience rows are placed, run a coverage pass:
 
+**Use the shipped builders rather than writing your own:**
+
+```bash
+cp ../../templates/build_docmanifest.js runs/<slug>/visuals/   # reader's document list
+cp ../../templates/build_docimages.js   runs/<slug>/visuals/   # artifact -> visual map + slugmap
+cd runs/<slug> && node visuals/build_docmanifest.js && node visuals/build_docimages.js
+```
+
+Both walk the whole run tree, handle multi-digit visual ids, resolve bare filenames from the manifest's source column against every directory, and print what is still unillustrated. Re-run them after **every** batch of generated visuals — they are the reconciliation step, not a one-off.
+
 1. **Measure it.** For every artifact, count words and count the visuals that cite it. Any substantive artifact over roughly 400 words with **zero** visuals is a gap. Exclude only the meta files — the manifest, the prompt file, the coverage audit, the README.
 2. **Check the mapping before generating anything.** Most "missing" illustrations are mis-resolved ones. The manifest's source column contains bare filenames (`D04.md`, `pitch_deck.md`); resolve them against the **whole run tree**, not the top-level directories, or every nested document reads as unillustrated while its poster sits on disk. On this pack that single fix moved coverage from 37 documents to 45.
 3. **Add one row per genuinely uncovered artifact**, in a dedicated manifest section, sourced to that artifact.

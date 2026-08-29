@@ -24,29 +24,25 @@ Turn the pack into a deployable marketing site. Iron rule: **the site arranges t
 
 ## Design system (binding — the pack's house look)
 
-Load the frontend-design skill for judgment, then apply these tokens. They are Claude-inspired: a warm ivory ground, clay accent, and a transitional serif — deliberately paired with the pack's own indigo/teal data palette so rendered infographics sit on the page natively instead of fighting it.
+Load the frontend-design skill for judgment, then apply these tokens. They live in `templates/site.css`; copy that file rather than retyping them.
 
 ```css
 :root{
-  --paper:#F0EEE6;        /* warm ivory ground */
-  --paper-raised:#FAF9F5; /* cards, raised surfaces */
-  --ink:#1F1E1D;          /* primary text */
-  --ink-soft:#605A57;     /* secondary text */
-  --rule:#DEDBD2;         /* hairlines, borders */
-  --clay:#D97757;         /* the accent: links, CTAs, one thing per screen */
-  --indigo:#312E81;       /* data ink — matches visuals/ */
-  --teal:#0D9488;         /* data accent — matches visuals/ */
-  --amber:#B45309;        /* caveats and [ROADMAP] flags only */
+  --canvas:#FFFFFF;   --surface:#F7F7F9;  --sunk:#F1F1F4;   /* white ground, one cool surface */
+  --ink:#0B0B12;      --muted:#5A5A6B;    --faint:#8A8A99;
+  --line:#E4E4EB;     --line-soft:#EFEFF3;                  /* hairlines, not shadows */
+  --accent:#4338CA;   --accent-soft:#EEEDFB;                /* one confident accent */
+  --signal:#0D7A70;   --warn:#B45309;                       /* data accent; caveats/[ROADMAP] only */
 }
 ```
 
-- **Display:** a warm transitional serif (Newsreader, Copernicus-class) for headlines only, used with restraint.
-- **Body:** a neutral grotesque (Inter, Styrene-class) at generous line-height.
+- **Display and body:** one neutral grotesque (Inter), with **tight negative tracking** on large sizes (`-0.03em` and below). No serif display face — see *Aesthetic direction*.
 - **Data:** monospace (JetBrains Mono) for **every number, hash, threshold and identifier** — the same rule that binds the pack's visuals. Numbers never render in the body face.
-- Load webfonts from a CDN with a real fallback stack; never let the page render in a default serif while fonts fetch.
-- Dark-mode aware where the ground inverts to `#1F1E1D` / ink `#F0EEE6`; the clay accent holds in both.
+- **Depth:** 1px borders and generous whitespace. At most one soft shadow, on the featured pricing tier.
+- Load webfonts from a CDN with a real fallback stack, and set `<meta name="color-scheme" content="light">`.
+- **Light only, every page.** No dark-mode block anywhere on the site — see *The reader must present documents*.
 
-**The signature device:** every number on the site carries its **source tag inline** as a small monospace chip (`[A1]`, `[D5]`, `(assumption)`), exactly as the artifacts do. The site performs the product's own thesis — showing the evidence — rather than describing it. This is the one memorable element; keep everything around it quiet.
+**The signature device:** every number carries its **source tag inline** as a small monospace chip (`[A1]`, `[D5]`, `(assumption)`), exactly as the artifacts do. The site performs the product's thesis — showing the evidence — rather than describing it. Keep everything around it quiet.
 
 ## The home page — a researched anatomy, in order
 
@@ -91,6 +87,15 @@ A single page carrying hero, problem, mechanism, product tour, evidence, pricing
 | `about.html` | Founder-market fit, mission, why now. |
 | `pack.html` | The document reader. |
 
+**Start from the shipped templates — do not re-derive them.** The pack carries working versions; copy, do not rewrite:
+
+```bash
+cp ../../templates/site.css       runs/<slug>/site.css        # design tokens + components
+cp ../../templates/build_site.js  runs/<slug>/build_site.js   # page shell; fill CONFIG + PAGES
+```
+
+`build_site.js` has a single brand-specific `CONFIG` block at the top and a `PAGES` array; everything else — head, nav with active state, footer, the keep-reading rail, and the broken-link check — is already written. `site.css` is brand-neutral apart from its `:root` tokens.
+
 **Mechanics that keep it a site rather than five drifting files:**
 
 - **One shared stylesheet** (`site.css`) linked by every page. Never paste the token block into each file — they diverge within one edit.
@@ -106,7 +111,7 @@ A landing page built only from data infographics reads as a report, not a compan
 
 **Make them text-free. This is the highest-leverage rule in the whole visual pipeline.** Every image failure mode — clipping, letter garbling, label mis-binding — is a *text-rendering* failure. A wordless image cannot exhibit any of them, so hero art is both the most beautiful and the most reliable category available. State it forcefully in the prompt: *no letters, no words, no numbers, no labels, no watermark, no UI chrome with readable type.*
 
-- Derive each image from the product's own mechanism, not from stock-photo abstraction: the monotonic ascent, the ledger of kept-and-discarded trials, the gates that clarify what passes, the purged splits that never touch. Someone who knows the product should recognise the idea.
+- Derive each image from the product's own mechanism, not from stock-photo abstraction: whatever the product's core loop actually is — the thing it repeats, the thing it filters, the thing it preserves. Someone who knows the product should recognise the idea.
 - Ask for one register and hold it — editorial minimalism, precise geometry, generous negative space, controlled palette drawn from the site tokens.
 - **Normalise the ground after generation.** Image models drift to cream even when asked for white, which clashes badly against a white page. Sample the corner pixel and map it to neutral with a levels pass (`ffmpeg -vf colorlevels=rimax=<r/255>:gimax=<g/255>:bimax=<b/255>`) rather than regenerating. Deterministic, instant, and it preserves the art.
 - Mid-tone or dark atmospheric pieces are fine as *bands* inside a light page — a dark section is a rhythm device, not a dark theme.
