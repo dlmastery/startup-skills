@@ -76,6 +76,6 @@ A pack of sixty files with no front door reads as an empty directory. `runs/<slu
 5. **Full artifact map** — every directory as a table: path · what it holds · file count · owning skill. Counts come from the glob.
 6. **Visual index** — every rendered image and HTML infographic as a relative link with its headline takeaway. **Images are embedded inline** (`![...](visuals/images/<ID>_<slug>.png)`) for at least the deck set, so the pack's best work is visible without opening a single subdirectory.
 7. **Top 5 sharpest claims** — each with its source tag, so a skeptic can start where it hurts.
-8. **What's missing / next draw** — the open rows from `audit/COVERAGE.md`, verbatim. A README that hides the gaps is a worse artifact than no README.
+8. **Completeness** — one short paragraph stating the run's honest state (`COMPLETE` / `PARTIAL`, and which layer is short), linking to `audit/COVERAGE.md`. Do **not** reproduce the gap table or draw order here: a front door states the state of the work, it does not carry the task list. Completeness is tracked in COVERAGE.md, where a reader who wants row-by-row status goes. Nothing is hidden — the status line at the top already declares PARTIAL and the counts — but a public founder pack must not open onto a TODO list.
 
 Every link must resolve. A README with one broken relative link is a `fix` row, not a pass.

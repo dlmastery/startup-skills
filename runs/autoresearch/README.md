@@ -102,15 +102,6 @@ Full spec for all 100 in [`visuals/visual_manifest.md`](visuals/visual_manifest.
 4. **The rigor layer measurably pays for its overhead.** Removing the citation gate spiked invalid experiments 42% and produced 3 leakage incidents (one task, one seed, founder-reported). `[not_vaporware §3]` — [`tech/not_vaporware.md`](tech/not_vaporware.md)
 5. **The honest correction cost us the plan.** Stars are not users; adding the missing stars→active stage moved 150 paying customers to ~month 20–21 and the old $5M plan did not survive. The milestone moved rather than the assumptions inflating. — [`financials/revenue_build.md`](financials/revenue_build.md) §4
 
-## What's missing — next draw
+## Completeness
 
-Reproduced verbatim from [`audit/COVERAGE.md`](audit/COVERAGE.md). One required row is open.
-
-| # | Gap | Owner | Blocked on |
-|---|---|---|---|
-| 1 | **75 required HTML infographics** (3 of 78 done) | startup-visuals | nothing — deterministic, start with the 12 remaining deck rows |
-| 2 | **57 required images** V22–V78 | startup-visuals | the text-to-image pipeline that produced V01–V21 |
-| 3 | 22 optional images V79–V100 | startup-visuals | deferred by choice |
-| 4 | `website/` — the public site | startup-website | phase 10, gated on row 1 |
-
-**Open scope question:** manifest row A50 makes HTML mandatory for *every* required visual row, which is 78 files duplicating 78 images. The visual manifest's own header calls HTML "a later pass". Decide whether A50 means "HTML for every row" or "HTML for rows an image can't carry" before generating 63 more files.
+This run is **PARTIAL** and says so plainly: the text pack is complete and cross-layer reconciled; the visual layer is partly rendered. The row-by-row status, the open rows and the draw order live in [`audit/COVERAGE.md`](audit/COVERAGE.md), which is where completeness is tracked — a front door states the state of the work, it doesn't carry the task list.
