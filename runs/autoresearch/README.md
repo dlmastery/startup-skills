@@ -62,7 +62,7 @@ The text pack is complete and cross-layer reconciled. The visual layer is 21% re
 | [`narrative/`](narrative) | One-pager, VC memo, 15-slide deck, future press release, founder story | 5 | startup-narrative |
 | [`validation/`](validation) | Riskiest assumptions, E1–E8 board, discovery guide, get-keep-grow, stage gate, metrics by stage, pivot log | 7 | startup-validation |
 | [`financials/`](financials) | Pricing, revenue build, unit economics, use of funds, risk matrix, comps & exits | 6 | startup-financials |
-| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 21 rendered PNGs, 3 HTML infographics | 3 + 24 | startup-visuals |
+| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 21 rendered PNGs, 10 HTML infographics | 3 + 31 | startup-visuals |
 | [`audit/COVERAGE.md`](audit/COVERAGE.md) | Row-by-row completeness audit and draw order | 1 | startup-audit |
 | [`index.html`](index.html) | The public site — [live on GitHub Pages](https://dlmastery.github.io/startup-skills/runs/autoresearch/) | 1 | startup-website |
 
@@ -73,16 +73,16 @@ Full spec for all 100 in [`visuals/visual_manifest.md`](visuals/visual_manifest.
 | ID | Headline takeaway | Image | HTML |
 |---|---|---|---|
 | V01 | 94,800 people starred a research loop nobody maintains | [png](visuals/images/V01_star-curve.png) | [html](visuals/infographics/V01_star-curve.html) |
-| V02 | Research rigor fails at published scale, manual and automated alike | [png](visuals/images/V02_leakage-census.png) | — |
-| V03 | Execution is solved; judgment is the gap — we ship the judgment layer | [png](visuals/images/V03_metr-horizon.png) | — |
+| V02 | Research rigor fails at published scale, manual and automated alike | [png](visuals/images/V02_leakage-census.png) | [html](visuals/infographics/V02_leakage-census.html) |
+| V03 | Execution is solved; judgment is the gap — we ship the judgment layer | [png](visuals/images/V03_metr-horizon.png) | [html](visuals/infographics/V03_metr-horizon.html) |
 | V04 | Point Ascent at your dataset and metric; wake up to audited, kept improvements | [png](visuals/images/V04_ratchet-loop.png) | [html](visuals/infographics/V04_ratchet-loop.html) |
 | V05 | The trial ledger is the demo: every trial logged, kept and discarded | [png](visuals/images/V05_trial-ledger.png) | [html](visuals/infographics/V05_trial-ledger.html) |
-| V06 | A constitution enforces what a tired human skips | [png](visuals/images/V06_gate-stack.png) | — |
-| V07 | Our flagship number, deflated by our own audit — that's the brand | [png](visuals/images/V07_deflation-ledger.png) | — |
-| V08 | The core market is $2–3B, sized bottom-up with the arithmetic shown | [png](visuals/images/V08_som-funnel.png) | — |
-| V09 | BYOK pricing removes token costs from our margin by construction | [png](visuals/images/V09_pricing-ladder.png) | — |
+| V06 | A constitution enforces what a tired human skips | [png](visuals/images/V06_gate-stack.png) | [html](visuals/infographics/V06_gate-stack.html) |
+| V07 | Our flagship number, deflated by our own audit — that's the brand | [png](visuals/images/V07_deflation-ledger.png) | [html](visuals/infographics/V07_deflation-ledger.html) |
+| V08 | The core market is $2–3B, sized bottom-up with the arithmetic shown | [png](visuals/images/V08_som-funnel.png) | [html](visuals/infographics/V08_som-funnel.html) |
+| V09 | BYOK pricing removes token costs from our margin by construction | [png](visuals/images/V09_pricing-ladder.png) | [html](visuals/infographics/V09_pricing-ladder.html) |
 | V10 | Ninety days of scripted motion end in pre-orders, not a hosted fantasy | [png](visuals/images/V10_gtm-timeline.png) | — |
-| V11 | The sustained-campaign, audit-gated quadrant is empty | [png](visuals/images/V11_quadrant-map.png) | — |
+| V11 | The sustained-campaign, audit-gated quadrant is empty | [png](visuals/images/V11_quadrant-map.png) | [html](visuals/infographics/V11_quadrant-map.html) |
 | V12 | Forks copy the constitution in a day; they cannot backfill the ledger | [png](visuals/images/V12_moat-ledger.png) | — |
 | V13 | Six domains, one protocol, reproducible in one command | [png](visuals/images/V13_domain-grid.png) | — |
 | V14 | The founder already ran the factory for months | [png](visuals/images/V14_deck-team.png) | — |
