@@ -131,7 +131,12 @@ The deliverable is a link, not a directory. Default to **GitHub Pages served fro
    gh api repos/<owner>/<repo>/pages --jq .html_url
    ```
 5. **Confirm before enabling.** Turning on Pages publishes the repository's contents at a public URL. Ask first unless the user explicitly requested a public link, and never publish a private run without asking — `runs/*` is gitignored by default for exactly this reason.
-6. Record the live URL in the run's `README.md` status block and in `audit/COVERAGE.md` row A57. Verify it loads (200, not 404) before reporting it — Pages takes ~1 minute on first build.
+6. **Record the live URL in all three places it belongs**, then verify each loads (200, not 404) — Pages takes ~1 minute on first build:
+   - the run's `README.md` status block, alongside a direct link to the pack reader;
+   - `audit/COVERAGE.md` row A57;
+   - **the repository's own root `README.md`**, near the top, as a "see it live" block.
+
+   The third is the one that gets forgotten, and it is the one that matters most: the repo root README is where every visitor actually lands. A published site nobody is pointed at is the same front-door failure as an unindexed run, one level up. Link the landing page *and* the reader — they answer different questions ("what is this?" vs "show me the work").
 
 Fallback when the repo has no GitHub remote: keep the site at `runs/<slug>/index.html` and tell the user the one command that would publish it.
 

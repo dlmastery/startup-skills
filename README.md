@@ -2,6 +2,19 @@
 
 Claude Code skills that take a **vague startup idea** and produce a complete, research-grounded founder artifact pack — the kind of package you'd walk into YC or a deep-tech VC meeting with.
 
+## See a finished pack, live
+
+**→ [dlmastery.github.io/startup-skills](https://dlmastery.github.io/startup-skills/)**
+
+| | |
+|---|---|
+| **[Ascent — the landing site](https://dlmastery.github.io/startup-skills/runs/autoresearch/)** | What the pipeline ships: positioning, proof, pricing, commissioned hero art |
+| **[The pack reader](https://dlmastery.github.io/startup-skills/runs/autoresearch/pack.html)** | All 64 documents rendered — Mermaid diagrams drawn, tables formatted, every source tag chipped |
+| **[Run README](https://github.com/dlmastery/startup-skills/blob/main/runs/autoresearch/README.md)** | The pack's front door: reading paths by audience, visual index, honest completeness |
+| **[Coverage audit](https://github.com/dlmastery/startup-skills/blob/main/runs/autoresearch/audit/COVERAGE.md)** | Row-by-row status against the artifact manifest |
+
+One run, generated end to end: **64 documents · 113 rendered visuals · 12 HTML infographics**, every claim traced to a source tag.
+
 The system has four modes, run in order:
 
 1. **Grill** (`grill-me`) — a YC-partner-grade interrogation that turns a vague idea into a sharp founder brief. Nothing else runs until the brief exists.

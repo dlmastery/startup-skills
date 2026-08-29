@@ -6,7 +6,7 @@ Rigorous ML experimentation is policed by nothing but human discipline, and disc
 
 ---
 
-**Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/**
+**Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/** · **Read all 64 documents:** **[the pack reader](https://dlmastery.github.io/startup-skills/runs/autoresearch/pack.html)**
 **Run:** `autoresearch` · **Generated:** 2026-08-28 · **Status: PARTIAL**
 **52 of 53 required artifacts present · 113 visuals rendered (every manifest row closed) · 12 of 78 required HTML infographics**
 The text pack is complete and cross-layer reconciled. Every visual row is rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
