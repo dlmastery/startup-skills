@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>V23 — Journey: Priya (edge-low)</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1e293b;display:flex;justify-content:center;padding:20px}
+.cv{width:1600px;max-width:100%;background:#fff;border:1px solid #e2e8f0;padding:44px 52px;display:flex;flex-direction:column;gap:18px}
+.mono{font-family:Consolas,'Courier New',monospace}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0d9488;font-weight:700}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:38px;line-height:1.14;color:#312e81;margin:6px 0 2px}
+.tk{font-size:18px;color:#475569;max-width:1350px}
+.zl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#6366f1;margin-bottom:10px}
+.zone{border:1px solid #e2e8f0;border-radius:10px;padding:18px 24px}
+.ft{border-top:3px solid #312e81;padding-top:10px;font-size:12px;color:#64748b}
+.rail{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.st{border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.st .hd{background:#312e81;color:#fff;padding:11px 16px}
+.st .hd .w{font-family:Consolas,'Courier New',monospace;font-size:12.5px;color:#c7d2fe}
+.st .hd .t{font-size:16px;font-weight:700;margin-top:3px;line-height:1.25}
+.st .bd{padding:14px 16px;font-size:14.3px;line-height:1.55;color:#475569;flex:1}
+.st .bd b{color:#1e293b}
+.st.catch .hd{background:#B45309}
+.mline{font-family:Consolas,'Courier New',monospace;background:#f8fafc;border:1px solid #e2e8f0;border-radius:7px;
+       padding:9px 12px;font-size:13.2px;line-height:1.5;margin-top:8px;color:#1e293b}
+.hero{background:#B45309;color:#fff;border-radius:10px;padding:22px 28px}
+.hero .big{font-size:24px;font-weight:700;line-height:1.35}
+.hero .cap{font-size:15px;color:#FDE68A;margin-top:9px;line-height:1.5}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.teal{background:#f0fdfa;border-color:#0d9488}
+.caveat{background:#FFFBEB;border:1px solid #F59E0B;border-radius:8px;padding:12px 16px;color:#92400e;font-size:14.5px;line-height:1.5;margin-top:10px}
+.rm{font-family:Consolas,monospace;font-size:11px;font-weight:700;color:#B45309;background:#FEF3C7;border-radius:4px;padding:1px 6px}
+</style>
+</head>
+<body>
+<div class="cv">
+  <div>
+    <div class="eb">Ascent · V23 · Audience: practitioner</div>
+    <h1>Journey — Priya brings her own dataset</h1>
+    <div class="tk">The edge-low user: a computational-biology postdoc with a real dataset, a clear metric, and no ML engineering depth. The system supplied the method she lacked — <b>without an ML engineer, and without shame</b>.</div>
+  </div>
+
+  <div class="hero">
+    <div class="big">The system caught the preprocessing leakage a lab ML engineer would have caught.</div>
+    <div class="cap">Her normalization was fit on the full matrix — the preprocessing-on-full-data leakage subtype from the 294-paper census. Nobody had to tell her she had made a beginner's mistake; the gate simply refused to proceed.</div>
+  </div>
+
+  <div class="rail">
+    <div class="st">
+      <div class="hd"><div class="w">FRIDAY 21:10</div><div class="t">Setup, in her own words</div></div>
+      <div class="bd">
+        The 12-step wizard takes the constraint as she states it:
+        <div class="mline">"cells from 8 donors — cells from the same donor must never straddle train and test"</div>
+        <div style="margin-top:9px">Mapped automatically to <b>GroupKFold</b>. A <span class="mono">52</span>-section constitution is emitted, <span class="mono">4</span> sections domain-adapted.</div>
+      </div>
+    </div>
+    <div class="st catch">
+      <div class="hd"><div class="w">FRIDAY 21:10</div><div class="t">The catch</div></div>
+      <div class="bd">
+        Private-dataset onboarding <b>flags her preprocessing script</b>: normalization was fit on the full matrix.
+        <div style="margin-top:9px">This is a named, documented leakage subtype — not a heuristic guess. She never ran a single invalid experiment.</div>
+      </div>
+    </div>
+    <div class="st">
+      <div class="hd"><div class="w">FRI 21:50 → OVERNIGHT</div><div class="t">She goes home</div></div>
+      <div class="bd">
+        The runner grinds the 7-step loop unattended.
+        <div class="mline">~$4/day projected · university key · economy routing · checkpoint every 5 minutes</div>
+        <div style="margin-top:9px">Her hardware is not a constraint she has to think about.</div>
+      </div>
+    </div>
+    <div class="st">
+      <div class="hd"><div class="w">SATURDAY 08:30</div><div class="t">Ninety seconds on a phone</div></div>
+      <div class="bd">
+        <span class="mono">23</span> trials, <span class="mono">3</span> kept; champion <b>AUROC 0.84</b>; the per-donor heatmap shows <b>donor 7 still weak</b>.
+        <div style="margin-top:9px">One steering sentence, in plain English:</div>
+        <div class="mline">"Donor 7 is the oldest sample — check whether batch-effect correction from the literature helps."</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="zone">
+      <div class="zl">Sunday 19:00 — the artifact, not the number</div>
+      <div style="font-size:15.5px;line-height:1.6;color:#475569">
+        At trial <span class="mono">61</span> a <span class="mono">+0.004</span> candidate is <b>discarded</b> — below the deflated threshold at <span class="mono">N=61</span>.
+        <div style="margin-top:9px">The final champion is confirmed across <span class="mono">5</span> seeds, spread <span class="mono">±0.006</span>.</div>
+      </div>
+      <div class="caveat"><b>Scope:</b> that acceptance gate is <span class="rm">ROADMAP</span> — until it ships, the offline DSR script covers the correction and the ledger carries the true trial count.</div>
+    </div>
+    <div class="zone teal">
+      <div class="zl" style="color:#0f766e">Monday — the moment that matters to a scientist</div>
+      <div style="font-size:15.5px;line-height:1.62;color:#0f766e">
+        Her PI runs <span class="mono">ascent reproduce</span> — <b>pass</b>, under the declared tolerance policy.
+        <div style="margin-top:10px">Her methods section can now cite three things she could not have written alone: the <b>split protocol</b>, the <b>trial count</b> (<span class="mono">61, 4 kept</span>), and the <b>seed-confirmation spread</b>.</div>
+        <div style="margin-top:10px"><b>That is the sale.</b> She is not buying hill-climbing; she is buying a methods section that survives review.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ft">Sources: product/journeys/edge_low.md &#183; strategy/personas.md persona 1 &#183; research/survey.md <span class="mono">[D5]</span> &#183; tech/deep_dives.md §4 &#183; PoC metrics founder-reported (A6)</div>
+</div>
+</body>
+</html>

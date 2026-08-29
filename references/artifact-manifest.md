@@ -54,7 +54,7 @@ Paths relative to `runs/<slug>/`. `req` = required for a complete pack; `opt` = 
 | A47 | `financials/risk_matrix.md` | startup-financials | req |
 | A48 | `financials/comps_exits.md` | startup-financials | req |
 | A49 | `visuals/visual_manifest.md` | startup-visuals | req |
-| A50 | `visuals/infographics/*.html` — every `required` manifest row | startup-visuals | req |
+| A50 | `visuals/infographics/*.html` — every required row **whose content an image cannot carry** (see below) | startup-visuals | req |
 | A51 | `visuals/image_prompts.md` | startup-visuals | req |
 | A52 | `visuals/images/*.png` — rendered when text2image available | startup-visuals | opt |
 | A52b | `visuals/docimages.json` — artifact→visual map; **no substantive artifact over ~400 words left with zero illustrations** | startup-visuals | req |
@@ -65,6 +65,23 @@ Paths relative to `runs/<slug>/`. `req` = required for a complete pack; `opt` = 
 | A57 | Live GitHub Pages URL, recorded in `README.md` and verified loading | startup-website | opt |
 
 Stub threshold: a `req` file under ~40 substantive lines, or missing sections its owner skill's contract names, counts as **stub**, not present. A24/A50 count each file individually.
+
+## A50 — which rows need an HTML version
+
+The original wording ("every required row") mandated an HTML file for all 78 required visuals, duplicating 78 images. That is the wrong obligation, and the reason is empirical rather than aesthetic: **image models render pictures well and text badly.** A row gets an HTML infographic when its content is text a reader must be able to read *exactly*, because that is precisely what garbles.
+
+**Needs HTML** — the words are the content:
+- tables and matrices with many cells (technique×feature heat tables, risk matrices, comps corridors);
+- journeys, collages and card walls carrying prose per panel;
+- posters enumerating many named items (technique waves, decision trees, teardowns, boards);
+- anything whose numbers must be transcribable — a reader who cannot copy the figure cannot check it.
+
+**Does not need HTML** — the picture is the content:
+- chart-shaped rows (curves, funnels, quadrants, timelines, ladders, gantts);
+- schematic dossier illustrations, which are deliberately label-only already;
+- **rows whose source artifact already ships a Mermaid diagram** — the reader renders those live, so an HTML poster duplicates them. Cite the source document instead.
+
+Record the classification per row in the manifest's Form column so the audit can check it mechanically, and state the resulting target count in the manifest header. A row that fails its image render for text reasons is automatically reclassified as needing HTML.
 
 ## A55 — the run README contract
 

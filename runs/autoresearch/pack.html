@@ -9,14 +9,14 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23312E81'/><path d='M22 72 L50 28 L78 72' stroke='%23D97757' stroke-width='11' fill='none' stroke-linejoin='round' stroke-linecap='round'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* Light only, by request: the reading column is white, the chrome is warm ivory. */
 :root{
-  --page:#FFFFFF;--chrome:#F4F2EC;--raised:#FAF9F5;--ink:#1F1E1D;--ink-soft:#5A554F;
-  --rule:#E2DFD6;--rule-soft:#EFEDE6;--clay:#C4633F;--indigo:#312E81;--teal:#0D7A70;--amber:#96590C;
-  --serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,-apple-system,sans-serif;
-  --mono:'JetBrains Mono',Consolas,'Courier New',monospace;
+  --page:#FFFFFF;--chrome:#F7F7F9;--raised:#F7F7F9;--ink:#0B0B12;--ink-soft:#5A5A6B;
+  --rule:#E4E4EB;--rule-soft:#EFEFF3;--clay:#4338CA;--indigo:#4338CA;--teal:#0D7A70;--amber:#B45309;
+  --serif:'Inter',system-ui,-apple-system,sans-serif;--sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--accent-soft:#EEEDFB;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -130,6 +130,28 @@ article a.xref{border-bottom:1px solid rgba(196,99,63,.4)}
 article a.asset::after{content:'↗';font-size:.78em;margin-left:3px;opacity:.75;vertical-align:.15em}
 .loading{color:var(--ink-soft);font-family:var(--mono);font-size:14px}
 .err{background:rgba(150,89,12,.09);border:1px solid var(--amber);border-radius:9px;padding:16px 20px;font-size:15px}
+
+.inline-vis{margin:22px 0 26px}
+.inline-vis img{width:100%;border:1px solid var(--rule);border-radius:12px;background:#fff}
+.inline-vis img:hover{border-color:var(--clay)}
+/* ── instrument-grade overrides: tight sans display, quiet chips ── */
+article h1,article h2,article h3,.dochead h1,.sbhead .home{font-family:var(--sans)!important}
+.dochead h1{letter-spacing:-.032em!important;font-weight:700!important}
+article h2{letter-spacing:-.026em;font-weight:700;font-size:27px}
+article h3{letter-spacing:-.016em;font-weight:600;font-size:20px}
+.sbhead .home{letter-spacing:-.03em;font-weight:700}
+article>p:first-of-type{font-size:19px;color:var(--ink-soft)}
+.tag{background:var(--accent-soft);border-color:transparent}
+.tag.roadmap,.tag.assume{background:#FDF3E7;border-color:transparent}
+.doc.on{background:rgba(67,56,202,.09);border-left-color:var(--clay)}
+.doc:hover{background:rgba(67,56,202,.05)}
+.doc .pill{background:var(--accent-soft);border-color:transparent;color:var(--clay)}
+article th{background:var(--chrome)}
+article tbody tr:nth-child(even){background:#FBFBFC}
+.callout{background:var(--chrome);border-color:var(--rule);border-left-color:var(--clay)}
+.callout.warn{background:#FDFAF5}
+figure img{border-radius:12px}
+.mermaid{background:var(--chrome)}
 </style>
 </head>
 <body>
@@ -158,7 +180,7 @@ article a.asset::after{content:'↗';font-size:.78em;margin-left:3px;opacity:.75
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script>
 const DEFAULT_DOC='README.md';
-let DOCS=[], IMGS={};
+let DOCS=[], IMGS={}, SLUGS={};
 
 if(window.mermaid) mermaid.initialize({
   startOnLoad:false, theme:'base',
@@ -209,11 +231,27 @@ async function render(){
     if(!r.ok) throw new Error('HTTP '+r.status);
     const md=await r.text();
     const blocks=[];
-    const stripped=md.replace(/```mermaid\n([\s\S]*?)```/g,(m,c)=>{blocks.push(c);return `\n\nMERMAIDBLOCK${blocks.length-1}ENDBLOCK\n\n`;});
+    let stripped=md.replace(/```mermaid\n([\s\S]*?)```/g,(m,c)=>{blocks.push(c);return `\n\nMERMAIDBLOCK${blocks.length-1}ENDBLOCK\n\n`;});
+    // Documents place a visual inline by slug: a line reading "visual: V-star-curve".
+    const inline=[];
+    stripped=stripped.replace(/^[ 	]*visual:\s*V-([a-z0-9-]+)[ 	]*$/gim,(m,slug)=>{
+      if(!SLUGS[slug]) return m;
+      inline.push(slug);
+      return `
+
+INLINEVIS${inline.length-1}ENDVIS
+
+`;
+    });
     let html=marked.parse(stripped,{mangle:false,headerIds:true});
     html=chipTags(html);
     html=html.replace(/<p>MERMAIDBLOCK(\d+)ENDBLOCK<\/p>/g,(m,i)=>
       `<div class="mermaid">${blocks[i].replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</div>`);
+    html=html.replace(/<p>INLINEVIS(\d+)ENDVIS<\/p>/g,(m,i)=>{
+      const slug=inline[i], file=SLUGS[slug];
+      return `<figure class="inline-vis"><a href="visuals/images/${file}" target="_blank" rel="noopener">`
+           + `<img src="visuals/images/${file}" alt="${slug.replace(/-/g,' ')}" loading="lazy"></a></figure>`;
+    });
 
     // Lift the document's own H1 into the header block.
     const tmp=document.createElement('div'); tmp.innerHTML=html;
@@ -223,7 +261,8 @@ async function render(){
       <h1 style="font-family:var(--serif);font-size:clamp(32px,4.2vw,46px);font-weight:500;line-height:1.13;letter-spacing:-.015em">
       ${h1?h1.innerHTML:(meta?meta.t:p)}</h1><div class="path">${p}</div>`;
 
-    const mine=IMGS[p]||[];
+    let mine=IMGS[p]||[];
+    if(inline.length){ const used=new Set(inline.map(sl=>SLUGS[sl])); mine=mine.filter(im=>!used.has(im.file)); }
     // one image leads the document; the rest close it
     const hero = mine.length ? figure(mine[0], 'hero-fig') : '';
     const rest = mine.slice(1);
@@ -319,6 +358,7 @@ async function render(){
   try{ DOCS=await (await fetch('visuals/docmanifest.json',{cache:'no-cache'})).json(); }
   catch(e){ DOCS=[{g:'Brief',p:'README.md',t:'README'}]; }
   try{ IMGS=await (await fetch('visuals/docimages.json',{cache:'no-cache'})).json(); }catch(e){ IMGS={}; }
+  try{ SLUGS=await (await fetch('visuals/slugmap.json',{cache:'no-cache'})).json(); }catch(e){ SLUGS={}; }
   const shots=Object.values(IMGS).flat().length;
   document.getElementById('cnt').textContent=DOCS.length+' documents · '+shots+' visuals inline';
   buildNav('');

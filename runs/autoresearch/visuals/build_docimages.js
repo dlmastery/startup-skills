@@ -53,3 +53,13 @@ console.log(`docimages.json: ${Object.keys(docImg).length} documents, ${placemen
 const bare = allDocs.filter(d => !docImg[d] && !/^(visuals\/|audit\/|README\.md)/.test(d));
 console.log(`still unillustrated (content docs): ${bare.length}`);
 bare.forEach(b => console.log('   ' + b));
+
+// Slug -> filename map, so documents can place a visual inline by slug
+// (the pitch deck marks each slide "visual: V-star-curve").
+const slugMap = {};
+for (const [id, file] of Object.entries(imgs)) {
+  const m = file.match(/^V\d+_(.+)\.png$/);
+  if (m) slugMap[m[1]] = file;
+}
+fs.writeFileSync('visuals/slugmap.json', JSON.stringify(slugMap));
+console.log(`slugmap.json: ${Object.keys(slugMap).length} slugs`);
