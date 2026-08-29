@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>V13 — Domain grid</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1e293b;display:flex;justify-content:center;padding:20px}
+.cv{width:1600px;max-width:100%;background:#fff;border:1px solid #e2e8f0;padding:44px 52px;display:flex;flex-direction:column;gap:18px}
+.mono{font-family:Consolas,'Courier New',monospace}
+.eb{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0d9488;font-weight:700}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:1.12;color:#312e81;margin:6px 0 2px}
+.tk{font-size:18px;color:#475569;max-width:1350px}
+.zl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#6366f1;margin-bottom:8px}
+.zone{border:1px solid #e2e8f0;border-radius:10px;padding:18px 24px;background:#fff}
+.ft{border-top:3px solid #312e81;padding-top:10px;font-size:12px;color:#64748b}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dom{border:1px solid #e2e8f0;border-radius:10px;padding:18px 20px;background:#fff}
+.dom .n{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#64748b;font-weight:700}
+.dom .t{font-size:20px;font-weight:700;color:#312e81;margin:6px 0 10px}
+.dom .m{font-family:Consolas,'Courier New',monospace;font-size:24px;font-weight:700;color:#0d9488;line-height:1.2}
+.dom .sub{font-size:14px;color:#475569;margin-top:8px;line-height:1.5}
+.dom.flag{border-color:#0d9488;background:#f0fdfa}
+.cmd{background:#312e81;color:#fff;border-radius:10px;padding:22px 28px;text-align:center}
+.cmd .big{font-family:Consolas,'Courier New',monospace;font-size:26px;font-weight:700}
+.cmd .cap{font-size:15px;color:#c7d2fe;margin-top:8px;font-style:italic}
+.caveat{background:#FFFBEB;border:1px solid #F59E0B;border-radius:8px;padding:12px 16px;color:#92400e;font-size:14.5px;line-height:1.5}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+li{margin:6px 0 6px 20px;font-size:15px;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="cv">
+  <div>
+    <div class="eb">Ascent · V13 · Audience: cross</div>
+    <h1>Six domains, one protocol, reproducible in one command</h1>
+    <div class="tk">The same constitution, the same 7-step loop and the same three gates ran across six unrelated problem classes. The generality is the claim — not any single number below.</div>
+  </div>
+
+  <div class="grid">
+    <div class="dom flag">
+      <div class="n">Finance · flagship</div>
+      <div class="t">EUR/USD signals</div>
+      <div class="m">Sharpe +6.52</div>
+      <div class="sub"><b>raw, pre-deflation</b> · <span class="mono">265+</span> experiments. A champion of 265 trials is exactly what the DSR discounts — the deflated number ships first.</div>
+    </div>
+    <div class="dom">
+      <div class="n">Finance</div>
+      <div class="t">QQQ signals</div>
+      <div class="m">Sharpe +1.32</div>
+      <div class="sub">composite · <span class="mono">PSR 0.997</span> · <span class="mono">216+</span> experiments</div>
+    </div>
+    <div class="dom">
+      <div class="n">Physics</div>
+      <div class="t">Higgs classification</div>
+      <div class="m">AUROC ≈0.8675+</div>
+      <div class="sub">public benchmark, contamination caveats apply</div>
+    </div>
+    <div class="dom">
+      <div class="n">Medical imaging</div>
+      <div class="t">PathMNIST OOD</div>
+      <div class="m">AUC 0.997</div>
+      <div class="sub">out-of-distribution detection</div>
+    </div>
+    <div class="dom">
+      <div class="n">Unsupervised</div>
+      <div class="t">Olivetti faces</div>
+      <div class="m">ARI 0.874</div>
+      <div class="sub">conditional adjusted Rand index</div>
+    </div>
+    <div class="dom flag">
+      <div class="n">Tabular · head-to-head</div>
+      <div class="t">Fraud detection</div>
+      <div class="m">AUC 0.6097</div>
+      <div class="sub">vs <b>AutoGluon <span class="mono">0.522</span></b> and <b>H2O <span class="mono">0.518</span></b> — the PoC beat open-source AutoML on the same task</div>
+    </div>
+  </div>
+
+  <div class="cmd">
+    <div class="zl" style="color:#a5b4fc">Zone 2 — The protocol, unchanged across all six</div>
+    <div class="big">Diagnose → Literature-ground → Hypothesize → Execute → Analyze → Document → Checkpoint</div>
+    <div class="cap">one 52-section constitution · three pre-commit gates · purged/embargoed splits · fingerprinted composite metric</div>
+  </div>
+
+  <div class="row">
+    <div class="zone">
+      <div class="zl">Zone 3 — What generality buys</div>
+      <ul>
+        <li>The rigor layer is <b>not domain-specific IP</b> — it transfers, which is what makes this a platform rather than a trading tool</li>
+        <li>Every run carries <b>full ledgers and reasoning traces</b>, kept and discarded alike</li>
+        <li>All six ran on a <b>consumer laptop</b> that blue-screened under load — which is why checkpointing is aggressive enough that a crash costs minutes, not campaigns</li>
+      </ul>
+    </div>
+    <div class="zone">
+      <div class="zl">Zone 4 — How to read these numbers</div>
+      <div class="caveat"><b>All founder-reported, single-seed in most domains, on public datasets with contamination caveats, reproducible from the repo — not independently verified.</b> That framing is binding on every artifact in this pack. Third-party validation exists for the <i>spec</i>, not the results: an independent audit of open-source AI-scientist systems found four recurring failure modes, and this architecture addresses three, with the fourth named as roadmap.</div>
+      <div style="font-size:14.5px;color:#475569;margin-top:10px;line-height:1.5">Noted so nobody flags it as a copy-paste error: the QQQ <span class="mono">PSR 0.997</span> and the PathMNIST <span class="mono">AUC 0.997</span> are distinct metrics from unrelated runs that happen to share a value.</div>
+    </div>
+  </div>
+
+  <div class="ft">Sources: narrative/pitch_deck.md s13 &#183; tech/not_vaporware.md §2 &#183; BRIEF.md &#183; PoC metrics founder-reported (A6) <span class="mono">[A46][D6][D7][D37]</span></div>
+</div>
+</body>
+</html>

@@ -48,6 +48,18 @@ Load the frontend-design skill for judgment, then apply these tokens. They are C
 
 **The signature device:** every number on the site carries its **source tag inline** as a small monospace chip (`[A1]`, `[D5]`, `(assumption)`), exactly as the artifacts do. The site performs the product's own thesis — showing the evidence — rather than describing it. This is the one memorable element; keep everything around it quiet.
 
+## Copy structure — the Minto Pyramid Principle (binding)
+
+Landing-page copy defaults to generic persuasion unless a structure forbids it. Write every run's site to the **Minto Pyramid**, which is built for persuading a skeptical executive and happens to match this pack's own claim → mechanism → evidence spine:
+
+1. **Lead with the conclusion.** The hero states the primary claim outright, in the first sentence, before any supporting material. Borrow the BLUF discipline here: the bottom line lands in sentence one, active voice, no throat-clearing.
+2. **Exactly three supporting categories, mutually exclusive and collectively exhaustive.** Not four, not seven feature cards. Name the three things that must all be true for the business to work — typically *the gap is real*, *the mechanism works and is measured*, *the economics hold*. State them as claims a reader could disprove.
+3. **2–3 concrete proofs per category.** Each proof is a number with its source tag, or a named mechanism. No adjective is allowed to carry an argument: the quality bar's "mechanism over adjective" rule applies to marketing copy exactly as it applies to artifacts.
+4. **Strict top-down flow.** Conclusion → three arguments → supporting sections. Label the detail sections by which pillar they support ("Support for 2 — the mechanism") so the structure is visible rather than implied.
+5. **Name the falsifier.** Directly under the three pillars, state the single assumption that would sink all of them, and what test settles it. On an evidence-led pack this converts better than another benefit card, and it is the honest thing to publish.
+
+Banned in site copy, as in every artifact: "revolutionary", "seamless", "powerful", "supercharge", "game-changing", and any claim whose only support is an adjective.
+
 ## Process
 
 1. Read the sources above; extract the copy verbatim-or-tightened (tightening may cut words, never add claims).
