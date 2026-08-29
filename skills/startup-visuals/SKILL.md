@@ -25,7 +25,19 @@ The audience sets above cover the *arguments*. They leave the **documents** bare
 - Short labels only: a code plus two or three words. **No prose, no paragraphs, ideally under ten labels.**
 - Prefer honest diagram forms — a grid of cards, a ranked bar stack, a before/after ledger, a numbered path, a funnel triptych.
 - Quote every label verbatim in the prompt and forbid additions ("render ONLY the labels quoted above").
+- **Bind every label inside the shape it describes.** Ask for the text *within* the bar, card or node — never floating beside it. This is the single highest-value instruction in the whole pass, and the reason is the third failure mode below.
+- Keep the element count low and state it as a number ("exactly THREE bars"). Asking for nine ranked bars with three labelled reliably produces eight bars and misplaced labels.
 - The document holds the words; the illustration holds the shape. If a visual needs a paragraph to work, it is an **HTML infographic**, not an image.
+
+### Three distinct failure modes, and what catches each
+
+| Failure | Looks like | Caught by |
+|---|---|---|
+| **Clipping** — type scaled until it runs off the canvas | title starts mid-word, frame edge missing | **automated**: measure edge-strip brightness per side, reject below ~246, retry with shortened labels |
+| **Garbling** — letters transposed, decimal commas, duplicated blocks | `2aturday`, `AURDC`, `1,2x`, `[ROADNAP]` | **only by looking**: open the file and read it |
+| **Mis-binding** — perfect spelling, clean margins, wrong meaning | labels floating next to the wrong bar; rank order misstated; fewer elements than asked | **only by reading it as data**: check each label sits on the element it belongs to, and count the elements |
+
+The third is the dangerous one: it passes every automated gate and survives a glance at a thumbnail. Diffusion models do not lay out data — they draw things shaped like layouts. Whenever a visual encodes an ordering, a mapping or a count, verify the *semantics*, not just the pixels.
 
 ## Standard visual set (adapt nouns; drop rows only with a reason in the manifest)
 
