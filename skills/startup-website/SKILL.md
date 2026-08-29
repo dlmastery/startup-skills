@@ -48,6 +48,23 @@ Load the frontend-design skill for judgment, then apply these tokens. They are C
 
 **The signature device:** every number on the site carries its **source tag inline** as a small monospace chip (`[A1]`, `[D5]`, `(assumption)`), exactly as the artifacts do. The site performs the product's own thesis — showing the evidence — rather than describing it. This is the one memorable element; keep everything around it quiet.
 
+## Hero imagery — the site needs art, not more charts
+
+A landing page built only from data infographics reads as a report, not a company. Commission a small set of **4–6 hero visuals** stored in `visuals/hero/`, separate from the manifest's data rows, and use them as full-bleed bands between sections.
+
+**Make them text-free. This is the highest-leverage rule in the whole visual pipeline.** Every image failure mode — clipping, letter garbling, label mis-binding — is a *text-rendering* failure. A wordless image cannot exhibit any of them, so hero art is both the most beautiful and the most reliable category available. State it forcefully in the prompt: *no letters, no words, no numbers, no labels, no watermark, no UI chrome with readable type.*
+
+- Derive each image from the product's own mechanism, not from stock-photo abstraction: the monotonic ascent, the ledger of kept-and-discarded trials, the gates that clarify what passes, the purged splits that never touch. Someone who knows the product should recognise the idea.
+- Ask for one register and hold it — editorial minimalism, precise geometry, generous negative space, controlled palette drawn from the site tokens.
+- **Normalise the ground after generation.** Image models drift to cream even when asked for white, which clashes badly against a white page. Sample the corner pixel and map it to neutral with a levels pass (`ffmpeg -vf colorlevels=rimax=<r/255>:gimax=<g/255>:bimax=<b/255>`) rather than regenerating. Deterministic, instant, and it preserves the art.
+- Mid-tone or dark atmospheric pieces are fine as *bands* inside a light page — a dark section is a rhythm device, not a dark theme.
+
+## Aesthetic direction — earn it, don't default to it
+
+The default "AI-generated site" look is a warm cream ground, a high-contrast serif display face and a terracotta accent. It is pleasant and it is instantly recognisable as untailored. For a technical product aimed at skeptical practitioners it reads as an editorial blog rather than a shipped company.
+
+For deep-tech and developer products the credible register is **near-monochrome with one confident accent**: white and a single cool surface tone, near-black ink, tight negative letter-spacing on large display type, one accent colour used sparingly for emphasis and interactive states, hairline borders instead of heavy shadows, and monospace reserved for every number. Restraint reads as confidence; decoration reads as compensation. Pick the direction from the subject, state it, and hold it across the landing page, the reader and the artwork.
+
 ## Copy structure — the Minto Pyramid Principle (binding)
 
 Landing-page copy defaults to generic persuasion unless a structure forbids it. Write every run's site to the **Minto Pyramid**, which is built for persuading a skeptical executive and happens to match this pack's own claim → mechanism → evidence spine:
