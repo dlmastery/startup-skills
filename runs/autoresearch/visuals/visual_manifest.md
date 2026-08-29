@@ -6,7 +6,7 @@
 - **Honesty rules bind images too (non-negotiable):** every PoC metric carries "founder-reported"; the EUR/USD champion always renders as `+6.52 raw (founder-reported) · deflated: week-1 work · N=265+ trials` — never the raw number alone; unshipped capabilities (trial-count-corrected acceptance gate, attestation packs, BYO-endpoint, fingerprint *refusal*) carry a visible **[ROADMAP]** tag; the fingerprint claim is always "tamper-evident, **not** tamper-refusing (refusal is roadmap)"; "monotonic" is always "monotonic in the composite proxy."
 - **Every number on every visual exists in a pack artifact**; each row cites its source file(s); each image prompt in `image_prompts.md` carries the source citation as an HTML comment.
 - **Forms:** `image` = production text-to-image prompt exists in `image_prompts.md` / `prompts.json`; `mermaid-existing` = a syntax-checked Mermaid source already ships in the cited artifact (the image row renders its poster version); `html` = best built as a self-contained HTML infographic in a later pass.
-- **Counts:** 100 rows · **78 required · 22 optional**. **Status as of 2026-08-28 (reconciled to the glob): 21 images rendered (V01–V21), 3 HTML infographics rendered (V01, V04, V05).** A row is marked rendered only when the file exists on disk with nonzero size — verified, not assumed.
+- **Counts:** 100 rows · **78 required · 22 optional**. **Status as of 2026-08-29 (reconciled to the glob): 21 images rendered (V01–V21), 10 HTML infographics rendered (V01–V09, V11).** A row is marked rendered only when the file exists on disk with nonzero size — verified, not assumed.
 - **Sizes:** 1536x1024 landscape default; 1024x1536 portrait for the technique-wave posters (V33–V35) and the decision-tree poster (V36) only.
 
 **Standard-set dedupe (contract rows satisfied by other rows, with reasons):** competitive positioning map → V11 (deck version is canonical); TAM/SAM/SOM bottom-up build → V08 + V57/V58 (deck + VC deep versions); use-of-funds milestone map → V15; journey maps → V23–V26; technique decision tree → V36; UX collages → V27–V32; risk matrix grid → V62 (placed in the VC set where the diligence read happens).
@@ -18,16 +18,16 @@
 | ID | Title — headline takeaway | Audience | Source artifact(s) | Form | Status |
 |---|---|---|---|---|---|
 | V01 | Star curve — 94,800 people starred a research loop nobody maintains. | VC | narrative/pitch_deck.md s1; research/landscape.md [A1][A3]; research/market_structure.md [C35] | image | image rendered + html rendered |
-| V02 | Leakage census — Research rigor fails at published scale, manual and automated alike. | VC | pitch_deck.md s2; research/survey.md [D5]; landscape.md [A16][A46][A39]; market_structure.md [C3] | image | image rendered |
-| V03 | METR horizon — Execution is solved; judgment is the gap — we ship the judgment layer. | VC | pitch_deck.md s3; research/capability_table.md [B1][B2][B4][B16] | image | image rendered |
+| V02 | Leakage census — Research rigor fails at published scale, manual and automated alike. | VC | pitch_deck.md s2; research/survey.md [D5]; landscape.md [A16][A46][A39]; market_structure.md [C3] | image | image rendered + html rendered |
+| V03 | METR horizon — Execution is solved; judgment is the gap — we ship the judgment layer. | VC | pitch_deck.md s3; research/capability_table.md [B1][B2][B4][B16] | image | image rendered + html rendered |
 | V04 | Ratchet loop — Point Ascent at your dataset and metric; wake up to audited, kept improvements. | cross | pitch_deck.md s4; BRIEF.md; tech/architecture/D02.md | image | image rendered + html rendered |
 | V05 | Trial ledger — The trial ledger is the demo: every runner-executed trial logged, kept and discarded. | cross | pitch_deck.md s5; product/features_flagship.md #1; product/ux_spec.md | image | image rendered + html rendered |
-| V06 | Gate stack — A constitution enforces what a tired human skips. | cross | pitch_deck.md s6; tech/deep_dives.md §3; survey.md §4.4 | image | image rendered |
-| V07 | Deflation ledger — Our flagship number, deflated by our own audit — that's the brand. | VC | pitch_deck.md s7; strategy/positioning.md §4; survey.md §6 [D6][D7] | image | image rendered |
-| V08 | SOM funnel — The core market is $2–3B, sized bottom-up with the arithmetic shown. | VC | pitch_deck.md s8; strategy/market_sizing.md §1–3 | image | image rendered |
-| V09 | Pricing ladder — BYOK pricing removes token costs from our margin by construction. | VC | pitch_deck.md s9; financials/pricing.md §4 | image | image rendered |
+| V06 | Gate stack — A constitution enforces what a tired human skips. | cross | pitch_deck.md s6; tech/deep_dives.md §3; survey.md §4.4 | image | image rendered + html rendered |
+| V07 | Deflation ledger — Our flagship number, deflated by our own audit — that's the brand. | VC | pitch_deck.md s7; strategy/positioning.md §4; survey.md §6 [D6][D7] | image | image rendered + html rendered |
+| V08 | SOM funnel — The core market is $2–3B, sized bottom-up with the arithmetic shown. | VC | pitch_deck.md s8; strategy/market_sizing.md §1–3 | image | image rendered + html rendered |
+| V09 | Pricing ladder — BYOK pricing removes token costs from our margin by construction. | VC | pitch_deck.md s9; financials/pricing.md §4 | image | image rendered + html rendered |
 | V10 | GTM timeline — Ninety days of scripted motion end in pre-orders, not a hosted fantasy. | VC | pitch_deck.md s10; strategy/gtm.md §4 | image | image rendered |
-| V11 | Quadrant map — The sustained-campaign, audit-gated quadrant is empty — and incumbents are walking away from it. | VC | pitch_deck.md s11; positioning.md §1–2; research/competitors.md | image | image rendered |
+| V11 | Quadrant map — The sustained-campaign, audit-gated quadrant is empty — and incumbents are walking away from it. | VC | pitch_deck.md s11; positioning.md §1–2; research/competitors.md | image | image rendered + html rendered |
 | V12 | Moat ledger — Forks copy the constitution in a day; they cannot backfill the ledger. | VC | pitch_deck.md s12; positioning.md §5; strategy (A11) | image | image rendered |
 | V13 | Domain grid — Six domains, one protocol, reproducible in one command. | cross | pitch_deck.md s13; tech/not_vaporware.md §2 | image | image rendered |
 | V14 | Deck team — The founder already ran the factory for months. | VC | pitch_deck.md s14; BRIEF.md; financials/use_of_funds.md §2b | image | image rendered |

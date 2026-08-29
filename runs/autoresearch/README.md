@@ -8,7 +8,7 @@ Rigorous ML experimentation is policed by nothing but human discipline, and disc
 
 **Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/**
 **Run:** `autoresearch` · **Generated:** 2026-08-28 · **Status: PARTIAL**
-**52 of 53 required artifacts present · 21 of 100 visuals rendered · 6 of 78 required HTML infographics**
+**52 of 53 required artifacts present · 21 of 100 visuals rendered · 10 of 78 required HTML infographics**
 The text pack is complete and cross-layer reconciled. The visual layer is 21% rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
 
 ---

@@ -8,7 +8,7 @@
 |---|---|
 | Required manifest rows | 53 |
 | **Required present** | **52** (98%) |
-| Required missing/partial | 1 — A50 HTML infographics (3 of 78) |
+| Required missing/partial | 1 — A50 HTML infographics (10 of 78) |
 | Optional rows present | 3 of 4 (wave3, images-partial, ingest n/a, website missing) |
 | Files on disk | 87 — 66 text artifacts + 21 rendered PNGs |
 | Visuals rendered | 21 of 100 manifest rows (all 21 verified: valid PNG signature, 1.46–1.73 MB) |
@@ -43,7 +43,7 @@
 | A36–A42 | `validation/` (7) | present | Full Blank board set; E1–E8 thresholds frozen 2026-08-27 |
 | A43–A48 | `financials/` (6) | present | Reconciled to the honest waterfall (`17d2e53`) |
 | A49 | `visuals/visual_manifest.md` | present | 100 rows · 78 req · 22 opt |
-| A50 | `visuals/infographics/*.html` | **PARTIAL — 6 of 78** | V01, V02, V03, V04, V05, V06 |
+| A50 | `visuals/infographics/*.html` | **PARTIAL — 10 of 78** | V01–V09, V11 (deck set less V10, V12–V15) |
 | A51 | `visuals/image_prompts.md` | present | 100 prompts + `prompts.json` |
 | A52 | `visuals/images/*.png` | partial (opt) — 21 of 100 | V01–V21, all valid |
 | A53 | `ingest/` | n/a (opt) | No sources ingested this run |
