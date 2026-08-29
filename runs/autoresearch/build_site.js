@@ -72,26 +72,21 @@ ${page.body}
 
 const PAGES = [
 { slug:'index', title:'Ascent — the autonomous ML research operating system',
-  desc:'Point Ascent at your dataset and metric. It runs literature-grounded, audit-gated experiments for days on a commodity laptop and hands you the evidence behind every kept result.',
+  desc:'Ascent runs machine-learning experiments overnight on your own laptop and proves the results hold up. You get what it kept, what it threw away, and the evidence for both.',
   next:[
-    {href:'product.html',k:'Product',t:'How the loop actually works',d:'The seven steps, the three pre-commit gates, and what you see each morning.'},
-    {href:'evidence.html',k:'Evidence',t:'Six domains, one protocol',d:'Every result, framed as founder-reported, with what we deliberately do not claim.'},
-    {href:'pack.html',k:'The pack',t:'All 64 documents',d:'Research, strategy, tech, financials — rendered, sourced and cross-linked.'},
+    {href:'product.html',k:'Product',t:'How the loop actually works',d:'The seven steps, the three checks that run before anything is kept, and what you see each morning.'},
+    {href:'evidence.html',k:'Evidence',t:'Does it work?',d:'Six domains on one protocol, and an explicit list of what we do not claim.'},
+    {href:'pricing.html',k:'Pricing',t:'What it costs',d:'About $3-12 a day of your own compute, and $125 a month for the layer that checks it.'},
   ],
   body:`
 <header class="hero">
   <div class="w">
-    <span class="eyebrow">Autonomous ML research operating system</span>
-    <h1>Improves your metric around the clock. Shows you the <span class="hl">evidence</span>.</h1>
-    <p class="lede">Point Ascent at your dataset and your metric. It runs literature-grounded, audit-gated experiments for days on a commodity laptop, keeps only strict improvements, and hands you a fingerprinted, one-command-reproducible bundle for every kept champion.</p>
+    <span class="eyebrow">Autonomous ML research</span>
+    <h1>It runs the experiments while you sleep &mdash; and proves the result is <span class="hl">real</span>.</h1>
+    <p class="lede">For researchers, quants and applied-ML engineers who have a dataset, a number they need to improve, and nobody to check their work at 2am. Ascent runs the experiments continuously on an ordinary laptop and keeps only what genuinely holds up.</p>
     <div class="cta">
       <a class="btn lg" href="product.html">See how it works</a>
-      <a class="btn lg ghost" href="pack.html">Read the full pack</a>
-    </div>
-    <div class="ledger">
-      <div class="k">The number we lead with is the one our own audit discounts</div>
-      <div class="v"><b>+6.52 raw</b> (founder-reported) · deflated: week-1 work · N=265+ trials</div>
-      <div class="n">A champion selected from 265+ trials is exactly what the deflated Sharpe ratio exists to discount. So we publish the corrected number ourselves, ledger attached, before anyone else computes it.</div>
+      <a class="btn lg ghost" href="evidence.html">See the evidence</a>
     </div>
   </div>
   <div class="heroart">
@@ -101,33 +96,98 @@ const PAGES = [
 
 <div class="proof">
   <div class="w">
-    <div class="c"><div class="n">94,800</div><div class="l">stars on the loop nobody maintains<span class="src">A1</span></div></div>
-    <div class="c"><div class="n">0 of 16</div><div class="l">notable forks that added any rigor<span class="src">A2</span></div></div>
-    <div class="c"><div class="n">6</div><div class="l">domains validated on one protocol</div></div>
-    <div class="c"><div class="n">82.0%</div><div class="l">gross margin at 150 users, by construction</div></div>
+    <div class="c"><div class="n">94,800</div><div class="l">people starred the minimal version of this loop in six months<span class="src">A1</span></div></div>
+    <div class="c"><div class="n">0 of 16</div><div class="l">of its notable forks added any rigor<span class="src">A2</span></div></div>
+    <div class="c"><div class="n">294</div><div class="l">published papers with documented data leakage<span class="src">D5</span></div></div>
+    <div class="c"><div class="n">6</div><div class="l">domains validated on one protocol <em>(founder-reported)</em></div></div>
   </div>
 </div>
 
 <section>
   <div class="w">
-    <span class="eyebrow">The argument</span>
-    <h2>Three things have to be true. All three are checkable.</h2>
-    <p class="sub">Every number in this pack carries its source tag. Where a figure is founder-reported or assumed, it says so at the point of use.</p>
+    <span class="eyebrow">Why this exists</span>
+    <h2>Most results that look good do not survive contact with reality.</h2>
+    <p class="sub">Try enough ideas and one will look brilliant by luck alone. Careful researchers guard against that by hand &mdash; holding data back, checking the literature, refusing to keep something that only worked once. It is slow, unglamorous work, and at 2am nobody does it properly. That is not a character flaw. It is a workload problem, and it is the one nobody has automated.</p>
     <div class="g3">
-      <div class="card"><div class="n">01 — THE GAP</div><h3>Empirically unfilled</h3>
-        <p><b>94,800</b> stars and <b>13,400</b> forks in six months; no active maintainer since 2026-03-26.<span class="src">A1</span></p>
-        <p><b>0 of 16</b> curated forks added rigor. The sustained-campaign × audit-gated quadrant has no occupant.</p>
-        <p><a href="evidence.html" style="color:var(--accent);font-weight:600">See the evidence →</a></p></div>
-      <div class="card"><div class="n">02 — THE MECHANISM</div><h3>Built, running, measured</h3>
-        <p>Removing the citation gate raised invalid experiments <b>42%</b> and produced <b>3</b> leakage incidents.</p>
-        <p>Three gates run <b>before commit</b>. A failing experiment never enters the champion line.</p>
-        <p><a href="product.html" style="color:var(--accent);font-weight:600">See the product →</a></p></div>
-      <div class="card"><div class="n">03 — THE ECONOMICS</div><h3>Margin is architectural</h3>
-        <p>BYOK puts token COGS on the user's card: <b>82.0%</b> gross margin at 150 users.</p>
-        <p><b>$125/mo</b> against <b>$1,100/day</b> of the practitioner's own time.<span class="src">C25</span></p>
-        <p><a href="pricing.html" style="color:var(--accent);font-weight:600">See pricing →</a></p></div>
+      <div class="card"><div class="n">DOING IT BY HAND</div><h3>Careful, and far too slow</h3><p>A practitioner runs <b>one to three</b> experiments a day, and spends <b>38&ndash;45%</b> of their time building scaffolding rather than testing ideas.<span class="src">A39</span></p></div>
+      <div class="card"><div class="n">AUTOMATING IT BADLY</div><h3>Fast, and quietly wrong</h3><p>Under independent review, <b>42%</b> of the best-known automated research system's experiments failed outright.<span class="src">A16</span></p></div>
+      <div class="card"><div class="n">THE GAP</div><h3>Nobody automated the caution</h3><p>Plenty of tools run more experiments. None enforce the discipline that decides which results deserve to be believed.</p></div>
     </div>
-    <div class="note"><b>What would falsify all three:</b> practitioners will not trust — or pay for — experiments they did not run themselves. That is the pack's declared riskiest assumption, and a 15-practitioner trust test in the first 90 days exists to settle it before any hosted product gets built.</div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="w">
+    <span class="eyebrow">How it works</span>
+    <h2>Three steps, and one rule it cannot talk its way past.</h2>
+    <div class="g3">
+      <div class="card"><div class="n">STEP 1</div><h3>Point it at your data</h3><p>You give it a dataset and the single number you want to improve &mdash; an accuracy, a forecast error, a risk-adjusted return. Setup takes about twenty minutes and needs no ML engineering.</p></div>
+      <div class="card"><div class="n">STEP 2</div><h3>It works overnight</h3><p>It forms a hypothesis, checks it against published research, changes <b>one thing</b>, measures, then keeps or discards. Then again, for as long as you let it &mdash; on your laptop, on your own API key.</p></div>
+      <div class="card"><div class="n">STEP 3</div><h3>You get something defensible</h3><p>A result, the full record of how it was reached, and a package a skeptical colleague can re-run with a single command.</p></div>
+    </div>
+    <p class="sub" style="margin-top:32px"><b>The rule:</b> three automatic checks run <em>before</em> any result is recorded &mdash; that the data was split honestly, that the idea was grounded in real published work, and that the reasoning was written down. Fail one and the experiment is discarded. The system cannot override them, and neither can you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <span class="eyebrow">Who it is for</span>
+    <h2>One system, three very different users.</h2>
+    <div class="g3">
+      <div class="card"><div class="n">THE DOMAIN SCIENTIST</div><h3>You have the data, not the ML team</h3><p>A biologist with an interesting dataset and no machine-learning depth. The system supplies the method &mdash; and catches the mistakes a lab engineer would have caught.</p></div>
+      <div class="card"><div class="n">THE SOLO QUANT</div><h3>You can already climb the hill</h3><p>What you cannot do is referee yourself at midnight on the fortieth variant of a signal. That is the part being automated.</p></div>
+      <div class="card"><div class="n">THE RESEARCH LEAD</div><h3>You have to prove it to someone</h3><p>You are buying the audit trail: who ran what, on which data, and why the result was believed. The reconstruction meeting stops happening.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="w">
+    <span class="eyebrow">What you actually get</span>
+    <h2>Four things, every morning.</h2>
+    <div class="g2">
+      <div class="card"><div class="n">01</div><h3>What it kept</h3><p>The improvements that survived every check, each strictly better than what came before it.</p></div>
+      <div class="card"><div class="n">02</div><h3>What it threw away</h3><p>Everything discarded, and why &mdash; usually far more than it kept. That pile is what makes the kept results mean anything.</p></div>
+      <div class="card"><div class="n">03</div><h3>A package you can hand over</h3><p>Configuration, data splits, reasoning and results, re-runnable by someone who has no reason to trust you.</p></div>
+      <div class="card"><div class="n">04</div><h3>The honest version of the number</h3><p>Corrected for how many things were tried before it appeared. That correction is explained next.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <span class="eyebrow">Why you should believe it</span>
+    <h2>If you try 265 things, the best one flatters you.</h2>
+    <p class="sub">This is the part every backtest gets wrong. Try enough ideas and the winner looks impressive even when nothing real is happening underneath. Statisticians have a correction for exactly this, and it needs one input almost nobody bothers to keep: <b>how many things were actually tried</b>, failures included. Ascent keeps that count on every experiment &mdash; which is what lets it publish the discounted number rather than the flattering one.</p>
+    <div class="ledger">
+      <div class="k">Our own flagship result, with our own correction applied</div>
+      <div class="v"><b>+6.52 raw</b> (founder-reported) &middot; deflated: week-1 work &middot; N=265+ trials</div>
+      <div class="n">Every competitor leads with their best number. We lead with the discount on ours and attach the ledger that lets you check it. A competitor cannot copy that without giving up their best slide.</div>
+    </div>
+    <div class="g3" style="margin-top:34px">
+      <div class="card"><div class="n">01 &mdash; THE GAP</div><h3>Empirically unfilled</h3>
+        <p>The minimal loop drew <b>94,800</b> stars, then lost its maintainer. Of sixteen notable forks, <b>none</b> added rigor.<span class="src">A2</span></p>
+        <p><a href="evidence.html" style="color:var(--accent);font-weight:600">See the evidence &rarr;</a></p></div>
+      <div class="card"><div class="n">02 &mdash; THE MECHANISM</div><h3>Built, running, measured</h3>
+        <p>Turning off one check raised invalid experiments <b>42%</b> and produced <b>3</b> leakage incidents. The discipline is worth its overhead.</p>
+        <p><a href="product.html" style="color:var(--accent);font-weight:600">See the product &rarr;</a></p></div>
+      <div class="card"><div class="n">03 &mdash; THE ECONOMICS</div><h3>Margin is architectural</h3>
+        <p>Users pay their own compute bill directly, so it never touches our margin: <b>82.0%</b> gross at 150 users.</p>
+        <p><a href="pricing.html" style="color:var(--accent);font-weight:600">See pricing &rarr;</a></p></div>
+    </div>
+    <div class="note"><b>What would prove us wrong:</b> that practitioners will not trust &mdash; or pay for &mdash; experiments they did not run themselves. It is the riskiest thing we believe, and a 15-practitioner trust test in the first 90 days exists to settle it before anything hosted gets built.</div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="w">
+    <span class="eyebrow">Get started</span>
+    <h2>Read the whole argument, with its sources attached.</h2>
+    <p class="sub">Sixty-four documents covering research, strategy, product, architecture, validation and financials &mdash; every claim tagged to where it came from, and every gap named rather than hidden.</p>
+    <div class="cta">
+      <a class="btn lg" href="pack.html">Open the pack</a>
+      <a class="btn lg ghost" href="pricing.html">See pricing</a>
+    </div>
   </div>
 </section>` },
 

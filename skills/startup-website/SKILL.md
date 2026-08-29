@@ -48,6 +48,34 @@ Load the frontend-design skill for judgment, then apply these tokens. They are C
 
 **The signature device:** every number on the site carries its **source tag inline** as a small monospace chip (`[A1]`, `[D5]`, `(assumption)`), exactly as the artifacts do. The site performs the product's own thesis — showing the evidence — rather than describing it. This is the one memorable element; keep everything around it quiet.
 
+## The home page — a researched anatomy, in order
+
+The home page is not the place to be interesting. It is the place to be *understood*. A technical founder writing their own home page reliably opens on the mechanism — the thing they find most exciting — and loses every reader who does not already know why the mechanism matters. Build it in this order and do not reorder it to be clever.
+
+**Above the fold, six elements** (2025–26 SaaS conversion research):
+
+1. **A headline naming the visitor's outcome**, not the product's mechanism. "It runs the experiments while you sleep and proves the result is real" is an outcome. "Audit-gated autonomous research with purged splits" is a mechanism, and it is unreadable to the person writing the cheque.
+2. **A subheadline naming who it is for**, in their own words.
+3. **One primary CTA**, phrased as what happens next — "See how it works", "Start free trial" — never "Learn more", which names nothing. A secondary ghost button is fine; a third is not.
+4. **A product visual** — the hero art, not a chart.
+5. **Social proof inside the first two scrolls.** Under half of SaaS sites put trust signals above the fold, so doing it is a differentiator; it must be absorbable in under three seconds — a usage statistic, a logo strip, or one short quote.
+6. **Pricing reachable from the nav**, and a **CTA repeated in the footer**.
+
+**Then, in this order, one section each — the questions a reader asks in the order they ask them:**
+
+| # | Question | Section |
+|---|---|---|
+| 1 | What is the problem, in human terms? | Why this exists — no jargon, no product yet |
+| 2 | How does it work? | Three steps, plus the one rule that makes it different |
+| 3 | Is it for me? | Who it is for — name two or three concrete people |
+| 4 | What do I actually get? | The tangible outputs, as nouns |
+| 5 | Why should I believe you? | The proof, and only here may the domain vocabulary appear |
+| 6 | What does it cost, and what do I do now? | Pricing link and the closing CTA |
+
+**Jargon has an earned position.** Domain vocabulary — deflated statistics, embargoed splits, trial-count corrections — is the pack's substance and must not be dumbed away, but it belongs at step 5 and on interior pages, *after* the reader knows what the product does. Introduce each term with a plain-English sentence before the term itself: "Try enough ideas and the winner flatters you. Statisticians correct for this, and the correction needs a number almost nobody keeps." Then name it. A reader who meets `N=265+ trials` before they know what the product does simply leaves.
+
+**Honesty constraint on social proof.** A pre-launch pack has no customers, so it has no logos and no testimonials, and inventing them is prohibited by the quality bar. Use what is genuinely third-party instead — an ecosystem statistic, a published finding, a benchmark result — and label founder-reported figures as such right there in the proof strip. Real proof of *demand* beats fabricated proof of *traction*.
+
 ## Structure — a site, not one long scroll
 
 A single page carrying hero, problem, mechanism, product tour, evidence, pricing, team and CTA is a **deck rendered as a webpage**. It reads as generated: no information hierarchy beyond vertical order, no page a visitor can be sent to, nothing to bookmark, and one enormous scroll where a real company has a navigable structure. Look at how funded startups actually ship — Home, Product, Pricing, Docs, About, each page doing one job.
