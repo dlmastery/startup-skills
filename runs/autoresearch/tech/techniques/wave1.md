@@ -1,5 +1,10 @@
 # Techniques — Wave 1: Established Research-Methodology Techniques (50)
 
+> **What this is** — Fifty settled techniques of rigorous empirical ML and quantitative research, each as name — mechanism — evidence anchor.
+> **Why it exists** — Ascent's constitution enforces these instead of asking a tired human to remember them, so the arsenal must be enumerable: asked why the runner purges and embargoes, we answer with a numbered cited technique, not a preference. Repo-anchored entries ship today; the rest are backlog.
+> **How to read it** — Clusters A and B carry the leakage and multiple-testing spine. Attack the classical anchors for over-claiming and the coverage note's claim of fullness at 50.
+> **Depends on / feeds** — Sourced from [survey](../../research/survey.md); extended by [wave2.md](wave2.md); consumed by [decision_tree.md](decision_tree.md) and [technique_feature_matrix.md](technique_feature_matrix.md).
+
 The settled toolkit of rigorous empirical ML and quantitative research. Per technique: **name — mechanism — evidence anchor.** IDs (W1.xx) are referenced by `decision_tree.md` and `technique_feature_matrix.md`. Six clusters, 50 techniques.
 
 ## Cluster A — Leakage-proof evaluation protocols (10)

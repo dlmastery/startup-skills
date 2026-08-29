@@ -1,5 +1,10 @@
 # Use of funds — Ascent pre-seed
 
+> **What this is** — what the $1.2M pre-seed buys, as four milestone-linked spend blocks across 24 months, plus the headcount grid behind them.
+> **Why it exists** — the raise is one wire but the spending is sequenced on evidence: block B's money is not spent if the 15-practitioner trust test fails, and block D's DD costs wait on Team pull. Without that discipline a solo founder with a working PoC builds hosted dashboards and hires ahead of ever learning whether anyone pays for audited results they did not produce.
+> **How to read it** — section 2's milestone column, then the 2b grid that caught a ~$45k double-count; a skeptic should attack the $110k founder comp and the 21% buffer.
+> **Depends on / feeds** — inherits from [revenue_build.md](revenue_build.md) and [../validation/experiment_board.md](../validation/experiment_board.md); feeds [../narrative/pitch_deck.md](../narrative/pitch_deck.md) slide 15.
+
 ## 1. The amount: **$1.2M pre-seed** for 24 months
 
 Why $1.2M and not the edges of the honest $750k–1.5M band:

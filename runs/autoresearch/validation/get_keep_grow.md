@@ -1,5 +1,10 @@
 # Get / Keep / Grow — Ascent
 
+> **What this is** — the acquisition, retention, and expansion model for the two beachhead segments, with every current value honestly set at zero.
+> **Why it exists** — it declares one activation moment (a user's first own-data campaign that survives the gates) and shows the funnel hinges on a single step: one-command reproduction. In a business whose pitch is that you can check the work yourself, a bundle that fails to reproduce on a skeptic's fresh machine is negative CAC, so packaging is costed in weeks here rather than assumed free.
+> **How to read it** — read the funnel summary table, then the capacity arithmetic that cut 30 published bundles to 8-10; a skeptic should attack the opt-in registry's 20-50% undercount band.
+> **Depends on / feeds** — inherits from [../strategy/gtm.md](../strategy/gtm.md) and [experiment_board.md](experiment_board.md); feeds [metrics_by_stage.md](metrics_by_stage.md), [../financials/revenue_build.md](../financials/revenue_build.md).
+
 Per beachhead segment (personas cards 2–3; card 1 is harvested by the same funnel via content, not sold to; cards 4–5 appear only in Grow — the year-2+ expand motion, market_type §4). Honest baseline everywhere: **current = 0 / not yet measurable** (A4, zero external users). Targets are the pack's own committed numbers, not new inventions.
 
 ## Segment A — Marcus: solo quant researchers / small prop shops (card 2)

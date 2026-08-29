@@ -1,5 +1,10 @@
 # Ascent — pitch deck (15 slides)
 
+> **What this is** — the fifteen-slide pitch, every title written as its own takeaway.
+> **Why it exists** — it is the room version of the raise: fifteen minutes to get a pre-seed committed to a solo pseudonymous founder with a working PoC and zero external users. Slide 7 is the deliberate move, publishing the deflated Sharpe rather than the +6.52 headline, because a deck that hides the trial count loses the rigor argument the moment a quant in the room recomputes it.
+> **How to read it** — slides 1-3 establish the gap, 7 and 12 are the defensible claims; a skeptic should attack slide 8's funnel arithmetic and slide 12's 12-24 month window.
+> **Depends on / feeds** — compresses [vc_memo.md](vc_memo.md), [../strategy/market_sizing.md](../strategy/market_sizing.md), [../financials/use_of_funds.md](../financials/use_of_funds.md); its visual lines resolve against [../visuals/visual_manifest.md](../visuals/visual_manifest.md).
+
 Every title is the takeaway. Every number traces to research/ or carries an assumption flag. PoC results are founder-reported, reproducible from the repo, not independently verified (A6).
 
 ---

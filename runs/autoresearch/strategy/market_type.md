@@ -1,5 +1,10 @@
 # Market type — Ascent
 
+> **What this is** — The declaration that Ascent enters a new market, autonomous research operating systems, rather than re-segmenting AutoML — argued against the strongest opposing reading.
+> **Why it exists** — This one call fixes the buyer, the comparison frame and the sales cycle. Read it as re-segmentation and Ascent inherits DataRobot's committees and DataRobot's trajectory; read it as a new market and the education cost must be budgeted — mostly pre-paid by 94.8k autoresearch stars, except the part that isn't: converting free-toy demand into paid-rigor demand.
+> **How to read it** — §3.3 and the consequences table. Attack whether stars imply any willingness to pay.
+> **Depends on / feeds** — Inherits [`research/competitors.md`](../research/competitors.md) and [`research/market_structure.md`](../research/market_structure.md); feeds [`strategy/positioning.md`](positioning.md), [`strategy/market_sizing.md`](market_sizing.md), [`strategy/gtm.md`](gtm.md).
+
 **Declaration: NEW MARKET — "autonomous research operating systems" — entered with the spend-behavior economics of an existing market.** One decision, defended below against the strongest alternative (re-segmented AutoML), then the consequences table.
 
 ## 1. The two candidate readings

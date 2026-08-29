@@ -1,5 +1,10 @@
 # Market Structure, Buyer Behavior & Money Flows — Ascent
 
+> **What this is** — Who the buyers are and what they already pay: population counts, analyst market sizes with inflation flagged, willingness-to-pay anchors, and open-core conversion benchmarks.
+> **Why it exists** — Ascent bills an individual practitioner, not an enterprise committee, and that only works if the $100–200/mo power tier is already normalized and OSS funnels convert 1–5% of active users. Both carry the plan; if either is wrong the beachhead cannot fund the company and the enterprise motion has to start in year 1, which a pseudonymous solo founder cannot sell.
+> **How to read it** — WTP anchors and conversion benchmarks first. Attack the analyst tables — base years span 3×.
+> **Depends on / feeds** — Feeds [`strategy/market_sizing.md`](../strategy/market_sizing.md), [`strategy/gtm.md`](../strategy/gtm.md), [`financials/pricing.md`](../financials/pricing.md).
+
 Researched 2026-08-27 via live web search. Every figure carries a source tag [Cn]; see Sources. Where analysts disagree, the range is reported. Analyst-report figures (AutoML, MLOps, agentic AI) should be treated as directional at best — see skepticism notes.
 
 ---

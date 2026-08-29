@@ -1,5 +1,10 @@
 # Ascent — 20 Flagship Features
 
+> **What this is** — The twenty features that carry Ascent, each as mechanism → principle → the literal moment a user sees on screen.
+> **Why it exists** — Every feature here is individually copyable — the constitution is open source by design — so the file must show why the closed loop is the product: drop the ledger and champions inflate; drop Gate 2 and citations fabricate.
+> **How to read it** — Read "The integration argument" first, then attack which moments are demoable: #2, #3, #11 and #12 are roadmap, and PoC numbers are founder-reported.
+> **Depends on / feeds** — Expands [PRD.md](PRD.md) §6; sequenced by [features_prioritized.md](features_prioritized.md); consumed by [ux_spec.md](ux_spec.md) and [technique_feature_matrix.md](../tech/techniques/technique_feature_matrix.md).
+
 Format per feature: **name** → mechanism → principle(s) (PRD §5) → the visible product moment (what the user literally sees). Source tags as in PRD. PoC metrics founder-reported (A6).
 
 1. **Trial ledger (discards included)** → append-only `experiment_log.jsonl` records every experiment — kept *and* discarded — with seed, config, git commit, gate verdicts; the ledger is the denominator every honest statistic needs [D6][D9] and the raw material of the calibration corpus (A11) → P2 → *Moment:* the dashboard header always shows "Trial 218 of this campaign — 9 kept, 209 discarded"; nothing is ever quietly deleted.

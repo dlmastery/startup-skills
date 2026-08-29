@@ -1,5 +1,10 @@
 # Techniques — Wave 3: Frontier AI-Native Techniques (46 — honestly short of 50)
 
+> **What this is** — Forty-six frontier techniques that exist only because LLM agents do — constitution engineering, grounded generation, adversarial verification, campaign infrastructure.
+> **Why it exists** — It places Ascent inside the 2024–2026 agentic-research literature and marks [ROADMAP] on what the moat depends on: what-worked-where priors, discard-ledger mining, gate catch-rate corpora. The wave stops at 46 on purpose — the four empty slots are the finding that the frontier is thinner than it markets.
+> **How to read it** — Clusters A and E. Attack cluster E's roadmap tags: the calibration corpus is the pack's kills-pack-if-wrong assumption.
+> **Depends on / feeds** — Follows [wave2.md](wave2.md); fires inside [decision_tree.md](decision_tree.md); audited by [technique_feature_matrix.md](technique_feature_matrix.md); engineered in [deep_dives.md](../deep_dives.md).
+
 Techniques that only exist because LLM agents do. Six clusters, 46 techniques. **Honesty note:** this wave stops at 46. The 2024–2026 agentic-research literature is young; the remaining candidates we surveyed (more prompt-engineering folklore, more scaffold variants) are packaging, not mechanisms, and padding to 50 would violate the quality bar. The four missing slots are the wave's finding: the frontier is thinner than it markets itself.
 
 ## Cluster A — Constitution & protocol engineering (8)

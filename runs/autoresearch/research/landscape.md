@@ -1,5 +1,10 @@
 # Landscape — everything adjacent to Ascent, nearest-to-farthest from its mechanism
 
+> **What this is** — A tier-by-tier teardown of the 20 systems adjacent to Ascent's loop, from the Karpathy autoresearch lineage out to the manual grind, plus post-mortems of the category's dead.
+> **Why it exists** — Ascent's entire strategy rests on one claim: nobody sells a sustained, audit-gated campaign on the user's own metric. This file is where it gets falsified or survives. Without it Ascent ships "a better DataRobot" into a category whose leader lost 92% of its valuation, or rebuilds SigOpt.
+> **How to read it** — Read each tier's "Gap left" line first, then the post-mortems; a skeptic's strongest move is that Ascent is search-without-trust again.
+> **Depends on / feeds** — Feeds [`research/competitors.md`](competitors.md), [`strategy/positioning.md`](../strategy/positioning.md), [`strategy/market_type.md`](../strategy/market_type.md); tags resolve in [`research/sources.md`](sources.md).
+
 Date of research: 2026-08-27. All facts live-web-verified on that date; every fact carries an [An] tag resolved in **## Sources**. Ascent's core loop for mapping: **Diagnose → Ground(literature) → Hypothesize → Execute → Analyze → Document → Checkpoint**, with three audit gates (data integrity, citation rigor, reasoning completeness), a fingerprinted composite metric, and purge/embargo super-folds.
 
 ---

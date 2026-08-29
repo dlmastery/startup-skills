@@ -1,5 +1,10 @@
 # Experiment board — Ascent (Blank-style learning log)
 
+> **What this is** — the top assumptions converted into falsifiable experiments, every pass/fail threshold declared before any result exists.
+> **Why it exists** — Ascent sells trial-count honesty, so moving a threshold after seeing data would be exactly the hypocrisy that kills the brand; board rule 2 makes any such change a logged pivot instead. E1's three legs (reproductions, private-data runs, named deploy evidence) are the gate that decides whether the paid path opens at all, which is why E2 and E6 must run before it.
+> **How to read it** — read the decision-rule column before the hypotheses, then the operating-characteristics note; a skeptic should attack the ~35% joint false-fail risk at n=15 and E8's single paired run.
+> **Depends on / feeds** — inherits from [riskiest_assumptions.md](riskiest_assumptions.md); feeds [stage_gate.md](stage_gate.md), [pivot_log.md](pivot_log.md), [../financials/revenue_build.md](../financials/revenue_build.md).
+
 Top 8 assumptions from `riskiest_assumptions.md` as falsifiable experiments. Discipline: every pass/fail threshold below is **declared now, before any result exists**. Status is "planned" on every row because the honest state is zero external users (A4); no Result/Learning cell may be filled by anyone but the founder after the run, with the raw counts. Thresholds carrying no source tag are pre-registrations made here, flagged (threshold: declared 2026-08-27).
 
 Calendar baseline (D-CALENDAR, critic round 2): day 1 = ascent v0 public launch (target week of 2026-09-01). E1 outreach weeks 8–10, **sessions weeks 10–13** (slid from 7–10 on the operator's capacity math); E4 tally ~day 100, pre-order window **days 110–120**. Measurement baseline (D-TELEMETRY): all "active user" numbers come from the minimal **opt-in reproduction-registry ping** (one-line consent at `ascent reproduce` time) plus GitHub clone stats — see E3 for the frozen correction methodology.

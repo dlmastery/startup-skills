@@ -1,5 +1,10 @@
 # Autonomous ML Research Systems: A Mini Survey of the Literature Behind Constitution-Driven, Audit-Gated Hill-Climbing
 
+> **What this is** — A literature survey of the four strands Ascent composes: AutoML, AI-scientist agents, metric-grinding loops, and the leakage and backtest-overfitting methodology explaining why unaudited automation misleads.
+> **Why it exists** — It supplies the citations behind each mechanism and, in §7, discounts Ascent's own PoC: a +6.52 Sharpe selected from 265+ trials is precisely what the deflated Sharpe ratio exists to kill. Without that discipline the pack markets that number as proof and loses the quant beachhead on first contact — the one unrecoverable error with this buyer.
+> **How to read it** — Start at §6–7. Attack §4.4: the audit gates' catch rates are unmeasured.
+> **Depends on / feeds** — Feeds [`strategy/positioning.md`](../strategy/positioning.md) §4, [`strategy/personas.md`](../strategy/personas.md), [`strategy/gtm.md`](../strategy/gtm.md); tags in [`research/sources.md`](sources.md).
+
 **Date:** 2026-08-27 · **Prepared for:** the Ascent artifact pack · **Status:** internal research synthesis; every claim carries a source tag [Dn] resolved in the Sources section. All papers were verified to exist via live web search on the date above.
 
 ---

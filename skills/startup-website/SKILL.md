@@ -50,8 +50,8 @@ The home page is not the place to be interesting. It is the place to be *underst
 
 **Above the fold, six elements** (2025–26 SaaS conversion research):
 
-1. **A headline naming the visitor's outcome**, not the product's mechanism. "It runs the experiments while you sleep and proves the result is real" is an outcome. "Audit-gated autonomous research with purged splits" is a mechanism, and it is unreadable to the person writing the cheque.
-2. **A subheadline naming who it is for**, in their own words.
+1. **A headline in the form `<Brand> helps <specific user> <quantified outcome>`.** This is how the credible companies in the AI-research category actually write it — Elicit ships "Elicit helps researchers be 10× more evidence-based". Three things are load-bearing and all three are usually missing from a generated page: the **brand name**, the **specific user** (not "teams", not "innovators"), and a **number**. A poetic promise — "it runs while you sleep and proves the result is real" — sounds finished and says nothing checkable; a reader cannot tell who it is for or what changes.
+2. **A subheadline of literal verbs plus a scale number**, not a second slogan. Elicit's names the actions and the corpus: "search, summarize, extract data from, and chat with over 125 million papers." Say what the product literally does, to what, at what scale, and for whom.
 3. **One primary CTA**, phrased as what happens next — "See how it works", "Start free trial" — never "Learn more", which names nothing. A secondary ghost button is fine; a third is not.
 4. **A product visual** — the hero art, not a chart.
 5. **Social proof inside the first two scrolls.** Under half of SaaS sites put trust signals above the fold, so doing it is a differentiator; it must be absorbable in under three seconds — a usage statistic, a logo strip, or one short quote.
@@ -65,8 +65,14 @@ The home page is not the place to be interesting. It is the place to be *underst
 | 2 | How does it work? | Three steps, plus the one rule that makes it different |
 | 3 | Is it for me? | Who it is for — name two or three concrete people |
 | 4 | What do I actually get? | The tangible outputs, as nouns |
-| 5 | Why should I believe you? | The proof, and only here may the domain vocabulary appear |
-| 6 | What does it cost, and what do I do now? | Pricing link and the closing CTA |
+| 5 | How is this different from what exists? | **"How we're different"** — name the alternatives and the one thing you do that they do not. State it; do not imply it. |
+| 6 | Why should I believe you? | A **quantified block** — real figures from one concrete run or case, not adjectives. This is where the domain vocabulary is finally earned. |
+| 7 | What if I don't buy it? | **FAQ** — take the three or four hardest objections head-on, in the visitor's words. |
+| 8 | What does it cost, and what do I do now? | Pricing link and the closing CTA |
+
+**The quantified block is what separates a real page from a generated one.** Elicit's mid-page proof is "1,600 papers · 10× faster · 99.4% extraction accuracy · 11× more evidence considered" — four numbers from one concrete case. Generated pages substitute adjectives here because numbers are harder. Pull them from the pack's own journeys and experiment board; if a figure is founder-reported or projected, label it *in the block itself*.
+
+**Write an FAQ, and make it answer the objections you fear.** A page that ducks the obvious "how do I know this isn't wrong?" reads as marketing; a page that answers it in plain words reads as confidence. Draw the questions from `validation/riskiest_assumptions.md` and the critic's objections — those are literally the questions a skeptic will ask.
 
 **Jargon has an earned position.** Domain vocabulary — deflated statistics, embargoed splits, trial-count corrections — is the pack's substance and must not be dumbed away, but it belongs at step 5 and on interior pages, *after* the reader knows what the product does. Introduce each term with a plain-English sentence before the term itself: "Try enough ideas and the winner flatters you. Statisticians correct for this, and the correction needs a number almost nobody keeps." Then name it. A reader who meets `N=265+ trials` before they know what the product does simply leaves.
 

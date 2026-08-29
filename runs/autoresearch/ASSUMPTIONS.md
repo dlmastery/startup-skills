@@ -1,5 +1,10 @@
 # Assumptions log — Ascent
 
+> **What this is** — the log of every choice made without founder confirmation, each with its basis and a verdict on whether the pack dies if it is wrong.
+> **Why it exists** — the pack was generated fully autonomously, so "Ascent", the solo-quant beachhead, open-core, and BYOK Pro are inferences, not founder instructions. Without this file a reader takes them as stated fact, and a single correction (say, an enterprise-first GTM) would silently invalidate financials and validation artifacts nobody knows to regenerate.
+> **How to read it** — read the kills-pack-if-wrong verdicts first; a skeptic should attack A6 (PoC metrics founder-reported, not independently verified) and A11 (the constitution ships open source, so the moat has to be the private discard ledger).
+> **Depends on / feeds** — inherits from [BRIEF.md](BRIEF.md); consumed by [validation/riskiest_assumptions.md](validation/riskiest_assumptions.md), [validation/pivot_log.md](validation/pivot_log.md), [financials/pricing.md](financials/pricing.md).
+
 Every choice made without founder confirmation (grill ran fully autonomous per founder instruction). Format: id · assumption · basis · kills-pack-if-wrong.
 
 - **A1: Working name "Ascent".** Basis: evokes monotonic hill-climbing, clean investor-friendly noun; PoC names (Vibe-Orchestrated AutoResearch, generalized_ml_autoresearch, autoresearchspy) are descriptors, not brands. Kills-pack-if-wrong: **no** (find/replace).

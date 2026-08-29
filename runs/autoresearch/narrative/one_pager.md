@@ -1,5 +1,10 @@
 # Ascent — one-pager
 
+> **What this is** — the single page handed to an investor or a practitioner who will give Ascent sixty seconds.
+> **Why it exists** — this is the artifact that gets forwarded without context, so it sets the first impression of a company whose differentiator is honesty about its own numbers. Leading with the raw +6.52 Sharpe instead of its deflation and 265+ trial count would lose the one audience Ascent needs: skeptical quants who recompute before they buy.
+> **How to read it** — the Evidence and Ask paragraphs carry the load; a skeptic should attack whether founder-reported PoC results and a 94,800-star demand pool convert into anyone paying $125/mo.
+> **Depends on / feeds** — compresses [../BRIEF.md](../BRIEF.md), [vc_memo.md](vc_memo.md), [../strategy/market_sizing.md](../strategy/market_sizing.md), [../financials/use_of_funds.md](../financials/use_of_funds.md); feeds [pitch_deck.md](pitch_deck.md).
+
 **Ascent improves your metric around the clock — and shows you the evidence behind every kept result.**
 
 Ascent is the autonomous ML research operating system: point it at your dataset and your metric, and it runs literature-grounded, audit-gated experiments for days on a commodity laptop, keeping only strict improvements — monotonic in a tamper-evident composite metric — and handing you a fingerprinted, one-command-reproducible bundle for every kept champion.

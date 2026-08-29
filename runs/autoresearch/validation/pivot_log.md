@@ -1,5 +1,10 @@
 # Pivot log — Ascent (decision journal)
 
+> **What this is** — the decision journal: five options already killed with the evidence that killed them, plus six standing pivot-or-persevere triggers that fire on dates.
+> **Why it exists** — it stops the pack re-proposing a secret constitution or flat-rate hosted Pro once the reasoning fades, and it pre-authorizes the Karpathy branch so a channel pivot needs no deliberation the day it fires. Rule 6 makes any threshold change a logged pivot, the mechanism that keeps the experiment board's pre-declared numbers honest.
+> **How to read it** — read the standing criteria and their dates before the killed table; a skeptic should attack whether the month-6 kill trigger will actually be honored against a founder's sunk months.
+> **Depends on / feeds** — inherits from [../ASSUMPTIONS.md](../ASSUMPTIONS.md) and [experiment_board.md](experiment_board.md); feeds [metrics_by_stage.md](metrics_by_stage.md), [../strategy/market_type.md](../strategy/market_type.md).
+
 What has already been considered and killed, with the evidence that killed it; then the standing pivot-or-persevere criteria. All grill/critic decisions date to the pack build, 2026-08-27. Rule: killed decisions stay listed forever — re-proposing one requires new evidence beating the evidence recorded here.
 
 ## Already considered and killed

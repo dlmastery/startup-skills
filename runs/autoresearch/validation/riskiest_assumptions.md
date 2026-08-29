@@ -1,5 +1,10 @@
 # Riskiest assumptions — Ascent (ranked board)
 
+> **What this is** — the ranked board of nine assumptions holding Ascent up, each with its cheapest decisive test, cost, time, and honest status.
+> **Why it exists** — it decides what the first $95k and the first six weeks buy. Every row reads "untested" because there are zero external users; without this ranking the founder builds hosted dashboards before learning whether quants will pay for experiments they did not run, the one failure that makes the product a toy rather than a business.
+> **How to read it** — rows 1-3 carry the company and rows 6-7 carry the moat; a skeptic should attack row 1's sample of 15 and row 4's assumed 5-15% star-to-active band.
+> **Depends on / feeds** — inherits from [../BRIEF.md](../BRIEF.md) and [../ASSUMPTIONS.md](../ASSUMPTIONS.md); feeds [experiment_board.md](experiment_board.md), [stage_gate.md](stage_gate.md), [../financials/use_of_funds.md](../financials/use_of_funds.md).
+
 Sources: ASSUMPTIONS.md (A1–A12), lean_canvas.md ⚠ cell, BRIEF riskiest-assumption line, market_sizing.md §3/§6, survey.md §6–7, gtm.md §2/§4, positioning.md §4–5. Status is honest per A4: **zero external users, zero external validation** — everything load-bearing is untested or founder-reported. Ranking = (kills company if wrong) × (thinness of current evidence).
 
 | # | Assumption | Kills company if wrong? | Current evidence (source) | Cheapest decisive test | Cost | Time | Status |

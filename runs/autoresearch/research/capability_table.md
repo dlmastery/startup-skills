@@ -1,5 +1,10 @@
 # Enabling-Technology Capability Table — Ascent
 
+> **What this is** — The why-now evidence table: five capabilities — agent time horizons, MLE-bench medal rates, token prices, literature APIs, 128 GB laptops — with measured numbers, cost trends and remaining gaps.
+> **Why it exists** — Ascent assumes an agent runs a bounded experiment reliably and that 24/7 steering costs a rounding error against an ML engineer's day. It tests both, and corrects the brief: frontier list prices are rising; only cost per unit of capability falls. Quote the wrong trend and BYOK margins rest on a curve that isn't happening.
+> **How to read it** — Master table, then §3's $3–60/day computation — the estimate to attack.
+> **Depends on / feeds** — Feeds [`financials/unit_economics.md`](../financials/unit_economics.md) and [`strategy/market_type.md`](../strategy/market_type.md); tags in [`research/sources.md`](sources.md).
+
 Date of research: **2026-08-27**. All facts from live web sources accessed today; tags [Bn] resolve in `## Sources`. Ranges are given where sources conflict or precision is unwarranted.
 
 ## Master table

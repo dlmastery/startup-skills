@@ -1,5 +1,10 @@
 # Stage gate — Ascent (Blank: Discovery → Validation → Creation → Building)
 
+> **What this is** — Ascent's honest placement on the Blank stage ladder, with the five numeric criteria that open the next gate.
+> **Why it exists** — a PoC validated across six domains invites the claim that the company is past Discovery. It is not, and a company selling rigor cannot overclaim its own stage. The file also relocates the 150-paying bar to the Validation exit, so a year of selling is not demanded inside a stage whose job is learning; the pre-order overlap is named, not hidden.
+> **How to read it** — the evidence table's "What it does NOT prove" column is the point; a skeptic should attack the early-Validation overlap that runs $99 pre-orders during Discovery.
+> **Depends on / feeds** — inherits from [experiment_board.md](experiment_board.md) and [riskiest_assumptions.md](riskiest_assumptions.md); feeds [metrics_by_stage.md](metrics_by_stage.md), [../financials/use_of_funds.md](../financials/use_of_funds.md).
+
 ## Current position: **Customer Discovery (with early-Validation overlap).** Working PoC, zero external validation — said plainly.
 
 There are no external users, no revenue, no independent reproduction of any PoC result, and no completed customer interviews (A4, A6, survey §7). The company holds a working proof of concept validated across 6 domains *by the founder only*, a fully argued strategy layer, and a pre-assembled demand pool it has not yet touched. That is Discovery — nothing more — and claiming otherwise would violate the pack's own overclaim boundary (positioning §4).

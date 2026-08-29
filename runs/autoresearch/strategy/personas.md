@@ -1,5 +1,10 @@
 # Personas — Ascent (five cards spanning the full spectrum, one system, no "lite" fork)
 
+> **What this is** — Five persona cards spanning the spectrum — comp-bio postdoc, solo quant, fintech ML engineer, fund research lead, enterprise model-risk buyer — each with a pain moment, switch trigger and blocking objection.
+> **Why it exists** — It commits the beachhead to cards 2 and 3, where payer equals user, and defers cards 4–5 to year 2: a pseudonymous solo founder fails bank and fund vendor-risk diligence, so selling there in year 1 spends the runway on procurement cycles that cannot close regardless of product quality.
+> **How to read it** — Cards 2 and 3, then each objection line. Attack whether the triggers are real.
+> **Depends on / feeds** — Inherits [`research/market_structure.md`](../research/market_structure.md) and [`research/survey.md`](../research/survey.md); feeds [`strategy/value_prop_canvas.md`](value_prop_canvas.md) and [`strategy/gtm.md`](gtm.md).
+
 Grounding data used across cards: 46% of developers distrust AI output accuracy, up from 31% a year earlier [C3]; the autoresearch community's actual behavior is porting and translating, not adding rigor (14/16 notable forks are platform ports, 0 add rigor [A2]), and it filed 185 issues into a maintainerless repo rather than leaving [C35] — these people want the loop on *their* machine for *their* problem, and no one is answering.
 
 ---

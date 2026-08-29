@@ -1,5 +1,10 @@
 # Unit economics — Ascent
 
+> **What this is** — per-tier margins, CAC by channel with founder hours priced in, churn bands, LTV and payback, all recomputable from stated assumptions.
+> **Why it exists** — it settles where the business is fragile and where it is not. At roughly 90% cash gross margin and payback under three months, neither COGS nor CAC can kill Ascent; what can is the conversion numerator, whether practitioners pay for experiments they did not run. So this file's job is to send diligence to the validation layer rather than to a spreadsheet argument.
+> **How to read it** — section 1's BYOK zero-token line is load-bearing; a skeptic should attack the uncited 3-7%/mo churn band, across which LTV swings 2.3x.
+> **Depends on / feeds** — inherits from [pricing.md](pricing.md) and [revenue_build.md](revenue_build.md); feeds [risk_matrix.md](risk_matrix.md), [comps_exits.md](comps_exits.md), [use_of_funds.md](use_of_funds.md).
+
 Per-tier P&L, CAC by channel, payback, LTV. Everything recomputable: change any `(assumption)` and the arithmetic is shown. Binding architecture fact: **Pro is BYOK (A12) — token COGS sits on the user's card by construction**, which is the single most important line in this file.
 
 ## 1. Pro tier P&L (per user per month, at $125/mo)

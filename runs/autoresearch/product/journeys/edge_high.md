@@ -1,5 +1,10 @@
 # Journey — Edge-high: Elena runs parallel campaigns
 
+> **What this is** — Ten beats of Elena, head of research at a ~40-person systematic fund, evaluating and buying Team tier in year 2.
+> **Why it exists** — It tests whether the power edge can outgrow the system and whether our honesty survives a fund security review: beat 2 says unprompted that steering calls hosted LLM APIs, so prompts leave the building, and that BYO-endpoint steering and attestations are roadmap.
+> **How to read it** — Beats 2 and 7 carry the argument. Attack the Later-tier dependency chain and whether bottom-up pod adoption really reaches a buyer at her level.
+> **Depends on / feeds** — Stretches [personas](../../strategy/personas.md) card 4 across the Later tier of [features_prioritized.md](../features_prioritized.md); scales up [beachhead.md](beachhead.md)'s honesty chain.
+
 **Calendar anchor: this journey is set in year 2, post block-D — it runs on Later-tier features (Team #43–47, family thresholds #45) plus the shipped Next tier; nothing here is claimed for launch.**
 
 **Persona:** Elena R., head of research at a systematic fund, ~40 researchers (strategy/personas.md card 4). Payer = her; users = her pods. Her stated buy: *"I'm buying the audit trail and the campaign memory, not the hill-climbing — my people can climb hills."* This journey stretches the power user: the system must be genuinely harder to outgrow than her internal platform, and honest about what it can't do yet (A9/A10). Entry is bottom-up — one pod adopted Ascent months ago (the Cursor path [C17]); Elena is now evaluating Team.

@@ -1,5 +1,10 @@
 # Ascent — Founder Brief
 
+> **What this is** — the founder's single-page source of truth: problem, user spectrum, mechanism, moat, and the one assumption that can kill Ascent.
+> **Why it exists** — every other artifact inherits its beachhead (solo quants), its BYOK pricing architecture, and its riskiest assumption from this page. If the claim that practitioners will trust experiments they did not run is wrong here, the rest of the pack argues for a toy — and the two-week test at the bottom is the cheapest way to find out.
+> **How to read it** — start at "Riskiest assumption" and "Mechanism & moat"; a skeptic should attack the PoC metrics, founder-reported and not independently verified, including a champion Sharpe of +6.52 selected from 265+ trials.
+> **Depends on / feeds** — pairs with [ASSUMPTIONS.md](ASSUMPTIONS.md); feeds [validation/riskiest_assumptions.md](validation/riskiest_assumptions.md), [narrative/vc_memo.md](narrative/vc_memo.md), [financials/pricing.md](financials/pricing.md).
+
 one-line: **Ascent is the autonomous ML research operating system: point it at any dataset and metric, and it hill-climbs monotonically toward state-of-the-art — every experiment literature-grounded, audit-gated, and reproducible — running for days on a commodity laptop.**
 domain: AI/ML developer tools · agentic scientific research
 stage: working proof of concept (public repo, 6 validated domains, pre-revenue, solo founder)

@@ -1,5 +1,10 @@
 # Ascent — Features, Prioritized (Trust-test Kernel / Launch Tranche / Next / Later)
 
+> **What this is** — All 57 features in strict build order across four tiers, with effort, dependencies, and PoC-checkmarks.
+> **Why it exists** — It decides where the founder's ~15 hrs/wk goes in weeks 1–12 and protects the E1 trust test: short on capacity, the pre-order gate slips, never the test. Built out of order, the honesty chain — ledger → offline DSR → acceptance gate → family thresholds — never assembles.
+> **How to read it** — Start at "Dependencies worth calling out," then the kernel table. Attack the S/M/L estimates against the zero-code velocity assumption.
+> **Depends on / feeds** — Sequences [features_flagship.md](features_flagship.md) and [PRD.md](PRD.md) §6; tier tags drive [ux_spec.md](ux_spec.md) and every journey; timed against [experiment_board](../validation/experiment_board.md).
+
 57 features in strict priority order. Effort: S ≤ 1 wk · M ≤ 1 mo · L > 1 mo. "PoC✓" in Mechanism = exists in `generalized_ml_autoresearch` and needs productization, not invention. Principles Pn per PRD §5.
 
 **Velocity assumption (explicit, binding on all effort estimates):** solo founder + agent-assisted build — basis: the PoC itself was built zero-code via natural-language steering across six domains in months (paper; A5/A6). Founder-hours envelope per gtm §4: ~50–55 productive hrs/wk total, of which **~15 hrs/wk go to ascent v0 + BYOK CLI packaging in weeks 1–12**; community (15), trust test (10, weeks 5–10), bundles/DSR (10), admin (5) consume the rest. If over capacity, the day-61–90 pre-order gate slips first — never the trust test.

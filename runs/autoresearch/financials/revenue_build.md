@@ -1,5 +1,10 @@
 # Revenue build — Ascent (bottom-up, stage-gated)
 
+> **What this is** — the bottom-up revenue plan, stage by stage, with the milestone that must be true before each stage counts as planned revenue.
+> **Why it exists** — the pack already killed a $5M SOM built by converting GitHub stars into payers; this is the corrected arithmetic. Its month-by-month waterfall is also what moved the 150-paying milestone from month 18 to roughly month 20-21: when the numbers stop following from their own assumptions, the date moves rather than the assumptions being quietly inflated.
+> **How to read it** — section 4's recurrence copies straight into a spreadsheet; a skeptic should attack the gross-adds ramp (the fragile input, not churn) and the $500k of audit-led enterprise revenue inside the $1.0M plan.
+> **Depends on / feeds** — inherits from [../strategy/market_sizing.md](../strategy/market_sizing.md), [pricing.md](pricing.md), [../validation/experiment_board.md](../validation/experiment_board.md); feeds [use_of_funds.md](use_of_funds.md), [unit_economics.md](unit_economics.md).
+
 Built strictly from the corrected `strategy/market_sizing.md` (the old $5M SOM is dead; plan is **$1.0M ARR at 36 months**; the 150-paying ≈ **$225k run-rate** target is re-dated by the §4 waterfall to **~mo 20–21** — i.e., "year 1" counts from GA at mo 6, not from day 0). Rule: **no jump happens without its named milestone**; each stage's arithmetic is one line a spreadsheet can copy.
 
 ## 1. The build table

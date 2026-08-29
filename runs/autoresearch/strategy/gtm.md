@@ -1,5 +1,10 @@
 # Go-to-market — Ascent
 
+> **What this is** — The channel decision argued rather than assumed, the named acquisition loop, per-segment CAC hypotheses, and a 90-day motion with founder-hours capacity math.
+> **Why it exists** — Ascent's audience is pre-assembled and unattended: 94.8k stars, ~185 open issues, no maintainer since 2026-03-26. This file sets the fork etiquette for claiming it without reading as a hijack, and gates the paid path behind the trust test — if fewer than 5 of 15 practitioners reproduce a bundle, what gets fixed is the proof artifact, not the marketing.
+> **How to read it** — §4's day-by-day plan and the capacity table. Attack the founder-hour totals.
+> **Depends on / feeds** — Inherits [`strategy/market_type.md`](market_type.md), [`strategy/positioning.md`](positioning.md), [`strategy/personas.md`](personas.md); feeds [`financials/revenue_build.md`](../financials/revenue_build.md) and [`validation/experiment_board.md`](../validation/experiment_board.md).
+
 ## 1. Channel decision: open-source-led, argued not assumed
 
 The brief assumes open-core (A2/A3). The evidence says the assumption is right, for four independent reasons:

@@ -1,5 +1,10 @@
 # Techniques — Wave 2: Advanced & Theory-Grounded Techniques (50)
 
+> **What this is** — Fifty advanced, theory-grounded techniques in seven clusters, from sequential error control and Goodhart mitigation to optimal experiment selection.
+> **Why it exists** — Ascent's roadmap differentiator is an entry on this list — W2.08, trial-count-corrected acceptance thresholds, which no published system implements. Cluster B supplies the ceiling: unhackable proxies provably do not exist, which is why the fingerprint is sold as tamper-evident and "monotonic" means monotonic in the composite proxy.
+> **How to read it** — Clusters A–C. Attack cluster E: the feature matrix flags experiment selection as an orphan powering no named feature.
+> **Depends on / feeds** — Builds on [wave1.md](wave1.md), precedes [wave3.md](wave3.md); branch targets in [decision_tree.md](decision_tree.md); specified in [deep_dives.md](../deep_dives.md) §4.
+
 The layer above standard practice: sequential error control, Goodhart theory, overfitting quantification, robust evaluation, and optimal experiment selection. Seven clusters, 50 techniques. Anchors as in wave1.
 
 ## Cluster A — Sequential & adaptive error control (8)

@@ -1,5 +1,10 @@
 # Ascent — Product Requirements Document
 
+> **What this is** — Ascent's single product definition: the closed 7-step loop, 24 core features, the ten principles every feature must map to, and the metrics that judge them.
+> **Why it exists** — It arbitrates cuts — §5 kills any feature mapping to no principle — and records the two live enforcement gaps (runner-refused experiments write no ledger row; the metric fingerprint is tamper-evident, not tamper-refusing) so no surface claims them shipped.
+> **How to read it** — Read §5, then §10. Attack §9's metrics and the founder-reported +6.52 raw Sharpe, selected from 265+ trials.
+> **Depends on / feeds** — Inherits [BRIEF](../BRIEF.md), [survey](../research/survey.md), [personas](../strategy/personas.md); feeds [features_flagship.md](features_flagship.md), [features_prioritized.md](features_prioritized.md), [ux_spec.md](ux_spec.md), [journeys](journeys/beachhead.md).
+
 **Version 1.0 · 2026-08-27 · Status: draft for founder review.** Source tags: [Dn]=research/survey.md, [Bn]=research/capability_table.md, [An]=research/landscape.md+competitors.md, [Cn]=strategy sources; (An assumption id)=ASSUMPTIONS.md. PoC = the founder's `generalized_ml_autoresearch` repo + paper; all PoC metrics are founder-reported, reproducible from the repo, not independently verified (A6).
 
 ---

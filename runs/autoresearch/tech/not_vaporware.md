@@ -1,5 +1,10 @@
 # Not Vaporware — What Exists Today, What It Costs, What's This Quarter vs Research Risk
 
+> **What this is** — One page of checkable claims: LOC by module, six domain runs, ablations, the cost model, and this quarter's work versus research risk.
+> **Why it exists** — It names the ~15-line fingerprint-refusal patch and the missing refusal ledger as this-quarter work, and its honesty ledger lists what the paper implies but the repo lacks — so a diligence reader meets those gaps from us, not from a grep.
+> **How to read it** — §5's honesty ledger, then §2's founder-reported framing. Attack whether "this quarter" is credible against the solo-founder velocity assumption.
+> **Depends on / feeds** — Grounds status labels in [deep_dives.md](deep_dives.md) and multipliers in [whitepaper.md](whitepaper.md); its this-quarter list becomes the kernel in [features_prioritized.md](../product/features_prioritized.md).
+
 One page. Every claim is checkable against the public repo or carries the A6 framing (founder-reported, reproducible from repo, not independently verified).
 
 ## 1. The repo is real code, not a deck

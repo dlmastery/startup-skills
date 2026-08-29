@@ -1,5 +1,10 @@
 # Ascent — technical investor memo
 
+> **What this is** — the long-form technical investment case: thesis, category-by-category teardown, architecture, two operating examples, honest risks.
+> **Why it exists** — it decides whether an investor funds the "judgment layer, not execution" thesis. Without the teardown a reader pattern-matches Ascent to AutoML and prices it off DataRobot's 92% valuation haircut; without the risk section, the solo pseudonymous founder and the unproven trust-to-payment conversion surface in diligence instead of on the page, where they can be priced.
+> **How to read it** — start at "Why existing approaches are insufficient", then "Honest risks"; a skeptic should attack risk 1 and whether the flagship Sharpe survives deflation over 265+ trials.
+> **Depends on / feeds** — inherits from [../BRIEF.md](../BRIEF.md) and [../research/sources.md](../research/sources.md); feeds [one_pager.md](one_pager.md), [pitch_deck.md](pitch_deck.md), [../financials/comps_exits.md](../financials/comps_exits.md).
+
 All claims trace to the research layer (tags [A/B/C/D-n] resolve in `research/sources.md`) or carry an explicit assumption flag. PoC numbers are founder-reported, reproducible from the public repo, not independently verified (assumption A6).
 
 ## Thesis

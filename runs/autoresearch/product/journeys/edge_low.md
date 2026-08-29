@@ -1,5 +1,10 @@
 # Journey — Edge-low: Priya brings her own dataset
 
+> **What this is** — Thirteen beats of Priya, the computational-biology postdoc, from Friday-night instantiation to her PI reproducing the champion.
+> **Why it exists** — It tests "one system, no lite fork" against the least ML-skilled user: if she needs an ML engineer for a donor-disjoint split, the full-spectrum claim collapses. Beat 2 — catching that her normalization was fit on the full matrix — is the dignity beat.
+> **How to read it** — Beats 1–5 are the 20-minute onboarding demo. Attack beats 10–11, which assume Next-tier features that do not exist yet.
+> **Depends on / feeds** — Runs [personas](../../strategy/personas.md) card 1 on [PRD.md](../PRD.md) and [features_prioritized.md](../features_prioritized.md) tiers; pairs with [beachhead.md](beachhead.md).
+
 **Timeline note:** this journey is set post-launch — beats 1–9 and 12–13 use kernel/launch-tranche surfaces; beats 10–11 use Next-tier features and are tagged as such.
 
 **Persona:** Dr. Priya N., 4th-year computational-biology postdoc (strategy/personas.md card 1). R fluent, Python passable, no ML-engineering depth, no lab ML engineer. Hardware: M-series MacBook, inside the validated envelope [B26–B28]. **Session goal:** get a defensible AUROC for her single-cell classifier — one she can put in front of her PI and a reviewer — without fooling herself. Her private dataset is exactly the clean-test case the contamination literature favors [D37][D38] (P7).

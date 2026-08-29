@@ -1,5 +1,10 @@
 # Pricing — Ascent
 
+> **What this is** — the tier architecture and the reasoning that sets Free OSS core, Pro at $125/mo BYOK, Team at $750/mo plus usage, Enterprise year-2+.
+> **Why it exists** — it resolves the token-COGS hole that would otherwise make Ascent's heaviest users its least profitable: a hosted power user burns $90-360/mo of inference against $125 of revenue. BYOK moves that cost onto the user's own card by construction, which is the single decision the whole revenue model rests on, and it preserves model choice as a platform-risk hedge.
+> **How to read it** — section 1 and the section 7 decision carry it; a skeptic should attack the $99 lifetime price lock and whether $125/mo clears a solo quant's bar with zero willingness-to-pay data.
+> **Depends on / feeds** — inherits A8/A12 from [../ASSUMPTIONS.md](../ASSUMPTIONS.md); feeds [revenue_build.md](revenue_build.md), [unit_economics.md](unit_economics.md).
+
 BYOK-first architecture per A12 (binding). Every number sourced or `(assumption: basis)`-tagged; change any assumption and the tier math recomputes trivially.
 
 ## 1. Value metric: what the price scales with

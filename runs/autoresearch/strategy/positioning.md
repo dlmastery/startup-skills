@@ -1,5 +1,10 @@
 # Positioning — Ascent
 
+> **What this is** — The two axes that divide this market, where each competitor sits, the positioning statement and tagline, and the overclaim boundary binding every downstream artifact.
+> **Why it exists** — Ascent's differentiator is a trust claim, self-destroying if oversold. §4 enforces the consequence: PoC numbers ship self-deflated — raw Sharpe alongside the DSR over the true trial count — or they do not ship. Skip that and the first quant to compute the deflation publishes it, taking the rigor brand, the one asset a fork cannot copy, with them.
+> **How to read it** — §4 first, then §5's 12–24 month window. Attack the calibration-corpus moat.
+> **Depends on / feeds** — Inherits [`research/competitors.md`](../research/competitors.md) and [`research/survey.md`](../research/survey.md); feeds [`strategy/gtm.md`](gtm.md) and [`strategy/value_prop_canvas.md`](value_prop_canvas.md).
+
 ## 1. The axes that actually divide this market
 
 The landscape agent proposed two axes; both survive testing against all 20 competitor rows [competitors.md]. **Adopted, with one refinement each.**

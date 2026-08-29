@@ -1,5 +1,10 @@
 # Value proposition canvas — Ascent
 
+> **What this is** — Jobs, pains and gains mapped to relievers and creators for three personas, then the four mappings ranked by fit.
+> **Why it exists** — It decides what every surface leads with. Mapping #1 — cannot police my own rigor at speed, met by gates and leakage-proof protocol by default — is the only one evidenced on both sides, so it headlines; the audit-trail mapping that funds and enterprises pay for ranks third and stays off individual-facing pages, because leading with it makes Ascent sound like compliance software to a solo quant.
+> **How to read it** — §4's ranking. Attack mapping #2's cost-per-day arithmetic.
+> **Depends on / feeds** — Inherits [`strategy/personas.md`](personas.md) and [`strategy/positioning.md`](positioning.md); feeds [`product/PRD.md`](../product/PRD.md) and [`narrative/one_pager.md`](../narrative/one_pager.md).
+
 Per major persona (personas.md cards 2, 3, 4; card 1 noted where it diverges). Format: customer side (jobs / pains / gains) → product side (pain relievers / gain creators / products & features), then the ranked top mappings.
 
 ---

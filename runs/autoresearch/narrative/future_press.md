@@ -1,5 +1,10 @@
 # FOR RELEASE — September 2032
 
+> **What this is** — a working-backwards press release dated September 2032, written as if the vision had already landed.
+> **Why it exists** — it forces a definition of winning that is not ARR: "audited improvement" becoming the unit the field reports in. Without that target the roadmap optimizes for the next SaaS tier instead of for the standard-setting position that makes the discard corpus and the reproduction network worth compounding at all, which is the whole A11 moat argument.
+> **How to read it** — skip to "How we got here"; that timeline is the testable part, and a skeptic should attack the 2027-2029 steps, where founder-reported PoC results must become independently reproduced ones.
+> **Depends on / feeds** — inherits vision from [../BRIEF.md](../BRIEF.md) and milestones from [../validation/experiment_board.md](../validation/experiment_board.md); feeds [pitch_deck.md](pitch_deck.md).
+
 *(Working-backwards vision artifact. Everything dated after August 2026 is aspiration, written as if achieved; everything dated before is fact from the pack's research layer.)*
 
 ## "Audited improvement" becomes the unit the field reports in: top ML venues and $1T+ in systematic capital now require deflated-metrics disclosure, with Ascent attestation the de facto format

@@ -1,5 +1,10 @@
 # Technique × Feature Matrix
 
+> **What this is** — Nineteen technique clusters crossed against the eight most technique-dependent flagship features, plus the orphan and thin-feature findings.
+> **Why it exists** — It is the audit that catches marketing drift: it found eight experiment-selection techniques powering no named feature — so search efficiency must not be claimed as IP until the selection optimizer ships — and the steering console's intelligence resting on roadmap corpus priors.
+> **How to read it** — Findings §1 and §2 before the grid. Attack §4.1: twelve of nineteen clusters feed the trust spine, so weak measured gate catch-rates weaken it all at once.
+> **Depends on / feeds** — Maps [wave1.md](wave1.md)–[wave3.md](wave3.md) onto [features_flagship.md](../../product/features_flagship.md); its decisions land as build items in [features_prioritized.md](../../product/features_prioritized.md).
+
 Rows = the 19 technique clusters (146 techniques: W1 50, W2 50, W3 46). Columns = 8 of the 20 flagship features from `product/features_flagship.md` — the 8 most technique-dependent, selected because column density is the point of this matrix; the 12 excluded features and their reasons are §3. ● = cluster's techniques directly power the feature; ○ = supporting role; blank = no relationship.
 
 **Columns (product feature numbers):** #2 Trial-count-corrected acceptance gate · #4 Super-fold split builder · #5 Three pre-commit audit gates · #8 Verified literature grounding · #11 Goodhart divergence monitor · #12 Multi-seed/CPCV confirmation · #14 Winner archive / champion bundle · #20 Team parallel campaigns + org ledger

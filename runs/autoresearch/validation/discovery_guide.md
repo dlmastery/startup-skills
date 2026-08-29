@@ -1,5 +1,10 @@
 # Customer discovery guide — Ascent (Mom-Test discipline)
 
+> **What this is** — the interview kit: persona screeners, fourteen past-tense problem questions, a reproduction-driven solution session, and a synthesis template.
+> **Why it exists** — Ascent's riskiest assumption is about trust, and trust cannot be surveyed. It has to be observed: whether a skeptical quant reproduces a champion bundle unaided, which artifact they open first, and what evidence they name before they would trade on a result they did not produce. Question 12 and solution step 4 capture that sentence verbatim, and it is the product roadmap.
+> **How to read it** — the screeners disqualify hardest; a skeptic should attack whether practitioners recruited from an orphaned repo's issue list represent the paying beachhead.
+> **Depends on / feeds** — inherits personas and E1 pools from [../strategy/personas.md](../strategy/personas.md) and [experiment_board.md](experiment_board.md); feeds [pivot_log.md](pivot_log.md), [get_keep_grow.md](get_keep_grow.md).
+
 Rules that override everything below: ask about the **past**, never the hypothetical future; never pitch during a problem interview; a compliment is a data-free deflection — log it as one; the interviewee's exact words go in quotes, not paraphrase. Personas from personas.md; the trust-test cohort (gtm §4) doubles as the first discovery panel.
 
 ## 1. Screeners (disqualify fast; recruit only people who do the job)

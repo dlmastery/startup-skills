@@ -1,5 +1,10 @@
 # The 10x Whitepaper — Why Ascent Is Mechanically Cheaper and Faster Per Trustworthy Result
 
+> **What this is** — The arithmetic behind the ≥10x claim: five frictions in today's research day, five mechanisms that remove them, each with a sourced multiplier and band.
+> **Why it exists** — "10x" is the number a technical investor will multiply out themselves, so this file does the multiplication in public — merging 24/7 into throughput and absorbing the M1×M2 overlap in a ÷3 honesty discount.
+> **How to read it** — §2's double-count controls, then §4's six limits. Attack the 3x throughput term: it rests on 3–4 sustained founder-reported experiments/day, not the 10–40/night projection.
+> **Depends on / feeds** — Draws on [survey](../research/survey.md) and [capability_table](../research/capability_table.md); status resolves in [not_vaporware.md](not_vaporware.md) and [deep_dives.md](deep_dives.md); feeds [vc_memo](../narrative/vc_memo.md).
+
 **Scope note (binding):** every PoC number in this document is founder-reported, reproducible from the public repo, not independently verified (assumption A6). "Monotonic" always means monotonic in the composite proxy [D31]. "Leakage-impossible" is scoped to the temporal/overlap leakage classes purge/embargo folds cover [D5][D8]. Source tags resolve in `research/sources.md`.
 
 ## Executive summary

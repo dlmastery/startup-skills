@@ -1,5 +1,10 @@
 # Market sizing — Ascent (bottom-up first, arithmetic shown)
 
+> **What this is** — Bottom-up TAM, SAM and SOM with the arithmetic shown line by line, plus the funnel from the orphaned autoresearch community to paying individuals.
+> **Why it exists** — The earlier version converted GitHub stars straight into revenue and produced a $5M SOM; inserting the missing stars→active-users stage cuts it to ~$1M. The same correction resets the kill trigger — the old "0.3% of stars" threshold would have fired on a perfectly healthy funnel, shutting down a working business on an arithmetic error.
+> **How to read it** — §3's funnel table, then §6's trigger. Attack the 5–15% active-user assumption.
+> **Depends on / feeds** — Inherits [`research/market_structure.md`](../research/market_structure.md) and [`strategy/market_type.md`](market_type.md); feeds [`financials/revenue_build.md`](../financials/revenue_build.md) and [`financials/pricing.md`](../financials/pricing.md).
+
 All ARR figures annualized. Every factor carries a source tag or an explicit (assumption: basis) flag. Analyst top-down numbers appear only in §4 as a sanity check, with their skepticism notes attached. **Revision note (critic round 1):** the prior version of this file sized SOM off raw GitHub stars and put the job filter in SAM instead of TAM — both category errors, both corrected below; the old $5M plan number does not survive the correction.
 
 ## 1. TAM — tiered, with the job filter applied at the TAM layer

@@ -1,5 +1,10 @@
 # Lean canvas — Ascent
 
+> **What this is** — The whole venture on one page: nine cells, each capped at three sourced bullets, plus an explicit flag on the cell most likely to be wrong.
+> **Why it exists** — It forces the build order. The riskiest cell is Revenue: practitioners must trust and pay for experiments they did not run, against 46% and rising developer distrust of AI output. Every other cell has external evidence; this conversion has none — so the trust test and $99 pre-orders come before any hosted product gets built.
+> **How to read it** — The riskiest-cell section, then Unfair advantage: the constitution is the channel, not the moat.
+> **Depends on / feeds** — Compresses [`strategy/market_type.md`](market_type.md), [`strategy/positioning.md`](positioning.md), [`strategy/personas.md`](personas.md), [`strategy/market_sizing.md`](market_sizing.md); feeds [`narrative/vc_memo.md`](../narrative/vc_memo.md).
+
 | Cell | Content (≤3 bullets each) |
 |---|---|
 | **Problem** | 1. Rigorous ML experimentation costs months of $200–280k-comp practitioner time [C25], much of it harness-building and data plumbing (38–45% of time on data prep alone [A39]; deployment-era surveys showed 64% of orgs took ≥1 month to ship one model [A40] — dated 2018–20, cited as background only). 2. Self-deception is endemic and unpoliced: leakage in ≥294 published papers across 17 fields [D5]; automation adds four more failure modes (CMU [A46]). 3. Existing automation does the wrong layer: AutoML grinds hyperparameters on a protocol the user must already have right [A23]; AI scientists write one-shot papers [A12–A17]; trackers record and enforce nothing [A30–A33]. |

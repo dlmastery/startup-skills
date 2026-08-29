@@ -1,5 +1,10 @@
 # Deep Dives — The 8 Tier-1 Systems Behind Ascent's Mechanisms
 
+> **What this is** — Eight system dives — goal, approach, I/O, key design choice, failure modes — each stamped [EXISTS], [PARTIAL] or [ROADMAP] against the PoC repo.
+> **Why it exists** — This is where the pack refuses to blur running code with plan: dive 1 states the fingerprint is logged but never compared — tamper-evident, not tamper-refusing — and dive 4 states the acceptance gate exists nowhere, including the PoC.
+> **How to read it** — Dive 1, then dive 4. Attack dive 3's admission that gate catch rates are unmeasured — the whitepaper's gate multiplier rests on it.
+> **Depends on / feeds** — Supplies mechanism for [whitepaper.md](whitepaper.md) §2 and status for [not_vaporware.md](not_vaporware.md); drawn in [architecture](architecture/00_INDEX.md); scheduled in [features_prioritized.md](../product/features_prioritized.md).
+
 Each dive: **Goal → Algorithmic approach → Inputs/outputs → Key design choice → Failure modes & fallbacks.** Status labels are strict: **[EXISTS]** = implemented in the PoC repo (`generalized_ml_autoresearch/`, file named); **[PARTIAL]** = implemented in reduced form; **[ROADMAP]** = specified here, not built. Source tags resolve in `research/sources.md`. PoC behavior is founder-reported (A6).
 
 ---

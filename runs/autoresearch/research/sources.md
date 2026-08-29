@@ -1,5 +1,10 @@
 # Consolidated sources — Ascent research layer
 
+> **What this is** — The pack-wide citation ledger: every [A]/[B]/[C]/[D] tag from the four research files, unioned with URL and access date.
+> **Why it exists** — Roughly 150 tags carry Ascent's numbers — 94.8k stars, DataRobot's haircut, the 1–5% open-core conversion band — and downstream artifacts would otherwise re-cite them from memory, drifting until the deck contradicts the sizing. It also records what was unfindable (Zochi's funding, Weco's pricing, any benchmark for multi-day monotonic improvement), so absences read as checked rather than overlooked.
+> **How to read it** — Look up a tag. Spot-check third-party ARR estimates and the 2026-dated links.
+> **Depends on / feeds** — Union of [`research/landscape.md`](landscape.md), [`research/competitors.md`](competitors.md), [`research/capability_table.md`](capability_table.md), [`research/market_structure.md`](market_structure.md), [`research/survey.md`](survey.md); consumed pack-wide.
+
 Tag scheme: [A*] landscape.md + competitors.md (competitive landscape agent) · [B*] capability_table.md (enabling tech) · [C*] market_structure.md (market) · [D*] survey.md (scientific survey). All accessed 2026-08-27/28. Each file also carries its own Sources section; this file is the union for pack-wide citation lookup.
 
 

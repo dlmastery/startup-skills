@@ -1,5 +1,10 @@
 # Competitor teardown — Ascent
 
+> **What this is** — A 20-row teardown scoring every alternative Ascent's buyer could choose — Karpathy's free loop, AutoML incumbents, paper factories, trackers, coding agents, doing nothing — on mechanism, price, traction and mechanistic failure.
+> **Why it exists** — It is the row-by-row evidence for the claim the pack prices and pitches on: the sustained-campaign × audit-gated quadrant is empty. Asserted without this table, the first serious skeptic empties it with one system Ascent never checked, and the category-creation bet collapses into comparison marketing.
+> **How to read it** — Last column first, then rows 19–20: the real enemy is manual + ChatGPT, not AutoML. Attack the quadrant.
+> **Depends on / feeds** — Built on [`research/landscape.md`](landscape.md); feeds [`strategy/positioning.md`](../strategy/positioning.md) and [`strategy/lean_canvas.md`](../strategy/lean_canvas.md).
+
 Date of research: 2026-08-27. Facts tagged [An]; sources at end. Mechanistic failure = where the system structurally cannot do what Ascent's loop does (Diagnose → Ground → Hypothesize → Execute → Analyze → Document → Checkpoint, audit-gated, on the user's dataset/metric), not where it merely underperforms.
 
 ## Teardown table

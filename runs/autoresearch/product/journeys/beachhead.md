@@ -1,5 +1,10 @@
 # Journey — Beachhead: Marcus, first session to habitual use
 
+> **What this is** — Marcus the solo quant's arc from a forum-post bundle to habitual use and paid renewal.
+> **Why it exists** — Weeks 0–1 are the literal E1 trust-test script (≥5/15 reproduce, ≥3/15 on own data, ≥8/15 name deploy evidence), so they constrain the kernel to surfaces that work with no UI; and the acceptance-gate rejection that converts him is Next-tier, absent at test time.
+> **How to read it** — Beats 1–4 are the session protocol. Attack beat 5: 10–40 gate-passed experiments/night is a projection; the PoC sustained 3–4/day, founder-reported.
+> **Depends on / feeds** — Runs [personas](../../strategy/personas.md) card 2 on kernel #1–9 of [features_prioritized.md](../features_prioritized.md); scripts E1 in [experiment_board](../../validation/experiment_board.md); continues in [day_in_life.md](day_in_life.md).
+
 **Persona:** Marcus T., ex-bank solo quant, 2-person prop shop (strategy/personas.md card 2). Sharpe culture; 1–3 hand-run experiments/day today; has read López de Prado [D8]; knows a 40-variant month means his in-sample Sharpe is nearly guaranteed to lie [D7]. **He is the payer and the user.** His conversion condition, verbatim from the persona card: *"I don't need it to be smart, I need it to be unable to cheat — give me the full run log, discards included."* This journey shows the system handing him exactly that.
 
 **Timeline honesty:** the Week 0–6 beats use **trust-test-kernel and launch-tranche surfaces only** (features_prioritized #1–23); this section doubles as the E1 trust-test script (sessions weeks 10–13). Beats requiring Next-tier features are in the clearly labeled **Week 12+ section** at the end. Trust-test recruits are practitioners who can hand-edit a config — the wizard is the OSS activation funnel, not a test prerequisite.

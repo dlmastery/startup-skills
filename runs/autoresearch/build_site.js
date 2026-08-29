@@ -72,7 +72,7 @@ ${page.body}
 
 const PAGES = [
 { slug:'index', title:'Ascent — the autonomous ML research operating system',
-  desc:'Ascent runs machine-learning experiments overnight on your own laptop and proves the results hold up. You get what it kept, what it threw away, and the evidence for both.',
+  desc:'Ascent helps ML practitioners run 10x more experiments they can actually defend. It runs literature-grounded, gate-checked experiments overnight on your own laptop and discards what does not survive an honest test.',
   next:[
     {href:'product.html',k:'Product',t:'How the loop actually works',d:'The seven steps, the three checks that run before anything is kept, and what you see each morning.'},
     {href:'evidence.html',k:'Evidence',t:'Does it work?',d:'Six domains on one protocol, and an explicit list of what we do not claim.'},
@@ -82,8 +82,8 @@ const PAGES = [
 <header class="hero">
   <div class="w">
     <span class="eyebrow">Autonomous ML research</span>
-    <h1>It runs the experiments while you sleep &mdash; and proves the result is <span class="hl">real</span>.</h1>
-    <p class="lede">For researchers, quants and applied-ML engineers who have a dataset, a number they need to improve, and nobody to check their work at 2am. Ascent runs the experiments continuously on an ordinary laptop and keeps only what genuinely holds up.</p>
+    <h1>Ascent helps ML practitioners run <span class="hl">10&times; more experiments</span> they can actually defend.</h1>
+    <p class="lede">Point it at a dataset and a metric. Ascent designs experiments, checks each idea against published research, runs them overnight on your own laptop, and keeps only the changes that survive three automatic integrity checks &mdash; typically <b>9 kept out of 218 tried</b>. Validated across six domains.</p>
     <div class="cta">
       <a class="btn lg" href="product.html">See how it works</a>
       <a class="btn lg ghost" href="evidence.html">See the evidence</a>
@@ -131,26 +131,38 @@ const PAGES = [
 
 <section>
   <div class="w">
-    <span class="eyebrow">Who it is for</span>
-    <h2>One system, three very different users.</h2>
-    <div class="g3">
-      <div class="card"><div class="n">THE DOMAIN SCIENTIST</div><h3>You have the data, not the ML team</h3><p>A biologist with an interesting dataset and no machine-learning depth. The system supplies the method &mdash; and catches the mistakes a lab engineer would have caught.</p></div>
-      <div class="card"><div class="n">THE SOLO QUANT</div><h3>You can already climb the hill</h3><p>What you cannot do is referee yourself at midnight on the fortieth variant of a signal. That is the part being automated.</p></div>
-      <div class="card"><div class="n">THE RESEARCH LEAD</div><h3>You have to prove it to someone</h3><p>You are buying the audit trail: who ran what, on which data, and why the result was believed. The reconstruction meeting stops happening.</p></div>
+    <span class="eyebrow">How we are different</span>
+    <h2>Everyone else automates the search. We automate the scepticism.</h2>
+    <p class="sub">There are good tools in this space. None of them do the part that decides whether a result is real.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>What it is</th><th>What it automates</th><th>What it leaves to you</th></tr></thead>
+        <tbody>
+          <tr><td><b>AutoML</b> (AutoGluon, H2O, DataRobot)</td><td class="n">Hyperparameter search</td><td>The evaluation protocol, the literature, and whether the result means anything</td></tr>
+          <tr><td><b>AI scientists</b> (paper-writing agents)</td><td class="n">One-shot papers on their own problems</td><td>Your metric, your data, and sustained improvement</td></tr>
+          <tr><td><b>Experiment trackers</b> (W&amp;B, MLflow)</td><td class="n">Recording what you did</td><td>Designing the experiments and judging them</td></tr>
+          <tr><td><b>A chatbot</b></td><td class="n">Suggesting ideas</td><td>Verification &mdash; a tired human at midnight</td></tr>
+          <tr style="background:#F7F7F9"><td><b>Ascent</b></td><td class="n">The scientific method itself</td><td>Steering, in one or two sentences a day</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
 <section class="alt">
   <div class="w">
-    <span class="eyebrow">What you actually get</span>
-    <h2>Four things, every morning.</h2>
-    <div class="g2">
-      <div class="card"><div class="n">01</div><h3>What it kept</h3><p>The improvements that survived every check, each strictly better than what came before it.</p></div>
-      <div class="card"><div class="n">02</div><h3>What it threw away</h3><p>Everything discarded, and why &mdash; usually far more than it kept. That pile is what makes the kept results mean anything.</p></div>
-      <div class="card"><div class="n">03</div><h3>A package you can hand over</h3><p>Configuration, data splits, reasoning and results, re-runnable by someone who has no reason to trust you.</p></div>
-      <div class="card"><div class="n">04</div><h3>The honest version of the number</h3><p>Corrected for how many things were tried before it appeared. That correction is explained next.</p></div>
+    <span class="eyebrow">One ordinary day</span>
+    <h2>What it looks like when it is working.</h2>
+    <p class="sub">A single day on two live campaigns, taken from the pack's day-in-the-life journey. Every figure below is projected from proof-of-concept timings and labelled as such.</p>
+    <div class="proof" style="border:1px solid var(--line);border-radius:12px;margin-top:30px">
+      <div class="w" style="padding:0">
+        <div class="c"><div class="n">63</div><div class="l">experiments run overnight across two campaigns</div></div>
+        <div class="c"><div class="n">2</div><div class="l">kept &mdash; the rest discarded, with reasons</div></div>
+        <div class="c"><div class="n">$6.90</div><div class="l">total compute, 91% routed to mid-tier models</div></div>
+        <div class="c"><div class="n">24 min</div><div class="l">of human time: two steering sentences and one export</div></div>
+      </div>
     </div>
+    <div class="note"><b>Read the discard number, not the kept one.</b> Two kept out of sixty-three is not underperformance &mdash; it is what an honest filter looks like. Any system that keeps most of what it tries is not filtering.</div>
   </div>
 </section>
 
@@ -164,7 +176,29 @@ const PAGES = [
       <div class="v"><b>+6.52 raw</b> (founder-reported) &middot; deflated: week-1 work &middot; N=265+ trials</div>
       <div class="n">Every competitor leads with their best number. We lead with the discount on ours and attach the ledger that lets you check it. A competitor cannot copy that without giving up their best slide.</div>
     </div>
-    <div class="g3" style="margin-top:34px">
+  </div>
+</section>
+
+<section class="alt">
+  <div class="w">
+    <span class="eyebrow">Questions people actually ask</span>
+    <h2>The obvious objections, answered.</h2>
+    <div class="g2">
+      <div class="card"><h3>How do I know the results are not wrong?</h3><p>You do not have to take our word for it. Every kept result ships with the data splits, the reasoning, the full trial count and a one-command reproduction. Run it yourself; that is the product.</p></div>
+      <div class="card"><h3>Is this just AutoML with extra steps?</h3><p>AutoML searches hyperparameters against an evaluation harness <em>you</em> built. Ascent builds the harness, grounds each idea in published work, and refuses experiments that fail integrity checks. The search is the easy half.</p></div>
+      <div class="card"><h3>Does my data leave my machine?</h3><p>Training and evaluation data never leave your hardware. Your steering instructions do go to a hosted model API &mdash; we say so plainly rather than let a security review discover it. Bring-your-own-endpoint is on the roadmap.<span class="rm">ROADMAP</span></p></div>
+      <div class="card"><h3>What does it cost to run?</h3><p>Roughly <b>$3&ndash;12 a day</b> of your own model credits, plus <b>$125/month</b> for the layer that does the checking. You pay the compute bill directly, so it never becomes our margin.</p></div>
+      <div class="card"><h3>Do I need an ML engineer?</h3><p>No. Setup is a guided twenty-minute questionnaire, and the system supplies the evaluation method &mdash; including catching mistakes an ML engineer would have caught.</p></div>
+      <div class="card"><h3>What is not built yet?</h3><p>The trial-count-corrected acceptance gate, attestation packs, bring-your-own-endpoint and fingerprint refusal. They are marked <span class="rm">ROADMAP</span> everywhere on this site rather than implied as shipped.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <span class="eyebrow">For investors</span>
+    <h2>Three things have to be true. All three are checkable.</h2>
+    <div class="g3">
       <div class="card"><div class="n">01 &mdash; THE GAP</div><h3>Empirically unfilled</h3>
         <p>The minimal loop drew <b>94,800</b> stars, then lost its maintainer. Of sixteen notable forks, <b>none</b> added rigor.<span class="src">A2</span></p>
         <p><a href="evidence.html" style="color:var(--accent);font-weight:600">See the evidence &rarr;</a></p></div>

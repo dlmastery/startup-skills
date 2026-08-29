@@ -1,5 +1,10 @@
 # Architecture Diagrams — Index
 
+> **What this is** — The map of the ten architecture diagrams: each one's mechanism in a line, and whether it mostly exists in the repo or is planned.
+> **Why it exists** — Ten diagrams in one style read as ten equally-shipped claims. This table forces the split before a reviewer opens anything — pipeline, loop, orchestration and run record are running code; routing, observability and team scale-out are not.
+> **How to read it** — Read the right-hand column first, then pick a diagram. Attack the "mostly exists" verdicts against the honesty ledger in not_vaporware.
+> **Depends on / feeds** — Indexes [D01.md](D01.md) through D10; verdicts trace to [not_vaporware.md](../not_vaporware.md) and the dive labels in [deep_dives.md](../deep_dives.md).
+
 Ten diagrams, each grounded in the real PoC repo (`generalized_ml_autoresearch/`, ~4,000 LOC core) and extended honestly to the product. Every component is labeled **[exists]** (in the repo today) or **[planned]** (product extension). Captions say what a reviewer should notice — the mechanism, not the shape.
 
 | # | Diagram | One-line mechanism | Mostly exists / planned |

@@ -1,5 +1,10 @@
 # Ascent — UX Specification (12 key screens)
 
+> **What this is** — A text spec for twelve screens plus the global patterns and copy rules every Ascent surface obeys.
+> **Why it exists** — The honesty conventions live or die in the interface: here a raw metric without its trial count is a lint error, every gate chip must resolve to verdict text, and the dashboard is settled as a local web app whose static HTML export is read-only.
+> **How to read it** — Global patterns, then screens 4, 6, 5, 8. Attack the tier tags: kernel capability must exist as CLI output before any screen renders it.
+> **Depends on / feeds** — Renders [features_flagship.md](features_flagship.md) under [features_prioritized.md](features_prioritized.md) tiers and [positioning](../strategy/positioning.md) §4; feeds the [journeys](journeys/day_in_life.md) and [visuals](../visuals/image_prompts.md).
+
 Text spec; visuals belong to startup-visuals. Product feel in one sentence: **a laboratory notebook that cannot be falsified, read like a trading terminal, steered like a chat.** Global rules first, then screens. Copy discipline everywhere per positioning.md §4: "shows you the evidence," never "proves"; raw metrics never render without their trial count; internal vocabulary (constitution, super-folds, reasoning blob) always glossed on first use per surface; PoC-derived exemplar numbers labeled founder-reported (A6).
 
 **Tier labels:** every screen below is tagged with its feature tier from features_prioritized.md — **[Kernel]** (trust-test kernel #1–9, CLI-first, no new UI), **[Launch]** (launch tranche #10–23), **[Next]**, **[Later]**. Kernel-tier capability always exists as CLI/file output before any screen renders it.

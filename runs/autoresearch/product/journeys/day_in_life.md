@@ -1,5 +1,10 @@
 # Journey — A day in the life: Marcus, ordinary Tuesday, all touchpoints
 
+> **What this is** — One ordinary Tuesday, 06:55 to 22:10, tracing every touchpoint and tallying the human minutes: about 24.
+> **Why it exists** — Retention rests on how thin the human layer is — if a habitual day costs more than a few minutes, the technical-lead model and the $/day economics both fail. The day also defines activation health and shows the payer≠user export beat without claiming the year-2 attestation pack.
+> **How to read it** — The 16:00 buyer beat and the 18:30 value review. Attack the 24-minute tally and whether 61 gate-passed experiments/week is demonstrated or projected.
+> **Depends on / feeds** — Continues [beachhead.md](beachhead.md); walks [ux_spec.md](../ux_spec.md) screens in order; instruments [PRD.md](../PRD.md) §9 and [unit_economics](../../financials/unit_economics.md).
+
 **Calendar anchor:** set post-launch with Next-tier features live (acceptance gate #25, Goodhart monitor #28, catalog #30) — consistent with beachhead.md's Week 12+ section.
 
 **Persona:** Marcus T., solo quant (personas card 2), months into habitual use, two campaigns live (FX intraday; a new rates dataset). Payer = user, so the "buyer's view" here is Marcus reviewing his own spend and record-of-value — plus one beat where the artifact travels to someone who *is* a payer≠user buyer. The campaign has been running all night; the day shows how thin the human layer is by design (the technical-lead model, PoC §3.1; RE-Bench division of labor [B4]).

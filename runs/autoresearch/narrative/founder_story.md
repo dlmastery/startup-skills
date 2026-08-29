@@ -1,5 +1,10 @@
 # Founder story — dlmastery
 
+> **What this is** — the first-person founder narrative, written for verbatim use in applications, intros, and accelerator forms.
+> **Why it exists** — a solo pseudonymous founder is the pack's third HIGH residual risk, and credentials cannot answer it. This is the argument that months of actually operating the loop (six domains, zero hand-written Python, every failure mode now a constitution section) is the qualification. Without it, "never wrote a line of Python" reads as a gimmick rather than as evidence that discipline, not capability, is the bottleneck.
+> **How to read it** — the three numbered "why me" claims are the falsifiable part; a skeptic should attack claim 2, since the ledger-completeness audit has not yet been run.
+> **Depends on / feeds** — inherits A5/A6/A11 from [../ASSUMPTIONS.md](../ASSUMPTIONS.md); feeds [pitch_deck.md](pitch_deck.md) slide 14 and [one_pager.md](one_pager.md).
+
 *First person. Usable verbatim in applications and intros. Identity per A5: solo, technical, pseudonymous.*
 
 I built an autonomous research system that ran 265+ experiments on a single problem, validated results across six unrelated domains, and logged every runner-executed trial, kept and discarded — and I never wrote a line of Python.

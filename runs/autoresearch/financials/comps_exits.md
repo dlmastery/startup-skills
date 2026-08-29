@@ -1,5 +1,10 @@
 # Comparables & exit landscape — Ascent
 
+> **What this is** — comparable transactions and rounds, acquirer profiles, honest IPO conditions, and the affirmative case for staying independent.
+> **Why it exists** — investors pattern-match an autonomous-experimentation tool to AutoML, and DataRobot's fall from $6.3B to about $500M is the price of that match. This file supplies the counter-comps, including W&B at roughly $1.2M per customer org for a layer that only recorded experiments, and states plainly that a pre-seed is priced on milestone evidence, not on ARR multiples Ascent does not have.
+> **How to read it** — section 1's multiples summary, then section 4's conditional clause; a skeptic should attack the generational-company case, which rests entirely on the unmeasured corpus effect (E8).
+> **Depends on / feeds** — inherits from [unit_economics.md](unit_economics.md), [revenue_build.md](revenue_build.md); feeds [../narrative/vc_memo.md](../narrative/vc_memo.md), [../narrative/pitch_deck.md](../narrative/pitch_deck.md).
+
 Sober comps first, winners and casualties both; the generational-company paragraph comes last, earned not asserted.
 
 ## 1. Comparable transactions & rounds (sourced)

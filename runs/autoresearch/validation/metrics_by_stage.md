@@ -1,5 +1,10 @@
 # Metrics by stage — Ascent
 
+> **What this is** — what to track and what to deliberately ignore at each of the four company stages, anchored to one north-star pair.
+> **Why it exists** — Ascent inherits a 94,800-star audience, and this pack already converted stars straight into payers once, producing a $5M plan that was a ~10x overstatement caught in review. The ignore-lists exist so that specific error cannot recur: stars are permitted only as a denominator for the star-to-active ratio, never as a numerator in anything.
+> **How to read it** — read each stage's ignore-list before its track-list; a skeptic should attack the corrected-actives methodology and whether the north-star pair is measurable at all before external users exist.
+> **Depends on / feeds** — inherits from [../strategy/market_sizing.md](../strategy/market_sizing.md), [experiment_board.md](experiment_board.md), [get_keep_grow.md](get_keep_grow.md); feeds [pivot_log.md](pivot_log.md).
+
 North-star **pair** carried through every stage (lean_canvas Key metrics, unchanged): **audited kept improvements/week across user campaigns** × **independent reproduction rate per published bundle** (internal twin: gate catch-rate on seeded violations). The pair must move together — kept-improvement volume without reproductions is vanity; reproductions of stale bundles is stagnation.
 
 ## The cautionary tale this file exists to enforce

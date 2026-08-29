@@ -1,5 +1,10 @@
 # Risk matrix — Ascent
 
+> **What this is** — ten risks with likelihood, impact, leading indicator, mitigation, and the residual severity that survives the mitigation.
+> **Why it exists** — three residuals stay HIGH and the file says so: the trust-conversion bet, the 12-24 month fast-follow window, and a solo pseudonymous founder as the bus factor. A matrix that graded everything down to low would itself be evidence against a company whose product is honest self-assessment, and it would hide that $1.2M buys an answer to risk 1, not an escape from it.
+> **How to read it** — start with the reading-order note at the bottom; a skeptic should attack risk 4, survivable only if Ascent publishes the deflated Sharpe before a critic computes it.
+> **Depends on / feeds** — inherits from [../validation/riskiest_assumptions.md](../validation/riskiest_assumptions.md) and [unit_economics.md](unit_economics.md); feeds [../narrative/vc_memo.md](../narrative/vc_memo.md), [use_of_funds.md](use_of_funds.md).
+
 Ten risks, honest residuals. A matrix where everything mitigates to "low" is fiction (skill contract); three of these stay HIGH after mitigation and the pack says so.
 
 | # | Risk | Likelihood | Impact | Leading indicator | Mitigation | **Residual** |

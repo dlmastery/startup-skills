@@ -1,5 +1,10 @@
 # Technique Decision Tree — How the Agent Picks the Next Experiment
 
+> **What this is** — The triage the constitution runs at the top of every cycle: a flowchart plus a priority logic table resolving to numbered techniques.
+> **Why it exists** — It answers what the agent does at 3 a.m. with nobody watching: safety and metric-integrity branches structurally outrank progress branches, and every branch ends in the same gate → fixed-duration → verdict spine. Today the logic is constitution prose the agent executes; logging which branch fired is the productization.
+> **How to read it** — The logic table, then the reviewer notes. Attack whether prose-executed branching is reproducible run to run.
+> **Depends on / feeds** — Fires techniques from [wave1.md](wave1.md)–[wave3.md](wave3.md); executes the loop drawn in [D02.md](../architecture/D02.md); gates specified in [deep_dives.md](../deep_dives.md).
+
 The triage the constitution runs at the top of every cycle: sense state → priority gates → branch on the dominant deficiency → re-evaluate after every experiment. Technique IDs resolve in `wave1.md`–`wave3.md`. Status: the sensing inputs and priority gates exist in the PoC (ledger, gates, checkpoint); the branch logic exists as constitution prose executed by the agent — the productization is making it explicit, logged policy [planned].
 
 ## The tree
