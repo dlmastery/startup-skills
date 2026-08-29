@@ -48,6 +48,30 @@ Load the frontend-design skill for judgment, then apply these tokens. They are C
 
 **The signature device:** every number on the site carries its **source tag inline** as a small monospace chip (`[A1]`, `[D5]`, `(assumption)`), exactly as the artifacts do. The site performs the product's own thesis — showing the evidence — rather than describing it. This is the one memorable element; keep everything around it quiet.
 
+## Structure — a site, not one long scroll
+
+A single page carrying hero, problem, mechanism, product tour, evidence, pricing, team and CTA is a **deck rendered as a webpage**. It reads as generated: no information hierarchy beyond vertical order, no page a visitor can be sent to, nothing to bookmark, and one enormous scroll where a real company has a navigable structure. Look at how funded startups actually ship — Home, Product, Pricing, Docs, About, each page doing one job.
+
+**Build the standard set as separate pages:**
+
+| Page | Its one job |
+|---|---|
+| `index.html` | The claim, the proof strip, the three pillars in brief, one image. It should be **short** — it exists to route, not to say everything. |
+| `product.html` | How the mechanism works and what the user actually sees. |
+| `evidence.html` | Results, framed honestly, plus the explicit list of what is not claimed. |
+| `pricing.html` | Tiers and the economics that make them hold. |
+| `about.html` | Founder-market fit, mission, why now. |
+| `pack.html` | The document reader. |
+
+**Mechanics that keep it a site rather than five drifting files:**
+
+- **One shared stylesheet** (`site.css`) linked by every page. Never paste the token block into each file — they diverge within one edit.
+- **Generate the pages from one shell** (`build_site.js`) holding head, nav and footer, with per-page content as data. Nav, meta tags and footer then cannot fall out of sync, and adding a page is one entry.
+- **Nav carries an active state** for the current page, so a visitor always knows where they are.
+- **Every interior page ends with a "keep reading" rail** — two or three cards pointing at the next relevant page, including a deep link into the reader. This is what makes a set of pages feel navigable rather than orphaned.
+- Cross-link *into the pack reader* by hash (`pack.html#financials/unit_economics.md`) wherever a page summarises something the pack argues in full.
+- Verify by walking every `href`/`src` in every generated page and asserting the target exists. Template literals inside embedded scripts will look like broken links — exclude the reader's own JS from that check rather than "fixing" it.
+
 ## Hero imagery — the site needs art, not more charts
 
 A landing page built only from data infographics reads as a report, not a company. Commission a small set of **4–6 hero visuals** stored in `visuals/hero/`, separate from the manifest's data rows, and use them as full-bleed bands between sections.

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Evidence — Ascent</title>
+<meta name="description" content="Six domains on one protocol, the ablation that measures the gates, and an explicit list of what we do not claim.">
+<meta property="og:title" content="Evidence — Ascent">
+<meta property="og:description" content="Six domains on one protocol, the ablation that measures the gates, and an explicit list of what we do not claim.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="visuals/hero/hero-ratchet.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230B0B12'/><path d='M20 74 L38 52 L54 62 L80 26' stroke='%234338CA' stroke-width='10' fill='none' stroke-linejoin='round' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<nav class="site">
+  <div class="w">
+    <a class="brand" href="index.html"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#0B0B12"/><path d="M20 74 L38 52 L54 62 L80 26" stroke="#4338CA" stroke-width="10" fill="none" stroke-linejoin="round" stroke-linecap="round"/></svg> Ascent</a>
+    <div class="nl">
+      <a href="product.html">Product</a>
+      <a href="evidence.html" class="on">Evidence</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="pack.html">The pack</a>
+    </div>
+    <a class="btn" href="pack.html">Read the pack</a>
+  </div>
+</nav>
+
+
+<header class="phead">
+  <div class="w">
+    <span class="eyebrow">Evidence</span>
+    <h1>Six domains, one protocol, full ledgers.</h1>
+    <p class="lede">All results are <strong>founder-reported</strong>, single-seed in most domains, on public datasets with contamination caveats, and reproducible from the repository — not independently verified. That framing is binding on every artifact we publish.<span class="src a">A6</span></p>
+  </div>
+</header>
+
+<section>
+  <div class="w">
+    <div class="tw">
+      <table>
+        <thead><tr><th>Domain</th><th>Result</th><th>Trials</th></tr></thead>
+        <tbody>
+          <tr><td>EUR/USD signals</td><td class="n">Sharpe +6.52 <span style="font-family:var(--sans);color:var(--muted)">— raw, pre-deflation</span></td><td class="n">265+</td></tr>
+          <tr><td>QQQ signals</td><td class="n">Composite Sharpe +1.32 · PSR 0.997</td><td class="n">216+</td></tr>
+          <tr><td>Higgs classification</td><td class="n">AUROC ≈ 0.8675+</td><td class="n">—</td></tr>
+          <tr><td>PathMNIST OOD</td><td class="n">AUC 0.997</td><td class="n">—</td></tr>
+          <tr><td>Olivetti faces</td><td class="n">Conditional ARI 0.874</td><td class="n">—</td></tr>
+          <tr><td>Fraud detection</td><td class="n">AUC 0.6097 <span style="font-family:var(--sans);color:var(--muted)">vs AutoGluon 0.522 / H2O 0.518</span></td><td class="n">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="g2">
+      <div class="card"><div class="n">ABLATION</div><h3>The rigor layer pays for its overhead</h3><p>Removing the citation gate spiked invalid experiments <b>42%</b> and produced <b>3</b> leakage incidents the gated arm did not. <em>One task, one seed, founder-reported.</em></p></div>
+      <div class="card"><div class="n">SCOPE</div><h3>What we do not claim</h3><p>Attestation packs, BYO-endpoint, fingerprint <em>refusal</em> and the acceptance gate are roadmap<span class="rm">ROADMAP</span> — named as such everywhere, never sold as shipped.</p></div>
+    </div>
+    <div class="band">
+      <img src="visuals/hero/hero-ledger.jpg" width="1600" height="1067" alt="A dense grid of faint cells with a scattered few glowing — kept results among the discarded." loading="lazy">
+      <div class="cap">Trial 218 — 9 kept, 209 discarded. The denominator every honest statistic needs.</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="w">
+    <span class="eyebrow">The gap</span>
+    <h2>The demand is proven. The supply walked away.</h2>
+    <div class="g3">
+      <div class="card"><div class="n">DEMAND</div><h3>94,800 stars in six months</h3><p>13,400 forks on the minimal loop — and no active maintainer since 2026-03-26.<span class="src">A1</span></p></div>
+      <div class="card"><div class="n">SUPPLY</div><h3>0 of 16 forks added rigor</h3><p>Fourteen are hardware ports or translations; roughly one is a domain extension.<span class="src">A2</span></p></div>
+      <div class="card"><div class="n">FIELD</div><h3>294 papers, 17 fields</h3><p>Documented data leakage in published, peer-reviewed work — the failure the gates exist to prevent.<span class="src">D5</span></p></div>
+    </div>
+  </div>
+</section>
+
+<div class="next">
+  <div class="w">
+    <span class="eyebrow">Keep reading</span>
+    <div class="row">
+      <a href="pricing.html"><div class="k">Pricing</div><div class="t">The economics</div><div class="d">Why BYOK makes margin architectural rather than a pricing hope.</div></a>
+      <a href="about.html"><div class="k">About</div><div class="t">Why this founder</div><div class="d">265+ experiments across six domains, and not a line of hand-written Python.</div></a>
+      <a href="pack.html#tech/not_vaporware.md"><div class="k">Deep dive</div><div class="t">The honesty ledger</div><div class="d">What the story implies and the repository lacks, listed by name.</div></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="w">
+    <div class="fl">
+      <a href="index.html">Home</a><a href="product.html">Product</a><a href="evidence.html">Evidence</a>
+      <a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="pack.html">The pack</a>
+      <a href="https://github.com/dlmastery/startup-skills">GitHub</a>
+    </div>
+    <p class="fine"><strong>Ascent</strong> is a demonstration run of the <span class="mono">startup-skills</span> artifact pipeline, generated 2026-08-28. It is a founder-artifact pack, not a funded company or a shipping product. All proof-of-concept metrics are founder-reported and reproducible from the source repository; none are independently verified. Roadmap items are tagged as such throughout and are not claimed as shipped. Upstream credit: the minimal research loop this work extends is Karpathy's <em>autoresearch</em>.</p>
+  </div>
+</footer>
+</body>
+</html>
