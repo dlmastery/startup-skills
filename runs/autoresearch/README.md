@@ -6,10 +6,10 @@ Rigorous ML experimentation is policed by nothing but human discipline, and disc
 
 ---
 
-**Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/** · **Read all 64 documents:** **[the pack reader](https://dlmastery.github.io/startup-skills/runs/autoresearch/pack.html)**
+**Live site:** **https://dlmastery.github.io/startup-skills/runs/autoresearch/** · **Read all 71 documents:** **[the pack reader](https://dlmastery.github.io/startup-skills/runs/autoresearch/pack.html)**
 **Run:** `autoresearch` · **Generated:** 2026-08-28 · **Status: PARTIAL**
-**52 of 53 required artifacts present · 113 visuals rendered (every manifest row closed) · 12 of 78 required HTML infographics**
-The text pack is complete and cross-layer reconciled. Every visual row is rendered. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
+**71 documents · 120 visuals rendered (every manifest row closed) · 16 HTML infographics**
+Every artifact opens with an orientation block; every visual row is rendered; every substantive artifact is illustrated. See [What's missing](#whats-missing--next-draw) — nothing here is hidden.
 
 ---
 
@@ -56,19 +56,19 @@ The text pack is complete and cross-layer reconciled. Every visual row is render
 |---|---|---|---|
 | [`BRIEF.md`](BRIEF.md) · [`ASSUMPTIONS.md`](ASSUMPTIONS.md) | The grilled founder brief and every open assumption | 2 | grill-me |
 | [`research/`](research) | Landscape, 20-row competitor teardown, capability table, survey, market structure, dated sources | 6 | startup-research |
-| [`strategy/`](strategy) | Market type, positioning, TAM/SAM/SOM, personas, lean canvas, VPC, GTM | 7 | startup-strategy |
+| [`strategy/`](strategy) | Market type, positioning, TAM/SAM/SOM, personas, lean canvas, VPC, GTM, **business model canvas, petal diagram, channel plan, sales roadmap** | 11 | startup-strategy |
 | [`product/`](product) | PRD, 57 prioritized features, flagship set, UX spec, 4 journeys | 8 | startup-product |
 | [`tech/`](tech) | Whitepaper, 8 deep dives, D01–D10 architecture (Mermaid), 146 techniques in 3 waves, decision tree, technique×feature matrix, honesty ledger | 19 | startup-tech |
-| [`narrative/`](narrative) | One-pager, VC memo, 15-slide deck, future press release, founder story | 5 | startup-narrative |
-| [`validation/`](validation) | Riskiest assumptions, E1–E8 board, discovery guide, get-keep-grow, stage gate, metrics by stage, pivot log | 7 | startup-validation |
+| [`narrative/`](narrative) | One-pager, VC memo, 15-slide deck, future press release, founder story, **mission & vision** | 6 | startup-narrative |
+| [`validation/`](validation) | Riskiest assumptions, E1–E8 board, discovery guide, get-keep-grow, stage gate, metrics by stage, pivot log, **MVP definition, decision-making unit** | 9 | startup-validation |
 | [`financials/`](financials) | Pricing, revenue build, unit economics, use of funds, risk matrix, comps & exits | 6 | startup-financials |
-| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 113 rendered PNGs, 12 HTML infographics | 3 + 125 | startup-visuals |
+| [`visuals/`](visuals) | 100-row manifest, 100 production image prompts (+JSON), 120 rendered PNGs, 16 HTML infographics | 3 + 136 | startup-visuals |
 | [`audit/COVERAGE.md`](audit/COVERAGE.md) | Row-by-row completeness audit and draw order | 1 | startup-audit |
 | [`index.html`](index.html) | The public site — [live on GitHub Pages](https://dlmastery.github.io/startup-skills/runs/autoresearch/) | 1 | startup-website |
 
-## Visual index — 113 images, 12 HTML infographics
+## Visual index — 120 images, 16 HTML infographics
 
-**Every manifest row is rendered, and every substantive artifact carries at least one illustration** (60 documents, 178 placements — visible inline in the [pack reader](pack.html)). Full spec in [`visuals/visual_manifest.md`](visuals/visual_manifest.md); prompts in [`visuals/image_prompts.md`](visuals/image_prompts.md).
+**Every manifest row is rendered, and every substantive artifact carries at least one illustration** (67 documents, 185 placements — inline in the [pack reader](pack.html)). Full spec in [`visuals/visual_manifest.md`](visuals/visual_manifest.md).
 
 | ID | Headline takeaway | Image | HTML |
 |---|---|---|---|
@@ -94,10 +94,10 @@ The text pack is complete and cross-layer reconciled. Every visual row is render
 | V20 | 12 of 19 technique clusters feed the twin gravity wells: the audit gates and the acceptan… | [png](visuals/images/V20_technique-feature-heat-table.png) | — |
 | V21 | BYOK puts token COGS on the user's card, so fully-loaded gross margin is 82.0% at 150 use… | [png](visuals/images/V21_unit-economics-engine.png) | — |
 | V22 | 5.1x more valid output × 6x cheaper days ÷ 3 honesty discount = a defended 10.4x. | [png](visuals/images/V22_10x-mechanism.png) | — |
-| V23 | The system caught her preprocessing leakage before any metric existed — the method she la… | [png](visuals/images/V23_journey-priya.png) | — |
-| V24 | The self-deflation stops his scroll; the ledger, discards included, earns his renewal. | [png](visuals/images/V24_journey-marcus.png) | — |
-| V25 | She's buying the audit trail and the campaign memory, not the hill-climbing. | [png](visuals/images/V25_journey-elena.png) | — |
-| V26 | ~24 human minutes steer two campaigns running on ~$7/day of the user's own tokens. | [png](visuals/images/V26_journey-tuesday.png) | — |
+| V23 | The system caught her preprocessing leakage before any metric existed — the method she la… | [png](visuals/images/V23_journey-priya.png) | [html](visuals/infographics/V23_journey-priya.html) |
+| V24 | The self-deflation stops his scroll; the ledger, discards included, earns his renewal. | [png](visuals/images/V24_journey-marcus.png) | [html](visuals/infographics/V24_journey-marcus.html) |
+| V25 | She's buying the audit trail and the campaign memory, not the hill-climbing. | [png](visuals/images/V25_journey-elena.png) | [html](visuals/infographics/V25_journey-elena.html) |
+| V26 | ~24 human minutes steer two campaigns running on ~$7/day of the user's own tokens. | [png](visuals/images/V26_journey-tuesday.png) | [html](visuals/infographics/V26_journey-tuesday.html) |
 | V27 | Dataset + metric becomes a constitution-governed campaign in ≤20 minutes. | [png](visuals/images/V27_ux-collage-setup.png) | — |
 | V28 | A laboratory notebook that cannot be falsified, read like a trading terminal, steered lik… | [png](visuals/images/V28_ux-collage-daily-loop.png) | — |
 | V29 | Bundles travel to skeptics; the org ledger raises the bar as the family's trial count grows. | [png](visuals/images/V29_ux-collage-trust-scale.png) | — |
@@ -185,6 +185,13 @@ The text pack is complete and cross-layer reconciled. Every visual row is render
 | V111 | Every correction recorded with what triggered it, including the ones that cost us the plan. | [png](visuals/images/V111_pivot-ledger.png) | — |
 | V112 | Ranked by what would kill the company soonest; the top one is a two-week test. | [png](visuals/images/V112_risk-stack.png) | — |
 | V113 | Four Blank stages, one metric each; a stage never borrows the next stage’s scoreboard. | [png](visuals/images/V113_metrics-ladder.png) | — |
+| V114 | Nine blocks, one falsifiable hypothesis and kill-test each. | [png](visuals/images/V114_business-model-canvas.png) | — |
+| V115 | Six adjacent markets we draw customers from, and what they already spend. | [png](visuals/images/V115_petal-map.png) | — |
+| V116 | From list price to contribution, computed per channel. | [png](visuals/images/V116_margin-stack.png) | — |
+| V117 | Three of ten routes to the largest budgets do not exist today. | [png](visuals/images/V117_access-map.png) | — |
+| V118 | One tests whether the problem is real, the other whether the solution is bought. | [png](visuals/images/V118_two-mvps.png) | — |
+| V119 | Five roles, and the four vetoes nothing satisfies today. | [png](visuals/images/V119_veto-register.png) | — |
+| V120 | Values written as trade-offs, not virtues. | [png](visuals/images/V120_mission-vision.png) | — |
 
 ## The five sharpest claims
 
