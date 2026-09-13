@@ -23,6 +23,7 @@ Build the evidence layer every other artifact cites. **Search the live web; do n
 
 ## Quality bar (see references/quality-bar.md)
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - A named real system beats a category ("Khanmigo" beats "AI tutors").
 - Post-mortems of failed attempts are required, not optional — "why did previous tries die" is the most investor-checked question.
 - Unfindable facts are stated as unfindable; a marked gap beats a confident guess.

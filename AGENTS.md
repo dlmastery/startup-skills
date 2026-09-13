@@ -16,10 +16,12 @@ Treat each `skills/<name>/SKILL.md` as an instruction file and follow it literal
    - `references/quality-bar.md` — the properties every artifact must satisfy (binding), including **property 0**: every artifact opens with an orientation block saying what it is and why it exists.
    - `references/artifact-manifest.md` — the file-by-file definition of "done", plus the A50 (HTML vs image) and A55 (run README) contracts and the Startup Owner's Manual coverage table.
    - `references/grill-question-bank.md` — the founder-interrogation quiver.
+   - `references/writing-style.md` — **ASD-STE100 Simplified Technical English** for every sentence of prose in a run (binding, quality-bar property 9).
 4. Working tooling ships in `templates/` — **copy these, do not rewrite them**:
    - `build_docmanifest.js` — the reader's document list; walks the whole run tree.
    - `build_docimages.js` — artifact→visual map, slug map, and the unillustrated-artifact report.
    - `build_site.js` + `site.css` — the multi-page site shell and design tokens.
+   - `check_ste.js` — the STE linter. Run it on every artifact before the critic loop and in the audit.
 5. All output goes to `runs/<slug>/` in the working directory.
 
 ## Capability adaptation (do not skip a phase because a tool is missing)
@@ -43,3 +45,4 @@ Treat each `skills/<name>/SKILL.md` as an instruction file and follow it literal
 8. **Never present pre-existing artifacts as newly produced.** A run directory often contains work from earlier sessions — check `git log --diff-filter=A -- <path>` before claiming it.
 9. **Verify by looking.** A file of the right size in the right place can still be the wrong content; automated checks catch layout, only inspection catches meaning.
 10. No fabricated traction — no invented logos, testimonials, quotes or metrics, in any artifact or on the site.
+11. **All prose is ASD-STE100.** Sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. `node templates/check_ste.js runs/<slug> --vocab runs/<slug>/BRIEF.md` must report zero `DASH`, `SEMI`, `LONG`, and `PARA` hits before a phase gate passes.

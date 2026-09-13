@@ -20,6 +20,7 @@ Fold an external source into the pack, keeping **only what is novel**. The failu
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - Novel-only: the dropped-as-duplicate list should usually be longer than the kept list.
 - Every kept claim lands as an edit in a real artifact, not just a note in the ingest file.
 - Charisma ≠ evidence: a speaker's confident number still gets tagged with the source's authority level.

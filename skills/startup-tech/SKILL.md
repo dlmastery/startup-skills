@@ -26,6 +26,7 @@ Generate the deep-tech layer: the mechanistic case that this is a real technolog
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - Real method names, honestly applied — "Bayesian knowledge tracing", not "proprietary AI". If it's speculative, label it research risk.
 - Mermaid must render (validate syntax); every diagram earns its place by showing a mechanism, not a marketing shape.
 - The whitepaper's multipliers must survive a skeptic multiplying them back together.

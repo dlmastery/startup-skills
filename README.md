@@ -84,6 +84,7 @@ Record the live URL in the run README, in `audit/COVERAGE.md`, **and in this rep
 - **Every number** cites `research/sources.md` or carries an `(assumption: basis)` tag.
 - **Every artifact** opens with an orientation block: what it is, why it exists, how to read it, what it depends on.
 - **Mechanism over adjective** — no claim rests on "powerful" or "seamless".
+- **ASD-STE100 prose** — every sentence follows Simplified Technical English: at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. `templates/check_ste.js` lints it at every gate; this is what removes the generated-text signature.
 - **Gaps are named, not hidden** — the run README states an honest completion count.
 - **No fabricated traction** — no invented logos, testimonials or metrics, ever.
 
@@ -95,7 +96,7 @@ The skills use the standard `SKILL.md` format (agentskills.io spec) and are writ
 - **Codex / Copilot CLI / Gemini CLI** — copy/symlink `skills/*` into `~/.agents/skills/` (the cross-runtime skills directory they all recognize).
 - **Grok Build / Antigravity / anything else** — clone the repo and point the agent at it; `AGENTS.md` tells any agent how to drive the pipeline by reading the skill files directly, no skill loader required.
 
-Whatever the harness: keep the repo intact rather than cherry-picking single skill folders — `references/` (quality bar, artifact manifest, grill question bank) is the shared contract every skill cites.
+Whatever the harness: keep the repo intact rather than cherry-picking single skill folders — `references/` (quality bar, writing style, artifact manifest, grill question bank) is the shared contract every skill cites.
 
 ## Output contract
 
@@ -126,5 +127,6 @@ The full file-by-file manifest lives in `references/artifact-manifest.md` — it
 - **Grill before generate.** Generic inputs produce generic packs. The brief is the single source of truth every generator reads.
 - **Research before claims.** Market sizes, competitor facts, and capability statements must trace to `research/sources.md` or be marked `(assumption)`.
 - **Contracts, not vibes.** Each generator specifies its artifact's sections, numbering, and quality bar. Artifacts are numbered, priority-ranked, span the full user spectrum, and end with a "recommended next" decision.
+- **Controlled language.** Prose is ASD-STE100, the aerospace industry's Simplified Technical English. Its mechanical rules (sentence cap, active voice, one meaning per word, no mid-sentence dashes) are exactly the rules that generated text breaks, and a linter enforces them.
 - **Deterministic visuals.** Diagrams are Mermaid/HTML (verifiable text), and raster-image needs become *prompt files* for external generators — never a flaky "hope the image rendered" loop.
 - **Audit closes the loop.** Done is defined by the manifest, not by memory.

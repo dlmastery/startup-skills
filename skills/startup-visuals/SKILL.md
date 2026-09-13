@@ -99,6 +99,7 @@ When the renderer is a web app (Grok Imagine, etc.) driven by browser automation
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - Every number on a visual exists in a pack artifact; visuals cite their source file.
 - Dense ≠ cluttered: one headline takeaway per visual, visible in 3 seconds; depth rewards the next 30.
 - Consistent visual language across the whole set (one palette, one type scale — declare them in the manifest header).

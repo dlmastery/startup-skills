@@ -21,6 +21,7 @@ Generate the Steve Blank / customer-development board set: the artifacts that sh
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - Falsifiable beats directional: "8 of 15 interviewees currently pay for a workaround" is a threshold; "people like it" is not.
 - Thresholds are declared before results exist — that's the whole discipline.
 - Interview questions ask about the past ("when did you last…"), never the hypothetical future ("would you use…").

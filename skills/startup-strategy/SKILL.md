@@ -23,6 +23,7 @@ Convert brief + research into the strategy layer. Every number here traces to `r
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - Axes must be *discovered from research*, not defaults (price × quality is almost never the real map).
 - Bottom-up beats top-down; showing arithmetic beats citing a Gartner headline.
 - Personas quote plausible real language, not marketing-speak.

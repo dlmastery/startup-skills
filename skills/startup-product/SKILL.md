@@ -29,6 +29,7 @@ Generate the product layer: a superset PRD grounded in the domain's science, ran
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - Feature ↔ principle mapping is the credibility engine: a feature that maps to no principle gets cut or the principle list was wrong.
 - Journeys are cinematic but mechanical: a skeptic reading `edge_low.md` should be able to list which components fired in what order.
 - Non-goals are real renunciations, not humble-brags.

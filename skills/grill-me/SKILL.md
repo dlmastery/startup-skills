@@ -36,6 +36,8 @@ Write to `runs/<slug>/` (slug = short kebab-case name for the idea):
 
 ### `BRIEF.md` — the single source of truth every generator reads
 
+Write it in ASD-STE100 (`references/writing-style.md`). The §Vocabulary section is also the run's technical-name list: every -ing noun and compound the founder uses goes there, one name per thing, so the linter (`templates/check_ste.js --vocab BRIEF.md`) exempts it. When the founder uses two names for one thing, pick one and record it.
+
 ```markdown
 # <Working name> — Founder Brief
 one-line: <X for Y that does Z via mechanism M>

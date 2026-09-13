@@ -24,9 +24,10 @@ Generate the persuasion layer. Persuasion here = evidence arranged in the right 
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - Slide titles are claims, not categories.
 - The VC memo must survive the "so what / says who" test on every paragraph: each claim has a mechanism and a source tag.
-- Voice: confident, specific, zero hype adjectives — the evidence does the selling.
+- Voice: confident and specific. No hype adjectives. The evidence does the selling. `founder_story.md` is first person and still follows every STE rule.
 
 ## Red flags
 

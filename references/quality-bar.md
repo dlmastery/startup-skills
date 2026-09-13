@@ -1,6 +1,6 @@
 # The quality bar — what "beats an elite founder's own pack" means
 
-Every generator skill in this pack must satisfy these nine properties. They are checkable, not aspirational. The audit skill spot-checks them.
+Every generator skill in this pack must satisfy these ten properties. They are checkable, not aspirational. The audit skill spot-checks them.
 
 ## 0. Every artifact opens by saying what it is and why it exists
 
@@ -52,3 +52,20 @@ Work nobody can find is work nobody did. `runs/<slug>/README.md` exists from the
 
 - Weak: sixty excellent artifacts across eight subdirectories, no README, images rendered but never linked.
 - Strong: a reader who opens the directory sees the pitch, the three best images, and the reading path for their role — in ten seconds, without opening a subdirectory.
+
+## 9. Written in ASD-STE100 Simplified Technical English
+
+Every sentence of prose follows `references/writing-style.md`. The rules that matter most: a sentence has at most 25 words and one topic. The verb is active and the sentence names the actor. The approved modals are "can", "must", and "will".
+
+A dash introduces a list item and never sits inside a sentence. There are no semicolons. A paragraph has one topic and at most six sentences.
+
+This property exists because generated prose has a signature that readers detect in one paragraph. The signature is long sentences with three clauses, dashes inside sentences, passive verbs, and hedge words. STE removes the signature with mechanical rules, and `templates/check_ste.js` checks the mechanical rules. `DASH`, `SEMI`, `LONG`, and `PARA` must be zero on every artifact before its phase gate passes.
+
+Weak, in a fence so the linter skips it:
+
+```text
+Our approach — unlike incumbents, which rely on brittle heuristics — leverages a learned model;
+results should improve as data accumulates.
+```
+
+- Strong: "Incumbents rely on hand-written rules. Ascent trains a model on the run history instead. Accuracy rises with each run (see research/survey.md §3)."

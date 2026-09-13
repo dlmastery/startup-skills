@@ -18,6 +18,7 @@ Generate the financial layer. Rule one: **assumption-driven, never number-painte
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` before the critic loop. `DASH`, `SEMI`, and `LONG` must be zero.
 - Show the arithmetic; a reader must be able to disagree with an assumption and recompute.
 - AI-native startups live or die on compute margin — the per-unit inference cost line is mandatory.
 - Ranges with reasoning beat false precision ("$14–22 CAC via channel X because comparable Y reports Z").

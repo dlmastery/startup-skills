@@ -138,7 +138,7 @@ Landing-page copy defaults to generic persuasion unless a structure forbids it. 
 4. **Strict top-down flow.** Conclusion → three arguments → supporting sections. Label the detail sections by which pillar they support ("Support for 2 — the mechanism") so the structure is visible rather than implied.
 5. **Name the falsifier.** Directly under the three pillars, state the single assumption that would sink all of them, and what test settles it. On an evidence-led pack this converts better than another benefit card, and it is the honest thing to publish.
 
-Banned in site copy, as in every artifact: "revolutionary", "seamless", "powerful", "supercharge", "game-changing", and any claim whose only support is an adjective.
+Banned in site copy, as in every artifact: "revolutionary", "seamless", "powerful", "supercharge", "game-changing", and any claim whose only support is an adjective. Site copy is ASD-STE100 like every other artifact (`references/writing-style.md`): a hero sentence has at most 25 words, a tagline at most 12, and no dash sits inside a sentence.
 
 ## Process
 
@@ -205,6 +205,7 @@ Fallback when the repo has no GitHub remote: keep the site at `runs/<slug>/index
 
 ## Quality bar
 
+- **Prose is ASD-STE100** (`references/writing-style.md`, binding): sentences of at most 25 words, active voice, approved words, no dash or semicolon inside a sentence. Run `node templates/check_ste.js <files> --vocab runs/<slug>/BRIEF.md` on the copy source files and on the site's rendered text. `DASH`, `SEMI`, and `LONG` must be zero.
 - A visitor should be able to answer "what is this, for whom, why believe it" in 10 seconds — the hero carries the positioning statement's payload in plain words.
 - Zero fabricated social proof: no fake testimonials, fake logos, or fake metrics. Pre-launch honesty converts better than invented traction and is non-negotiable.
 - Copy sounds like the founder's voice (founder_story), not SaaS-template speak ("Supercharge your workflow" is banned).

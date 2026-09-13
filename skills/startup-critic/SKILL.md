@@ -13,7 +13,7 @@ Adversarial refinement loop: three elite critic personas attack the draft, the g
 2. **The domain PhD** — 20 years in this field. Attacks: misused terminology, overclaimed evidence, cherry-picked citations, effect sizes that don't replicate, mechanisms that violate how the domain actually works, missing seminal work. Signature question: *"Would this survive review by people who actually build/study this?"*
 3. **The elite operator-founder** — has scaled a company in an adjacent space. Attacks: unbuildable scope, GTM fantasy, unit economics that ignore reality, journeys no real user would follow, teams that can't be hired, timelines that ignore integration pain. Signature question: *"What breaks in month three of actually executing this?"*
 
-Run each persona as a genuinely separate pass (separate subagents when available — a critic sharing the author's context pulls its punches). Each critic reads: the artifact, its owning skill's contract, `references/quality-bar.md`, and the relevant `research/` files.
+Run each persona as a genuinely separate pass (separate subagents when available — a critic sharing the author's context pulls its punches). Each critic reads: the artifact, its owning skill's contract, `references/quality-bar.md`, `references/writing-style.md`, and the relevant `research/` files.
 
 ## Verdict format (per critic, per round)
 
@@ -28,6 +28,7 @@ Critics must quote the artifact — an issue that can't point to a line isn't an
 
 ## The loop
 
+0. Round 0, before any persona reads: run `node templates/check_ste.js <artifact> --vocab runs/<slug>/BRIEF.md`. Any `DASH`, `SEMI`, `LONG`, or `PARA` hit is a `major` issue with the line number. The author fixes these before round 1, so the personas spend their rounds on substance, not on sentence shape. See `references/writing-style.md`.
 1. Round 1: all three critics review the draft in parallel.
 2. Revise: fix fatal and major issues; minor issues at author's judgment (log skipped ones with a reason at the bottom of the artifact as an HTML comment).
 3. Rounds 2–3: only previously-failing critics re-review, checking their own issues plus regressions.
